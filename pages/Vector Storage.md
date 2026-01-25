@@ -1,0 +1,2 @@
+- # Frontier: Vector Storage
+- Notes on Vector Databases (Pinecone, Milvus, Weaviate, FAISS) for RAG and Semantic Search.
