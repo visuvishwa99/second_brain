@@ -1,0 +1,6 @@
+- This Terminal is for Cloud related tech
+- [[Aws]]
+- [[Azure]]
+- [[Gcp]]
+- [[Table Formats]]
+-
