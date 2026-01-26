@@ -172,8 +172,7 @@ exclude-from-graph-view:: true
 	- Using isNull() and isNotNull() functions:
 		- df.filter(df.column.isNull()) - Filters rows where the specified column is NULL
 		- df.filter(df.column.isNotNull()) - Filters rows where the specified column is not NULL
-- How do you "like" in df : df2.filter(df2.name.like("%rose%")).show()
-  id:: 6644550d-d004-4b0e-adf2-88d66f3288ba
+- How do you "like" in df : df2.filter(df2.name.like("%rose%")).show() ^6644550d-d004-4b0e-adf2-88d66f3288ba
 - rlike : df2.filter(df2.name.rlike("(?i)^*rose$")).show()
 - Filter vs select :
 - select is for choosing which columns to keep  and filter is Keep all columns but filter rows based on a condition
@@ -225,8 +224,7 @@ exclude-from-graph-view:: true
 	- schema1 = ["id", "name", "age"]
 	- schema2 = ["id", "name", "age", "city"]
 	- df1 = spark.createDataFrame(data1, schema1)
-	- f2 = spark.createDataFrame(data2, schema2)
-	  id:: 664456dd-4ad0-4b64-b0cc-63f58f5d95a8
+	- f2 = spark.createDataFrame(data2, schema2) ^664456dd-4ad0-4b64-b0cc-63f58f5d95a8
 	- merged_df = df1.unionByName(df2, allowMissingColumns=True).show()
 - UDF :
   collapsed:: true
@@ -241,8 +239,7 @@ exclude-from-graph-view:: true
 	- df.withColumn("Cureated Name",
 	- upperCase(col("Name"))) \
 	- .show(truncate=False)
-- map(f, preservesPartitioning=True):
-  id:: 66445721-301d-4c13-a092-d72e3e68dc3e
+- map(f, preservesPartitioning=True): ^66445721-301d-4c13-a092-d72e3e68dc3e
   collapsed:: true
 	- If the original RDD is partitioned (e.g., using partitionBy), the resulting RDD will maintain the same partitioning scheme
 	- ex: used in reduceByKey or join, as it can avoid unnecessary data shuffling across partitions.
