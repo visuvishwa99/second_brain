@@ -1,4 +1,6 @@
-exclude-from-graph-view:: true
+---
+exclude-from-graph-view: true
+---
 
 	- Kafka version -> 0.11.0.X and Confluent Platform 3.x
 		- **Confluent Platform 3.x Components:***
@@ -35,12 +37,9 @@ exclude-from-graph-view:: true
 			  RabbitMQ follows a "smart broker, dumb consumer" model where the broker handles message routing and delivery[2](https://www.upsolver.com/blog/kafka-versus-rabbitmq-architecture-performance-use-case)[5](https://www.openlogic.com/blog/kafka-vs-rabbitmq). Kafka follows a "dumb broker, smart consumer" model where consumers control their consumption and offset management[2](https://www.upsolver.com/blog/kafka-versus-rabbitmq-architecture-performance-use-case)[5](https://www.openlogic.com/blog/kafka-vs-rabbitmq).  
 			    
 			  In summary, while both are messaging systems, Kafka is optimized for high-throughput streaming data pipelines with replayability, while RabbitMQ is a more traditional message broker focused on reliable delivery and flexible routing[1](https://www.logicmonitor.com/blog/rabbitmq-vs-kafka)[2](https://www.upsolver.com/blog/kafka-versus-rabbitmq-architecture-performance-use-case)[4](https://www.site24x7.com/learn/kafka-vs-rabbitmq.html)[5](https://www.openlogic.com/blog/kafka-vs-rabbitmq). The choice depends on the specific requirements of throughput, ordering, scalability, and data retention in your use case.
-		- Key and value are serialized as a :-> "ByteArray".
-		  id:: 664646ab-7290-4678-ad08-b1884df5a44b
-		- Important parts of kafka packet :-> key,value,timestamp
-		  id:: 664646ab-fbba-48f5-a69b-e60445b04e48
-		- offset :-> In partitions, messages are assigned a unique ID number
-		  id:: 664646ab-4207-448d-b062-8d7a4808b096
+		- Key and value are serialized as a :-> "ByteArray". ^664646ab-7290-4678-ad08-b1884df5a44b
+		- Important parts of kafka packet :-> key,value,timestamp ^664646ab-fbba-48f5-a69b-e60445b04e48
+		- offset :-> In partitions, messages are assigned a unique ID number ^664646ab-4207-448d-b062-8d7a4808b096
 		- ![image.png](../assets/image_1715832828206_0.png)
 		-
 			- Can Kafka be used without ZooKeeper ? below 2.5 version No .
@@ -54,18 +53,14 @@ exclude-from-graph-view:: true
 			- ISR is the abbreviation of In sync replicas.They are a set of message replicas that are synced to be leaders. https://gautambangalore.medium.com/knowing-and-valuing-apache-kafkas-isr-in-sync-replicas-167bf8c76cc1
 			- How can you get precisely one messaging during data production/Dedup
 				- To get precisely one messaging from data production, you have to follow two things avoiding duplicates during data production and avoiding duplicates during data consumption. For this, include a primary key in the message and de-duplicate on the consumer.
-			- Zookeeper in Kafka :->It is a high performance and open source complete coordination service used for distributed applications adapted by Kafka. It lets Kafka manage sources properly.
-			  id:: 664646ab-d7e2-4471-97d4-5f219a036bcc
-			- replica in the Kafka environment :->The replica is a list of essential nodes needed for logging for any particular partition. It can play the role of a follower or leader.
-			  id:: 664646ab-f134-4ca9-9390-0c53fb57cd35
-			- consumer group :-> When more than one consumer consumes a bunch of subscribed topics jointly, it forms a consumer group.
-			  id:: 664646ab-ca74-4c4e-84a7-078f01e1468c
+			- Zookeeper in Kafka :->It is a high performance and open source complete coordination service used for distributed applications adapted by Kafka. It lets Kafka manage sources properly. ^664646ab-d7e2-4471-97d4-5f219a036bcc
+			- replica in the Kafka environment :->The replica is a list of essential nodes needed for logging for any particular partition. It can play the role of a follower or leader. ^664646ab-f134-4ca9-9390-0c53fb57cd35
+			- consumer group :-> When more than one consumer consumes a bunch of subscribed topics jointly, it forms a consumer group. ^664646ab-ca74-4c4e-84a7-078f01e1468c
 			- start a Kafka Server:->
 				- To start a Kafka Server, the Zookeeper has to be powered up by using the following steps:
 				- bin/zookeeper-server-start.sh config/zookeeper.properties
 				- bin/kafka-server-start.sh config/server.properties
-			- replications dangerous in Kafka :-> duplication assures that issued messages
-			  id:: 664646ab-6cfa-49d0-bb8b-def141abb016
+			- replications dangerous in Kafka :-> duplication assures that issued messages ^664646ab-6cfa-49d0-bb8b-def141abb016
 			- The Kafka Producer API provides two main modes of operation
 				- SyncProducer provides stronger ordering and durability guarantees at the cost of lower throughput, while AsyncProducer favors higher throughput over strict ordering and durability. The choice depends on the specific requirements of the use case.
 				- ## Synchronous (SyncProducer)
@@ -118,12 +113,10 @@ exclude-from-graph-view:: true
 			- log cleaner configured
 			  collapsed:: true
 				- bin/kafka-topics.sh --bootstrap-server broker1:9092 --create --topic compacted-topic --partitions 3 --replication-factor 2 --config cleanup.policy=compact
-			- broker configuration files :-> broker.id, log.dirs, zookeeper.connect.
-			  id:: 664646ab-3123-4027-b253-57950fc78b05
+			- broker configuration files :-> broker.id, log.dirs, zookeeper.connect. ^664646ab-3123-4027-b253-57950fc78b05
 				- /path/to/kafka/config/server.properties
 			- Server in Kafka cluster -> broker in Kafka
-			- maximum message size can the Kafka server receive :->
-			  id:: 664646ab-6a86-4e26-8bd7-7d263e4bf8be
+			- maximum message size can the Kafka server receive :-> ^664646ab-6a86-4e26-8bd7-7d263e4bf8be
 			  collapsed:: true
 				- Specifically:
 				- The `message.max.bytes` setting determines the largest record batch size allowed by Kafka, after compression if compression is enabled[1](https://stackoverflow.com/questions/50207715/where-to-set-maximum-message-size-in-apache-kafka)[2](https://kafka.apache.org/081/documentation.html)[4](https://www.linkedin.com/pulse/kakfa-large-messages-marwa-ali).

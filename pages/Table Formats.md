@@ -1,108 +1,55 @@
 deck:: [[Table Formats]]
 
-- What are the common file formats used for data storage? :-> {{ ORC, Parquet, AVRO, JSON, Text, CSV }}
-  id:: 680bdb9b-82ef-4cf8-8609-4059946070c1
-- Which file format is columnar and uses efficient compression techniques? :-> {{ Parquet }}
-  id:: 680bdb9b-f7d2-45df-a2eb-91eab9461be1
-- Which file format was created by Apache and provides fast data serialization? :-> {{ AVRO }}
-  id:: 680bdb9b-7255-450c-9b3b-0464b4ef7e2a
-- Which file format is row-based and developed by Apache Hive? :-> {{ ORC (Optimized Row Columnar) }}
-  id:: 680bdb9b-15ad-4841-864a-449ceb8d5c0a
-- Which file format is human-readable and widely used for data interchange? :-> {{ JSON }}
-  id:: 680bdb9b-a57a-4845-a03b-bfe51bf92b44
-- Which file format is simplest and uses comma-separated values? :-> {{ CSV }}
-  id:: 680bdb9b-cef0-4aa7-9db8-ca0e18f2c558
-- What are the three major table formats used in modern data lakes? :-> {{ Delta Lake, Apache Iceberg, Apache Hudi }}
-  id:: 680bdb9b-7f83-4892-8fdf-11e179de3377
-- What is the primary difference between file formats and table formats? :-> {{ File formats define how data is encoded and stored, while table formats add metadata management, ACID transactions, schema evolution, and other features on top of file formats }}
-  id:: 680bdb9b-c590-4302-b92a-874fcccf4112
-- What does ACID stand for in database transactions? :-> {{ Atomicity, Consistency, Isolation, Durability }}
-  id:: 680bdb9b-5977-4748-9e69-80efd1b4952c
-- What are the two main table storage strategies in Apache Hudi? :-> {{ Copy-on-Write (COW) and Merge-on-Read (MOR) }}
-  id:: 680bdb9b-247e-487c-a973-26abcafd33fe
-- What is time travel functionality in table formats? :-> {{ The ability to query data as it existed at a specific point in time or commit }}
-  id:: 680bdb9b-2ef5-47a2-83d0-a0b83f6a2706
-- What is schema evolution? :-> {{ The ability to change table schema (add/modify/remove columns) without breaking existing queries }}
-  id:: 680bdb9b-ccaf-4611-ab6e-7408414b67c3
-- What is the primary storage format used by Delta Lake? :-> {{ Parquet (with additional metadata) }}
-  id:: 680bdb9b-8451-446b-8a41-e75594585669
-- How does Delta Lake manage metadata? :-> {{ Through transaction logs (_delta_log) }}
-  id:: 680bdb9b-0d8e-4693-b4e6-35f6bbb36307
-- What components make up a Delta Lake table? :-> {{ JSON Transaction log file + Parquet file (data) + CRC (Cyclic Redundant Check) }}
-  id:: 680bdb9b-2f26-46df-8da6-f07a84c56539
-- What concurrency control method does Delta Lake use? :-> {{ Optimistic Concurrency Control (OCC) }}
-  id:: 680bdb9b-b94c-448d-94a1-9195bd13bd6b
-- How does Delta Lake support data versioning? :-> {{ Time Travel (Log-based) }}
-  id:: 680bdb9b-3cc5-44f8-9dac-862151530758
-- What are Delta Lake's performance optimization techniques? :-> {{ Data Skipping, Z-ordering, Optimized Caching }}
-  id:: 680bdb9b-631b-427d-b89c-444ea9bc9ab1
-- What type of partitioning does Delta Lake use? :-> {{ Explicit Partitioning }}
-  id:: 680bdb9b-d2dc-4ad0-8115-c88a6fd2a7fc
-- What indexing mechanism does Delta Lake use for predicate pushdown? :-> {{ _delta_log }}
-  id:: 680bdb9b-8b04-4678-a154-f1f69d8e8689
-- What storage formats does Apache Iceberg support? :-> {{ Parquet, ORC, Avro }}
-  id:: 680bdb9b-0c51-4853-975e-687bdc30b66a
-- How does Apache Iceberg manage metadata? :-> {{ Snapshot-based JSON Metadata }}
-  id:: 680bdb9b-ce91-41f1-a761-0ec7ff50c689
-- What are the three layers in Apache Iceberg's architecture? :-> {{ Metadata Layer (table structure, snapshots, and partitioning) + Manifest Layer (metadata for data files) + Data Layer }}
-  id:: 680bdb9b-076b-4882-aefd-c70db69e3da5
-- What concurrency control method does Apache Iceberg use? :-> {{ Multi-Version Concurrency Control (MVCC) }}
-  id:: 680bdb9b-c29e-4bab-b4ee-29e4c1c8d367
-- How does Apache Iceberg handle schema evolution? :-> {{ Flexible Evolution (No table rewrites required) }}
-  id:: 680bdb9b-90ac-4de8-9d5c-bde3d235c3e9
-- What type of partitioning does Apache Iceberg use? :-> {{ Hidden Partitioning (No explicit partition column) }}
-  id:: 680bdb9b-f9ee-4d30-9bed-5a93865da742
-- What performance optimization techniques does Iceberg use? :-> {{ Vectorized Reads, Hidden Partitions, Pruning }}
-  id:: 680bdb9b-6dbd-4b10-a700-518324d97543
-- What is the purpose of Min/Max Pruning in Iceberg? :-> {{ Uses statistics to prune unnecessary files during query execution }}
-  id:: 680bdb9b-e53d-464f-8b9b-657f25f6b6ab
-- What storage formats does Apache Hudi support? :-> {{ Parquet, Avro }}
-  id:: 680bdb9b-73a8-4896-810b-62ab5df3656c
-- How does Apache Hudi manage metadata? :-> {{ Timeline-based metadata with Indexing (.hoodie folder) }}
-  id:: 680bdb9b-6f2f-4d24-8d2f-77b39832e9d5
-- What components make up an Apache Hudi table? :-> {{ Timeline Metadata (.hoodie folder) + Indexing Mechanisms + Data Files (Parquet/Avro) + Compaction Logs (for MOR mode) }}
-  id:: 680bdb9b-f7ee-4632-86cf-e7fd2c1527c2
-- What are the two table types in Apache Hudi? :-> {{ Copy-on-Write (COW) and Merge-on-Read (MOR) }}
-  id:: 680bdb9b-2d66-4c44-90cf-eafe312f394c
-- What is the difference between COW and MOR in Hudi? :-> {{ COW rewrites entire files for updates (slower writes, faster reads), while MOR uses delta logs for updates (faster writes, slower reads) }}
-  id:: 680bdb9b-04d6-4235-85a1-cfc2d47d5e41
-- What indexing mechanisms does Hudi offer? :-> {{ Bloom Index, Bucket Index, HBase Index, Global Index, Simple Index, In-Memory Index }}
-  id:: 680bdb9b-8a90-4de1-98f3-cd9e8b1f9af6
-- What is the benefit of Bloom Index in Hudi? :-> {{ Fast lookups using Bloom filters on record keys }}
-  id:: 680bdb9b-7d79-4fb6-8e0d-d0066d5eec57
-- What is compaction in Hudi's MOR tables? :-> {{ The process of merging delta logs with base files to create new base files }}
-  id:: 680bdb9b-5a74-441a-85e6-4ba3a633fa23
-- What is Copy-on-Write (COW) strategy? :-> {{ All data stored in columnar format; when updates occur, entire files are rewritten }}
-  id:: 680bdb9b-2511-465a-8be1-e921d6cf9d33
-- What is Merge-on-Read (MOR) strategy? :-> {{ Hybrid storage using columnar base files + row-based delta logs; updates written to delta logs then merged during reads or compaction }}
-  id:: 680bdb9b-bd8c-4cfe-b949-e70046039e70
-- What types of queries does Apache Hudi support? :-> {{ Snapshot Queries, Incremental Queries, Read Optimized Queries, Time Travel }}
-  id:: 680bdb9b-a196-48ad-a425-c5211638dd1f
-- What is a Snapshot Query? :-> {{ Queries that see the latest snapshot of the table as of a given commit or compaction action }}
-  id:: 680bdb9b-f9f0-4512-a59b-ef110d998b53
-- What is an Incremental Query? :-> {{ Queries that only see new data written to the table since a given commit/compaction }}
-  id:: 680bdb9b-ab9e-4617-979a-21cdceaa5088
-- What are the main operation types supported by Apache Hudi? :-> {{ UPSERT, INSERT, DELETE, BULK_INSERT, INSERT_OVERWRITE, DELETE_PARTITION }}
-  id:: 680bdb9b-2211-4d65-b91c-ca1dd91e6337
-- What sort modes are available for bulk insert in Hudi? :-> {{ NONE, GLOBAL_SORT, PARTITION_SORT, PARTITION_PATH_REPARTITION, PARTITION_PATH_REPARTITION_AND_SORT }}
-  id:: 680bdb9b-31bd-4b11-943e-391cc785aa90
-- What are the two types of deletes supported by Hudi? :-> {{ Soft Deletes (nullifies values) and Hard Deletes (completely removes the record) }}
-  id:: 680bdb9b-3879-4c91-9824-f73eb8b80fbc
-- What is the purpose of Global Index in Hudi? :-> {{ Ensures record uniqueness across all partitions of a table }}
-  id:: 680bdb9b-d283-4e3a-8117-e74224107a6f
-- What is the purpose of Bucket Index in Hudi? :-> {{ Hash-based indexing for high-throughput updates }}
-  id:: 680bdb9b-472d-4dcd-a115-c885a8744582
-- Which index works best for small, fast-changing datasets? :-> {{ In-Memory Index }}
-  id:: 680bdb9b-7472-4ec7-86d5-e233423f5905
-- Which table format is best for ACID-compliant data lakes and ML workloads? :-> {{ Delta Lake }}
-  id:: 680bdb9b-88d9-426c-bef2-815f25109db8
-- Which table format is best for large-scale analytics and multi-engine support? :-> {{ Apache Iceberg }}
-  id:: 680bdb9b-02f4-466b-8327-2bcd0da17790
-- Which table format is best for real-time ingestion and Change Data Capture (CDC)? :-> {{ Apache Hudi }}
-  id:: 680bdb9b-f08b-411b-a1ef-2dd51cea162f
-- Which compute engines are compatible with Delta Lake? :-> {{ Spark, Presto, Trino, Flink }}
-  id:: 680bdb9b-28ee-4bac-845b-c8cfb97eec5a
-- Which compute engines are compatible with Apache Iceberg? :-> {{ Spark, Trino, Flink, Hive, Snowflake }}
-  id:: 680bdb9b-05f3-43fe-a5d8-d7a357dfe3b2
-- Which compute engines are compatible with Apache Hudi? :-> {{ Spark, Flink, Presto }}
-  id:: 680bdb9b-089f-4300-9dcc-4f27f093b3d3
+- What are the common file formats used for data storage? :-> {{ ORC, Parquet, AVRO, JSON, Text, CSV }} ^680bdb9b-82ef-4cf8-8609-4059946070c1
+- Which file format is columnar and uses efficient compression techniques? :-> {{ Parquet }} ^680bdb9b-f7d2-45df-a2eb-91eab9461be1
+- Which file format was created by Apache and provides fast data serialization? :-> {{ AVRO }} ^680bdb9b-7255-450c-9b3b-0464b4ef7e2a
+- Which file format is row-based and developed by Apache Hive? :-> {{ ORC (Optimized Row Columnar) }} ^680bdb9b-15ad-4841-864a-449ceb8d5c0a
+- Which file format is human-readable and widely used for data interchange? :-> {{ JSON }} ^680bdb9b-a57a-4845-a03b-bfe51bf92b44
+- Which file format is simplest and uses comma-separated values? :-> {{ CSV }} ^680bdb9b-cef0-4aa7-9db8-ca0e18f2c558
+- What are the three major table formats used in modern data lakes? :-> {{ Delta Lake, Apache Iceberg, Apache Hudi }} ^680bdb9b-7f83-4892-8fdf-11e179de3377
+- What is the primary difference between file formats and table formats? :-> {{ File formats define how data is encoded and stored, while table formats add metadata management, ACID transactions, schema evolution, and other features on top of file formats }} ^680bdb9b-c590-4302-b92a-874fcccf4112
+- What does ACID stand for in database transactions? :-> {{ Atomicity, Consistency, Isolation, Durability }} ^680bdb9b-5977-4748-9e69-80efd1b4952c
+- What are the two main table storage strategies in Apache Hudi? :-> {{ Copy-on-Write (COW) and Merge-on-Read (MOR) }} ^680bdb9b-247e-487c-a973-26abcafd33fe
+- What is time travel functionality in table formats? :-> {{ The ability to query data as it existed at a specific point in time or commit }} ^680bdb9b-2ef5-47a2-83d0-a0b83f6a2706
+- What is schema evolution? :-> {{ The ability to change table schema (add/modify/remove columns) without breaking existing queries }} ^680bdb9b-ccaf-4611-ab6e-7408414b67c3
+- What is the primary storage format used by Delta Lake? :-> {{ Parquet (with additional metadata) }} ^680bdb9b-8451-446b-8a41-e75594585669
+- How does Delta Lake manage metadata? :-> {{ Through transaction logs (_delta_log) }} ^680bdb9b-0d8e-4693-b4e6-35f6bbb36307
+- What components make up a Delta Lake table? :-> {{ JSON Transaction log file + Parquet file (data) + CRC (Cyclic Redundant Check) }} ^680bdb9b-2f26-46df-8da6-f07a84c56539
+- What concurrency control method does Delta Lake use? :-> {{ Optimistic Concurrency Control (OCC) }} ^680bdb9b-b94c-448d-94a1-9195bd13bd6b
+- How does Delta Lake support data versioning? :-> {{ Time Travel (Log-based) }} ^680bdb9b-3cc5-44f8-9dac-862151530758
+- What are Delta Lake's performance optimization techniques? :-> {{ Data Skipping, Z-ordering, Optimized Caching }} ^680bdb9b-631b-427d-b89c-444ea9bc9ab1
+- What type of partitioning does Delta Lake use? :-> {{ Explicit Partitioning }} ^680bdb9b-d2dc-4ad0-8115-c88a6fd2a7fc
+- What indexing mechanism does Delta Lake use for predicate pushdown? :-> {{ _delta_log }} ^680bdb9b-8b04-4678-a154-f1f69d8e8689
+- What storage formats does Apache Iceberg support? :-> {{ Parquet, ORC, Avro }} ^680bdb9b-0c51-4853-975e-687bdc30b66a
+- How does Apache Iceberg manage metadata? :-> {{ Snapshot-based JSON Metadata }} ^680bdb9b-ce91-41f1-a761-0ec7ff50c689
+- What are the three layers in Apache Iceberg's architecture? :-> {{ Metadata Layer (table structure, snapshots, and partitioning) + Manifest Layer (metadata for data files) + Data Layer }} ^680bdb9b-076b-4882-aefd-c70db69e3da5
+- What concurrency control method does Apache Iceberg use? :-> {{ Multi-Version Concurrency Control (MVCC) }} ^680bdb9b-c29e-4bab-b4ee-29e4c1c8d367
+- How does Apache Iceberg handle schema evolution? :-> {{ Flexible Evolution (No table rewrites required) }} ^680bdb9b-90ac-4de8-9d5c-bde3d235c3e9
+- What type of partitioning does Apache Iceberg use? :-> {{ Hidden Partitioning (No explicit partition column) }} ^680bdb9b-f9ee-4d30-9bed-5a93865da742
+- What performance optimization techniques does Iceberg use? :-> {{ Vectorized Reads, Hidden Partitions, Pruning }} ^680bdb9b-6dbd-4b10-a700-518324d97543
+- What is the purpose of Min/Max Pruning in Iceberg? :-> {{ Uses statistics to prune unnecessary files during query execution }} ^680bdb9b-e53d-464f-8b9b-657f25f6b6ab
+- What storage formats does Apache Hudi support? :-> {{ Parquet, Avro }} ^680bdb9b-73a8-4896-810b-62ab5df3656c
+- How does Apache Hudi manage metadata? :-> {{ Timeline-based metadata with Indexing (.hoodie folder) }} ^680bdb9b-6f2f-4d24-8d2f-77b39832e9d5
+- What components make up an Apache Hudi table? :-> {{ Timeline Metadata (.hoodie folder) + Indexing Mechanisms + Data Files (Parquet/Avro) + Compaction Logs (for MOR mode) }} ^680bdb9b-f7ee-4632-86cf-e7fd2c1527c2
+- What are the two table types in Apache Hudi? :-> {{ Copy-on-Write (COW) and Merge-on-Read (MOR) }} ^680bdb9b-2d66-4c44-90cf-eafe312f394c
+- What is the difference between COW and MOR in Hudi? :-> {{ COW rewrites entire files for updates (slower writes, faster reads), while MOR uses delta logs for updates (faster writes, slower reads) }} ^680bdb9b-04d6-4235-85a1-cfc2d47d5e41
+- What indexing mechanisms does Hudi offer? :-> {{ Bloom Index, Bucket Index, HBase Index, Global Index, Simple Index, In-Memory Index }} ^680bdb9b-8a90-4de1-98f3-cd9e8b1f9af6
+- What is the benefit of Bloom Index in Hudi? :-> {{ Fast lookups using Bloom filters on record keys }} ^680bdb9b-7d79-4fb6-8e0d-d0066d5eec57
+- What is compaction in Hudi's MOR tables? :-> {{ The process of merging delta logs with base files to create new base files }} ^680bdb9b-5a74-441a-85e6-4ba3a633fa23
+- What is Copy-on-Write (COW) strategy? :-> {{ All data stored in columnar format; when updates occur, entire files are rewritten }} ^680bdb9b-2511-465a-8be1-e921d6cf9d33
+- What is Merge-on-Read (MOR) strategy? :-> {{ Hybrid storage using columnar base files + row-based delta logs; updates written to delta logs then merged during reads or compaction }} ^680bdb9b-bd8c-4cfe-b949-e70046039e70
+- What types of queries does Apache Hudi support? :-> {{ Snapshot Queries, Incremental Queries, Read Optimized Queries, Time Travel }} ^680bdb9b-a196-48ad-a425-c5211638dd1f
+- What is a Snapshot Query? :-> {{ Queries that see the latest snapshot of the table as of a given commit or compaction action }} ^680bdb9b-f9f0-4512-a59b-ef110d998b53
+- What is an Incremental Query? :-> {{ Queries that only see new data written to the table since a given commit/compaction }} ^680bdb9b-ab9e-4617-979a-21cdceaa5088
+- What are the main operation types supported by Apache Hudi? :-> {{ UPSERT, INSERT, DELETE, BULK_INSERT, INSERT_OVERWRITE, DELETE_PARTITION }} ^680bdb9b-2211-4d65-b91c-ca1dd91e6337
+- What sort modes are available for bulk insert in Hudi? :-> {{ NONE, GLOBAL_SORT, PARTITION_SORT, PARTITION_PATH_REPARTITION, PARTITION_PATH_REPARTITION_AND_SORT }} ^680bdb9b-31bd-4b11-943e-391cc785aa90
+- What are the two types of deletes supported by Hudi? :-> {{ Soft Deletes (nullifies values) and Hard Deletes (completely removes the record) }} ^680bdb9b-3879-4c91-9824-f73eb8b80fbc
+- What is the purpose of Global Index in Hudi? :-> {{ Ensures record uniqueness across all partitions of a table }} ^680bdb9b-d283-4e3a-8117-e74224107a6f
+- What is the purpose of Bucket Index in Hudi? :-> {{ Hash-based indexing for high-throughput updates }} ^680bdb9b-472d-4dcd-a115-c885a8744582
+- Which index works best for small, fast-changing datasets? :-> {{ In-Memory Index }} ^680bdb9b-7472-4ec7-86d5-e233423f5905
+- Which table format is best for ACID-compliant data lakes and ML workloads? :-> {{ Delta Lake }} ^680bdb9b-88d9-426c-bef2-815f25109db8
+- Which table format is best for large-scale analytics and multi-engine support? :-> {{ Apache Iceberg }} ^680bdb9b-02f4-466b-8327-2bcd0da17790
+- Which table format is best for real-time ingestion and Change Data Capture (CDC)? :-> {{ Apache Hudi }} ^680bdb9b-f08b-411b-a1ef-2dd51cea162f
+- Which compute engines are compatible with Delta Lake? :-> {{ Spark, Presto, Trino, Flink }} ^680bdb9b-28ee-4bac-845b-c8cfb97eec5a
+- Which compute engines are compatible with Apache Iceberg? :-> {{ Spark, Trino, Flink, Hive, Snowflake }} ^680bdb9b-05f3-43fe-a5d8-d7a357dfe3b2
+- Which compute engines are compatible with Apache Hudi? :-> {{ Spark, Flink, Presto }} ^680bdb9b-089f-4300-9dcc-4f27f093b3d3

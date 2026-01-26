@@ -1,5 +1,0 @@
-- Terminal for all Batch
-- [[Ingestion]]
-- [[Transformation]]
-- [[Reporting]]
--

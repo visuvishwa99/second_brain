@@ -1,4 +1,6 @@
-exclude-from-graph-view:: true
+---
+exclude-from-graph-view: true
+---
 
 - data skew in Sqoop
 	- Leverage Hash-Based Splitting:

@@ -1,7 +1,6 @@
 - Implement using **foreachBatch(self.upsert)**
   collapsed:: true
-	- syntax => foreachBatch(self.<call back method>)
-	  id:: 66427649-0d0a-4f6e-9cd4-9c8da1d7c627
+	- syntax => foreachBatch(self.<call back method>) ^66427649-0d0a-4f6e-9cd4-9c8da1d7c627
 		- Note : A callback function is a function that is passed as an argument to another function
 		  
 		  Need to use   .outputMode ("update").foreachBatch(self.upsert)

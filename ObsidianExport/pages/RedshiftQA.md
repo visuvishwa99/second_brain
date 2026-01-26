@@ -1,5 +1,0 @@
-- It is a Massively Parallel Processing (MPP) cloud data warehouse service
-- AWS redshift supports all these storage types
-	- MySQL Workbench
-	- 3rd Party BI Tools  Tableau, MicroStrategy
-	- Amazon QuickSight
