@@ -1,3 +1,0 @@
-- [[gafg]]
-- [[amex]]
-- [[Freeide mac]]

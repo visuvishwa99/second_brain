@@ -1,3 +1,8 @@
+---
+tags:
+  - level3
+---
+
 deck:: [[SQL]]
 
 - What is the key mistake to avoid when building a CTE?
@@ -343,3 +348,8 @@ deck:: [[SQL]]
 		    ON src.record_id = tgt.record_id
 		  WHERE tgt.record_id IS NULL;
 		  ```
+
+
+### Related
+- [[Analytical Eng]]
+- [[Transformation]]

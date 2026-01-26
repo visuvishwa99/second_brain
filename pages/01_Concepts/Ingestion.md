@@ -1,3 +1,14 @@
+---
+tags:
+  - level2
+---
+
 - incremental
 	- ![image.png](../assets/image_1738863576021_0.png)
 	- ![image.png](../assets/image_1738863589462_0.png)
+
+
+### Related
+- [[sqoop]]
+- [[kafka]]
+- [[Glue]]

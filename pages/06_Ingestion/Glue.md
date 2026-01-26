@@ -1,3 +1,8 @@
+---
+tags:
+  - level3
+---
+
 - Glue -> Fully managed cloud-optimized ETL service on AWS
   collapsed:: true
 	- Glue crawler scans data in S3, creates schema Can run periodically Populates the Glue Data Catalog
@@ -199,3 +204,9 @@
 	- Enable Auto-Scaling for Glue Jobs
 	- incremental instead of full load
 	-
+
+
+### Related
+- [[Ingestion]]
+- [[Batch processing]]
+- [[Cloud engineering]]

@@ -1,3 +1,8 @@
+---
+tags:
+  - level1
+---
+
 - Terminal to all tech
 - ### [[Batch processing]]
 - ### [[Streaming]]

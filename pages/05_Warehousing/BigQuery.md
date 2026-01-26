@@ -1,3 +1,8 @@
+---
+tags:
+  - level3
+---
+
 # BigQuery Architecture
 	- ## Key Architecture Concept
 		- Decoupling store and compute so we pay individually
@@ -38,3 +43,8 @@
 		- Note: You can't create a string as partition column in BigQuery
 - # BigQuery Concepts
 	- DB called as :-> {{Dataset}} ^68086cc4-4594-41fc-9b51-bdfbc5c4af78
+
+
+### Related
+- [[Analytical Eng]]
+- [[Cloud engineering]]

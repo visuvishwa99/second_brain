@@ -1,3 +1,0 @@
-- [[spark]]
-- [[Kafka FAQ _v1.0]]
-- [[kafka]]

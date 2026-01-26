@@ -1,5 +1,7 @@
 ---
 exclude-from-graph-view: true
+tags:
+  - level3
 ---
 
 - data skew in Sqoop
@@ -22,3 +24,7 @@ exclude-from-graph-view: true
 			- if increase the mappers didnt work
 			- Split by col is done using a alpha-numberic value and we changed that to Telephone number and it worked
 	-
+
+### Related
+- [[Ingestion]]
+- [[Batch processing]]

@@ -1,3 +1,8 @@
+---
+tags:
+  - level3
+---
+
 deck:: [[kafka]]
 
 - What is Apache Kafka? :-> {{ A distributed streaming platform that allows publishing and subscribing to streams of records, storing streams of records, and processing streams of records }} ^680bcf9a-f412-47e0-8e9e-119d1bdb4b1f
@@ -34,3 +39,8 @@ deck:: [[kafka]]
 - How is a compacted topic configured in Kafka? :-> {{ Using bin/kafka-topics.sh with --config cleanup.policy=compact parameter }} ^680bcf9a-cd08-4d3e-b990-f9dd4ca0b8da
 - For which use cases is Kafka NOT a good fit? :-> {{ Low throughput requirements, strict ordering requirements across partitions, short-lived data streams, simple point-to-point communication }} ^680bcf9a-63cd-41ac-b2c1-5f19decd36e2
 - How do you rebalance a Kafka cluster? :-> {{ By identifying imbalance, generating a reassignment plan with kafka-reassign-partitions tool, reviewing and modifying the plan, executing reassignment, and verifying progress }} ^680bcf9a-b26b-41cc-903a-7357d5c7ac8c
+
+
+### Related
+- [[Streaming]]
+- [[Ingestion]]

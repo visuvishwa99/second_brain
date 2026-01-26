@@ -1,3 +1,8 @@
+---
+tags:
+  - level3
+---
+
 deck::  [[aws]]
 
 - What are the three main network zones in AWS architecture? :-> {{ "Public Internet" zone, "AWS Public" zone, and "AWS Private" zone }} ^680bd5a5-1251-484e-a197-29cfa989f9ae
@@ -121,3 +126,7 @@ deck::  [[aws]]
 - What SQL dialect does Athena use? :-> {{ Presto SQL (ANSI SQL with some extensions) }} ^680bd662-f815-4f36-8df8-0df39619a918
 - How can you create tables in Athena? :-> {{ By defining them manually in Athena or by using a Glue crawler to automatically infer the schema }} ^680bd662-90dd-4952-bd62-5b7ce96ad0fa
 - What happens when you query a table that has partitioned data? :-> {{ Athena only scans the partitions that match your query's WHERE clause, improving performance and reducing cost }} ^680bd662-7841-422d-9cc1-4238908a9311
+
+
+### Related
+- [[Cloud engineering]]
