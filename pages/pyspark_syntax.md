@@ -1,7 +1,9 @@
 deck:: [[pyspark_syntax]]
 
-- What are the different ways to create a DataFrame in PySpark? ^680b0655-1df6-4c55-a19d-2eb87633ee89
-	- #card ^681176f4-7e12-42c1-b44b-1e3dd504dfc3
+- What are the different ways to create a DataFrame in PySpark?
+  id:: 680b0655-1df6-4c55-a19d-2eb87633ee89
+	- #card
+	  id:: 681176f4-7e12-42c1-b44b-1e3dd504dfc3
 		- from files => 
 		      ```python
 		      spark.read.csv("/text/json/parquet/format")
@@ -23,8 +25,10 @@ deck:: [[pyspark_syntax]]
 		      ```python
 		      createDataFrame(dataList,schema)
 		      ```
-- How do you check if a specific column exists in a DataFrame schema? ^680b07a6-18ef-40e4-971e-32e9f50aea0d
-	- #card ^681176f4-7e12-42c1-b44b-1e3dd504dfc4
+- How do you check if a specific column exists in a DataFrame schema?
+  id:: 680b07a6-18ef-40e4-971e-32e9f50aea0d
+	- #card
+	  id:: 681176f4-7e12-42c1-b44b-1e3dd504dfc4
 		- Use:
 		      ```python
 		      df.schema.contains(StructField("firstname", StringType, true))
@@ -33,8 +37,10 @@ deck:: [[pyspark_syntax]]
 		      ```python
 		      "id" in df.columns
 		      ```
-- What is the syntax for defining a nested schema with array and map types? ^680b07a6-ac8a-4d5b-8732-9ba7f31b2ef4
-	- #card ^681176f4-7e12-42c1-b44b-1e3dd504dfc5
+- What is the syntax for defining a nested schema with array and map types?
+  id:: 680b07a6-ac8a-4d5b-8732-9ba7f31b2ef4
+	- #card
+	  id:: 681176f4-7e12-42c1-b44b-1e3dd504dfc5
 		- ```python
 		      StructType([
 		          StructField('name', StructType([nested fields])), 
@@ -101,8 +107,10 @@ deck:: [[pyspark_syntax]]
 		   emptyRDD = spark.sparkContext.emptyRDD()
 		      spark.createDataFrame(emptyRDD, schema)
 		      ```
-- What is the syntax for casting a column to a different data type? ^680b07a6-45f9-4c94-bbd1-01b8167d3caf
-	- #card ^681176f4-7e12-42c1-b44b-1e3dd504dfca
+- What is the syntax for casting a column to a different data type?
+  id:: 680b07a6-45f9-4c94-bbd1-01b8167d3caf
+	- #card
+	  id:: 681176f4-7e12-42c1-b44b-1e3dd504dfca
 		- ```python
 		      df.select(df.fname, df.id.cast("int")).printSchema()
 		      ```
@@ -136,8 +144,10 @@ deck:: [[pyspark_syntax]]
 		          )
 		      ).drop("id", "gender", "salary")
 		      ```
-- How do you select columns using different methods in PySpark? ^680b07a6-bdc1-4e08-8dbc-ab46e481072c
-	- #card ^681176f4-7e12-42c1-b44b-1e3dd504dfcd
+- How do you select columns using different methods in PySpark?
+  id:: 680b07a6-bdc1-4e08-8dbc-ab46e481072c
+	- #card
+	  id:: 681176f4-7e12-42c1-b44b-1e3dd504dfcd
 		- Using column object notation:
 		      ```python
 		      df.select(df.column_name)
@@ -176,8 +186,10 @@ deck:: [[pyspark_syntax]]
 		  
 		  ```
 			- `
-- How do you convert a PySpark DataFrame to a Pandas DataFrame? ^680b07a6-5b93-4eed-a77d-68c5b2ca4ab4
-	- #card ^681176f4-7e12-42c1-b44b-1e3dd504dfce
+- How do you convert a PySpark DataFrame to a Pandas DataFrame?
+  id:: 680b07a6-5b93-4eed-a77d-68c5b2ca4ab4
+	- #card
+	  id:: 681176f4-7e12-42c1-b44b-1e3dd504dfce
 		- ```python
 		      pysparkDF.toPandas()
 		      ```
@@ -214,8 +226,10 @@ deck:: [[pyspark_syntax]]
 			  1	Hello-World
 			  2	Spark-SQL
 			    ```
-- How do you concatenate columns using expr() function? ^680b07a6-c60d-4903-8e04-122576394eba
-	- #card ^681176f4-7e12-42c1-b44b-1e3dd504dfd1
+- How do you concatenate columns using expr() function?
+  id:: 680b07a6-c60d-4903-8e04-122576394eba
+	- #card
+	  id:: 681176f4-7e12-42c1-b44b-1e3dd504dfd1
 		- ```python
 		      df.select(expr("fname ||','|| lname").alias("fullName")).show()
 		      ```
@@ -259,8 +273,10 @@ deck:: [[pyspark_syntax]]
 		      df.select(df.fname.substr(1,2).alias("substr")).show()
 		      ```
 		      to extract part of a string
-- How do you implement conditional logic in PySpark DataFrame columns? ^680b081e-7528-40cf-91c9-c80444e90243
-	- #card ^681176f4-7e12-42c1-b44b-1e3dd504dfd5
+- How do you implement conditional logic in PySpark DataFrame columns?
+  id:: 680b081e-7528-40cf-91c9-c80444e90243
+	- #card
+	  id:: 681176f4-7e12-42c1-b44b-1e3dd504dfd5
 		- Use when() and otherwise():
 		      ```python
 		      df.select(
@@ -272,8 +288,10 @@ deck:: [[pyspark_syntax]]
 		          .otherwise(df.gender).alias("new_gender")
 		      ).show()
 		      ```
-- How do you filter DataFrame rows based on whether a value is in a list? ^680b081e-c7bb-40c2-b19e-b91df1d1b026
-	- #card ^681176f4-7e12-42c1-b44b-1e3dd504dfd6
+- How do you filter DataFrame rows based on whether a value is in a list?
+  id:: 680b081e-c7bb-40c2-b19e-b91df1d1b026
+	- #card
+	  id:: 681176f4-7e12-42c1-b44b-1e3dd504dfd6
 		- Use isin():
 		      ```python
 		      df.select(df.fname, df.lname, df.id).filter(df.id.isin(list)).show()
@@ -282,8 +300,10 @@ deck:: [[pyspark_syntax]]
 		      ```python
 		      df.filter(df.state.isin(list)==False).show()
 		  ```
-- What are the different methods to sort DataFrame data? ^680b081e-d158-4f7a-bcc8-8f070f30f643
-	- #card ^681176f4-7e12-42c1-b44b-1e3dd504dfd7
+- What are the different methods to sort DataFrame data?
+  id:: 680b081e-d158-4f7a-bcc8-8f070f30f643
+	- #card
+	  id:: 681176f4-7e12-42c1-b44b-1e3dd504dfd7
 		- sort():
 		      ```python
 		      df.sort("department", "state").show(truncate=False)
@@ -296,8 +316,10 @@ deck:: [[pyspark_syntax]]
 		      ```python
 		      df.sort(df.department.asc(), df.state.asc()).show(truncate=False)
 		      ```
-- How do you perform groupBy operations with multiple aggregations? ^680b081e-adf2-4bf0-a989-e091d12fbbf3
-	- #card ^681176f4-7e12-42c1-b44b-1e3dd504dfd8
+- How do you perform groupBy operations with multiple aggregations?
+  id:: 680b081e-adf2-4bf0-a989-e091d12fbbf3
+	- #card
+	  id:: 681176f4-7e12-42c1-b44b-1e3dd504dfd8
 		- ```python
 		      df.groupBy("department").agg(
 		          sum("salary").alias("sum_salary"),
@@ -426,8 +448,10 @@ deck:: [[pyspark_syntax]]
 		      ```python
 		      spark.sql("select Seqno, convertUDF(Name) as Name from NAME_TABLE").show(truncate=False)
 		      ```
-- How do you implement joins between DataFrames? ^680b081e-3542-431a-9999-ddd7be5e70de
-	- #card ^681176f4-7e12-42c1-b44b-1e3dd504dfdd
+- How do you implement joins between DataFrames?
+  id:: 680b081e-3542-431a-9999-ddd7be5e70de
+	- #card
+	  id:: 681176f4-7e12-42c1-b44b-1e3dd504dfdd
 		- ```python
 		      empDF.join(deptDF, empDF.emp_dept_id == deptDF.dept_id, "inner").show(truncate=False)
 		      ```
@@ -840,26 +864,34 @@ deck:: [[pyspark_syntax]]
 			      ```python
 			      df.select(sumDistinct("salary"))
 			      ```
-- How do you format dates in PySpark? ^680b085e-bb6e-48ba-921f-894004fff328
-	- #card ^681176f4-7e12-42c1-b44b-1e3dd504dff2
+- How do you format dates in PySpark?
+  id:: 680b085e-bb6e-48ba-921f-894004fff328
+	- #card
+	  id:: 681176f4-7e12-42c1-b44b-1e3dd504dff2
 		- Using date_format:
 		      ```python
 		      df.select(col("input"), date_format(col("input"), "MM-dd-yyyy").alias("date_format")).show()
 		      ```
-- How do you convert string columns to date type? ^680b085e-6a2f-4ffc-a9ff-90101ee4e2d2
-	- #card ^681176f4-7e12-42c1-b44b-1e3dd504dff3
+- How do you convert string columns to date type?
+  id:: 680b085e-6a2f-4ffc-a9ff-90101ee4e2d2
+	- #card
+	  id:: 681176f4-7e12-42c1-b44b-1e3dd504dff3
 		- Using to_date:
 		      ```python
 		      df.select(col("input"), to_date(col("input"), "yyyy-MM-dd").alias("to_date")).show()
 		      ```
-- How do you calculate the difference between dates? ^680b085e-7402-4827-b091-4ae6471e4a9d
-	- #card ^681176f4-7e12-42c1-b44b-1e3dd504dff4
+- How do you calculate the difference between dates?
+  id:: 680b085e-7402-4827-b091-4ae6471e4a9d
+	- #card
+	  id:: 681176f4-7e12-42c1-b44b-1e3dd504dff4
 		- Using datediff:
 		      ```python
 		      df.select(col("input"), datediff(current_date(), col("input")).alias("datediff")).show()
 		      ```
-- How do you calculate months between two dates? ^680b085e-3feb-41fe-8f5d-e8e9c066fe0f
-	- #card ^681176f4-7e12-42c1-b44b-1e3dd504dff5
+- How do you calculate months between two dates?
+  id:: 680b085e-3feb-41fe-8f5d-e8e9c066fe0f
+	- #card
+	  id:: 681176f4-7e12-42c1-b44b-1e3dd504dff5
 		- Using months_between:
 		      ```python
 		      df.select(col("input"), months_between(current_date(), col("input")).alias("months_between")).show()
@@ -875,8 +907,10 @@ deck:: [[pyspark_syntax]]
 		  	df = df.withColumn("months_diff", 
 		                expr("(year(end_date) - year(start_date)) * 12 + (month(end_date) - month(start_date))"))
 		      ```
-- How do you truncate dates to specific units? ^680b085e-3641-4994-a88c-b2bde4cd536d
-	- #card ^681176f4-7e12-42c1-b44b-1e3dd504dff6
+- How do you truncate dates to specific units?
+  id:: 680b085e-3641-4994-a88c-b2bde4cd536d
+	- #card
+	  id:: 681176f4-7e12-42c1-b44b-1e3dd504dff6
 		- Using trunc:
 		      ```python
 		      df.select(
@@ -904,8 +938,10 @@ deck:: [[pyspark_syntax]]
 		  FROM your_table_name; /*post-gres & redshift*/
 		  """
 		  ```
-- How do you add or subtract time from dates? ^680b085e-fd0d-46e0-8bc8-e079a61dcf44
-	- #card ^681176f4-7e12-42c1-b44b-1e3dd504dff7
+- How do you add or subtract time from dates?
+  id:: 680b085e-fd0d-46e0-8bc8-e079a61dcf44
+	- #card
+	  id:: 681176f4-7e12-42c1-b44b-1e3dd504dff7
 		- Using add_months, date_add, date_sub:
 		      ```python
 		      df.select(
@@ -916,8 +952,10 @@ deck:: [[pyspark_syntax]]
 		          date_sub(col("input"), 4).alias("date_sub")
 		      ).show()
 		      ```
-- How do you extract parts of a date? ^680b085e-f420-406a-907e-3a3d7aa18501
-	- #card ^681176f4-7e12-42c1-b44b-1e3dd504dff8
+- How do you extract parts of a date?
+  id:: 680b085e-f420-406a-907e-3a3d7aa18501
+	- #card
+	  id:: 681176f4-7e12-42c1-b44b-1e3dd504dff8
 		- Using year, month, next_day, weekofyear:
 		      ```python
 		      df.select(
@@ -928,8 +966,10 @@ deck:: [[pyspark_syntax]]
 		          weekofyear(col("input")).alias("weekofyear")
 		      ).show()
 		      ```
-- How do you extract day information from dates? ^680b085e-8d09-4af4-867f-e73538630773
-	- #card ^681176f4-7e12-42c1-b44b-1e3dd504dff9
+- How do you extract day information from dates?
+  id:: 680b085e-8d09-4af4-867f-e73538630773
+	- #card
+	  id:: 681176f4-7e12-42c1-b44b-1e3dd504dff9
 		- Using dayofweek, dayofmonth, dayofyear:
 		      ```python
 		      df.select(
@@ -939,8 +979,10 @@ deck:: [[pyspark_syntax]]
 		          dayofyear(col("input")).alias("dayofyear")
 		      ).show()
 		      ```
-- How do you work with timestamps in PySpark? ^680b085e-373c-41f8-8fc5-f5e63fe857e1
-	- #card ^681176f4-7e12-42c1-b44b-1e3dd504dffa
+- How do you work with timestamps in PySpark?
+  id:: 680b085e-373c-41f8-8fc5-f5e63fe857e1
+	- #card
+	  id:: 681176f4-7e12-42c1-b44b-1e3dd504dffa
 		- Get current timestamp:
 		      ```python
 		      df2.select(current_timestamp().alias("current_timestamp"))
@@ -949,8 +991,10 @@ deck:: [[pyspark_syntax]]
 		      ```python
 		      to_timestamp(col("input"), "MM-dd-yyyy HH mm ss SSS").alias("to_timestamp")
 		      ```
-- How do you setup window functions in PySpark? ^680b085e-672e-4595-94c4-8918ee258477
-	- #card ^681176f4-7e12-42c1-b44b-1e3dd504dffb
+- How do you setup window functions in PySpark?
+  id:: 680b085e-672e-4595-94c4-8918ee258477
+	- #card
+	  id:: 681176f4-7e12-42c1-b44b-1e3dd504dffb
 		- Import Window:
 		      ```python
 		      from pyspark.sql.window import Window
@@ -963,8 +1007,10 @@ deck:: [[pyspark_syntax]]
 		      ```python
 		      df.withColumn("row_number", row_number().over(windowSpec)).show(truncate=False)
 		      ```
-- What window ranking functions are available in PySpark? ^680b085e-6ed2-4e6a-894f-fbdf9bdd7725
-	- #card ^681176f4-7e12-42c1-b44b-1e3dd504dffc
+- What window ranking functions are available in PySpark?
+  id:: 680b085e-6ed2-4e6a-894f-fbdf9bdd7725
+	- #card
+	  id:: 681176f4-7e12-42c1-b44b-1e3dd504dffc
 		- row_number(): assigns unique sequential integers
 		      ```python
 		      row_number().over(windowSpec)
@@ -977,8 +1023,10 @@ deck:: [[pyspark_syntax]]
 		      ```python
 		      dense_rank().over(windowSpec)
 		      ```
-- How do you convert JSON strings to structured data? ^680b085e-0dbf-4f39-a3de-bc6b9445153d
-	- #card ^681176f4-7e12-42c1-b44b-1e3dd504dffd
+- How do you convert JSON strings to structured data?
+  id:: 680b085e-0dbf-4f39-a3de-bc6b9445153d
+	- #card
+	  id:: 681176f4-7e12-42c1-b44b-1e3dd504dffd
 		- Using from_json:
 		      ```python
 		  from pyspark.sql.functions import from_json
@@ -1051,15 +1099,19 @@ deck:: [[pyspark_syntax]]
 		  +-----+---+----+-----+
 		  
 		  ```
-- How do you convert structured data to JSON strings? ^680b085e-646e-40b4-b36e-ed58332c27ef
-	- #card ^681176f4-7e12-42c1-b44b-1e3dd504dffe
+- How do you convert structured data to JSON strings?
+  id:: 680b085e-646e-40b4-b36e-ed58332c27ef
+	- #card
+	  id:: 681176f4-7e12-42c1-b44b-1e3dd504dffe
 		- Using to_json:
 		      ```python
 		      from pyspark.sql.functions import to_json, col
 		      df2.withColumn("value", to_json(col("value"))).show(truncate=False)
 		      ```
-- How do you extract fields from JSON strings? ^680b085e-a58f-4709-8101-4619c980b757
-	- #card ^681176f4-7e12-42c1-b44b-1e3dd504dfff
+- How do you extract fields from JSON strings?
+  id:: 680b085e-a58f-4709-8101-4619c980b757
+	- #card
+	  id:: 681176f4-7e12-42c1-b44b-1e3dd504dfff
 		- Using json_tuple:
 		      ```python
 		      df.select(
@@ -1121,14 +1173,18 @@ deck:: [[pyspark_syntax]]
 		  
 		  df_city.show(truncate=False):
 		  ```
-- How do you read multiple CSV files with PySpark? ^680b085e-8af1-4239-aa3c-65d703eaacac
-	- #card ^681176f4-7e12-42c1-b44b-1e3dd504e000
+- How do you read multiple CSV files with PySpark?
+  id:: 680b085e-8af1-4239-aa3c-65d703eaacac
+	- #card
+	  id:: 681176f4-7e12-42c1-b44b-1e3dd504e000
 		- Using comma-separated paths:
 		      ```python
 		      df = spark.read.csv("path1,path2,path3")
 		      ```
-- What options are available when reading CSV files? ^680b085e-5264-4623-a5f2-f3db3a43ad51
-	- #card ^681176f4-7e12-42c1-b44b-1e3dd504e001
+- What options are available when reading CSV files?
+  id:: 680b085e-5264-4623-a5f2-f3db3a43ad51
+	- #card
+	  id:: 681176f4-7e12-42c1-b44b-1e3dd504e001
 		- ```python
 		      spark.read.options(inferSchema='True', delimiter=',').csv("path")
 		    
@@ -1293,8 +1349,10 @@ deck:: [[pyspark_syntax]]
 			  
 			  """
 			  ```
-- How can you use the expr() function for filtering? ^680b088b-51ae-48ba-ac5d-eb17bf15f641
-	- #card ^681176f4-7e12-42c1-b44b-1e3dd504e004
+- How can you use the expr() function for filtering?
+  id:: 680b088b-51ae-48ba-ac5d-eb17bf15f641
+	- #card
+	  id:: 681176f4-7e12-42c1-b44b-1e3dd504e004
 		- ```python
 		      df.filter(expr("col1 == col2")).show()
 		      ```
@@ -1336,8 +1394,10 @@ deck:: [[pyspark_syntax]]
 		          END
 		      """))
 		      ```
-- How do you integrate SQL expressions with DataFrame operations? ^680b088b-ff70-4b2b-a28c-74ae3963705a
-	- #card ^681176f4-7e12-42c1-b44b-1e3dd504e008
+- How do you integrate SQL expressions with DataFrame operations?
+  id:: 680b088b-ff70-4b2b-a28c-74ae3963705a
+	- #card
+	  id:: 681176f4-7e12-42c1-b44b-1e3dd504e008
 		- Create temporary view:
 		      ```python
 		      df.createOrReplaceTempView("PERSON")
@@ -1346,16 +1406,20 @@ deck:: [[pyspark_syntax]]
 		      ```python
 		      spark.sql("select SPLIT(name, ',') as NameArray from PERSON").show()
 		      ```
-- How do you extract substrings from DataFrame columns? ^680b088b-2ce7-44b5-8f53-2f1ac2d5e5b6
-	- #card ^681176f4-7e12-42c1-b44b-1e3dd504e009
+- How do you extract substrings from DataFrame columns?
+  id:: 680b088b-2ce7-44b5-8f53-2f1ac2d5e5b6
+	- #card
+	  id:: 681176f4-7e12-42c1-b44b-1e3dd504e009
 		- Using substring:
 		      ```python
 		      df.withColumn('year', substring('date', 1, 4)) \
 		        .withColumn('month', substring('date', 5, 2)) \
 		        .withColumn('day', substring('date', 7, 2))
 		      ```
-- How do you replace characters in string columns? ^680b088b-29a4-4db5-bd49-d690ed9fed08
-	- #card ^681176f4-7e12-42c1-b44b-1e3dd504e00a
+- How do you replace characters in string columns?
+  id:: 680b088b-29a4-4db5-bd49-d690ed9fed08
+	- #card
+	  id:: 681176f4-7e12-42c1-b44b-1e3dd504e00a
 		- Using translate:
 		      ```python
 		   #The translate() function performs "character-by-character" substitution according to a mapping:
@@ -1377,8 +1441,10 @@ deck:: [[pyspark_syntax]]
 		  |1234567|12XXX567 |@#$4567   |
 		  +-------+---------+----------+
 		      ```
-- How do you apply regular expressions to DataFrame columns? ^680b088b-4570-4ea4-9fbb-328977786e48
-	- #card ^681176f4-7e12-42c1-b44b-1e3dd504e00b
+- How do you apply regular expressions to DataFrame columns?
+  id:: 680b088b-4570-4ea4-9fbb-328977786e48
+	- #card
+	  id:: 681176f4-7e12-42c1-b44b-1e3dd504e00b
 		- Using :
 		      ```python
 		  df.withColumn("new_column", expr("regexp_replace(col1, col2, col3)").alias("replaced_value")).show()
@@ -1387,8 +1453,10 @@ deck:: [[pyspark_syntax]]
 		  rlike / regexp: Filters rows based on a regex pattern
 		  regexp_extract_all: Extracts all occurrences of a pattern (available in newer Spark versions)
 		  ```
-- How do you create map-type columns from existing columns? ^680b088b-f19f-4f87-bc49-7e66de124418
-	- #card ^681176f4-7e12-42c1-b44b-1e3dd504e00c
+- How do you create map-type columns from existing columns?
+  id:: 680b088b-f19f-4f87-bc49-7e66de124418
+	- #card
+	  id:: 681176f4-7e12-42c1-b44b-1e3dd504e00c
 		- Using create_map:
 		      ```python
 		      df.withColumn("propertiesMap", create_map(
@@ -1432,8 +1500,10 @@ deck:: [[pyspark_syntax]]
 		  If you’re reading from an external source that naturally has map-like data:
 		  → Use MapType in schema.
 		  ```
-- How do you access keys and values in map-type columns? ^680b088b-0298-47df-9775-79e4f0ef1982
-	- #card ^681176f4-7e12-42c1-b44b-1e3dd504e00d
+- How do you access keys and values in map-type columns?
+  id:: 680b088b-0298-47df-9775-79e4f0ef1982
+	- #card
+	  id:: 681176f4-7e12-42c1-b44b-1e3dd504e00d
 		- Get keys:
 		      ```python
 		      df.select(df.id,explode(map_keys(df.properties))).distinct()
@@ -1443,8 +1513,10 @@ deck:: [[pyspark_syntax]]
 		      ```python
 		      df.select(df.id, explode(map_values(df.properties)).alias("property_value"))
 		  ```
-- How do you overlay one string on another at a specific position? ^680b088b-69ea-46c2-9b3f-91058dc14674
-	- #card ^681176f4-7e12-42c1-b44b-1e3dd504e00e
+- How do you overlay one string on another at a specific position?
+  id:: 680b088b-69ea-46c2-9b3f-91058dc14674
+	- #card
+	  id:: 681176f4-7e12-42c1-b44b-1e3dd504e00e
 		- Using overlay function:
 		      ```python
 		      overlay() =>  function replaces a substring at a specified position with another string:   overlay(source, replacement, position[, length])
@@ -1477,8 +1549,10 @@ deck:: [[pyspark_syntax]]
 		  Overlay: Replaces 2 characters starting at position 3 → "12XXX567" (replaces "34" with "XXX")
 		  Translate: Maps 1→@, 2→#, 3→$ → "@#$4567" (other characters unchanged)
 		      ```
-- How do you write data to CSV files with PySpark? ^680b088b-93ff-464f-b22f-b7ee750e5c70
-	- #card ^681176f4-7e12-42c1-b44b-1e3dd504e00f
+- How do you write data to CSV files with PySpark?
+  id:: 680b088b-93ff-464f-b22f-b7ee750e5c70
+	- #card
+	  id:: 681176f4-7e12-42c1-b44b-1e3dd504e00f
 		- ```python
 		      df2.write.format("csv").mode('overwrite').save("/tmp/spark_output/zipcodes")
 		      ```

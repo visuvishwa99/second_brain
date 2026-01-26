@@ -1,7 +1,8 @@
 deck:: [[python]]
 
 - First element of list
-	- #card ^6812ecc8-fe06-4738-aba2-23263b280000
+	- #card
+	  id:: 6812ecc8-fe06-4738-aba2-23263b280000
 		- ```python
 		  lst[0]
 		  ```
@@ -12,7 +13,8 @@ deck:: [[python]]
 		  lst[-1]
 		  ```
 - Count items in a list
-	- #card ^6812ecc8-a5c8-4660-8f39-6a88e466695a
+	- #card
+	  id:: 6812ecc8-a5c8-4660-8f39-6a88e466695a
 	  card-last-interval:: -1
 	  card-repeats:: 1
 	  card-ease-factor:: 2.5
@@ -44,7 +46,8 @@ deck:: [[python]]
 		  lst.copy()
 		  ```
 - Make a deep copy of a list
-	- #card ^6812ecc8-8d63-44c0-81bf-3b5dd27254fc
+	- #card
+	  id:: 6812ecc8-8d63-44c0-81bf-3b5dd27254fc
 		- ```python
 		  import copy
 		  copy.deepcopy(lst)
@@ -65,7 +68,8 @@ deck:: [[python]]
 		  list("Geeks for")
 		  ```
 - Access character at index 3 for a given list
-	- #card ^6812ecc8-78a7-4532-9af0-c60327071c4b
+	- #card
+	  id:: 6812ecc8-78a7-4532-9af0-c60327071c4b
 		- ```python
 		  string[3]
 		  ```
@@ -78,7 +82,8 @@ deck:: [[python]]
 		  for list you can use pop(index)
 		  ```
 - Add character 'c' at index 3 for a given list
-	- #card ^6812ecc8-ada0-4f6a-b44f-e7abe9be6d70
+	- #card
+	  id:: 6812ecc8-ada0-4f6a-b44f-e7abe9be6d70
 		- ```python
 		  string[:3] + 'c' + string[3:]
 		  ```
@@ -89,7 +94,8 @@ deck:: [[python]]
 		  s == s[::-1]
 		  ```
 - Check if two strings are anagrams
-	- #card ^6812ecc8-1eab-4cff-ae94-27ef163bef1a
+	- #card
+	  id:: 6812ecc8-1eab-4cff-ae94-27ef163bef1a
 		- ```python
 		  from collections import Counter
 		  Counter(s) == Counter(t)
@@ -101,7 +107,8 @@ deck:: [[python]]
 		  lst.append(value)
 		  ```
 - Add multiple elements to end of list
-	- #card ^6812ecc8-833c-4b55-8054-ba3ebdbcbf3e
+	- #card
+	  id:: 6812ecc8-833c-4b55-8054-ba3ebdbcbf3e
 		- ```python
 		  lst.extend(iterable)
 		  ```
@@ -112,7 +119,8 @@ deck:: [[python]]
 		  lst.insert(index, value)
 		  ```
 - Remove first occurrence of value of a list not string
-	- #card ^6812ecc8-3de0-4313-bcc3-67230ec8e333
+	- #card
+	  id:: 6812ecc8-3de0-4313-bcc3-67230ec8e333
 		- id:: 6812edc6-4f12-4db6-86d1-0422c6f64f9b
 		  ```python
 		  
@@ -141,7 +149,8 @@ deck:: [[python]]
 		  Note : Default: pop() removes the last element.
 		  ```
 - Remove and return element at index
-	- #card ^6812ecc8-b82d-4459-8cf1-813186e520a6
+	- #card
+	  id:: 6812ecc8-b82d-4459-8cf1-813186e520a6
 		- ```python
 		  lst.pop(index)
 		  ```
@@ -157,7 +166,8 @@ deck:: [[python]]
 		  “In-place” means that the original object is modified directly, rather than creating a new object.
 		  ```
 - Reverse list in-place
-	- #card ^6812ecc8-f62f-41db-a58e-7a02c773a168
+	- #card
+	  id:: 6812ecc8-f62f-41db-a58e-7a02c773a168
 		- ```python
 		  lst.reverse()
 		  &lst[::-1]
@@ -185,12 +195,14 @@ deck:: [[python]]
 		  
 		  ```
 - Difference between sort() and sorted()
-	- #card ^6812ecc8-ab0f-443f-9f9c-498c06418fcb
+	- #card
+	  id:: 6812ecc8-ab0f-443f-9f9c-498c06418fcb
 		- sort() is a list method that modifies the list in-place and returns None
 		- sorted() is a built-in function that returns a new sorted list
 		- sort() works only on lists, sorted() works on any iterable
 - Create a dictionary
-	- #card ^6812ecc8-b1c9-4c72-932d-7b27a41dbc30
+	- #card
+	  id:: 6812ecc8-b1c9-4c72-932d-7b27a41dbc30
 		- ```python
 		  d = {'key1': 'value1', 'key2': 'value2'} # Regular Dictionary
 		  
@@ -237,7 +249,8 @@ deck:: [[python]]
 		  d.keys()
 		  ```
 - Get all values of dict
-	- #card ^6812ecc8-5ddf-451c-9037-6aaaffaae5a2
+	- #card
+	  id:: 6812ecc8-5ddf-451c-9037-6aaaffaae5a2
 		- ```python
 		  d.values()
 		  ```
@@ -248,7 +261,8 @@ deck:: [[python]]
 		  d.items()
 		  ```
 - Create a set
-	- #card ^6812ecc8-f03e-4766-a4ca-057c5695bacf
+	- #card
+	  id:: 6812ecc8-f03e-4766-a4ca-057c5695bacf
 		- ```python
 		  s = {1, 2, 3}
 		  ```
@@ -257,7 +271,8 @@ deck:: [[python]]
 		  s = set([1, 2, 3])
 		  ```
 - Add to a set
-	- #card ^6812ecc8-d5a7-425d-9acc-4a4469e0ae45
+	- #card
+	  id:: 6812ecc8-d5a7-425d-9acc-4a4469e0ae45
 		- ```python
 		  add() → adds a single element & update() → adds multiple elements
 		  
@@ -307,7 +322,8 @@ deck:: [[python]]
 		  # result would be "data-engineering-concepts"
 		  ```
 - Split string on whitespace
-	- #card ^6812ecc8-87d1-46bb-ba55-a3f67aa3497a
+	- #card
+	  id:: 6812ecc8-87d1-46bb-ba55-a3f67aa3497a
 		- ```python
 		  s.split()
 		  ```
@@ -318,7 +334,8 @@ deck:: [[python]]
 		  s.split(',')
 		  ```
 - Convert to uppercase
-	- #card ^6812ecc8-1fe8-475c-bff9-02d32e88641b
+	- #card
+	  id:: 6812ecc8-1fe8-475c-bff9-02d32e88641b
 		- ```python
 		  s.upper()
 		  ```
@@ -329,7 +346,8 @@ deck:: [[python]]
 		  s.lower()
 		  ```
 - Remove whitespace from ends
-	- #card ^6812ecc8-dac3-43c5-9bbf-203d46b27beb
+	- #card
+	  id:: 6812ecc8-dac3-43c5-9bbf-203d46b27beb
 		- ```python
 		  s.strip()
 		  ```
@@ -340,7 +358,8 @@ deck:: [[python]]
 		  s.isalnum()
 		  ```
 - Get ASCII value of character
-	- #card ^6812ecc8-9dac-453a-a49b-f929b6536622
+	- #card
+	  id:: 6812ecc8-9dac-453a-a49b-f929b6536622
 		- ```python
 		  ord('a')
 		  ```
@@ -351,7 +370,8 @@ deck:: [[python]]
 		  chr(97)
 		  ```
 - Iterate with index and value
-	- #card ^6812ecc8-9af9-4500-826e-9bbda6562efd
+	- #card
+	  id:: 6812ecc8-9af9-4500-826e-9bbda6562efd
 		- ```python
 		  for idx, val in enumerate(lst):
 		   # Your code here
@@ -363,7 +383,8 @@ deck:: [[python]]
 		  range(start, stop, step)
 		  ```
 - Loop over dictionary keys
-	- #card ^6812ecc8-cf98-4ee0-a8d5-ebbfc6028827
+	- #card
+	  id:: 6812ecc8-cf98-4ee0-a8d5-ebbfc6028827
 		- ```python
 		  for key in d:
 		   # Your code here
@@ -376,7 +397,8 @@ deck:: [[python]]
 		   # Your code here
 		  ```
 - Loop over key-value pairs
-	- #card ^6812ecc8-00e7-4b15-8aa1-79443ac24b64
+	- #card
+	  id:: 6812ecc8-00e7-4b15-8aa1-79443ac24b64
 		- ```python
 		  for key, value in d.items():
 		   # Your code here
@@ -388,7 +410,8 @@ deck:: [[python]]
 		  lambda arguments: expression
 		  ```
 - Name a function to each item in iterable
-	- #card ^6812ecc8-42be-46d3-95cf-d34c8311c4af
+	- #card
+	  id:: 6812ecc8-42be-46d3-95cf-d34c8311c4af
 		- ```python
 		  map(function, iterable)
 		  # map() function takes two arguments: a function and an iterable. It returns a map object 
@@ -407,7 +430,8 @@ deck:: [[python]]
 		  filter(function, sequence)
 		  ```
 - Name a function cumulatively to items
-	- #card ^6812ecc8-6eba-48df-95ea-51fbc682618a
+	- #card
+	  id:: 6812ecc8-6eba-48df-95ea-51fbc682618a
 		- ```python
 		  from functools import reduce
 		  reduce(function, sequence)
@@ -445,7 +469,8 @@ deck:: [[python]]
 		  
 		  ```
 - Rotate list right / left  by n
-	- #card ^6812ecc8-702f-48e6-84ed-ed7eac2a5a0c
+	- #card
+	  id:: 6812ecc8-702f-48e6-84ed-ed7eac2a5a0c
 		- ```python
 		  
 		  Visual memory aid:
@@ -460,7 +485,8 @@ deck:: [[python]]
 		  float('inf')
 		  ```
 - Define negative infinity
-	- #card ^6812ecc8-c5b1-41ae-b25e-608f62d840bf
+	- #card
+	  id:: 6812ecc8-c5b1-41ae-b25e-608f62d840bf
 		- ```python
 		  float('-inf')
 		  ```
@@ -476,7 +502,8 @@ deck:: [[python]]
 		  math.floor(-3.2)  # Returns -4 (rounds down to more negative)
 		  ```
 - Round a number up
-	- #card ^6812ecc8-7dae-4233-96b5-65f6a097885e
+	- #card
+	  id:: 6812ecc8-7dae-4233-96b5-65f6a097885e
 		- ```python
 		  # Ceil examples (round up)
 		  math.ceil(3.2)  # Returns 4
@@ -503,7 +530,8 @@ deck:: [[python]]
 		  
 		  ```
 - Check if substring exists
-	- #card ^6812ecc8-b93b-4622-9647-dc7655384834
+	- #card
+	  id:: 6812ecc8-b93b-4622-9647-dc7655384834
 		- ```python
 		  if substring in string:
 		   # Your code here
@@ -524,7 +552,8 @@ deck:: [[python]]
 		  CTRL+]  # Indent
 		  ```
 - Handle an exception
-	- #card ^6812ecc8-af81-4b08-9713-1b0926ebf0a2
+	- #card
+	  id:: 6812ecc8-af81-4b08-9713-1b0926ebf0a2
 		- ```python
 		  try:
 		   # code that might raise exception
@@ -541,7 +570,8 @@ deck:: [[python]]
 		   # handle multiple types
 		  ```
 - Raise an exception
-	- #card ^6812ecc8-cdb8-42a3-83e5-1f37cdc05c73
+	- #card
+	  id:: 6812ecc8-cdb8-42a3-83e5-1f37cdc05c73
 		- ```python
 		  raise ExceptionClass("message")
 		  ```

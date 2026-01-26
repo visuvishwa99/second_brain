@@ -1,123 +1,244 @@
 deck::  [[aws]]
 
-- What are the three main network zones in AWS architecture? :-> {{ "Public Internet" zone, "AWS Public" zone, and "AWS Private" zone }} ^680bd5a5-1251-484e-a197-29cfa989f9ae
-- How do users access AWS Public services from home? :-> {{ Using the internet as transit with a public IP }} ^680bd5a5-d93c-4b54-9a86-8ce2e8984061
-- What is IGW in AWS networking? :-> {{ Internet Gateway - translates private IPs to public IPs and facilitates traffic between AWS zones and the internet }} ^680bd5a5-9db1-43a3-aa6b-8848dba50784
-- How are VPCs isolated by default? :-> {{ VPCs are isolated unless specifically configured to connect with other networks }} ^680bd5a5-3818-4737-9609-0eb82055a522
-- What are the two methods for on-premises systems to access VPCs? :-> {{ VPN or Direct Connect }} ^680bd5a5-3d45-42e7-a90d-39982c0c78cf
-- What's the primary difference between public and private AWS services? :-> {{ Public services are accessible via the internet, while private services are only accessible within AWS network or through specific connection methods }} ^680bd5a5-4d16-49c3-b8c3-12103b5ba9d9
-- What is IAM in AWS? :-> {{ Identity and Access Management - a service that enables secure management of access to AWS services and resources }} ^680bd5a5-79a5-4941-a031-5b70ad385e90
-- What are the four main components of IAM? :-> {{ Users, Groups, Roles, and Policies }} ^680bd5a5-1ca2-4ffa-9075-14ba7b9ba471
-- How does AWS use a default deny model? :-> {{ All actions are denied by default unless explicitly allowed through policies }} ^680bd5a5-bf94-47f6-bf26-1cd195c691a5
-- What is an IAM User? :-> {{ An entity you create in AWS to represent a person or application that interacts with AWS services }} ^680bd5a5-ff97-4894-9eb5-1487ddb09fdc
-- What is an IAM Group? :-> {{ A collection of IAM users that helps manage permissions for multiple users }} ^680bd5a5-fd80-4c36-9607-f967ad655cf3
-- What is an IAM Policy? :-> {{ A document that defines permissions and can be attached to users, groups, or roles }} ^680bd5a5-9510-462d-b37e-873e336336ef
-- What is an IAM Role? :-> {{ An identity with specific permissions that can be assumed by entities that need temporary access }} ^680bd5a5-010b-401d-b568-145ad78c405e
-- What are the three main elements of an AWS Policy? :-> {{ Effect (Allow/Deny), Action (specific actions allowed/denied), and Resource (resources to which actions apply) }} ^680bd5a5-fb86-4664-9045-ce4026ddbe77
-- Which policy element specifies whether the policy allows or denies access? :-> {{ Effect }} ^680bd5a5-8f98-4fc8-9f85-2e8b79d77314
-- Which policy element lists the specific actions that the policy allows or denies? :-> {{ Action }} ^680bd5a5-2351-4192-b2be-0fa9da377794
-- Which policy element specifies the resources to which the actions apply? :-> {{ Resource }} ^680bd5a5-3d71-49f5-9bfd-268dedfb0885
-- What is the recommended principle when granting permissions? :-> {{ Principle of least privilege - granting only the permissions necessary for users to perform their tasks }} ^680bd5a5-4857-4b04-904e-99700b9deb3c
-- What's the difference between an IAM Role and an IAM Policy? :-> {{ A policy defines permissions, while a role is an identity that has permission policies and can be assumed by users or services }} ^680bd5a5-368b-4440-acb9-1e219e5af20e
-- Why are IAM Roles needed for AWS services like EC2? :-> {{ AWS services like EC2 cannot directly have policies attached to them; they need roles to interact with other AWS services }} ^680bd5a5-85c9-4ddf-9e3f-7752ecb9faf8
-- How does an EC2 instance access an S3 bucket? :-> {{ By having an IAM role with S3 access permissions attached to the EC2 instance }} ^680bd5a5-5a91-40e5-b385-006fe5e8c0df
-- What happens if an EC2 instance doesn't have the correct role? :-> {{ It cannot access AWS resources that require those permissions (e.g., cannot list S3 buckets) }} ^680bd5a5-0978-47b8-8b58-e841d27e7015
-- What happens to permissions when attaching a role with S3 full access to an EC2 instance? :-> {{ The EC2 instance gains the ability to perform all S3 operations }} ^680bd5a5-3636-432c-8300-245895caeaba
-- What are three best practices for IAM security? :-> {{ Follow the principle of least privilege, regularly review permissions, use roles for applications running on AWS services }} ^680bd5a5-a940-4135-95d0-b5de90f33210
-- What is the security benefit of separating permissions between user roles and service roles? :-> {{ It reduces the potential impact of security breaches by limiting the scope of permissions }} ^680bd5a5-cfc8-4267-b976-45e1949dc0fa
-- How should credentials be managed for applications running on EC2 instances? :-> {{ Use IAM roles instead of storing access keys on the instance }} ^680bd5a5-903b-43b5-95e2-51c5febae925
-- Why should you regularly review and refine IAM permissions? :-> {{ To maintain security by ensuring users and services have only the permissions they need }} ^680bd5a5-f471-47f6-bd8d-d235739c9b20
-- Why should you enable MFA for privileged users? :-> {{ To add an extra layer of security beyond just a password }} ^680bd5a5-21c1-4d1a-a08e-a7d2ec392209
-- What is Amazon S3? :-> {{ Amazon Simple Storage Service - allows people to store objects (files) in "buckets" (directories) }} ^680bd5a5-7660-4697-a9b4-6e4bcf3da198
-- What is the maximum object size in S3? :-> {{ 5TB }} ^680bd5a5-501b-42ad-9e27-7fbe39293d29
-- What requirement do S3 bucket names have? :-> {{ They must be globally unique }} ^680bd5a5-3242-47f8-a462-5a5a34027e81
-- What is an S3 object's key? :-> {{ The full path to the object, e.g., <my_bucket>/my_folder/my_file.txt }} ^680bd5a5-d9f9-4b54-ad3b-41d026db593c
-- What are object tags in S3? :-> {{ Key/value pairs (up to 10) that are useful for security and lifecycle management }} ^680bd5a5-c5c0-45c6-96b8-59c2770b6755
-- Why is S3 considered a good backbone for machine learning services? :-> {{ It offers infinite size, no provisioning, extreme durability, and decoupling of storage from compute }} ^680bd5a5-61fe-4528-8fe5-2a8137c78a51
-- What is data partitioning in S3? :-> {{ A pattern for speeding up range queries by organizing data in a logical structure }} ^680bd5a5-ca33-4ea9-8b78-d90aa6c4bcc6
-- What is an example of date-based partitioning in S3? :-> {{ s3://bucket/my-data-set/year/month/day/hour/data_00.csv }} ^680bd5a5-2c38-4cc0-b21b-b594ec4c6333
-- What is an example of product-based partitioning in S3? :-> {{ s3://bucket/my-data-set/product-id/data_32.csv }} ^680bd5a5-cf9b-45aa-9722-a55200fdd06d
-- How does data partitioning benefit query performance? :-> {{ It allows queries to access only relevant partitions rather than scanning the entire dataset }} ^680bd5a5-c1b8-465d-87ec-85b042811ae6
-- Who typically handles data partitioning in AWS? :-> {{ Tools like AWS Glue can automatically handle partitioning strategies }} ^680bd5a5-221c-4724-b030-aa20e01e6ba4
-- Name at least four S3 storage classes :-> {{ S3 Standard, S3 Standard-IA, S3 One Zone-IA, S3 Glacier Instant Retrieval, S3 Glacier Flexible Retrieval, S3 Glacier Deep Archive, S3 Intelligent Tiering }} ^680bd5a5-56f8-4c6c-b0e9-8d6822797ed8
-- What is the durability of objects in S3 across all storage classes? :-> {{ 99.999999999% (11 nines) }} ^680bd5a5-2f68-4060-b5aa-8bdb9ca8777f
-- What happens if you store 10,000,000 objects in S3? :-> {{ You can expect to lose a single object once every 10,000 years on average }} ^680bd5a5-171d-43d2-bd7e-27e71056010f
-- What is the availability percentage of S3 Standard? :-> {{ 99.99% availability (not available for approximately 53 minutes per year) }} ^680bd5a5-19fa-4582-aed3-90399bf6c6c1
-- Which S3 storage class is designed for data accessed less than once per quarter? :-> {{ S3 Glacier Instant Retrieval }} ^680bd5a5-58d7-4e31-80ea-56c751786c87
-- Which S3 storage class automatically moves objects between access tiers based on usage? :-> {{ S3 Intelligent Tiering }} ^680bd5a5-a730-4e80-84d3-2d79394edbc1
-- What are S3 Lifecycle Rules used for? :-> {{ To automate moving objects between storage classes and to expire (delete) objects after a certain time }} ^680bd5a5-b480-41e2-b7b7-d07a5f9d738c
-- What is a transition action in S3 Lifecycle Rules? :-> {{ Moving objects from one storage class to another after a specified time }} ^680bd5a5-de25-4233-ba42-9977e33c86d1
-- What is an expiration action in S3 Lifecycle Rules? :-> {{ Deleting objects after a specified time }} ^680bd5a5-b2dd-40a4-a6ef-ad8eb9772499
-- What can S3 Lifecycle Rules be used to delete? :-> {{ Old versions of files, access log files, incomplete multi-part uploads }} ^680bd5a5-dc80-4c69-8bab-4103b74ef3b5
-- How would you design an S3 Lifecycle Rule for profile photo thumbnails that can be easily recreated? :-> {{ Store thumbnails in One-Zone IA with a lifecycle configuration to expire (delete) them after the required retention period }} ^680bd5a5-cec7-405d-a0be-da27bff7fbd9
-- What are the two main types of access control for S3? :-> {{ User-based (IAM policies) and Resource-based (bucket policies, ACLs) }} ^680bd5a5-0d09-400a-9b17-4055b129d3a3
-- When can an IAM principal access an S3 object? :-> {{ If the user IAM permissions ALLOW it OR the resource policy ALLOWS it, AND there's no explicit DENY }} ^680bd5a5-97f8-44ee-839e-0891362e3f28
-- What is the default security posture in AWS S3? :-> {{ Default deny - all public access is blocked by default }} ^680bd5a5-a16c-49e4-a9a3-a5c96eb350ce
-- What is Bucket Policy? :-> {{ A resource-based policy attached to an S3 bucket that controls access to the bucket and its objects }} ^680bd5a5-a265-404a-b7c9-cb4410462378
-- What is Object ACL? :-> {{ Access Control List at the object level that provides more granular permissions (can be disabled) }} ^680bd5a5-1896-4358-87b1-179e2fc3c4ff
-- What is Bucket ACL? :-> {{ Access Control List at the bucket level (less common and can be disabled) }} ^680bd5a5-02cb-46aa-8ed8-8535c5d8db47
-- What are the four methods of encrypting objects in S3? :-> {{ Server-Side Encryption with S3-Managed Keys (SSE-S3), Server-Side Encryption with KMS Keys (SSE-KMS), Server-Side Encryption with Customer-Provided Keys (SSE-C), and Client-Side Encryption }} ^680bd5a5-f097-49d3-85be-5519d7ce3868
-- What is the default encryption type for new buckets and objects? :-> {{ SSE-S3 (Server-Side Encryption with Amazon S3-Managed Keys) }} ^680bd5a5-d3b4-44ef-85ca-4e62b94b953c
-- What encryption type gives you user control and audit key usage via CloudTrail? :-> {{ SSE-KMS (Server-Side Encryption with AWS KMS Keys) }} ^680bd5a5-eaca-4b1c-bff1-48a34bb68c05
-- Which encryption type requires HTTPS? :-> {{ SSE-C (Server-Side Encryption with Customer-Provided Keys) }} ^680bd5a5-803f-4364-9070-6c3a323f5b50
-- In which encryption type does the customer manage the entire encryption process? :-> {{ Client-Side Encryption }} ^680bd5a5-9887-4cb8-b12b-c2fc92083459
-- What header must be set for SSE-S3 encryption? :-> {{ "x-amz-server-side-encryption": "AES256" }} ^680bd5a5-d66f-41a8-86ae-801abaab9522
-- What header must be set for SSE-KMS encryption? :-> {{ "x-amz-server-side-encryption": "aws:kms" }} ^680bd5a5-d0f1-4a85-8dfe-2f6c24747d93
-- What is S3 Versioning? :-> {{ A feature that stores multiple versions of an object in the same bucket }} ^680bd5a5-2e19-4f4d-9a9e-b85eee2adc35
-- What happens when you delete a versioned object? :-> {{ A delete marker is created, but the object isn't permanently deleted }} ^680bd5a5-093b-4dae-919d-5c691e5cf281
-- How can you permanently delete a specific version of an object? :-> {{ By specifying the version ID in the delete operation }} ^680bd5a5-1318-4f4e-b99a-e1ee636eedb1
-- What must be enabled for S3 replication to work? :-> {{ Versioning must be enabled on both source and destination buckets }} ^680bd5a5-31f7-49b4-ab9e-9ff655315546
-- What are the two types of S3 replication? :-> {{ Cross-Region Replication (CRR) and Same-Region Replication (SRR) }} ^680bd5a5-6c13-4818-bf2c-7676c4f94f0e
-- Is S3 replication synchronous or asynchronous? :-> {{ Asynchronous }} ^680bd5a5-6bba-48a1-9c4f-5070c2ac4e7d
-- What use case does Cross-Region Replication serve? :-> {{ Compliance, lower latency access, replication across accounts }} ^680bd5a5-864b-486f-a049-37355684ac26
-- What use case does Same-Region Replication serve? :-> {{ Log aggregation, live replication between production and test accounts }} ^680bd5a5-6416-4861-acc1-6742700d58f5
-- What is AWS Lambda? :-> {{ A serverless compute service that runs code in response to events without provisioning servers }} ^680bd5a5-dfbd-478c-a00b-cc23eb3f63c2
-- Which programming languages are supported by Lambda? :-> {{ Node.js, Python, Java, C#, Go, PowerShell, Ruby }} ^680bd5a5-b449-4e91-a644-09686fdb683d
-- What are the main advantages of Lambda? :-> {{ Serverless (no server management), continuous scaling, high availability, pay-per-use }} ^680bd5a5-3788-4664-a312-4f383090d4d2
-- What is the maximum execution time for a Lambda function? :-> {{ 900 seconds (15 minutes) }} ^680bd5a5-aea2-4a08-bdaf-8577a187b071
-- What are the main uses of Lambda? :-> {{ Real-time file processing, stream processing, ETL, cron replacement, processing AWS events }} ^680bd5a5-f716-471e-b3b6-fbebed289c04
-- What is the pricing model for Lambda? :-> {{ Pay per invocation and compute time, with a free tier of 1M requests and 400,000 GB-seconds of compute per month }} ^680bd5a5-94ec-4741-b42f-07146c3d2ed0
-- What is an event in AWS Lambda? :-> {{ A JSON-formatted document containing information about the event that triggered the Lambda function }} ^680bd5a5-5893-4316-a8e4-8b79233efd87
-- What is the context object in AWS Lambda? :-> {{ An object that provides methods and properties about the invocation, function, and execution environment }} ^680bd5a5-0a96-466b-b6da-775909f22634
-- What is a trigger for Lambda? :-> {{ An AWS service or resource that invokes a Lambda function }} ^680bd5a5-e725-4e9a-8f1d-8938c2a80457
-- Name three possible triggers for Lambda functions :-> {{ S3 events, DynamoDB streams, API Gateway requests, CloudWatch Events, SNS notifications }} ^680bd5a5-d638-44df-b18e-dcbf198238d3
-- Can Lambda functions call other AWS services? :-> {{ Yes, Lambda functions can interact with any AWS service or external service }} ^680bd5a5-6162-48bc-b2fd-ea74e84097b3
-- What is AWS Glue? :-> {{ A fully managed cloud-optimized ETL service that discovers, prepares, and transforms data }} ^680bd5a5-8e71-4860-997b-a97e1061d68e
-- What are the main components of AWS Glue? :-> {{ Data Catalog, Crawlers, ETL Engine, Job Scheduler }} ^680bd5a5-7b81-479e-8d19-d68ae231699c
-- What is a Glue Data Catalog? :-> {{ A central metadata repository that stores information about data sources, targets, and schemas }} ^680bd5a5-78af-4693-9f26-5904c72653e5
-- What is a Glue Crawler? :-> {{ A component that scans data sources to infer schemas and update the Data Catalog }} ^680bd5a5-382d-47ba-8280-e4c0dbc8abed
-- What technology does Glue use for ETL jobs? :-> {{ Apache Spark }} ^680bd5a5-22f8-46ef-9e20-658a6af53990
-- How are Glue jobs triggered? :-> {{ On demand, on a schedule, or by events }} ^680bd5a5-9274-4c90-af17-c7225fa2c08f
-- What is Amazon DynamoDB? :-> {{ A fully managed NoSQL database service for any scale }} ^680bd5a5-fef7-4834-840c-7210bebae8f9
-- What are the two capacity modes in DynamoDB? :-> {{ Provisioned Mode and On-Demand Mode }} ^680bd5a5-66fd-4141-8245-8d42c290bfab
-- What are Write Capacity Units (WCU) in DynamoDB? :-> {{ A measure of write throughput: one WCU represents one write per second for an item up to 1 KB }} ^680bd5a5-8737-417e-a161-64fdf1820e3c
-- What are Read Capacity Units (RCU) in DynamoDB? :-> {{ A measure of read throughput: one RCU represents one strongly consistent read per second, or two eventually consistent reads per second, for items up to 4 KB }} ^680bd5a5-fcd9-4d63-bae4-31fa8d200dc2
-- What is the difference between Eventually Consistent and Strongly Consistent reads? :-> {{ Eventually Consistent reads might return stale data after a recent write due to replication, while Strongly Consistent reads return the most up-to-date data but consume twice the RCUs }} ^680bd5a5-3f7f-44f2-920a-0a039c8dc314
-- What happens if you exceed provisioned capacity in DynamoDB? :-> {{ You get a "ProvisionedThroughputExceededException" and requests are throttled }} ^680bd5a5-9a96-4e26-90ce-398f184da106
-- What is Amazon Redshift? :-> {{ A fully managed, petabyte-scale data warehouse service }} ^680bd5a5-0437-4ec6-b637-4d0b3a613756
-- What are the two deployment options for Redshift? :-> {{ Redshift Serverless and Redshift Cluster }} ^680bd5a5-dadc-4ecc-b1ed-ffce6fe0477e
-- What is a leader node in Redshift? :-> {{ The node that manages query planning, result aggregation, and communication with client applications }} ^680bd5a5-6046-4a52-bbee-b216f2aff3ff
-- What is a compute node in Redshift? :-> {{ The node that stores data and executes queries assigned by the leader node }} ^680bd5a5-0812-4d9a-a8cd-331bc60ad87b
-- What database engine is Redshift compatible with? :-> {{ PostgreSQL }} ^680bd5a5-7b4c-4264-8c95-45a744c334f1
-- What storage format does Redshift use? :-> {{ Columnar storage }} ^680bd5a5-7d4e-4db3-9322-0d7fe2a6eb13
-- Why is columnar storage beneficial for data warehouses? :-> {{ It improves query performance by reading only required columns and enables better compression }} ^680bd5a5-278d-4493-b44d-d2f19df047eb
-- What are the three data distribution styles in Redshift? :-> {{ KEY distribution, EVEN distribution, and ALL distribution }} ^680bd5a5-5f54-4794-96aa-a1ba95e10e69
-- When should you use KEY distribution? :-> {{ When joining tables on a common column, distribute both tables on that join key }} ^680bd5a5-9fff-4df6-8174-04b236111526
-- When should you use EVEN distribution? :-> {{ For tables without clear join patterns or where uniform distribution is important }} ^680bd5a5-3f6d-491b-b5c6-7afd631dd784
-- When should you use ALL distribution? :-> {{ For smaller dimension tables that are frequently joined with fact tables }} ^680bd5a5-3685-49af-8807-7f921f73c9e5
-- What is a sort key in Redshift? :-> {{ A column that determines the order in which data is physically stored, improving query performance }} ^680bd5a5-a838-4759-8a10-5edbdd768239
-- What are the two types of sort keys in Redshift? :-> {{ COMPOUND (default) and INTERLEAVED }} ^680bd5a5-e58b-4fa2-ba53-526c87502121
-- What are AWS Step Functions? :-> {{ A service to design workflows for orchestrating AWS services }} ^680bd5a5-26b2-44f7-ad71-e953e3f72956
-- What are the key benefits of Step Functions? :-> {{ Easy visualizations, advanced error handling and retry mechanisms, audit capabilities, ability to wait for arbitrary time periods }} ^680bd5a5-9ede-4445-9db9-bd43ba485d46
-- What is the maximum execution time of a State Machine? :-> {{ 1 year }} ^680bd5a5-0b87-4714-9300-e655f9692fff
-- What language are Step Functions defined in? :-> {{ Amazon States Language (ASL), a JSON-based language }} ^680bd5a5-babe-42b9-889f-b67b971c4ee4
-- What are some common use cases for Step Functions? :-> {{ Training ML models, managing batch jobs, coordinating microservices }} ^680bd5a5-d5ca-49dd-855d-d77fefa8a1eb
-- What is Amazon Athena? :-> {{ A serverless query service that makes it easy to analyze data directly in S3 using standard SQL }} ^680bd662-e0e9-42ff-85a4-d6324f087d23
-- How is Athena priced? :-> {{ Pay per query, based on the amount of data scanned, with a 10 MB minimum per query }} ^680bd662-eefd-49b8-99ff-31b13b148b23
-- What is the minimum amount billed for very small queries in Athena? :-> {{ 10 MB, even if the query processes less data }} ^680bd662-a17f-4f12-bb1d-2a7715038808
-- What file formats does Athena support? :-> {{ CSV, JSON, Parquet, ORC, and other common formats stored in S3 }} ^680bd662-4615-428c-9c17-2ef5dc5d08db
-- How can you optimize Athena query costs? :-> {{ Use columnar formats like Parquet or ORC, partition your data effectively, use appropriate WHERE clauses, and compress your data }} ^680bd662-2652-4e6b-9ba2-7ed04bec978d
-- What's the relationship between Athena and the AWS Glue Data Catalog? :-> {{ Athena uses the AWS Glue Data Catalog to store and retrieve table metadata for analysis }} ^680bd662-9f0e-4109-b5e5-32133a4a99c7
-- What SQL dialect does Athena use? :-> {{ Presto SQL (ANSI SQL with some extensions) }} ^680bd662-f815-4f36-8df8-0df39619a918
-- How can you create tables in Athena? :-> {{ By defining them manually in Athena or by using a Glue crawler to automatically infer the schema }} ^680bd662-90dd-4952-bd62-5b7ce96ad0fa
-- What happens when you query a table that has partitioned data? :-> {{ Athena only scans the partitions that match your query's WHERE clause, improving performance and reducing cost }} ^680bd662-7841-422d-9cc1-4238908a9311
+- What are the three main network zones in AWS architecture? :-> {{ "Public Internet" zone, "AWS Public" zone, and "AWS Private" zone }}
+  id:: 680bd5a5-1251-484e-a197-29cfa989f9ae
+- How do users access AWS Public services from home? :-> {{ Using the internet as transit with a public IP }}
+  id:: 680bd5a5-d93c-4b54-9a86-8ce2e8984061
+- What is IGW in AWS networking? :-> {{ Internet Gateway - translates private IPs to public IPs and facilitates traffic between AWS zones and the internet }}
+  id:: 680bd5a5-9db1-43a3-aa6b-8848dba50784
+- How are VPCs isolated by default? :-> {{ VPCs are isolated unless specifically configured to connect with other networks }}
+  id:: 680bd5a5-3818-4737-9609-0eb82055a522
+- What are the two methods for on-premises systems to access VPCs? :-> {{ VPN or Direct Connect }}
+  id:: 680bd5a5-3d45-42e7-a90d-39982c0c78cf
+- What's the primary difference between public and private AWS services? :-> {{ Public services are accessible via the internet, while private services are only accessible within AWS network or through specific connection methods }}
+  id:: 680bd5a5-4d16-49c3-b8c3-12103b5ba9d9
+- What is IAM in AWS? :-> {{ Identity and Access Management - a service that enables secure management of access to AWS services and resources }}
+  id:: 680bd5a5-79a5-4941-a031-5b70ad385e90
+- What are the four main components of IAM? :-> {{ Users, Groups, Roles, and Policies }}
+  id:: 680bd5a5-1ca2-4ffa-9075-14ba7b9ba471
+- How does AWS use a default deny model? :-> {{ All actions are denied by default unless explicitly allowed through policies }}
+  id:: 680bd5a5-bf94-47f6-bf26-1cd195c691a5
+- What is an IAM User? :-> {{ An entity you create in AWS to represent a person or application that interacts with AWS services }}
+  id:: 680bd5a5-ff97-4894-9eb5-1487ddb09fdc
+- What is an IAM Group? :-> {{ A collection of IAM users that helps manage permissions for multiple users }}
+  id:: 680bd5a5-fd80-4c36-9607-f967ad655cf3
+- What is an IAM Policy? :-> {{ A document that defines permissions and can be attached to users, groups, or roles }}
+  id:: 680bd5a5-9510-462d-b37e-873e336336ef
+- What is an IAM Role? :-> {{ An identity with specific permissions that can be assumed by entities that need temporary access }}
+  id:: 680bd5a5-010b-401d-b568-145ad78c405e
+- What are the three main elements of an AWS Policy? :-> {{ Effect (Allow/Deny), Action (specific actions allowed/denied), and Resource (resources to which actions apply) }}
+  id:: 680bd5a5-fb86-4664-9045-ce4026ddbe77
+- Which policy element specifies whether the policy allows or denies access? :-> {{ Effect }}
+  id:: 680bd5a5-8f98-4fc8-9f85-2e8b79d77314
+- Which policy element lists the specific actions that the policy allows or denies? :-> {{ Action }}
+  id:: 680bd5a5-2351-4192-b2be-0fa9da377794
+- Which policy element specifies the resources to which the actions apply? :-> {{ Resource }}
+  id:: 680bd5a5-3d71-49f5-9bfd-268dedfb0885
+- What is the recommended principle when granting permissions? :-> {{ Principle of least privilege - granting only the permissions necessary for users to perform their tasks }}
+  id:: 680bd5a5-4857-4b04-904e-99700b9deb3c
+- What's the difference between an IAM Role and an IAM Policy? :-> {{ A policy defines permissions, while a role is an identity that has permission policies and can be assumed by users or services }}
+  id:: 680bd5a5-368b-4440-acb9-1e219e5af20e
+- Why are IAM Roles needed for AWS services like EC2? :-> {{ AWS services like EC2 cannot directly have policies attached to them; they need roles to interact with other AWS services }}
+  id:: 680bd5a5-85c9-4ddf-9e3f-7752ecb9faf8
+- How does an EC2 instance access an S3 bucket? :-> {{ By having an IAM role with S3 access permissions attached to the EC2 instance }}
+  id:: 680bd5a5-5a91-40e5-b385-006fe5e8c0df
+- What happens if an EC2 instance doesn't have the correct role? :-> {{ It cannot access AWS resources that require those permissions (e.g., cannot list S3 buckets) }}
+  id:: 680bd5a5-0978-47b8-8b58-e841d27e7015
+- What happens to permissions when attaching a role with S3 full access to an EC2 instance? :-> {{ The EC2 instance gains the ability to perform all S3 operations }}
+  id:: 680bd5a5-3636-432c-8300-245895caeaba
+- What are three best practices for IAM security? :-> {{ Follow the principle of least privilege, regularly review permissions, use roles for applications running on AWS services }}
+  id:: 680bd5a5-a940-4135-95d0-b5de90f33210
+- What is the security benefit of separating permissions between user roles and service roles? :-> {{ It reduces the potential impact of security breaches by limiting the scope of permissions }}
+  id:: 680bd5a5-cfc8-4267-b976-45e1949dc0fa
+- How should credentials be managed for applications running on EC2 instances? :-> {{ Use IAM roles instead of storing access keys on the instance }}
+  id:: 680bd5a5-903b-43b5-95e2-51c5febae925
+- Why should you regularly review and refine IAM permissions? :-> {{ To maintain security by ensuring users and services have only the permissions they need }}
+  id:: 680bd5a5-f471-47f6-bd8d-d235739c9b20
+- Why should you enable MFA for privileged users? :-> {{ To add an extra layer of security beyond just a password }}
+  id:: 680bd5a5-21c1-4d1a-a08e-a7d2ec392209
+- What is Amazon S3? :-> {{ Amazon Simple Storage Service - allows people to store objects (files) in "buckets" (directories) }}
+  id:: 680bd5a5-7660-4697-a9b4-6e4bcf3da198
+- What is the maximum object size in S3? :-> {{ 5TB }}
+  id:: 680bd5a5-501b-42ad-9e27-7fbe39293d29
+- What requirement do S3 bucket names have? :-> {{ They must be globally unique }}
+  id:: 680bd5a5-3242-47f8-a462-5a5a34027e81
+- What is an S3 object's key? :-> {{ The full path to the object, e.g., <my_bucket>/my_folder/my_file.txt }}
+  id:: 680bd5a5-d9f9-4b54-ad3b-41d026db593c
+- What are object tags in S3? :-> {{ Key/value pairs (up to 10) that are useful for security and lifecycle management }}
+  id:: 680bd5a5-c5c0-45c6-96b8-59c2770b6755
+- Why is S3 considered a good backbone for machine learning services? :-> {{ It offers infinite size, no provisioning, extreme durability, and decoupling of storage from compute }}
+  id:: 680bd5a5-61fe-4528-8fe5-2a8137c78a51
+- What is data partitioning in S3? :-> {{ A pattern for speeding up range queries by organizing data in a logical structure }}
+  id:: 680bd5a5-ca33-4ea9-8b78-d90aa6c4bcc6
+- What is an example of date-based partitioning in S3? :-> {{ s3://bucket/my-data-set/year/month/day/hour/data_00.csv }}
+  id:: 680bd5a5-2c38-4cc0-b21b-b594ec4c6333
+- What is an example of product-based partitioning in S3? :-> {{ s3://bucket/my-data-set/product-id/data_32.csv }}
+  id:: 680bd5a5-cf9b-45aa-9722-a55200fdd06d
+- How does data partitioning benefit query performance? :-> {{ It allows queries to access only relevant partitions rather than scanning the entire dataset }}
+  id:: 680bd5a5-c1b8-465d-87ec-85b042811ae6
+- Who typically handles data partitioning in AWS? :-> {{ Tools like AWS Glue can automatically handle partitioning strategies }}
+  id:: 680bd5a5-221c-4724-b030-aa20e01e6ba4
+- Name at least four S3 storage classes :-> {{ S3 Standard, S3 Standard-IA, S3 One Zone-IA, S3 Glacier Instant Retrieval, S3 Glacier Flexible Retrieval, S3 Glacier Deep Archive, S3 Intelligent Tiering }}
+  id:: 680bd5a5-56f8-4c6c-b0e9-8d6822797ed8
+- What is the durability of objects in S3 across all storage classes? :-> {{ 99.999999999% (11 nines) }}
+  id:: 680bd5a5-2f68-4060-b5aa-8bdb9ca8777f
+- What happens if you store 10,000,000 objects in S3? :-> {{ You can expect to lose a single object once every 10,000 years on average }}
+  id:: 680bd5a5-171d-43d2-bd7e-27e71056010f
+- What is the availability percentage of S3 Standard? :-> {{ 99.99% availability (not available for approximately 53 minutes per year) }}
+  id:: 680bd5a5-19fa-4582-aed3-90399bf6c6c1
+- Which S3 storage class is designed for data accessed less than once per quarter? :-> {{ S3 Glacier Instant Retrieval }}
+  id:: 680bd5a5-58d7-4e31-80ea-56c751786c87
+- Which S3 storage class automatically moves objects between access tiers based on usage? :-> {{ S3 Intelligent Tiering }}
+  id:: 680bd5a5-a730-4e80-84d3-2d79394edbc1
+- What are S3 Lifecycle Rules used for? :-> {{ To automate moving objects between storage classes and to expire (delete) objects after a certain time }}
+  id:: 680bd5a5-b480-41e2-b7b7-d07a5f9d738c
+- What is a transition action in S3 Lifecycle Rules? :-> {{ Moving objects from one storage class to another after a specified time }}
+  id:: 680bd5a5-de25-4233-ba42-9977e33c86d1
+- What is an expiration action in S3 Lifecycle Rules? :-> {{ Deleting objects after a specified time }}
+  id:: 680bd5a5-b2dd-40a4-a6ef-ad8eb9772499
+- What can S3 Lifecycle Rules be used to delete? :-> {{ Old versions of files, access log files, incomplete multi-part uploads }}
+  id:: 680bd5a5-dc80-4c69-8bab-4103b74ef3b5
+- How would you design an S3 Lifecycle Rule for profile photo thumbnails that can be easily recreated? :-> {{ Store thumbnails in One-Zone IA with a lifecycle configuration to expire (delete) them after the required retention period }}
+  id:: 680bd5a5-cec7-405d-a0be-da27bff7fbd9
+- What are the two main types of access control for S3? :-> {{ User-based (IAM policies) and Resource-based (bucket policies, ACLs) }}
+  id:: 680bd5a5-0d09-400a-9b17-4055b129d3a3
+- When can an IAM principal access an S3 object? :-> {{ If the user IAM permissions ALLOW it OR the resource policy ALLOWS it, AND there's no explicit DENY }}
+  id:: 680bd5a5-97f8-44ee-839e-0891362e3f28
+- What is the default security posture in AWS S3? :-> {{ Default deny - all public access is blocked by default }}
+  id:: 680bd5a5-a16c-49e4-a9a3-a5c96eb350ce
+- What is Bucket Policy? :-> {{ A resource-based policy attached to an S3 bucket that controls access to the bucket and its objects }}
+  id:: 680bd5a5-a265-404a-b7c9-cb4410462378
+- What is Object ACL? :-> {{ Access Control List at the object level that provides more granular permissions (can be disabled) }}
+  id:: 680bd5a5-1896-4358-87b1-179e2fc3c4ff
+- What is Bucket ACL? :-> {{ Access Control List at the bucket level (less common and can be disabled) }}
+  id:: 680bd5a5-02cb-46aa-8ed8-8535c5d8db47
+- What are the four methods of encrypting objects in S3? :-> {{ Server-Side Encryption with S3-Managed Keys (SSE-S3), Server-Side Encryption with KMS Keys (SSE-KMS), Server-Side Encryption with Customer-Provided Keys (SSE-C), and Client-Side Encryption }}
+  id:: 680bd5a5-f097-49d3-85be-5519d7ce3868
+- What is the default encryption type for new buckets and objects? :-> {{ SSE-S3 (Server-Side Encryption with Amazon S3-Managed Keys) }}
+  id:: 680bd5a5-d3b4-44ef-85ca-4e62b94b953c
+- What encryption type gives you user control and audit key usage via CloudTrail? :-> {{ SSE-KMS (Server-Side Encryption with AWS KMS Keys) }}
+  id:: 680bd5a5-eaca-4b1c-bff1-48a34bb68c05
+- Which encryption type requires HTTPS? :-> {{ SSE-C (Server-Side Encryption with Customer-Provided Keys) }}
+  id:: 680bd5a5-803f-4364-9070-6c3a323f5b50
+- In which encryption type does the customer manage the entire encryption process? :-> {{ Client-Side Encryption }}
+  id:: 680bd5a5-9887-4cb8-b12b-c2fc92083459
+- What header must be set for SSE-S3 encryption? :-> {{ "x-amz-server-side-encryption": "AES256" }}
+  id:: 680bd5a5-d66f-41a8-86ae-801abaab9522
+- What header must be set for SSE-KMS encryption? :-> {{ "x-amz-server-side-encryption": "aws:kms" }}
+  id:: 680bd5a5-d0f1-4a85-8dfe-2f6c24747d93
+- What is S3 Versioning? :-> {{ A feature that stores multiple versions of an object in the same bucket }}
+  id:: 680bd5a5-2e19-4f4d-9a9e-b85eee2adc35
+- What happens when you delete a versioned object? :-> {{ A delete marker is created, but the object isn't permanently deleted }}
+  id:: 680bd5a5-093b-4dae-919d-5c691e5cf281
+- How can you permanently delete a specific version of an object? :-> {{ By specifying the version ID in the delete operation }}
+  id:: 680bd5a5-1318-4f4e-b99a-e1ee636eedb1
+- What must be enabled for S3 replication to work? :-> {{ Versioning must be enabled on both source and destination buckets }}
+  id:: 680bd5a5-31f7-49b4-ab9e-9ff655315546
+- What are the two types of S3 replication? :-> {{ Cross-Region Replication (CRR) and Same-Region Replication (SRR) }}
+  id:: 680bd5a5-6c13-4818-bf2c-7676c4f94f0e
+- Is S3 replication synchronous or asynchronous? :-> {{ Asynchronous }}
+  id:: 680bd5a5-6bba-48a1-9c4f-5070c2ac4e7d
+- What use case does Cross-Region Replication serve? :-> {{ Compliance, lower latency access, replication across accounts }}
+  id:: 680bd5a5-864b-486f-a049-37355684ac26
+- What use case does Same-Region Replication serve? :-> {{ Log aggregation, live replication between production and test accounts }}
+  id:: 680bd5a5-6416-4861-acc1-6742700d58f5
+- What is AWS Lambda? :-> {{ A serverless compute service that runs code in response to events without provisioning servers }}
+  id:: 680bd5a5-dfbd-478c-a00b-cc23eb3f63c2
+- Which programming languages are supported by Lambda? :-> {{ Node.js, Python, Java, C#, Go, PowerShell, Ruby }}
+  id:: 680bd5a5-b449-4e91-a644-09686fdb683d
+- What are the main advantages of Lambda? :-> {{ Serverless (no server management), continuous scaling, high availability, pay-per-use }}
+  id:: 680bd5a5-3788-4664-a312-4f383090d4d2
+- What is the maximum execution time for a Lambda function? :-> {{ 900 seconds (15 minutes) }}
+  id:: 680bd5a5-aea2-4a08-bdaf-8577a187b071
+- What are the main uses of Lambda? :-> {{ Real-time file processing, stream processing, ETL, cron replacement, processing AWS events }}
+  id:: 680bd5a5-f716-471e-b3b6-fbebed289c04
+- What is the pricing model for Lambda? :-> {{ Pay per invocation and compute time, with a free tier of 1M requests and 400,000 GB-seconds of compute per month }}
+  id:: 680bd5a5-94ec-4741-b42f-07146c3d2ed0
+- What is an event in AWS Lambda? :-> {{ A JSON-formatted document containing information about the event that triggered the Lambda function }}
+  id:: 680bd5a5-5893-4316-a8e4-8b79233efd87
+- What is the context object in AWS Lambda? :-> {{ An object that provides methods and properties about the invocation, function, and execution environment }}
+  id:: 680bd5a5-0a96-466b-b6da-775909f22634
+- What is a trigger for Lambda? :-> {{ An AWS service or resource that invokes a Lambda function }}
+  id:: 680bd5a5-e725-4e9a-8f1d-8938c2a80457
+- Name three possible triggers for Lambda functions :-> {{ S3 events, DynamoDB streams, API Gateway requests, CloudWatch Events, SNS notifications }}
+  id:: 680bd5a5-d638-44df-b18e-dcbf198238d3
+- Can Lambda functions call other AWS services? :-> {{ Yes, Lambda functions can interact with any AWS service or external service }}
+  id:: 680bd5a5-6162-48bc-b2fd-ea74e84097b3
+- What is AWS Glue? :-> {{ A fully managed cloud-optimized ETL service that discovers, prepares, and transforms data }}
+  id:: 680bd5a5-8e71-4860-997b-a97e1061d68e
+- What are the main components of AWS Glue? :-> {{ Data Catalog, Crawlers, ETL Engine, Job Scheduler }}
+  id:: 680bd5a5-7b81-479e-8d19-d68ae231699c
+- What is a Glue Data Catalog? :-> {{ A central metadata repository that stores information about data sources, targets, and schemas }}
+  id:: 680bd5a5-78af-4693-9f26-5904c72653e5
+- What is a Glue Crawler? :-> {{ A component that scans data sources to infer schemas and update the Data Catalog }}
+  id:: 680bd5a5-382d-47ba-8280-e4c0dbc8abed
+- What technology does Glue use for ETL jobs? :-> {{ Apache Spark }}
+  id:: 680bd5a5-22f8-46ef-9e20-658a6af53990
+- How are Glue jobs triggered? :-> {{ On demand, on a schedule, or by events }}
+  id:: 680bd5a5-9274-4c90-af17-c7225fa2c08f
+- What is Amazon DynamoDB? :-> {{ A fully managed NoSQL database service for any scale }}
+  id:: 680bd5a5-fef7-4834-840c-7210bebae8f9
+- What are the two capacity modes in DynamoDB? :-> {{ Provisioned Mode and On-Demand Mode }}
+  id:: 680bd5a5-66fd-4141-8245-8d42c290bfab
+- What are Write Capacity Units (WCU) in DynamoDB? :-> {{ A measure of write throughput: one WCU represents one write per second for an item up to 1 KB }}
+  id:: 680bd5a5-8737-417e-a161-64fdf1820e3c
+- What are Read Capacity Units (RCU) in DynamoDB? :-> {{ A measure of read throughput: one RCU represents one strongly consistent read per second, or two eventually consistent reads per second, for items up to 4 KB }}
+  id:: 680bd5a5-fcd9-4d63-bae4-31fa8d200dc2
+- What is the difference between Eventually Consistent and Strongly Consistent reads? :-> {{ Eventually Consistent reads might return stale data after a recent write due to replication, while Strongly Consistent reads return the most up-to-date data but consume twice the RCUs }}
+  id:: 680bd5a5-3f7f-44f2-920a-0a039c8dc314
+- What happens if you exceed provisioned capacity in DynamoDB? :-> {{ You get a "ProvisionedThroughputExceededException" and requests are throttled }}
+  id:: 680bd5a5-9a96-4e26-90ce-398f184da106
+- What is Amazon Redshift? :-> {{ A fully managed, petabyte-scale data warehouse service }}
+  id:: 680bd5a5-0437-4ec6-b637-4d0b3a613756
+- What are the two deployment options for Redshift? :-> {{ Redshift Serverless and Redshift Cluster }}
+  id:: 680bd5a5-dadc-4ecc-b1ed-ffce6fe0477e
+- What is a leader node in Redshift? :-> {{ The node that manages query planning, result aggregation, and communication with client applications }}
+  id:: 680bd5a5-6046-4a52-bbee-b216f2aff3ff
+- What is a compute node in Redshift? :-> {{ The node that stores data and executes queries assigned by the leader node }}
+  id:: 680bd5a5-0812-4d9a-a8cd-331bc60ad87b
+- What database engine is Redshift compatible with? :-> {{ PostgreSQL }}
+  id:: 680bd5a5-7b4c-4264-8c95-45a744c334f1
+- What storage format does Redshift use? :-> {{ Columnar storage }}
+  id:: 680bd5a5-7d4e-4db3-9322-0d7fe2a6eb13
+- Why is columnar storage beneficial for data warehouses? :-> {{ It improves query performance by reading only required columns and enables better compression }}
+  id:: 680bd5a5-278d-4493-b44d-d2f19df047eb
+- What are the three data distribution styles in Redshift? :-> {{ KEY distribution, EVEN distribution, and ALL distribution }}
+  id:: 680bd5a5-5f54-4794-96aa-a1ba95e10e69
+- When should you use KEY distribution? :-> {{ When joining tables on a common column, distribute both tables on that join key }}
+  id:: 680bd5a5-9fff-4df6-8174-04b236111526
+- When should you use EVEN distribution? :-> {{ For tables without clear join patterns or where uniform distribution is important }}
+  id:: 680bd5a5-3f6d-491b-b5c6-7afd631dd784
+- When should you use ALL distribution? :-> {{ For smaller dimension tables that are frequently joined with fact tables }}
+  id:: 680bd5a5-3685-49af-8807-7f921f73c9e5
+- What is a sort key in Redshift? :-> {{ A column that determines the order in which data is physically stored, improving query performance }}
+  id:: 680bd5a5-a838-4759-8a10-5edbdd768239
+- What are the two types of sort keys in Redshift? :-> {{ COMPOUND (default) and INTERLEAVED }}
+  id:: 680bd5a5-e58b-4fa2-ba53-526c87502121
+- What are AWS Step Functions? :-> {{ A service to design workflows for orchestrating AWS services }}
+  id:: 680bd5a5-26b2-44f7-ad71-e953e3f72956
+- What are the key benefits of Step Functions? :-> {{ Easy visualizations, advanced error handling and retry mechanisms, audit capabilities, ability to wait for arbitrary time periods }}
+  id:: 680bd5a5-9ede-4445-9db9-bd43ba485d46
+- What is the maximum execution time of a State Machine? :-> {{ 1 year }}
+  id:: 680bd5a5-0b87-4714-9300-e655f9692fff
+- What language are Step Functions defined in? :-> {{ Amazon States Language (ASL), a JSON-based language }}
+  id:: 680bd5a5-babe-42b9-889f-b67b971c4ee4
+- What are some common use cases for Step Functions? :-> {{ Training ML models, managing batch jobs, coordinating microservices }}
+  id:: 680bd5a5-d5ca-49dd-855d-d77fefa8a1eb
+- What is Amazon Athena? :-> {{ A serverless query service that makes it easy to analyze data directly in S3 using standard SQL }}
+  id:: 680bd662-e0e9-42ff-85a4-d6324f087d23
+- How is Athena priced? :-> {{ Pay per query, based on the amount of data scanned, with a 10 MB minimum per query }}
+  id:: 680bd662-eefd-49b8-99ff-31b13b148b23
+- What is the minimum amount billed for very small queries in Athena? :-> {{ 10 MB, even if the query processes less data }}
+  id:: 680bd662-a17f-4f12-bb1d-2a7715038808
+- What file formats does Athena support? :-> {{ CSV, JSON, Parquet, ORC, and other common formats stored in S3 }}
+  id:: 680bd662-4615-428c-9c17-2ef5dc5d08db
+- How can you optimize Athena query costs? :-> {{ Use columnar formats like Parquet or ORC, partition your data effectively, use appropriate WHERE clauses, and compress your data }}
+  id:: 680bd662-2652-4e6b-9ba2-7ed04bec978d
+- What's the relationship between Athena and the AWS Glue Data Catalog? :-> {{ Athena uses the AWS Glue Data Catalog to store and retrieve table metadata for analysis }}
+  id:: 680bd662-9f0e-4109-b5e5-32133a4a99c7
+- What SQL dialect does Athena use? :-> {{ Presto SQL (ANSI SQL with some extensions) }}
+  id:: 680bd662-f815-4f36-8df8-0df39619a918
+- How can you create tables in Athena? :-> {{ By defining them manually in Athena or by using a Glue crawler to automatically infer the schema }}
+  id:: 680bd662-90dd-4952-bd62-5b7ce96ad0fa
+- What happens when you query a table that has partitioned data? :-> {{ Athena only scans the partitions that match your query's WHERE clause, improving performance and reducing cost }}
+  id:: 680bd662-7841-422d-9cc1-4238908a9311

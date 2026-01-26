@@ -1,5 +1,6 @@
 - [[spark streaming]]
-- [[Streaming Aggregates and State Store]] ^663d6cc9-ae7f-4bb0-ba84-3ff0223b0e6f
+- [[Streaming Aggregates and State Store]]
+  id:: 663d6cc9-ae7f-4bb0-ba84-3ff0223b0e6f
   collapsed:: true
 	- Syntax  => outputMode("complete")
 	  ```python
@@ -15,7 +16,8 @@
 	  ![image.png](../assets/image_1715303229659_0.png)
 - [[Incremental Aggregates and Update Mode]]
   collapsed:: true
-	- syntax => Need to use   .outputMode ("update").foreachBatch(self.upsert) ^663dcba4-f021-40bf-a1a0-0e9a9d6156a4
+	- syntax => Need to use   .outputMode ("update").foreachBatch(self.upsert)
+	  id:: 663dcba4-f021-40bf-a1a0-0e9a9d6156a4
 	  #+BEGIN_NOTE
 	  upsert = merge + insert 
 	  #+END_NOTE

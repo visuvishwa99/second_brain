@@ -2,17 +2,20 @@ deck:: [[spark_optimization]]
 
 - What is the default storage level when using cache() on an RDD and dataframe?
   collapsed:: true
-	- #card ^6816857a-c58d-415a-b5c6-43bf23f58593
+	- #card
+	  id:: 6816857a-c58d-415a-b5c6-43bf23f58593
 	  collapsed:: true
 		- MEMORY_ONLY for RDD and MEMORY_AND_DISK_DESER for dataframe (version > spark 3.0 else for dataset and dataframe => )
 - When should you use persist() instead of cache()?
   collapsed:: true
-	- #card ^6816857a-28dc-41b2-a97a-8772a739a3be
+	- #card
+	  id:: 6816857a-28dc-41b2-a97a-8772a739a3be
 	  collapsed:: true
 		- When you want to assign a storage level other than the default (MEMORY_ONLY for RDD or MEMORY_AND_DISK_DESER (3.0+ else memory and disk)for Dataframe)
 - List the five storage levels available with persist()
   collapsed:: true
-	- #card ^6816857a-d0e6-4360-958f-aece1299101e
+	- #card
+	  id:: 6816857a-d0e6-4360-958f-aece1299101e
 	  collapsed:: true
 		- MEMORY_ONLY
 		- MEMORY_AND_DISK
@@ -22,12 +25,14 @@ deck:: [[spark_optimization]]
 		- syntax with examples df.persist(StorageLevel.MEMORY_AND_DISK)
 - What does MEMORY_ONLY_SER storage level mean?
   collapsed:: true
-	- #card ^6816857a-685b-4bcd-8395-8417dc7983b6
+	- #card
+	  id:: 6816857a-685b-4bcd-8395-8417dc7983b6
 	  collapsed:: true
 		- Data is stored in serialized format in memory only
 - What is Kryo and why is it better than Java's default serializer? Even in Spark 3.0+ and Databricks, Kryo has some limitations: Unserializable classes: Some classes might not be serializable by Kryo
   collapsed:: true
-	- #card ^6816857a-0774-40b4-a3d6-860c2b43a0e1
+	- #card
+	  id:: 6816857a-0774-40b4-a3d6-860c2b43a0e1
 	  collapsed:: true
 		- Kryo is a serialization library that converts objects into a compact binary format much faster than Java's default serialization
 		- Note : 
@@ -38,34 +43,41 @@ deck:: [[spark_optimization]]
 		  ```
 - Which Spark APIs are generally recommended over RDDs and why?
   collapsed:: true
-	- #card ^6816857a-432d-484b-b979-8cce19498002
+	- #card
+	  id:: 6816857a-432d-484b-b979-8cce19498002
 	  collapsed:: true
 		- DataFrames and Datasets, because they leverage Spark's Catalyst optimizer and offer better performance
 - What is the primary benefit of caching and persisting data in Spark?
   collapsed:: true
-	- #card ^6816857a-3282-42fd-8771-82fe7f2e3c53
+	- #card
+	  id:: 6816857a-3282-42fd-8771-82fe7f2e3c53
 	  collapsed:: true
 		- Reduces disk I/O and recomputation overhead by keeping frequently used data in memory
 - What is a broadcast table in Spark?
   collapsed:: true
-	- #card ^6816857a-9ebb-48b2-ae96-63e0c01937a5
+	- #card
+	  id:: 6816857a-9ebb-48b2-ae96-63e0c01937a5
 	  collapsed:: true
 		- A read-only dataset that is distributed to all worker nodes in advance to avoid shuffling during joins
 - When should you use broadcast tables?
   collapsed:: true
-	- #card ^6816857a-04b6-4cba-a7ed-8321b0444f7d
+	- #card
+	  id:: 6816857a-04b6-4cba-a7ed-8321b0444f7d
 	  collapsed:: true
 		- For smaller tables that need to be accessed by multiple tasks, especially in join operations
 - What is Predicate Pushdown in Spark SQL?
   collapsed:: true
-	- #card ^6816857a-210d-47bd-a815-f3ca4501be31
+	- #card
+	  id:: 6816857a-210d-47bd-a815-f3ca4501be31
 	  collapsed:: true
 		- A technique that improves query performance by pushing down filters to the data source, reducing the amount of data that needs to be processed
 - Name three join strategies in Spark
   collapsed:: true
-	- #card ^6816857a-cfc0-44bf-a7f4-67fbadf80e78
+	- #card
+	  id:: 6816857a-cfc0-44bf-a7f4-67fbadf80e78
 	  collapsed:: true
-		- Broadcast hash join ^6816857a-6b91-4cff-b17b-a4bf5097f97f
+		- Broadcast hash join
+		  id:: 6816857a-6b91-4cff-b17b-a4bf5097f97f
 		- Shuffle hash join
 		- Sort-merge join
 		- That `/*+ ... */` part is called a **query hint**.It is telling the optimizer.
@@ -147,22 +159,26 @@ deck:: [[spark_optimization]]
 			- ⚡ **Best for large-scale equi-joins**
 - When is a broadcast hash join preferred?
   collapsed:: true
-	- #card ^6816857a-cbf0-40c9-b0f6-1aafefbe9b8e
+	- #card
+	  id:: 6816857a-cbf0-40c9-b0f6-1aafefbe9b8e
 	  collapsed:: true
 		- When one of the tables is small enough to fit in memory and can be broadcast to all worker nodes
 - What is partitioning in Spark and why is it important?
   collapsed:: true
-	- #card ^6816857a-47ed-48da-9c41-690ebf2a20cc
+	- #card
+	  id:: 6816857a-47ed-48da-9c41-690ebf2a20cc
 	  collapsed:: true
 		- Dividing data across multiple nodes to enable parallel processing and optimize join operations
 - What is Hive bucketing and when is it useful?
   collapsed:: true
-	- #card ^6816857a-0297-4bf4-9568-8a16197328f0
+	- #card
+	  id:: 6816857a-0297-4bf4-9568-8a16197328f0
 	  collapsed:: true
 		- A technique that organizes data into buckets based on hash values of specified columns, useful for optimizing join operations on large datasets
 - What is Z-order clustering?
   collapsed:: true
-	- #card ^6816857a-cbc8-45d6-87b9-6eeacdfc0687
+	- #card
+	  id:: 6816857a-cbc8-45d6-87b9-6eeacdfc0687
 	  collapsed:: true
 		- Z-order clustering (also called Z-order indexing or Z-order curve) is a data organization technique that arranges multi-dimensional data  to a one-dimensional space while keeping related data points close to each other
 		- The technique gets its name from the Z-shaped pattern it creates when visualized in two dimensions
@@ -200,7 +216,8 @@ deck:: [[spark_optimization]]
 		  ```
 - What configuration should you adjust to allocate memory for caching in Spark?
   collapsed:: true
-	- #card ^6816857a-dbf7-46c6-a941-f3d668087f3d
+	- #card
+	  id:: 6816857a-dbf7-46c6-a941-f3d668087f3d
 	  collapsed:: true
 		- ```python
 		  | Config                                         | Purpose                                                                                                                                |
@@ -300,12 +317,14 @@ deck:: [[spark_optimization]]
 		  ```
 - Why is controlling the number of partitions important?
   collapsed:: true
-	- #card ^68168579-5564-4ca3-ae49-aad38fd1aca7
+	- #card
+	  id:: 68168579-5564-4ca3-ae49-aad38fd1aca7
 	  collapsed:: true
 		- Too few partitions limits parallelism, while too many increases task scheduling overhead
 - What is data skew and how can it impact Spark performance?
   collapsed:: true
-	- #card ^68168579-f03b-4580-b209-7585f0f72170
+	- #card
+	  id:: 68168579-f03b-4580-b209-7585f0f72170
 	  collapsed:: true
 		- **Key techniques:**
 		- **Salting**: Add random suffixes to keys to distribute processing (e.g., `concat($"key", lit("_"), (rand()*10).cast("int").cast("string"))`)
@@ -316,12 +335,14 @@ deck:: [[spark_optimization]]
 		- **Adaptive Query Execution (AQE)**: Enable with `spark.sql.adaptive.skewJoin.enabled=true` in Spark 3.0+
 - How can you mitigate data skew in Spark?
   collapsed:: true
-	- #card ^682e9ace-6743-4198-ab08-64e1288515a3
+	- #card
+	  id:: 682e9ace-6743-4198-ab08-64e1288515a3
 	  collapsed:: true
 		- By using salting techniques, custom partitioning, or broadcasting smaller datasets
 - What is the benefit of using parquet file format in Spark?
   collapsed:: true
-	- #card ^68168579-78f7-4a90-a91a-7fe241cc7048
+	- #card
+	  id:: 68168579-78f7-4a90-a91a-7fe241cc7048
 	  collapsed:: true
 		- Columnar storage provides better compression and enables column pruning and predicate pushdown
 		- ```textile
@@ -363,22 +384,26 @@ deck:: [[spark_optimization]]
 		  ```
 - What is the difference between narrow and wide transformations?
   collapsed:: true
-	- #card ^68168579-5e69-4185-82b7-d333446a82e3
+	- #card
+	  id:: 68168579-5e69-4185-82b7-d333446a82e3
 	  collapsed:: true
 		- Narrow transformations compute each partition independently (map, filter), while wide transformations require data exchange between partitions (reduceByKey, groupByKey)
 - What is the difference between reduceByKey and groupByKey?
   collapsed:: true
-	- #card ^68168579-b5ba-4f0d-8b18-075c86704db9
+	- #card
+	  id:: 68168579-b5ba-4f0d-8b18-075c86704db9
 	  collapsed:: true
 		- Both are wide transformations, but reduceByKey does MapSide combine while groupByKey doesn't
 - What is a DataFrame in Spark?
   collapsed:: true
-	- #card ^68168579-fefa-46d5-a4a7-aa09d34b4373
+	- #card
+	  id:: 68168579-fefa-46d5-a4a7-aa09d34b4373
 	  collapsed:: true
 		- Dataset<Row> - a distributed collection of data organized into named columns
 - What's the difference between select and selectExpr?
   collapsed:: true
-	- #card ^68168579-5cf7-4d03-9fda-dc16ca332463
+	- #card
+	  id:: 68168579-5cf7-4d03-9fda-dc16ca332463
 	  collapsed:: true
 		- select() vs selectExpr() :
 		  ```sql	
@@ -397,7 +422,8 @@ deck:: [[spark_optimization]]
 		  ```
 - databricks optimization techniques?
   collapsed:: true
-	- #card ^68168579-14f2-44dd-a6c7-378828792ac6
+	- #card
+	  id:: 68168579-14f2-44dd-a6c7-378828792ac6
 	  collapsed:: true
 		- ```sql
 		  ## 1. Data Organization & Layout
@@ -865,7 +891,8 @@ deck:: [[spark_optimization]]
 				  ```
 - What can cause a Spark stage to have only one task and why is it problematic?
   collapsed:: true
-	- #card ^68168579-6d0b-42ce-92f8-ce29b2821438
+	- #card
+	  id:: 68168579-6d0b-42ce-92f8-ce29b2821438
 	  collapsed:: true
 		- Causes include:
 		  collapsed:: true
@@ -878,7 +905,8 @@ deck:: [[spark_optimization]]
 		- This is problematic because only one CPU is utilized while the rest of the cluster remains idle
 - What is the command to optimize file compaction in Delta Lake tables?
   collapsed:: true
-	- #card ^68168579-5dec-4b1e-aafb-12ede9c1c6a2
+	- #card
+	  id:: 68168579-5dec-4b1e-aafb-12ede9c1c6a2
 	  collapsed:: true
 		- ```sql
 		  OPTIMIZE table_name [WHERE predicate] [ZORDER BY (col_name1 [, ...])]
@@ -992,7 +1020,8 @@ deck:: [[spark_optimization]]
 	  ```
 - How to identify potential skew in Spark metrics?
   collapsed:: true
-	- #card ^68168579-820c-4293-9794-040279f48e6f
+	- #card
+	  id:: 68168579-820c-4293-9794-040279f48e6f
 	  collapsed:: true
 		- Compare Max duration with 75th percentile duration
 		- If Max is 50% more than 75th percentile, you may have skew

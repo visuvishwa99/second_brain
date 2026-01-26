@@ -1,0 +1,3 @@
+- [[dbt]]
+- [[SQL]]
+- [[snow flake]]
