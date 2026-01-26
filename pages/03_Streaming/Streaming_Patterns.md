@@ -1,3 +1,26 @@
+---
+tags:
+  - level3
+---
+
+# Streaming Patterns
+
+## Statefull (S).md
+
+- Statefull  Transformation  -> spark is maintaining/storing  the results . pass the results across the micro batches.
+- ![image.png](../assets/image_1740418453707_0.png)
+- [[OM:complete]]
+- [[OM:update]] ^66426678-bb23-4917-8c31-cc691886f82b
+  collapsed:: true
+	- statefull aggregations
+		- ![image.png](../assets/image_1715630652570_0.png)
+-
+
+
+---
+
+## Stateless (S).md
+
 filters:: {"sparkstreaming" true}
 
 - Stateless Transformation -> No need to store the state of results . so there are stateless
@@ -39,3 +62,7 @@ filters:: {"sparkstreaming" true}
 	- Data Cleansing:** Filtering out invalid records, removing duplicates, handling null values
 	- **Data Enrichment:** Joining streaming data with static lookup tables to add additional context.
 	- **Simple Aggregations:**  Counting the number of events within each micro-batch.
+
+
+---
+
