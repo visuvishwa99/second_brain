@@ -1,4 +1,6 @@
-exclude-from-graph-view:: true
+---
+exclude-from-graph-view: true
+---
 
 - Why spark
   title:: spark QA

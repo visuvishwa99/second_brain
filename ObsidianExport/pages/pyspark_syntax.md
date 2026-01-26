@@ -533,7 +533,7 @@ deck:: [[pyspark_syntax]]
 		  # Using map to split each string
 		  map_result = rdd.map(lambda x: x.split())
 		  print("map result:", map_result.collect())
-		  map result: [['hello', 'spark'], ['big', 'data']]
+		  map result: [ ['hello', 'spark'], ['big', 'data'] ]
 		      ```
 		      
 		      flatMap(lambda x: x.split(" ")) applies a function that returns an iterator and flattens the results:
@@ -740,10 +740,10 @@ deck:: [[pyspark_syntax]]
 		      ```python
 		      # Create sample data with nested arrays
 		  	data = [
-		  		("Alice", [["Math", "Physics"], ["English", "Literature"]]),
-		  		("Bob", [["History", "Geography"], ["Art"]]),
-		  		("Carol", [["Computer Science"], ["Chemistry", "Biology", "Physics"]]),
-		  		("David", [[]]),  # Empty inner array
+		  		("Alice", [ ["Math", "Physics"], ["English", "Literature"] ]),
+		  		("Bob", [ ["History", "Geography"], ["Art"] ]),
+		  		("Carol", [ ["Computer Science"], ["Chemistry", "Biology", "Physics"] ]),
+		  		("David", [ [] ]),  # Empty inner array
 		  		("Eve", None)     # Null array
 		  	]
 		  
@@ -817,12 +817,12 @@ deck:: [[pyspark_syntax]]
 			      collect_list:
 			      ```python
 			      df.select(collect_list("salary"))
-			    collect_list: [[85000, 92000, 78000, 105000, 67000, 85000]] #keeps all occurrences
+			    collect_list: [85000, 92000, 78000, 105000, 67000, 85000] #keeps all occurrences
 			  ```
 			      collect_set:
 			      ```python
 			      df.select(collect_set("salary"))
-			    collect_set:  [[85000, 92000, 78000, 105000, 67000]] # collect_set → removes duplicates
+			    collect_set:  [85000, 92000, 78000, 105000, 67000] # collect_set → removes duplicates
 			  ```
 			      count:
 			      ```python

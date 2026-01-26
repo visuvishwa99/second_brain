@@ -1,3 +1,5 @@
-exclude-from-graph-view:: false
+---
+exclude-from-graph-view: false
+---
 
 -

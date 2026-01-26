@@ -1,4 +1,6 @@
-exclude-from-graph-view:: true
+---
+exclude-from-graph-view: true
+---
 
 	- Kafka version -> 0.11.0.X and Confluent Platform 3.x
 		- **Confluent Platform 3.x Components:***

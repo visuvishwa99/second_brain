@@ -1,3 +1,5 @@
-exclude-from-graph-view:: true
+---
+exclude-from-graph-view: true
+---
 
 - Testing is for testing
