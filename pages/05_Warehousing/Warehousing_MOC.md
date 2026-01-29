@@ -7,4 +7,5 @@ tags:
 - [[Athena]]
 - [[BigQuery]]
 - [[dbt]]
-- [[RedshiftQA]]
+- [[Redshift]]
+- [[Snowflake]]

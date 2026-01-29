@@ -4,17 +4,21 @@
     "type": "split",
     "children": [
       {
-        "id": "aad2be1979a5ddb6",
+        "id": "54fa2ef8c0d90be8",
         "type": "tabs",
         "children": [
           {
-            "id": "950ebeb7b1deed60",
+            "id": "f99b5e8aa3105382",
             "type": "leaf",
             "state": {
-              "type": "graph",
-              "state": {},
-              "icon": "lucide-git-fork",
-              "title": "Graph view"
+              "type": "markdown",
+              "state": {
+                "file": "2026-01-29.md",
+                "mode": "source",
+                "source": false
+              },
+              "icon": "lucide-file",
+              "title": "2026-01-29"
             }
           }
         ]
@@ -109,12 +113,12 @@
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "journals/2024-05-12.md",
+                "file": "2026-01-29.md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               },
               "icon": "links-going-out",
-              "title": "Outgoing links from 2024-05-12"
+              "title": "Outgoing links from 2026-01-29"
             }
           },
           {
@@ -152,21 +156,41 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "journals/2024-05-12.md",
+                "file": "2026-01-29.md",
                 "followCursor": false,
                 "showSearch": false,
                 "searchQuery": ""
               },
               "icon": "lucide-list",
-              "title": "Outline of 2024-05-12"
+              "title": "Outline of 2026-01-29"
+            }
+          },
+          {
+            "id": "dde537878e7c719a",
+            "type": "leaf",
+            "state": {
+              "type": "mermaid-toolbar-view",
+              "state": {},
+              "icon": "trident-custom",
+              "title": "Mermaid Toolbar"
+            }
+          },
+          {
+            "id": "5ac9bce76ec6c7ae",
+            "type": "leaf",
+            "state": {
+              "type": "git-view",
+              "state": {},
+              "icon": "git-pull-request",
+              "title": "Source Control"
             }
           }
-        ]
+        ],
+        "currentTab": 6
       }
     ],
     "direction": "horizontal",
-    "width": 300,
-    "collapsed": true
+    "width": 448.5
   },
   "left-ribbon": {
     "hiddenItems": {
@@ -176,47 +200,49 @@
       "daily-notes:Open today's daily note": false,
       "templates:Insert template": false,
       "command-palette:Open command palette": false,
-      "bases:Create new base": false
+      "bases:Create new base": false,
+      "mermaid-tools:Open Mermaid Toolbar": false,
+      "obsidian-git:Open Git source control": false
     }
   },
-  "active": "950ebeb7b1deed60",
+  "active": "f99b5e8aa3105382",
   "lastOpenFiles": [
+    "2026-01-29.md",
+    "test.md",
+    "Untitled.md",
+    "journals/2026-01-25.md",
+    "journals/Untitled.md",
+    "Untitled.base",
+    "journals/2024-05-12.md",
+    "2024-05-12.md",
+    "pages/05_Warehousing/Redshift.md",
+    "Untitled 1.md",
+    "pages/05_Warehousing/Warehousing_MOC.md",
+    "pages/05_Warehousing/Snowflake.md",
+    "pages/04_Cloud/Freeide mac.md",
+    "pages/00_Map/Project flows.md",
+    "pages/00_Map/DATAENG_MOC.md",
     "pages/07_Languages/language.md",
     "pages/99_Misc/deck.md",
     "pages/02_Compute/PySpark_Syntax.md",
     "pages/02_Compute/PySpark_OOPS.md",
-    "pages/05_Warehousing/Redshift_QA.md",
     "pages/02_Compute/Spark_Streaming_QA.md",
     "pages/02_Compute/Spark_QA.md",
     "pages/99_Misc/Misc_MOC.md",
     "pages/08_Architecture/Architecture_MOC.md",
     "pages/07_Languages/Languages_MOC.md",
     "pages/06_Ingestion/Ingestion_MOC.md",
-    "pages/05_Warehousing/Warehousing_MOC.md",
     "pages/04_Cloud/Cloud_MOC.md",
     "pages/03_Streaming/Streaming_MOC.md",
-    "pages/02_Compute/Compute_MOC.md",
-    "pages/01_Concepts/Concepts_MOC.md",
     "fix_graph_issues.py",
-    "pages/08_Architecture/00_Index.md",
-    "pages/spark_optimization.md",
-    "pages/OM%3Acomplete.md",
-    "pages/04_Cloud/gcp/Gcp.md",
     "pages/04_Cloud/gcp",
-    "pages/04_Cloud/azure/Azure.md",
     "pages/04_Cloud/azure",
-    "pages/04_Cloud/aws/IAM.md",
-    "pages/04_Cloud/aws/s3.md",
-    "pages/04_Cloud/aws/Aws.md",
     "pages/04_Cloud/aws",
     "organize_cloud.py",
-    "pages/07_Languages/SQL.md",
-    "pages/07_Languages/python.md",
     "pages/07_Languages",
     "pages/03_Streaming",
     "pages/02_Compute",
     "rename_folders_generic.py",
-    "pages/99_Misc",
     "Untitled.canvas",
     "assets/image_1715303229659_0.png",
     "assets/image_1739923808664_0.png",
