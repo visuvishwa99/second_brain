@@ -1,2 +1,2 @@
 - SQL VS GRAPH DB
-	- ![image.png](../assets/image_1740681755003_0.png)
+	- ![image.png](../../assets/image_1740681755003_0.png)

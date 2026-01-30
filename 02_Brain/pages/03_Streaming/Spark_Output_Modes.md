@@ -36,7 +36,7 @@ tags:
 	        toTable(" customer_ rewards")
 	  print ("Done")
 	  ```
-	  ![image.png](../assets/image_1715303229659_0.png)
+	  ![image.png](../../assets/image_1715303229659_0.png)
 	- Note : Be mindful that the `Complete` mode can be resource-intensive, especially with large datasets, as it stores the entire result in memory
 - We want to implement incremental update . ^663dd827-1e19-41f2-92bf-588f97881619
 -
@@ -88,10 +88,10 @@ tags:
 	- Window size could be microseconds, milliseconds, seconds, minutes, hours, and days
 	- You need a timestamp column (event time) in your input records
 	- Ex:aggregate sum function.
-	- ![image.png](../assets/image_1715383842832_0.png)
+	- ![image.png](../../assets/image_1715383842832_0.png)
 	- For input file =>
-		- ![image.png](../assets/image_1715386288024_0.png)
-	- ![image.png](../assets/image_1715381438542_0.png)
+		- ![image.png](../../assets/image_1715386288024_0.png)
+	- ![image.png](../../assets/image_1715381438542_0.png)
 		- ```python
 		  def getAggregate(self, trade_df):
 		  from pyspark.sql.functions import window, sum
@@ -118,10 +118,10 @@ tags:
 		  
 		  ```
 			- sample test data
-				- ![image.png](../assets/image_1715386693149_0.png)
+				- ![image.png](../../assets/image_1715386693149_0.png)
 				-
 			- Test suit ==>
-			   ![image.png](../assets/image_1715386693149_0.png)
+			   ![image.png](../../assets/image_1715386693149_0.png)
 - **Watermarking / State Store Cleanup / Late coming records handling** #Watermarking
   collapsed:: true
 	- Spark streaming automatically handles the late coming records
@@ -136,7 +136,7 @@ tags:
 		- How to decide your watermark
 			- What is the maximum possible delay? Discuss with business
 			- When late records are not relevant? After watermark timeframe
-			- ![image.png](../assets/image_1715554982767_0.png)
+			- ![image.png](../../assets/image_1715554982767_0.png)
 		- syntax
 			- collapsed:: true
 			  ```python
@@ -171,11 +171,11 @@ tags:
   collapsed:: true
 	- *why we need Sliding Window?*
 	  usecase : we need to get max_temp in 15 mins window but asked to inform the outcome every 5mins so we have an overlap here . so we have problem of overlapping
-	- ![image.png](../assets/image_1715556949567_0.png)
+	- ![image.png](../../assets/image_1715556949567_0.png)
 	- Implementation of sliding window and Tumbling window is similar where we pass 3rd parameter under window function
-	- ![image.png](../assets/image_1715557987377_0.png)
+	- ![image.png](../../assets/image_1715557987377_0.png)
 	- Test data :
-	- ![image.png](../assets/image_1715557374656_0.png)
+	- ![image.png](../../assets/image_1715557374656_0.png)
 -
 
 

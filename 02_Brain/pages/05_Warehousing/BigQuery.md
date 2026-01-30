@@ -20,7 +20,7 @@ tags:
 		- High-speed network protocol connecting Dremel (compute) and Colossus (storage) :-> {{Jupiter }} ^68086cc4-97c9-489d-9a7e-c71b920fbfe7
 		- Orchestrator managing internal communication between components :-> {{Borg}} ^68086cc4-893f-4b23-ac8b-f998a83bba25
 	- ## Query Execution Flow
-		- ![image.png](../assets/image_1745386451003_0.png)
+		- ![image.png](../../assets/image_1745386451003_0.png)
 - # BigQuery Tables
   collapsed:: true
 	- ## Empty Tables

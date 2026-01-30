@@ -12,11 +12,11 @@ tags:
 		- Once cataloged, you can treat your unstructured data like it's structured
 			- Redshift Spectrum ,Athena ,EMR , Quicksight. Can also be imported in Hive catalog
 		- Glue crawler will extract partitions based on how your S3 data is organized
-			- ![image.png](../assets/image_1739465258211_0.png)
+			- ![image.png](../../assets/image_1739465258211_0.png)
 		-
 - Glue architecture . how does it work ?
   collapsed:: true
-	- ![image.png](../assets/image_1739469819700_0.png)
+	- ![image.png](../../assets/image_1739469819700_0.png)
 	- 1. Crawlers populate the Data Catalog with metadata from data sources
 	  2. ETL jobs are created using the metadata in the Data Catalog
 	  3. Jobs are scheduled or triggered to extract, transform, and load data
@@ -36,12 +36,12 @@ tags:
 	- use **custom connector** to load into target from difference source .
 	- **DQ** rules can be defined at to validate the source data
 	  collapsed:: true
-		- ![image.png](../assets/image_1739564646589_0.png)
-	- ![image.png](../assets/image_1739564495261_0.png)
+		- ![image.png](../../assets/image_1739564646589_0.png)
+	- ![image.png](../../assets/image_1739564495261_0.png)
 	- Dynamicframe ~ Dataframe
-	- ![image.png](../assets/image_1739465519032_0.png)
+	- ![image.png](../../assets/image_1739465519032_0.png)
 	- Transformations (Filter , Join , Map ,ResolveChoice etc)
-		- ![image.png](../assets/image_1739564278554_0.png)
+		- ![image.png](../../assets/image_1739564278554_0.png)
 		- ResolveChoice => In  **ResolveChoice** transformation is used to handle ambiguous column
 		- ```python
 		  import sys
@@ -61,7 +61,7 @@ tags:
 		                                                                 format='csv', format_options = {"withHeader": True, "optimizePerformance": True})
 		  
 		  ```
-		- ![image.png](../assets/image_1739467248575_0.png)
+		- ![image.png](../../assets/image_1739467248575_0.png)
 			- you can also use "make_cols" . resolved_dyf = dyf.resolveChoice(specs=[("value", "make_cols")])
 			- This would create `value_long`, `value_string`, etc.
 			-
@@ -151,7 +151,7 @@ tags:
 		  collapsed:: true
 			- Parallelism automatically enables grouping without any manual configuration when the number of input files exceeds 50,000.
 			- Due to a high degree of papalism, the Spark driver may run out of memory when attempting to read a large number of files.
-			- ![image.png](../assets/image_1739566479768_0.png)
+			- ![image.png](../../assets/image_1739566479768_0.png)
 			- Solution =>control parallelism by grouping (groupFiles,groupSize)
 			  collapsed:: true
 				- ```python
@@ -170,11 +170,11 @@ tags:
 			  there is not enough disk space left on the executor and there is no recovery.
 			- Solution => spark shuffle manager. Let the spark to not use local disk and write to s3
 			  instead .
-			- ![image.png](../assets/image_1739566697343_0.png)
+			- ![image.png](../../assets/image_1739566697343_0.png)
 		- Issue 3 => Try to ingest large table instead of chucks
 		  collapsed:: true
 			- Solution => 1) Divide them into batches 2) Ingest only delta (Job Bookmark) 3) Run jobs multiple times using step functions
-			- ![image.png](../assets/image_1739566838964_0.png)
+			- ![image.png](../../assets/image_1739566838964_0.png)
 			- Using Job Bookmarks in AWS Glue Jobs
 			  collapsed:: true
 				- Job bookmark - persisted state information about the run
@@ -191,7 +191,7 @@ tags:
 	- OptimizeData Formats Before Writing fileformats like parque , orc
 	- use Flexible Execution class
 	  collapsed:: true
-		- ![image.png](../assets/image_1739567251571_0.png)
+		- ![image.png](../../assets/image_1739567251571_0.png)
 		- Working => you only pay for allocated resource ex: non-time-critical ETL Jobs like (Historical loads while team is working on something. This feature will not overload the resources)
 		- Note : you can convert normal execution to flexible execution using AWS CLI
 			- ```python

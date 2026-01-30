@@ -1,4 +1,4 @@
-- ![image.png](../assets/image_1738863796071_0.png)
+- ![image.png](../../assets/image_1738863796071_0.png)
 -
 	- Fraud ODL
 		- Project EDP => calculate the negativity variables as defined by business (we get mapping sheet ).

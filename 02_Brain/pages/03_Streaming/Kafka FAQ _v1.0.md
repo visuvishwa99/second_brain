@@ -40,7 +40,7 @@ exclude-from-graph-view: true
 		- Key and value are serialized as a :-> "ByteArray". ^664646ab-7290-4678-ad08-b1884df5a44b
 		- Important parts of kafka packet :-> key,value,timestamp ^664646ab-fbba-48f5-a69b-e60445b04e48
 		- offset :-> In partitions, messages are assigned a unique ID number ^664646ab-4207-448d-b062-8d7a4808b096
-		- ![image.png](../assets/image_1715832828206_0.png)
+		- ![image.png](../../assets/image_1715832828206_0.png)
 		-
 			- Can Kafka be used without ZooKeeper ? below 2.5 version No .
 				- Yes, Kafka can now be used without ZooKeeper, starting with Apache Kafka version 2.8.0 and becoming fully supported in version 3.5.0 but relatively new . can recommend for production . Its called (KRaft (Kafka Raft) mode.)
@@ -49,7 +49,7 @@ exclude-from-graph-view: true
 				- Kafka uses a hashing function (e.g. murmur2 hash) to map the key to a specific partition number within the topic. The formula is: partition = murmur2(key) % number_of_partitions
 			- QueueFullException occurs when the producer attempts to send messages at a pace not handleable by the broker.
 			- Partition is a single piece of Kafka topic. More partitions allow excellent parallelism when reading from the topics. The number of partitions is configured based on per topic.
-				- ![image.png](../assets/image_1715871364973_0.png)
+				- ![image.png](../../assets/image_1715871364973_0.png)
 			- ISR is the abbreviation of In sync replicas.They are a set of message replicas that are synced to be leaders. https://gautambangalore.medium.com/knowing-and-valuing-apache-kafkas-isr-in-sync-replicas-167bf8c76cc1
 			- How can you get precisely one messaging during data production/Dedup
 				- To get precisely one messaging from data production, you have to follow two things avoiding duplicates during data production and avoiding duplicates during data consumption. For this, include a primary key in the message and de-duplicate on the consumer.

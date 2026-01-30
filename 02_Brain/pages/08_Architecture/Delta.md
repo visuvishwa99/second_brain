@@ -24,7 +24,7 @@
 			- deltatable.createOrreplace(spark)
 			- df.write.format(delta).saveastable(table_name)
 		- Time travel (JSON, Parquet, and CRC files)
-			- ![image.png](../assets/image_1738861871698_0.png)
+			- ![image.png](../../assets/image_1738861871698_0.png)
 				- JSON Files
 				  (log associated to file)
 				-
