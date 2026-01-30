@@ -1,5 +1,5 @@
 ---
-created: {{date}} {{time}}
+created at : {{date}} {{time}}
 tags:
   - journal
   - daily
@@ -12,6 +12,6 @@ tags:
 
 ## 📝 Notes
 
-
+- 
 
 
