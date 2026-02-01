@@ -11,10 +11,14 @@
             "id": "c343669cad9a7daf",
             "type": "leaf",
             "state": {
-              "type": "empty",
-              "state": {},
+              "type": "markdown",
+              "state": {
+                "file": "01_Raw/journals/2026/Q1/2026-02-01_14-55-28.md",
+                "mode": "source",
+                "source": false
+              },
               "icon": "lucide-file",
-              "title": "New tab"
+              "title": "2026-02-01_14-55-28"
             }
           }
         ]
@@ -80,8 +84,7 @@
               "title": "Recent Files"
             }
           }
-        ],
-        "currentTab": 3
+        ]
       }
     ],
     "direction": "horizontal",
@@ -211,11 +214,12 @@
       "obsidian-git:Open Git source control": false
     }
   },
-  "active": "7c8a813f8f31cbaf",
+  "active": "c343669cad9a7daf",
   "lastOpenFiles": [
+    "01_Raw/journals/2026/Q1/2026-02-01_13-20-45.md",
+    "01_Raw/journals/2026/Q1/2026-02-01_14-55-28.md",
     "Untitled.base",
     "Untitled.canvas",
-    "01_Raw/journals/2026/Q1/2026-02-01_13-20-45.md",
     "Templates/Journal.md",
     "01_Raw/journals/2026/Q1/2026-01-29_22-09-25.md",
     "01_Raw/journals/2026/Q1/Untitled.md",
