@@ -1,4 +1,7 @@
 [
   "mermaid-tools",
-  "obsidian-git"
+  "obsidian-git",
+  "recent-files-obsidian",
+  "highlightr-plugin",
+  "code-styler"
 ]
