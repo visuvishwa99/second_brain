@@ -1,6 +1,22 @@
 {
   "recentFiles": [
     {
+      "basename": "Kafka FAQ _v1.0",
+      "path": "02_Brain/pages/03_Streaming/Kafka FAQ _v1.0.md"
+    },
+    {
+      "basename": "Batch processing",
+      "path": "02_Brain/pages/01_Concepts/Batch processing.md"
+    },
+    {
+      "basename": "DATAENG_MOC",
+      "path": "02_Brain/pages/00_Map/DATAENG_MOC.md"
+    },
+    {
+      "basename": "Delta",
+      "path": "02_Brain/pages/08_Architecture/Delta.md"
+    },
+    {
       "basename": "Functional_Data_Engineering",
       "path": "02_Brain/pages/08_Architecture/Functional_Data_Engineering.md"
     },
