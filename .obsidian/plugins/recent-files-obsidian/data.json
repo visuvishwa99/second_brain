@@ -1,6 +1,10 @@
 {
   "recentFiles": [
     {
+      "basename": "2026-02-02_20-03-30",
+      "path": "01_Raw/journals/2026/Q1/2026-02-02_20-03-30.md"
+    },
+    {
       "basename": "amex",
       "path": "02_Brain/pages/99_Misc/amex.md"
     },
@@ -19,10 +23,6 @@
     {
       "basename": "Azure",
       "path": "02_Brain/pages/04_Cloud/azure/Azure.md"
-    },
-    {
-      "basename": "2026-02-02_20-03-30",
-      "path": "01_Raw/journals/2026/Q1/2026-02-02_20-03-30.md"
     },
     {
       "basename": "Kafka FAQ _v1.0",
