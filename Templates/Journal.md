@@ -9,6 +9,8 @@ tags:
 
 **Date:** [[{{date}}]]
 **Time:** {{time}}
+**Explain:** *t**
+
 
 ## 📝 Notes
 

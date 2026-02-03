@@ -23,14 +23,50 @@ CATEGORIES = {
 
 DEFAULT_CATEGORY = "99_Misc"
 
+
+def parse_tags(content):
+    """
+    Extract tags from content formatted as [[tag_name]].
+    Returns a list of tags.
+    """
+    # Regex to find [[tag]] or #tag
+    # We focus on [[tag]] as per user example
+    wikilink_tags = re.findall(r"\[\[(.*?)\]\]", content)
+    
+    # Also support hash tags #tag just in case
+    hash_tags = re.findall(r"#(\w+)", content)
+    
+    normalization = [t.lower().replace(" ", "_") for t in wikilink_tags + hash_tags]
+    return normalization
+
 def classify_content(content):
     """
-    Classify content based on keywords.
+    Classify content based on Tags first, then keywords.
     Returns the target folder name.
     """
-    content_lower = content.lower()
+    tags = parse_tags(content)
     
-    # Check for keywords in priority order
+    # 1. Direct Tag Mapping
+    # If the user explicitly provided a tag that matches a known category key or value
+    
+    # Invert CATEGORIES for easy lookup: keyword -> category
+    keyword_map = {}
+    for cat, keywords in CATEGORIES.items():
+        # Map the category folder name itself
+        folder_name_clean = cat.split("_", 1)[1].lower() # 02_Compute -> compute
+        keyword_map[folder_name_clean] = cat
+        
+        # Map specific keywords
+        for kw in keywords:
+            keyword_map[kw.lower()] = cat
+
+    # Check extracted tags against map
+    for tag in tags:
+        if tag in keyword_map:
+            return keyword_map[tag]
+            
+    # 2. Key Word Scoring (Fallback)
+    content_lower = content.lower()
     scores = {cat: 0 for cat in CATEGORIES}
     
     for cat, keywords in CATEGORIES.items():
@@ -45,6 +81,7 @@ def classify_content(content):
         return best_cat
     
     return DEFAULT_CATEGORY
+
 
 def ensure_frontmatter(content, category):
     """
