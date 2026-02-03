@@ -1,6 +1,30 @@
 {
   "recentFiles": [
     {
+      "basename": "amex",
+      "path": "02_Brain/pages/99_Misc/amex.md"
+    },
+    {
+      "basename": "Misc_MOC",
+      "path": "02_Brain/pages/99_Misc/Misc_MOC.md"
+    },
+    {
+      "basename": "2024-05-16",
+      "path": "02_Brain/pages/99_Misc/2024-05-16.md"
+    },
+    {
+      "basename": "Transformation",
+      "path": "02_Brain/pages/01_Concepts/Transformation.md"
+    },
+    {
+      "basename": "Azure",
+      "path": "02_Brain/pages/04_Cloud/azure/Azure.md"
+    },
+    {
+      "basename": "2026-02-02_20-03-30",
+      "path": "01_Raw/journals/2026/Q1/2026-02-02_20-03-30.md"
+    },
+    {
       "basename": "Kafka FAQ _v1.0",
       "path": "02_Brain/pages/03_Streaming/Kafka FAQ _v1.0.md"
     },
@@ -15,10 +39,6 @@
     {
       "basename": "Delta",
       "path": "02_Brain/pages/08_Architecture/Delta.md"
-    },
-    {
-      "basename": "2026-02-02_20-03-30",
-      "path": "01_Raw/journals/2026/Q1/2026-02-02_20-03-30.md"
     },
     {
       "basename": "2026-02-01_14-55-28",

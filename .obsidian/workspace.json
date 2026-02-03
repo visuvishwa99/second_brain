@@ -13,12 +13,12 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "02_Brain/pages/03_Streaming/Kafka FAQ _v1.0.md",
+                "file": "02_Brain/pages/99_Misc/amex.md",
                 "mode": "source",
                 "source": false
               },
               "icon": "lucide-file",
-              "title": "Kafka FAQ _v1.0"
+              "title": "amex"
             }
           }
         ]
@@ -216,6 +216,12 @@
   },
   "active": "c343669cad9a7daf",
   "lastOpenFiles": [
+    "02_Brain/pages/99_Misc/Misc_MOC.md",
+    "02_Brain/pages/99_Misc/2024-05-16.md",
+    "02_Brain/pages/01_Concepts/Transformation.md",
+    "02_Brain/pages/04_Cloud/azure/Azure.md",
+    "01_Raw/journals/2026/Q1/2026-02-02_20-03-30.md",
+    "02_Brain/pages/03_Streaming/Kafka FAQ _v1.0.md",
     "03_Mart/PySpark_OOPS.md",
     "03_Mart/PySpark_Syntax.md",
     "03_Mart/spark_optimization.md",
@@ -231,7 +237,6 @@
     "02_Brain/pages/00_Map/DATAENG_MOC.md",
     "02_Brain/pages/08_Architecture/Delta.md",
     "02_Brain/pages/08_Architecture/Functional_Data_Engineering.md",
-    "01_Raw/journals/2026/Q1/2026-02-02_20-03-30.md",
     "agents/workflows/deep_dive.md",
     "agents/workflows",
     "03_Mart/anki_imports.md",
@@ -241,11 +246,6 @@
     "01_Raw/journals/2026/Q1/2026-02-01_13-20-45.md",
     "Untitled.base",
     "Untitled.canvas",
-    "Templates/Journal.md",
-    "01_Raw/journals/2026/Q1/Untitled.md",
-    "01_Raw/journals/2026-01-29_22-06-59.md",
-    "01_Raw/journals/2026-01-29_22-06-05.md",
-    "Untitled.md",
     "01_Raw/journals/2026/Q1 1",
     "Templates",
     "01_Raw/journals/2026/Q1",
