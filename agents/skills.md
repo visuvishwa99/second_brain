@@ -11,6 +11,9 @@ The Librarian is an automated workflow that organizes notes from `01_Raw` into t
 
 You can trigger the librarian by running the python automation script, or by manually asking the agent to "Process my notes".
 
+You can also use the **Deep Dive** workflow to analyze your latest journal entry: `analyze journal` or `deep dive`.
+
+
 ## Automation Script
 
 The automation is handled by `scripts/librarian.py`. 

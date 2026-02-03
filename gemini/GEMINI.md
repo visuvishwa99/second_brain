@@ -63,3 +63,8 @@ classDef group fill:#f1f2f6,stroke:#2f3542,stroke-width:1px,color:#2d3436
 **Tech Stack mapping:**
 - Optionally map libraries/tools using dashed lines (`-.->`) in a `Tech_Stack` subgraph.
 - Use explicit DE metaphors (e.g., "Vector DB (like Snowflake in DE)").
+
+### Output Handling Rules
+When you generate an explanation:
+1. **The Explanation**: Save the full markdown file to the appropriate `02_Brain/pages/<Category>/` folder (e.g., `08_Architecture/Functional_Data_Engineering.md`).
+2. **The Flashcard**: Extract the Q/A block and **append** it to `03_Mart/anki_imports.md`.
