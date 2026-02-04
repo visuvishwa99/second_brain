@@ -1,11 +1,12 @@
 ---
 created_at: "{{date}} {{time}}"
 status: seed
+processed: false
 Explain: F
-tags: 
-examples: 2
+tags:
+examples: 0
 Realtime: NA
-diagram: mermaid
+diagram: NA
 ---
 
 

@@ -37,18 +37,17 @@ Command: `Process my notes` or `Analyze my latest journal`
 
 ### Workflow Steps
 1. **Scan**: User points to a journal file in `./01_Raw/`.
-2. **Analyze**: Antigravity reads the content and generates:
-   - **Concept Definition**: High-level explanation.
-   - **Real-time DE Example**: Specific implementation.
-   - **Syntax**: Code snippets.
-   - **Mermaid Diagram** (if applicable).
-   - **Flashcard**: Q/A for Anki.
-3. **Propose Destination**:
-   - Antigravity tells the user: *"I plan to append this to `02_Brain/pages/<Category>/<Filename>.md`"*
-   - If classification is uncertain → `99_Misc` (no tag).
-4. **User Approval**: User says "OK" or corrects the destination.
-5. **Append**: Antigravity appends the content to the target file.
-6. **Log**: Flashcard appended to `./03_Mart/anki_imports.md`.
+2. **Check**: If `processed: true` in frontmatter, skip.
+3. **Draft (Staging)**: 
+   - Antigravity generates the deep dive content.
+   - Saves the file to `./01_Raw/stage/<Filename>.md`.
+   - *Note*: The flashcard is temporarily held here or in memory.
+4. **Review**: User checks the file in `stage`.
+5. **Publish**: 
+   - User says "Approve" or "Move to Brain".
+   - Antigravity moves the file from `stage` to `./02_Brain/pages/<Category>/`.
+   - Appends flashcard to `./03_Mart/anki_imports.md`.
+   - Marks source journal as `processed: true`.
 
 ---
 
