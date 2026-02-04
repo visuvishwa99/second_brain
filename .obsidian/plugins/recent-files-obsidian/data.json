@@ -1,6 +1,22 @@
 {
   "recentFiles": [
     {
+      "basename": "anki_imports",
+      "path": "03_Mart/anki_imports.md"
+    },
+    {
+      "basename": "deep_dive",
+      "path": "agents/workflows/deep_dive.md"
+    },
+    {
+      "basename": "Kafka_FAQ__v1.0",
+      "path": "02_Brain/pages/03_Streaming/Kafka_FAQ__v1.0.md"
+    },
+    {
+      "basename": "2026-02-04_09-59-41",
+      "path": "01_Raw/journals/2026/Q1/2026-02-04_09-59-41.md"
+    },
+    {
       "basename": "dbt",
       "path": "02_Brain/pages/05_Warehousing/dbt.md"
     },
