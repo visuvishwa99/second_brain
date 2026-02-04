@@ -4,21 +4,17 @@
     "type": "split",
     "children": [
       {
-        "id": "0106c995ab2c5661",
+        "id": "2a35213a3384daa1",
         "type": "tabs",
         "children": [
           {
-            "id": "c81f830e8f494186",
+            "id": "4720317845d391f5",
             "type": "leaf",
             "state": {
-              "type": "markdown",
-              "state": {
-                "file": "gemini/GEMINI.md",
-                "mode": "source",
-                "source": false
-              },
+              "type": "empty",
+              "state": {},
               "icon": "lucide-file",
-              "title": "GEMINI"
+              "title": "New tab"
             }
           }
         ]
@@ -215,8 +211,12 @@
       "omnisearch:Omnisearch": false
     }
   },
-  "active": "7c8a813f8f31cbaf",
+  "active": "4720317845d391f5",
   "lastOpenFiles": [
+    "02_Brain/pages/05_Warehousing/dbt.md",
+    "02_Brain/pages/01_Concepts/Analytical_Eng.md",
+    "02_Brain/pages/05_Warehousing/BigQuery.md",
+    "gemini/GEMINI.md",
     "01_Raw/journals/2026/Q1/2026-02-03_20-26-19.md",
     "01_Raw/journals/2026/Q1/2026-02-03_20-25-43.md",
     "02_Brain/pages/08_Architecture/Functional_Data_Engineering.md",
@@ -235,7 +235,6 @@
     "02_Brain/pages/01_Concepts/System_Design.md",
     "02_Brain/pages/01_Concepts/Cloud_engineering.md",
     "02_Brain/pages/01_Concepts/Batch_processing.md",
-    "02_Brain/pages/01_Concepts/Analytical_Eng.md",
     "02_Brain/pages/00_Map/Project_flows.md",
     "scripts/file_renamer.py",
     "scripts/tag_standardizer.py",
@@ -243,9 +242,6 @@
     "02_Brain/pages/99_Misc/amex.md",
     "02_Brain/pages/02_Compute/Spark_Streaming_QA.md",
     "02_Brain/pages/04_Cloud/Cloud_MOC.md",
-    "02_Brain/pages/04_Cloud/gcp/Gcp.md",
-    "02_Brain/pages/03_Streaming/2024-05-10.md",
-    "01_Raw/journals/2026/Q1/2026-02-03_19-35-45.md",
     "scripts/move_decks.py",
     "agents/workflows",
     "Untitled.base",

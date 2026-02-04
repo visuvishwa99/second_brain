@@ -1,6 +1,18 @@
 {
   "recentFiles": [
     {
+      "basename": "dbt",
+      "path": "02_Brain/pages/05_Warehousing/dbt.md"
+    },
+    {
+      "basename": "Analytical_Eng",
+      "path": "02_Brain/pages/01_Concepts/Analytical_Eng.md"
+    },
+    {
+      "basename": "BigQuery",
+      "path": "02_Brain/pages/05_Warehousing/BigQuery.md"
+    },
+    {
       "basename": "GEMINI",
       "path": "gemini/GEMINI.md"
     },

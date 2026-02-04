@@ -1,5 +1,5 @@
 {
-  "collapse-filter": true,
+  "collapse-filter": false,
   "search": "path:02_Brain",
   "showTags": false,
   "showAttachments": false,
@@ -32,6 +32,6 @@
   "repelStrength": 9.00818523707691,
   "linkStrength": 0.68402035248138,
   "linkDistance": 393,
-  "scale": 0.8371063035554531,
+  "scale": 0.8629536235331602,
   "close": true
 }
