@@ -87,12 +87,17 @@ User points to a journal entry in `01_Raw/` and asks for analysis.
 ### Step 2: Invoke
 Command: **"Deep dive this"** or **"Analyze my latest journal"**
 
-### Step 3: Output Structure
-1. **Concept Definition**: High-level explanation.
-2. **Real-time Example**: Specific DE implementation.
-3. **Syntax**: Code snippets.
-4. **Visuals**: Mermaid diagram (if `diagram: mermaid` requested).
-5. **Flashcard**: Appended to `03_Mart/anki_imports.md`.
+### Step 3: Analysis (The Realtime Rule)
+**Criterion**: At least ONE example must be a practical "Realtime" implementation.
+
+1.  **Concept**: Define what the user asked about.
+2.  **The Realtime Example**:
+    - **Default**: Data Engineering implementation.
+    - **Specific**: If the user asks about a specific tool (e.g., Tableau), show the implementation there *if relevant*. If not, fallback to DE.
+    - **How-To**: Show code, configuration, or specific steps.
+3.  **Syntax/Code**: Python, SQL, YAML, etc.
+4.  **Visuals**: Mermaid diagram (if relevant).
+5.  **Flashcard**: Q/A for Anki.
 
 ### Step 4: Propose & Confirm
 Before appending, Antigravity MUST:
@@ -103,3 +108,6 @@ Before appending, Antigravity MUST:
 ### Status Updates
 - Change `Explain: T` → `Explain: F`
 - Change `status: seed` → `status: sapling`
+- Change `examples: <count>` → `examples: dataengineering[1]` (or appropriate tool)
+- Change `diagram: <bool>` → `diagram: F` (if no diagram) or `mermaid`
+
