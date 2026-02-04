@@ -1,6 +1,34 @@
 {
   "recentFiles": [
     {
+      "basename": "2026-02-03",
+      "path": "01_Raw/journals/2026/Q1/2026-02-03.md"
+    },
+    {
+      "basename": "2026-02-03_19-35-27",
+      "path": "01_Raw/journals/2026/Q1/2026-02-03_19-35-27.md"
+    },
+    {
+      "basename": "2026-02-03_19-35-45",
+      "path": "01_Raw/journals/2026/Q1/2026-02-03_19-35-45.md"
+    },
+    {
+      "basename": "2026-02-03_20-25-43",
+      "path": "01_Raw/journals/2026/Q1/2026-02-03_20-25-43.md"
+    },
+    {
+      "basename": "2026-02-03_20-26-19",
+      "path": "01_Raw/journals/2026/Q1/2026-02-03_20-26-19.md"
+    },
+    {
+      "basename": "2026-02-04_09-59-41",
+      "path": "01_Raw/journals/2026/Q1/2026-02-04_09-59-41.md"
+    },
+    {
+      "basename": "2026-02-04_11-27-22",
+      "path": "01_Raw/journals/2026/Q1/2026-02-04_11-27-22.md"
+    },
+    {
       "basename": "anki_imports",
       "path": "03_Mart/anki_imports.md"
     },
@@ -11,10 +39,6 @@
     {
       "basename": "Kafka_FAQ__v1.0",
       "path": "02_Brain/pages/03_Streaming/Kafka_FAQ__v1.0.md"
-    },
-    {
-      "basename": "2026-02-04_09-59-41",
-      "path": "01_Raw/journals/2026/Q1/2026-02-04_09-59-41.md"
     },
     {
       "basename": "dbt",
@@ -31,18 +55,6 @@
     {
       "basename": "GEMINI",
       "path": "gemini/GEMINI.md"
-    },
-    {
-      "basename": "2026-02-03_20-26-19",
-      "path": "01_Raw/journals/2026/Q1/2026-02-03_20-26-19.md"
-    },
-    {
-      "basename": "2026-02-03_20-25-43",
-      "path": "01_Raw/journals/2026/Q1/2026-02-03_20-25-43.md"
-    },
-    {
-      "basename": "2026-02-03_19-35-27",
-      "path": "01_Raw/journals/2026/Q1/2026-02-03_19-35-27.md"
     },
     {
       "basename": "Journal",
@@ -71,10 +83,6 @@
     {
       "basename": "2024-05-10",
       "path": "02_Brain/pages/03_Streaming/2024-05-10.md"
-    },
-    {
-      "basename": "2026-02-03_19-35-45",
-      "path": "01_Raw/journals/2026/Q1/2026-02-03_19-35-45.md"
     },
     {
       "basename": "Architecture_MOC",
