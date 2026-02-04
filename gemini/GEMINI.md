@@ -140,3 +140,8 @@ Before appending, Antigravity MUST:
 ### Frontmatter Formatting
 - Always ensure a newline before the closing `---` delimiter.
 - Use `false`/`true` (lowercase) for boolean properties, not `F`/`T`.
+
+### File Naming Conventions
+- **MOC Files**: Must be ALL CAPS with MOC suffix (e.g., `CONCEPT_MOC.md`, `WAREHOUSING_MOC.md`).
+- **Standard Notes**: Must be **lowercase** with **underscores** (e.g., `snowflake_cortex.md`, `delta_lake.md`).
+

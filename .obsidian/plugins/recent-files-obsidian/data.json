@@ -45,10 +45,6 @@
       "path": "02_Brain/pages/01_Concepts/Analytical_Eng.md"
     },
     {
-      "basename": "BigQuery",
-      "path": "02_Brain/pages/05_Warehousing/BigQuery.md"
-    },
-    {
       "basename": "GEMINI",
       "path": "gemini/GEMINI.md"
     },
@@ -99,10 +95,6 @@
     {
       "basename": "Azure",
       "path": "02_Brain/pages/04_Cloud/azure/Azure.md"
-    },
-    {
-      "basename": "DATAENG_MOC",
-      "path": "02_Brain/pages/00_Map/DATAENG_MOC.md"
     },
     {
       "basename": "Delta",

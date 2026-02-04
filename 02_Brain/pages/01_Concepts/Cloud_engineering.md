@@ -8,8 +8,8 @@ tags:
 - [[Aws]]
 - [[Azure]]
 - [[Gcp]]
-- [[Table Formats]]
--
+- [[Table_Formats]]
+
 
 
 ### Related

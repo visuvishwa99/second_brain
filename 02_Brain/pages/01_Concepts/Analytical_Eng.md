@@ -6,7 +6,7 @@ tags:
 
 - [[dbt]]
 - [[SQL]]
-- [[snow flake]]
+- [[Snowflake]]
 
 
 ### Related

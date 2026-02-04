@@ -2,21 +2,21 @@
 
 This guide explains how to interact with your AI agent (Antigravity) to manage your Second Brain.
 
-## 🤖 The Personas
+## The Personas
 
-### 1. The Librarian 📚
+### 1. The Librarian
 *   **Role**: Organizer, categorizer, cleaner.
 *   **Goal**: Move notes from `01_Raw` to `02_Brain` without adding heavy content.
 *   **Trigger Condition**: `Explain: false` in your note.
 
-### 2. The Principal Engineer 👷
+### 2. The Principal Engineer
 *   **Role**: Senior Architect, Mentor.
 *   **Goal**: Deeply analyze a concept, provide real-world Data Engineering examples, write code, and draw diagrams.
 *   **Trigger Condition**: `Explain: true` in your note.
 
 ---
 
-## 🗣️ Command Triggers
+## Command Triggers
 
 Since Antigravity is a natural language agent, you can talk to it normally. Use these phrases to trigger specific workflows:
 
@@ -34,7 +34,7 @@ Use this when you want to learn.
 *   **Action**: 
     *   Finds the latest journal entry.
     *   **If `Explain: true`**: Generates a full technical analysis (Concepts + Realtime Examples + Code + Diagrams).
-    *   **If `Explain: false`**: summarizing it concisely.
+    *   **If `Explain: false`**: Summarizes it concisely.
 
 ### Option 3: Specific Pointer
 Use this to target a specific file.
@@ -43,7 +43,7 @@ Use this to target a specific file.
 
 ---
 
-## 📝 The Journal Template Rules
+## The Journal Template Rules
 
 Your journal template controls the AI's behavior.
 
@@ -51,7 +51,34 @@ Your journal template controls the AI's behavior.
 ---
 processed: false        # false = Agent will look at it. true = Agent ignores it.
 Explain: false          # false = Just file it. true = DEEP DIVE it.
-examples: dataengineering[1]  # The "Realtime Rule": Must have 1 practical DE example.
+examples:
+  - dataengineering[1]: # The "Realtime Rule": Must have 1 practical DE example.
+Realtime: NA            # Or specify a tool (e.g., Databricks, Snowflake).
 diagram: false          # true/mermaid = Agent creates a Mermaid diagram.
 ---
 ```
+
+---
+
+## Mobile Sync (iPhone)
+
+To sync your Second Brain between your PC and iPhone without iCloud:
+
+### Prerequisites
+1.  **Working Copy** (Git client for iOS) - Download from App Store.
+2.  Clone your `build_second_brain` repo in Working Copy.
+3.  **Obsidian Mobile** - Open the vault from the Working Copy folder.
+
+### Create a "Sync Brain" Shortcut
+1.  Open the **Shortcuts** app on your iPhone.
+2.  Tap **+** to create a new shortcut. Name it **"Sync Brain"**.
+3.  Add these actions (search for "Working Copy"):
+    *   **Commit Repository**: Repo = `build_second_brain`, Message = "Mobile sync".
+    *   **Pull Repository**: Repo = `build_second_brain`.
+    *   **Push Repository**: Repo = `build_second_brain`.
+    *   **Open App**: App = Obsidian.
+4.  Add shortcut to Home Screen.
+
+### Usage
+*   **Before working on mobile**: Tap "Sync Brain" to pull latest from PC.
+*   **After working on mobile**: Tap "Sync Brain" to push your changes so the PC can see them.
