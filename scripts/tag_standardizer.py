@@ -120,6 +120,9 @@ def process_file(filepath, folder_name):
     fm['tags'] = final_tags
     new_fm_str = reconstruct_frontmatter(fm, fm_str)
     
+    if not new_fm_str.endswith('\n'):
+        new_fm_str += '\n'
+        
     new_content = f"---{new_fm_str}---{body}"
     
     with open(filepath, 'w', encoding='utf-8') as f:

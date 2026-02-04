@@ -2,7 +2,8 @@
 exclude-from-graph-view: true
 
 tags:
-  - compute---
+  - compute
+---
 
 - Why spark
   title:: spark QA

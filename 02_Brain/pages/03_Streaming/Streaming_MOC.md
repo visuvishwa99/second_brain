@@ -1,7 +1,8 @@
 ---
 tags:
   - index
-  - streaming---
+  - streaming
+---
 # 03_Streaming Index
 
 - [[Kafka_FAQ__v1.0]]

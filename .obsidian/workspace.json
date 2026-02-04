@@ -4,17 +4,17 @@
     "type": "split",
     "children": [
       {
-        "id": "e40ae34e1ddb11af",
+        "id": "0106c995ab2c5661",
         "type": "tabs",
         "children": [
           {
-            "id": "39167e974ff5535d",
+            "id": "c81f830e8f494186",
             "type": "leaf",
             "state": {
-              "type": "graph",
+              "type": "empty",
               "state": {},
-              "icon": "lucide-git-fork",
-              "title": "Graph view"
+              "icon": "lucide-file",
+              "title": "New tab"
             }
           }
         ]
@@ -207,11 +207,21 @@
       "command-palette:Open command palette": false,
       "bases:Create new base": false,
       "mermaid-tools:Open Mermaid Toolbar": false,
-      "obsidian-git:Open Git source control": false
+      "obsidian-git:Open Git source control": false,
+      "omnisearch:Omnisearch": false
     }
   },
-  "active": "39167e974ff5535d",
+  "active": "c81f830e8f494186",
   "lastOpenFiles": [
+    "02_Brain/pages/08_Architecture/Functional_Data_Engineering.md",
+    "02_Brain/pages/01_Concepts/LangChain_Ecosystem.md",
+    "cMiscDataengineeringProjectsbuild_second_brain03_Martanki_imports.md",
+    "02_Brain/pages/04_Cloud/2026-02-03_19-35-45.md",
+    "02_Brain/pages/01_Concepts/2026-02-03_19-35-27.md",
+    "01_Raw/journals/2026/Q1/2026-02-03_19-35-27.md",
+    "LangChain.md",
+    "Templates/Journal.md",
+    "scripts/fix_frontmatter.py",
     "02_Brain/pages/07_Languages/2025-03-02.md",
     "02_Brain/pages/08_Architecture/Graph_DB.md",
     "02_Brain/pages/04_Cloud/Freeide_mac.md",
@@ -229,17 +239,9 @@
     "02_Brain/pages/04_Cloud/Cloud_MOC.md",
     "02_Brain/pages/04_Cloud/gcp/Gcp.md",
     "02_Brain/pages/03_Streaming/2024-05-10.md",
-    "01_Raw/journals/2026/Q1/2026-02-03_19-35-27.md",
     "01_Raw/journals/2026/Q1/2026-02-03_19-35-45.md",
-    "Templates/Journal.md",
     "01_Raw/journals/2026/Q1/2026-02-02_20-03-30.md",
     "01_Raw/journals/2026/Q1/2026-02-01_14-55-28.md",
-    "02_Brain/pages/01_Concepts/Analytical Eng.md",
-    "02_Brain/pages/08_Architecture/Architecture_MOC.md",
-    "02_Brain/pages/01_Concepts/Ingestion.md",
-    "01_Raw/journals/2026/Q1/2026-02-03_19-23-33.md",
-    "02_Brain/pages/01_Concepts/Batch processing.md",
-    "Untitled.md",
     "scripts/move_decks.py",
     "agents/workflows",
     "Untitled.base",
@@ -248,7 +250,6 @@
     "Templates",
     "01_Raw/journals/2026/Q1",
     "01_Raw/journals/2026",
-    "01_Raw/journals",
     "assets/image_1715303229659_0.png",
     "assets/image_1739923808664_0.png",
     "assets/image_1739567652676_0.png",

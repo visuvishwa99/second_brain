@@ -1,77 +1,106 @@
 # Data Engineering Knowledge Pipeline Rules
 
-## The Librarian Persona
-You are a Data Engineering Librarian. Your goal is to move technical notes from the 'Landing Zone' (01_Raw) to the 'Curated Vault' (02_Brain) based on the medallion architecture.
+## 1️⃣ Folder Structure & Tag Rules
 
-## Automated Workflow
-When triggered by the command "Process my notes" or at configured intervals:
+### Folder Taxonomy
 
-1. **Scan**: Identify all .md files in `./01_Raw/`.
-2. **Classify**:
-   - **Priority 1**: Check for explicit tags (e.g., `[[data_engineering]]`, `[[architecture]]`) in the content.
-   - **Priority 2**: Map content keywords to an **existing** folder below.
-   - `./02_Brain/pages/01_Concepts/` (Theory, ACID, CAP, RAG, LLM)
-   - `./02_Brain/pages/02_Compute/` (Spark, Databricks, Hadoop)
-   - `./02_Brain/pages/03_Streaming/` (Kafka, Flink, Real-time)
-   - `./02_Brain/pages/04_Cloud/` (AWS, Azure, GCP, IAM)
-   - `./02_Brain/pages/05_Warehousing/` (Snowflake, dbt, SQL, Iceberg, Delta)
-   - `./02_Brain/pages/06_Ingestion/` (Airbyte, APIs, ETL)
-   - `./02_Brain/pages/07_Languages/` (Python, Scala, Bash)
-   - `./02_Brain/pages/08_Architecture/` (Medallion, Lakehouse, Mesh)
-   - **Fallback**: If it definitely does not fit above, use `./02_Brain/pages/99_Misc/`.
-3. **Refine**:
-   - Clean up markdown and label code blocks.
-   - **Tags Rule**:
-     - **Strict**: Use ONLY tags that align with existing folders or known high-level terms (e.g., `#spark`, `#aws`).
-     - **Exception**: If you must create a *new* tag that doesn't fit the existing taxonomy, the file **MUST** go to `99_Misc`.
-4. **Copy**: Copy the file to the target directory (leaving the original in Raw).
-5. **Log**: Append an entry to `./agents/movement_log.md` with: | Date | File | Destination | Status |
+| Folder | Purpose | Mandatory Tag | Keywords (for auto-classification) |
+|--------|---------|---------------|-------------------------------------|
+| `01_Concepts` | Theory, foundational ideas | `#concepts` | ACID, CAP, normalization, RAG, LLM |
+| `02_Compute` | Processing engines | `#compute` | Spark, Databricks, Hadoop |
+| `03_Streaming` | Real-time data | `#streaming` | Kafka, Flink, real-time, PubSub |
+| `04_Cloud` | Cloud platforms & services | `#cloud` | AWS, Azure, GCP, IAM, S3 |
+| `05_Warehousing` | Data warehouses & modeling | `#warehousing` | Snowflake, dbt, SQL, BigQuery, Iceberg |
+| `06_Ingestion` | ETL/ELT tools | `#ingestion` | Airbyte, Fivetran, APIs |
+| `07_Languages` | Programming | `#languages` | Python, Scala, Bash |
+| `08_Architecture` | Patterns & design | `#architecture` | Medallion, Lakehouse, Mesh |
+| `99_Misc` | Uncategorized (review later) | *(no tag)* | Anything else |
+
+### Tagging Rules
+> [!IMPORTANT]
+> **Rule 1**: Every file MUST have its folder's mandatory tag.
+> **Rule 2**: Use ONLY existing tags (from the table above) or broad terms like `#spark`, `#aws`.
+> **Rule 3**: If a new, unique tag is needed, the file MUST go to `99_Misc`.
+
+### 99_Misc Special Rules
+> [!NOTE]
+> - Files in `99_Misc` should have **NO tags** (or only `#misc` if required for tracking).
+> - This ensures `99_Misc` files do NOT appear in the Obsidian Graph View.
+> - These files are for temporary storage and manual review only.
 
 ---
 
-## The Principal Engineer Persona
-When asked to "explain" a topic, especially from `journals/` or `01_Raw/`:
+## 2️⃣ Journal-to-Brain Workflow (The Librarian)
 
-1. **Role**: You are a seasoned Principal Engineer with 20+ years of experience.
-2. **Goal**: Clarify concepts deeply, providing context, pros/cons, and implementation details.
-3. **Output Format**: Markdown.
+### Trigger
+Command: `Process my notes` or `Analyze my latest journal`
 
-### Explanation Structure
-Every explanation MUST include:
-1. **Concept Definition**: Clear, high-level explanation.
-2. **Real-time Examples**: At least one specific **Data Engineering** implementation example (e.g., "How would I implement this in Spark/Snowflake?").
-3. **Syntax**: Code snippets where applicable.
-4. **Flashcard**: A single, concise Q/A block at the end for Anki/Mart.
+### Workflow Steps
+1. **Scan**: User points to a journal file in `./01_Raw/`.
+2. **Analyze**: Antigravity reads the content and generates:
+   - **Concept Definition**: High-level explanation.
+   - **Real-time DE Example**: Specific implementation.
+   - **Syntax**: Code snippets.
+   - **Mermaid Diagram** (if applicable).
+   - **Flashcard**: Q/A for Anki.
+3. **Propose Destination**:
+   - Antigravity tells the user: *"I plan to append this to `02_Brain/pages/<Category>/<Filename>.md`"*
+   - If classification is uncertain → `99_Misc` (no tag).
+4. **User Approval**: User says "OK" or corrects the destination.
+5. **Append**: Antigravity appends the content to the target file.
+6. **Log**: Flashcard appended to `./03_Mart/anki_imports.md`.
 
-### Visualizations (Mermaid)
-Always ask: *"Would you like a Mermaid diagram for this?"*
-If the user says **YES**, follow these strict standards:
+---
 
-**Color Palette:**
-- `logic` (#2d3436): Logic, Prompts, Decisions
-- `storage` (#0984e3): DBs, Cache, S3
-- `process` (#6c5ce7): Models, AI, Transformations
-- `user` (#00b894): User, Inputs, Outputs
-- `group` (#f1f2f6): Subgraphs
+## 3️⃣ Node Identification Parameters
 
-**Required Style Block:**
-```mermaid
-classDef logic fill:#2d3436,stroke:#dfe6e9,stroke-width:2px,color:#fff
-classDef storage fill:#0984e3,stroke:#74b9ff,stroke-width:2px,color:#fff
-classDef process fill:#6c5ce7,stroke:#a29bfe,stroke-width:2px,color:#fff
-classDef user fill:#00b894,stroke:#55efc4,stroke-width:2px,color:#fff
-classDef group fill:#f1f2f6,stroke:#2f3542,stroke-width:1px,color:#2d3436
+To make the Obsidian Graph View useful, every note must have these properties:
+
+```yaml
+---
+created_at: "YYYY-MM-DD HH:MM"
+tags: [mandatory_tag, specific_tech]
+Explain: F                         # T = Needs explanation, F = Done
+examples: 2                        # Count of examples
+Realtime: NA                       # NA/Yes/Partial
+diagram: mermaid                   # If a diagram is present
+status: seed | sapling | evergreen # Note maturity
+---
 ```
 
-**Contrast Rules:**
-- Dark nodes (logic, storage, process, user) MUST use `color:#fff`.
-- Light nodes (groups) MUST use `color:#2d3436`.
+### Obsidian Graph Groups (Copy to Settings)
+- `tag:#concepts`     → 🔴 Red
+- `tag:#compute`      → 🟠 Orange
+- `tag:#streaming`    → 🔵 Blue
+- `tag:#cloud`        → 🟢 Green
+- `tag:#warehousing`  → 🟣 Purple
+- `tag:#architecture` → 🟡 Yellow
 
-**Tech Stack mapping:**
-- Optionally map libraries/tools using dashed lines (`-.->`) in a `Tech_Stack` subgraph.
-- Use explicit DE metaphors (e.g., "Vector DB (like Snowflake in DE)").
+> **Note**: `99_Misc` is intentionally NOT in this list. Files there will not appear in the Graph.
 
-### Output Handling Rules
-When you generate an explanation:
-1. **The Explanation**: Save the full markdown file to the appropriate `02_Brain/pages/<Category>/` folder (e.g., `08_Architecture/Functional_Data_Engineering.md`).
-2. **The Flashcard**: Extract the Q/A block and **append** it to `03_Mart/anki_imports.md`.
+---
+
+## 4️⃣ LLM Integration (Principal Engineer)
+
+### Step 1: Note Identification
+User points to a journal entry in `01_Raw/` and asks for analysis.
+
+### Step 2: Invoke
+Command: **"Deep dive this"** or **"Analyze my latest journal"**
+
+### Step 3: Output Structure
+1. **Concept Definition**: High-level explanation.
+2. **Real-time Example**: Specific DE implementation.
+3. **Syntax**: Code snippets.
+4. **Visuals**: Mermaid diagram (if `diagram: mermaid` requested).
+5. **Flashcard**: Appended to `03_Mart/anki_imports.md`.
+
+### Step 4: Propose & Confirm
+Before appending, Antigravity MUST:
+1. **State the target file**: e.g., *"I will append to `02_Brain/pages/01_Concepts/LangChain.md`"*
+2. **Wait for user confirmation** ("OK" or correction).
+3. Only then write to the file.
+
+### Status Updates
+- Change `Explain: T` → `Explain: F`
+- Change `status: seed` → `status: sapling`

@@ -1,6 +1,7 @@
 ---
 tags:
-  - level2---
+  - level2
+---
 
 - [[gafg]]
 - [[amex]]

@@ -1,7 +1,8 @@
 ---
 tags:
   - architecture
-  - index---
+  - index
+---
 # 08_Architecture Index
 
 - [[Delta]]

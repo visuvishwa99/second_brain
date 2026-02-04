@@ -1,7 +1,8 @@
 ---
 tags:
   - concepts
-  - index---
+  - index
+---
 # 01_Concepts Index
 
 - [[Analytical_Eng]]

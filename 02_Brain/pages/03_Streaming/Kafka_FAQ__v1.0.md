@@ -2,7 +2,8 @@
 exclude-from-graph-view: true
 
 tags:
-  - streaming---
+  - streaming
+---
 
 	- Kafka version -> 0.11.0.X and Confluent Platform 3.x
 		- **Confluent Platform 3.x Components:***

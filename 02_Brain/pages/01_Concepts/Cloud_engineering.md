@@ -1,7 +1,8 @@
 ---
 tags:
   - concepts
-  - level2---
+  - level2
+---
 
 - This Terminal is for Cloud related tech
 - [[Aws]]

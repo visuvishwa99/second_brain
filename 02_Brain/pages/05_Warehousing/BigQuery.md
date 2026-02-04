@@ -1,7 +1,8 @@
 ---
 tags:
   - level3
-  - warehousing---
+  - warehousing
+---
 
 # BigQuery Architecture
 	- ## Key Architecture Concept

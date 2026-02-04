@@ -1,7 +1,8 @@
 ---
 tags:
   - ingestion
-  - level3---
+  - level3
+---
 
 - Glue -> Fully managed cloud-optimized ETL service on AWS
   collapsed:: true

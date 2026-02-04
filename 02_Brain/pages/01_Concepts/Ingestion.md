@@ -1,7 +1,8 @@
 ---
 tags:
   - concepts
-  - level2---
+  - level2
+---
 
 - incremental
 	- ![image.png](../../assets/image_1738863576021_0.png)

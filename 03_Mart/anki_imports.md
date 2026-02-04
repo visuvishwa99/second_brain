@@ -8,3 +8,13 @@
 >
 > **A:** Pipelines should be treated as **Pure Functions** ($f(input) = output$), meaning they efficiently handle immutability and side effects so that re-running the same data always yields the same result (idempotency), regardless of the underlying storage mutability.
 ---
+
+> **Q:** What is the key architectural difference between LangChain and LangGraph?
+>
+> **A:** LangChain is optimized for **DAGs (Directed Acyclic Graphs)** or linear chains, while LangGraph is optimized for **Cyclic Graphs** (loops), which are essential for agentic behaviors like retries and iterative planning.
+---
+
+> **Q:** What role does LangSmith play in the LangChain ecosystem?
+>
+> **A:** LangSmith is the **observability platform** for LLM applications. It provides tracing, debugging, and monitoring of metrics like latency and token usage (think "Datadog for LLMs").
+---

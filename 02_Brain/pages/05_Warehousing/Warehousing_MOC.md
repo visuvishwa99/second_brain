@@ -1,7 +1,8 @@
 ---
 tags:
   - index
-  - warehousing---
+  - warehousing
+---
 # 05_Warehousing Index
 
 - [[Athena]]

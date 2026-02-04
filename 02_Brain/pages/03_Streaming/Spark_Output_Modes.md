@@ -1,7 +1,8 @@
 ---
 tags:
   - level3
-  - streaming---
+  - streaming
+---
 
 # Spark Output Modes
 

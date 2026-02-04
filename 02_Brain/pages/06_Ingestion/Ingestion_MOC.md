@@ -1,7 +1,8 @@
 ---
 tags:
   - index
-  - ingestion---
+  - ingestion
+---
 # 06_Ingestion Index
 
 - [[Glue]]

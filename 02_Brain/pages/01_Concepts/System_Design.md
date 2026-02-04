@@ -1,7 +1,8 @@
 ---
 tags:
   - concepts
-  - level2---
+  - level2
+---
 
 - [[Graph_DB]]
 

@@ -1,7 +1,8 @@
 ---
 tags:
   - concepts
-  - level2---
+  - level2
+---
 
 - [[spark]]
 - [[Kafka_FAQ__v1.0]]
