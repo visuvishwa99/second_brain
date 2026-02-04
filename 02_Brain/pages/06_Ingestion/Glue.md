@@ -1,7 +1,7 @@
 ---
 tags:
-  - level3
----
+  - ingestion
+  - level3---
 
 - Glue -> Fully managed cloud-optimized ETL service on AWS
   collapsed:: true
@@ -208,5 +208,5 @@ tags:
 
 ### Related
 - [[Ingestion]]
-- [[Batch processing]]
-- [[Cloud engineering]]
+- [[Batch_processing]]
+- [[Cloud_engineering]]

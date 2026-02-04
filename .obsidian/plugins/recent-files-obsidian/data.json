@@ -37,20 +37,12 @@
       "path": "Templates/Journal.md"
     },
     {
-      "basename": "Analytical Eng",
-      "path": "02_Brain/pages/01_Concepts/Analytical Eng.md"
-    },
-    {
       "basename": "Architecture_MOC",
       "path": "02_Brain/pages/08_Architecture/Architecture_MOC.md"
     },
     {
       "basename": "Ingestion",
       "path": "02_Brain/pages/01_Concepts/Ingestion.md"
-    },
-    {
-      "basename": "Batch processing",
-      "path": "02_Brain/pages/01_Concepts/Batch processing.md"
     },
     {
       "basename": "Misc_MOC",
@@ -67,10 +59,6 @@
     {
       "basename": "Azure",
       "path": "02_Brain/pages/04_Cloud/azure/Azure.md"
-    },
-    {
-      "basename": "Kafka FAQ _v1.0",
-      "path": "02_Brain/pages/03_Streaming/Kafka FAQ _v1.0.md"
     },
     {
       "basename": "DATAENG_MOC",

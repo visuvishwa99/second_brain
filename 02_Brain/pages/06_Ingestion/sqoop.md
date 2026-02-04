@@ -1,8 +1,8 @@
 ---
 exclude-from-graph-view: true
 tags:
-  - level3
----
+  - ingestion
+  - level3---
 
 - data skew in Sqoop
 	- Leverage Hash-Based Splitting:
@@ -27,4 +27,4 @@ tags:
 
 ### Related
 - [[Ingestion]]
-- [[Batch processing]]
+- [[Batch_processing]]

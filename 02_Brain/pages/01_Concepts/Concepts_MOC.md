@@ -1,13 +1,13 @@
 ---
 tags:
-  - index
----
+  - concepts
+  - index---
 # 01_Concepts Index
 
-- [[Analytical Eng]]
-- [[Batch processing]]
-- [[Cloud engineering]]
+- [[Analytical_Eng]]
+- [[Batch_processing]]
+- [[Cloud_engineering]]
 - [[Ingestion]]
 - [[Streaming]]
-- [[System Design]]
+- [[System_Design]]
 - [[Transformation]]

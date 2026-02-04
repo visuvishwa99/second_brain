@@ -1,7 +1,7 @@
 ---
 tags:
-  - index
----
+  - cloud
+  - index---
 # 04_Cloud Index
 
-- [[Freeide mac]]
+- [[Freeide_mac]]

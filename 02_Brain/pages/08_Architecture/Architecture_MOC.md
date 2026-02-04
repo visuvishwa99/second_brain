@@ -1,10 +1,10 @@
 ---
 tags:
-  - index
----
+  - architecture
+  - index---
 # 08_Architecture Index
 
 - [[Delta]]
-- [[Graph DB]]
+- [[Graph_DB]]
 - [[mpp]]
 - [[Table Formats]]

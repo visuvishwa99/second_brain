@@ -83,26 +83,80 @@ def classify_content(content):
     return DEFAULT_CATEGORY
 
 
+
+# Map folder names to mandatory tags (Reused from tag_standardizer logic if we want consistency)
+FOLDER_TAG_MAP = {
+    "01_Concepts": "concepts",
+    "02_Compute": "compute",
+    "03_Streaming": "streaming",
+    "04_Cloud": "cloud",
+    "05_Warehousing": "warehousing",
+    "06_Ingestion": "ingestion",
+    "07_Languages": "languages",
+    "08_Architecture": "architecture",
+    "99_Misc": "misc"
+}
+
 def ensure_frontmatter(content, category):
     """
-    Ensure the file has YAML frontmatter.
+    Ensure the file has YAML frontmatter AND correct tags.
     """
-    if content.startswith("---"):
-        # Already has frontmatter.
-        # Check if we need to inject metadata or if it's fine.
-        # For now, we will append a 'librarian_processed: true' comment or ensure category is there?
-        # Let's just return as is to preserve user intent, or maybe add the category if missing.
-        return content
+    import yaml
     
-    frontmatter = f"""---
+    # helper to parse FM roughly
+    def parse_fm(c):
+        if not c.startswith("---"): return None, c
+        parts = c.split("---", 2)
+        if len(parts) < 3: return None, c
+        return parts[1], parts[2]
+    
+    existing_fm_str, body = parse_fm(content)
+    
+    tags = []
+    
+    if existing_fm_str:
+        # Simple extraction of existing tags
+        # We can implement a simple parser or just rebuild it.
+        # For robustness, let's just append the new tag if missing to the text if regex fails,
+        # or fully rebuild if we can.
+        
+        # Let's verify if the category tag is present. 
+        mandatory_tag = FOLDER_TAG_MAP.get(category, "misc")
+        
+        # Check if tag exists
+        if mandatory_tag not in existing_fm_str.lower():
+            # Inject it.
+            # Find "tags:" line
+            if "tags:" in existing_fm_str:
+                 # Add to list
+                 lines = existing_fm_str.split('\n')
+                 new_lines = []
+                 for line in lines:
+                     new_lines.append(line)
+                     if line.strip().startswith("tags:"):
+                         new_lines.append(f"  - {mandatory_tag}")
+                 existing_fm_str = "\n".join(new_lines)
+            else:
+                 # No tags block, add it
+                 existing_fm_str += f"\ntags:\n  - {mandatory_tag}\n"
+        
+        return f"---{existing_fm_str}---{body}"
+
+    else:
+        # Create new
+        mandatory_tag = FOLDER_TAG_MAP.get(category, "misc")
+        frontmatter = f"""---
 area: data_engineering
 category: {category}
 refined: true
 created: {datetime.datetime.now().strftime('%Y-%m-%d')}
+tags:
+  - {mandatory_tag}
 ---
 
 """
-    return frontmatter + content
+        return frontmatter + content
+
 
 def log_movement(filename, destination, status):
     """

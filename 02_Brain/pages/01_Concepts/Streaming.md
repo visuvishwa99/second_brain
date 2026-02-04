@@ -1,10 +1,10 @@
 ---
 tags:
-  - level2
----
+  - concepts
+  - level2---
 
 - [[spark]]
-- [[Kafka FAQ _v1.0]]
+- [[Kafka_FAQ__v1.0]]
 - [[kafka]]
 - [[Stateless (S)]]
 - [[Statefull (S)]]

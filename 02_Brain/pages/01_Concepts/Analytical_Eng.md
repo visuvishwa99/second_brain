@@ -1,7 +1,7 @@
 ---
 tags:
-  - level2
----
+  - concepts
+  - level2---
 
 - [[dbt]]
 - [[SQL]]

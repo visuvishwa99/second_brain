@@ -1,11 +1,10 @@
 ---
 tags:
-  - level2
----
+  - level2---
 
 - [[gafg]]
 - [[amex]]
-- [[Freeide mac]]
+- [[Freeide_mac]]
 
 
 ### Related

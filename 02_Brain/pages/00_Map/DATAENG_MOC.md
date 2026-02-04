@@ -1,8 +1,7 @@
 ---
 tags:
-  - MOC
   - level1
----
+  - moc---
 
 # Data Engineering Knowledge Base
 

@@ -1,7 +1,7 @@
 ---
 tags:
-  - level3
----
+  - compute
+  - level3---
 
 - Core spark => [[spark_optimization]]
 - [[pyspark_syntax]]
@@ -14,4 +14,4 @@ tags:
 ### Related
 - [[Transformation]]
 - [[Streaming]]
-- [[Batch processing]]
+- [[Batch_processing]]

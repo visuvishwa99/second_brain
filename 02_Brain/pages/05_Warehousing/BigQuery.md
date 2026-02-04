@@ -1,7 +1,7 @@
 ---
 tags:
   - level3
----
+  - warehousing---
 
 # BigQuery Architecture
 	- ## Key Architecture Concept
@@ -46,5 +46,5 @@ tags:
 
 
 ### Related
-- [[Analytical Eng]]
-- [[Cloud engineering]]
+- [[Analytical_Eng]]
+- [[Cloud_engineering]]

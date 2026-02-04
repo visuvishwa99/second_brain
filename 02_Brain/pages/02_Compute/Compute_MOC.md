@@ -1,7 +1,7 @@
 ---
 tags:
-  - index
----
+  - compute
+  - index---
 # 02_Compute Index
 
 - [[pyspark_oops]]
