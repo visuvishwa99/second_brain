@@ -4,17 +4,17 @@
 
 ### Folder Taxonomy
 
-| Folder | Purpose | Mandatory Tag | Keywords (for auto-classification) |
-|--------|---------|---------------|-------------------------------------|
-| `01_Concepts` | Theory, foundational ideas | `#concepts` | ACID, CAP, normalization, RAG, LLM |
-| `02_Compute` | Processing engines | `#compute` | Spark, Databricks, Hadoop |
-| `03_Streaming` | Real-time data | `#streaming` | Kafka, Flink, real-time, PubSub |
-| `04_Cloud` | Cloud platforms & services | `#cloud` | AWS, Azure, GCP, IAM, S3 |
-| `05_Warehousing` | Data warehouses & modeling | `#warehousing` | Snowflake, dbt, SQL, BigQuery, Iceberg |
-| `06_Ingestion` | ETL/ELT tools | `#ingestion` | Airbyte, Fivetran, APIs |
-| `07_Languages` | Programming | `#languages` | Python, Scala, Bash |
-| `08_Architecture` | Patterns & design | `#architecture` | Medallion, Lakehouse, Mesh |
-| `99_Misc` | Uncategorized (review later) | *(no tag)* | Anything else |
+| Folder            | Purpose                      | Mandatory Tag   | Keywords (for auto-classification)     |
+| ----------------- | ---------------------------- | --------------- | -------------------------------------- |
+| `01_Concepts`     | Theory, foundational ideas   | `#concepts`     | ACID, CAP, normalization, RAG, LLM     |
+| `02_Compute`      | Processing engines           | `#compute`      | Spark, Databricks, Hadoop              |
+| `03_Streaming`    | Real-time data               | `#streaming`    | Kafka, Flink, real-time, PubSub        |
+| `04_Cloud`        | Cloud platforms & services   | `#cloud`        | AWS, Azure, GCP, IAM, S3               |
+| `05_Warehousing`  | Data warehouses & modeling   | `#warehousing`  | Snowflake, dbt, SQL, BigQuery, Iceberg |
+| `06_Ingestion`    | ETL/ELT tools                | `#ingestion`    | Airbyte, Fivetran, APIs                |
+| `07_Languages`    | Programming                  | `#languages`    | Python, Scala, Bash                    |
+| `08_Architecture` | Patterns & design            | `#architecture` | Medallion, Lakehouse, Mesh             |
+| `99_Misc`         | Uncategorized (review later) | #default        | Anything else                          |
 
 ### Tagging Rules
 > [!IMPORTANT]

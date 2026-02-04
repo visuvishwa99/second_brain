@@ -11,10 +11,14 @@
             "id": "c81f830e8f494186",
             "type": "leaf",
             "state": {
-              "type": "empty",
-              "state": {},
+              "type": "markdown",
+              "state": {
+                "file": "gemini/GEMINI.md",
+                "mode": "source",
+                "source": false
+              },
               "icon": "lucide-file",
-              "title": "New tab"
+              "title": "GEMINI"
             }
           }
         ]
@@ -211,8 +215,10 @@
       "omnisearch:Omnisearch": false
     }
   },
-  "active": "c81f830e8f494186",
+  "active": "7c8a813f8f31cbaf",
   "lastOpenFiles": [
+    "01_Raw/journals/2026/Q1/2026-02-03_20-26-19.md",
+    "01_Raw/journals/2026/Q1/2026-02-03_20-25-43.md",
     "02_Brain/pages/08_Architecture/Functional_Data_Engineering.md",
     "02_Brain/pages/01_Concepts/LangChain_Ecosystem.md",
     "cMiscDataengineeringProjectsbuild_second_brain03_Martanki_imports.md",
@@ -240,8 +246,6 @@
     "02_Brain/pages/04_Cloud/gcp/Gcp.md",
     "02_Brain/pages/03_Streaming/2024-05-10.md",
     "01_Raw/journals/2026/Q1/2026-02-03_19-35-45.md",
-    "01_Raw/journals/2026/Q1/2026-02-02_20-03-30.md",
-    "01_Raw/journals/2026/Q1/2026-02-01_14-55-28.md",
     "scripts/move_decks.py",
     "agents/workflows",
     "Untitled.base",
