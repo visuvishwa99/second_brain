@@ -59,6 +59,8 @@ After publishing, Antigravity MUST complete these steps:
 - [ ] Delete staged file from `01_Raw/stage/` using `rm` (NOT `del`)
 - [ ] Update source journal frontmatter: `processed: true`
 - [ ] Append flashcard to `03_Mart/anki_imports.md`
+- [ ] Log to `agents/movement_log.md` using this format:
+      `| YYYY-MM-DD HH:MM:SS | <SourceFile> | <DestinationFolder> | Success |`
 
 ---
 

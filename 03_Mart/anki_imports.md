@@ -18,3 +18,13 @@
 >
 > **A:** LangSmith is the **observability platform** for LLM applications. It provides tracing, debugging, and monitoring of metrics like latency and token usage (think "Datadog for LLMs").
 ---
+
+> **Q:** How does Snowflake Cortex Code (CoCo) prevent hallucinations about non-existent tables?
+>
+> **A:** Unlike generic AI tools, CoCo is **Context Aware**—it checks the actual database metadata (schema, RBAC privileges) before generating code, ensuring it only suggests valid objects.
+---
+
+> **Q:** What is the "Hybrid Strategy" for Databricks and Snowflake in 2026?
+>
+> **A:** Using Databricks as the **Data Factory** (for heavy engineering, ML, structureless data) and Snowflake as the **Data Storefront** (for high-concurrency BI and serving governed data via Iceberg/replication).
+---
