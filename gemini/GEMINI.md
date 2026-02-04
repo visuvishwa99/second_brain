@@ -39,9 +39,9 @@ Command: `Process my notes` or `Analyze my latest journal`
 1. **Scan**: User points to a journal file in `./01_Raw/`.
 2. **Check**: If `processed: true` in frontmatter, skip.
 3. **Draft (Staging)**: 
-   - Antigravity generates the deep dive content.
+   - **If `Explain: T`**: Generate **Deep Dive** (Concept, Realtime Example, Syntax, Diagram, Flashcards).
+   - **If `Explain: F`**: Generate **Concise Summary** (Clean up markdown, structure content, no extra analysis).
    - Saves the file to `./01_Raw/stage/<Filename>.md`.
-   - *Note*: The flashcard is temporarily held here or in memory.
 4. **Review**: User checks the file in `stage`.
 5. **Publish**: 
    - User says "Approve" or "Move to Brain".
@@ -106,8 +106,8 @@ Before appending, Antigravity MUST:
 3. Only then write to the file.
 
 ### Status Updates
-- Change `Explain: T` → `Explain: F`
+- Change `Explain: false` → `Explain: false` (or `true` if deep dive)
 - Change `status: seed` → `status: sapling`
-- Change `examples: <count>` → `examples: dataengineering[1]` (or appropriate tool)
-- Change `diagram: <bool>` → `diagram: F` (if no diagram) or `mermaid`
+- Change `examples: dataengineering[1]` (update if specific tool used)
+- Change `diagram: false` → `diagram: mermaid` (if diagram added)
 

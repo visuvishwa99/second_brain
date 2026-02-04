@@ -13,12 +13,12 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "01_Raw/journals/2026/Q1/2026-02-04_09-59-41.md",
+                "file": "03_Mart/anki_imports.md",
                 "mode": "source",
                 "source": false
               },
               "icon": "lucide-file",
-              "title": "2026-02-04_09-59-41"
+              "title": "anki_imports"
             }
           }
         ]
@@ -217,17 +217,22 @@
   },
   "active": "887004d92bfaa993",
   "lastOpenFiles": [
-    "01_Raw/journals/2026/Q1/2026-02-04_12-37-04.md",
-    "01_Raw/journals/2026/Q1/2026-02-04_11-27-22.md",
-    "01_Raw/journals/2026/Q1/2026-02-04_09-59-41.md",
-    "Templates/Journal.md",
-    "01_Raw/journals/2026/Q1/2026-02-03.md",
-    "01_Raw/journals/2026/Q1/2026-02-03_20-26-19.md",
-    "01_Raw/stage",
-    "01_Raw/journals/2026/Q1/2026-02-03_19-35-27.md",
-    "01_Raw/journals/2026/Q1/2026-02-03_19-35-45.md",
-    "01_Raw/journals/2026/Q1/2026-02-03_20-25-43.md",
+    "01_Raw/stage/Snowflake_Cortex_Code.md",
+    "02_Brain/pages/05_Warehousing/Snowflake_Cortex_Code.md",
+    "01_Raw/stage/Snowflake.md",
     "03_Mart/anki_imports.md",
+    "01_Raw/journals/2026/Q1/2026-02-04_12-37-04.md",
+    "01_Raw/journals/2026/Q1/2026-02-03.md",
+    "01_Raw/journals/2026/Q1/2026-02-03_19-35-45.md",
+    "01_Raw/journals/2026/Q1/2026-02-03_19-35-27.md",
+    "User_Guide.md",
+    "01_Raw/stage",
+    "01_Raw/Stage",
+    "Templates/Journal.md",
+    "01_Raw/journals/2026/Q1/2026-02-03_20-26-19.md",
+    "01_Raw/journals/2026/Q1/2026-02-03_20-25-43.md",
+    "01_Raw/journals/2026/Q1/2026-02-04_09-59-41.md",
+    "01_Raw/journals/2026/Q1/2026-02-04_11-27-22.md",
     "agents/workflows/deep_dive.md",
     "02_Brain/pages/03_Streaming/Kafka_FAQ__v1.0.md",
     "02_Brain/pages/05_Warehousing/dbt.md",
@@ -241,10 +246,6 @@
     "02_Brain/pages/01_Concepts/2026-02-03_19-35-27.md",
     "LangChain.md",
     "scripts/fix_frontmatter.py",
-    "02_Brain/pages/07_Languages/2025-03-02.md",
-    "02_Brain/pages/08_Architecture/Graph_DB.md",
-    "02_Brain/pages/04_Cloud/Freeide_mac.md",
-    "02_Brain/pages/01_Concepts/System_Design.md",
     "scripts/file_renamer.py",
     "scripts/tag_standardizer.py",
     "scripts/move_decks.py",
@@ -253,7 +254,6 @@
     "Untitled.canvas",
     "01_Raw/journals/2026/Q1 1",
     "Templates",
-    "01_Raw/journals/2026/Q1",
     "assets/image_1715303229659_0.png",
     "assets/image_1739923808664_0.png",
     "assets/image_1739567652676_0.png",
