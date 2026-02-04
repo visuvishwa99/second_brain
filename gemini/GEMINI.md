@@ -1,20 +1,20 @@
 # Data Engineering Knowledge Pipeline Rules
 
-## 1️⃣ Folder Structure & Tag Rules
+## 1. Folder Structure & Tag Rules
 
 ### Folder Taxonomy
 
-| Folder            | Purpose                      | Mandatory Tag   | Keywords (for auto-classification)     |
-| ----------------- | ---------------------------- | --------------- | -------------------------------------- |
-| `01_Concepts`     | Theory, foundational ideas   | `#concepts`     | ACID, CAP, normalization, RAG, LLM     |
-| `02_Compute`      | Processing engines           | `#compute`      | Spark, Databricks, Hadoop              |
-| `03_Streaming`    | Real-time data               | `#streaming`    | Kafka, Flink, real-time, PubSub        |
-| `04_Cloud`        | Cloud platforms & services   | `#cloud`        | AWS, Azure, GCP, IAM, S3               |
-| `05_Warehousing`  | Data warehouses & modeling   | `#warehousing`  | Snowflake, dbt, SQL, BigQuery, Iceberg |
-| `06_Ingestion`    | ETL/ELT tools                | `#ingestion`    | Airbyte, Fivetran, APIs                |
-| `07_Languages`    | Programming                  | `#languages`    | Python, Scala, Bash                    |
-| `08_Architecture` | Patterns & design            | `#architecture` | Medallion, Lakehouse, Mesh             |
-| `99_Misc`         | Uncategorized (review later) | #default        | Anything else                          |
+| Folder | Purpose | Mandatory Tag | Keywords (for auto-classification) |
+|--------|---------|---------------|-------------------------------------|
+| `01_Concepts` | Theory, foundational ideas | `#concepts` | ACID, CAP, normalization, RAG, LLM |
+| `02_Compute` | Processing engines | `#compute` | Spark, Databricks, Hadoop |
+| `03_Streaming` | Real-time data | `#streaming` | Kafka, Flink, real-time, PubSub |
+| `04_Cloud` | Cloud platforms & services | `#cloud` | AWS, Azure, GCP, IAM, S3 |
+| `05_Warehousing` | Data warehouses & modeling | `#warehousing` | Snowflake, dbt, SQL, BigQuery, Iceberg |
+| `06_Ingestion` | ETL/ELT tools | `#ingestion` | Airbyte, Fivetran, APIs |
+| `07_Languages` | Programming | `#languages` | Python, Scala, Bash |
+| `08_Architecture` | Patterns & design | `#architecture` | Medallion, Lakehouse, Mesh |
+| `99_Misc` | Uncategorized (review later) | #default | Anything else |
 
 ### Tagging Rules
 > [!IMPORTANT]
@@ -30,56 +30,75 @@
 
 ---
 
-## 2️⃣ Journal-to-Brain Workflow (The Librarian)
+## 2. Journal-to-Brain Workflow (The Librarian)
 
-### Trigger
+### Core Principle
+Organize knowledge by topic files, not by creating scattered individual files for each question. **Search First, Create Later.**
+
+## Trigger
 Command: `Process my notes` or `Analyze my latest journal`
 
 ### Workflow Steps
 1. **Scan**: User points to a journal file in `./01_Raw/`.
-2. **Check**: If `processed: true` in frontmatter, skip.
+2. **Search Existing Files**:
+   - Check `02_Brain` for an existing file matching the topic (e.g., if topic is "Snowflake Time Travel", look for `Snowflake.md`).
 3. **Draft (Staging)**: 
-   - **If `Explain: T`**: Generate **Deep Dive** (Concept, Realtime Example, Syntax, Diagram, Flashcards).
-   - **If `Explain: F`**: Generate **Concise Summary** (Clean up markdown, structure content, no extra analysis).
-   - Saves the file to `./01_Raw/stage/<Filename>.md`.
+   - **If Existing File Found**: Prepare an **Append Entry** (see format below).
+   - **If No Match**: Prepare a **New File**.
+   - Save the draft to `./01_Raw/stage/<Topic>.md` for review.
 4. **Review**: User checks the file in `stage`.
 5. **Publish**: 
    - User says "Approve" or "Move to Brain".
-   - Antigravity moves the file from `stage` to `./02_Brain/pages/<Category>/`.
+   - Antigravity appends/moves content to the target file in `02_Brain`.
    - Appends flashcard to `./03_Mart/anki_imports.md`.
    - Marks source journal as `processed: true`.
 
+### Post-Publish Checklist (CRITICAL)
+After publishing, Antigravity MUST complete these steps:
+- [ ] Write/Append content to `02_Brain/pages/<Category>/<File>.md`
+- [ ] Delete staged file from `01_Raw/stage/` using `rm` (NOT `del`)
+- [ ] Update source journal frontmatter: `processed: true`
+- [ ] Append flashcard to `03_Mart/anki_imports.md`
+
 ---
 
-## 3️⃣ Node Identification Parameters
+## 3. Node Identification Parameters
 
-To make the Obsidian Graph View useful, every note must have these properties:
+### Append Format (for adding to existing files)
+When appending to an existing file, use this separator and header:
 
-```yaml
+```markdown
 ---
-created_at: "YYYY-MM-DD HH:MM"
-tags: [mandatory_tag, specific_tech]
-Explain: F                         # T = Needs explanation, F = Done
-examples: 2                        # Count of examples
-Realtime: NA                       # NA/Yes/Partial
-diagram: mermaid                   # If a diagram is present
-status: seed | sapling | evergreen # Note maturity
+[New Entry]
+created_at: "{{date}} {{time}}"
+status: seed
+processed: false
+Explain: false [Full explanation of the concept - detailed and comprehensive]
+tags: [relevant, topic, tags]
+examples: 
+  - dataengineering[1]: [Realtime implementation example with actual code/configuration]
+  - [specified-tool][2]: [Realtime implementation OR default to dataengineering if irrelevant]
+diagram: NA [or describe if diagram would be helpful]
 ---
+
+### [Topic Title]
+(Content goes here...)
 ```
 
-### Obsidian Graph Groups (Copy to Settings)
-- `tag:#concepts`     → 🔴 Red
-- `tag:#compute`      → 🟠 Orange
-- `tag:#streaming`    → 🔵 Blue
-- `tag:#cloud`        → 🟢 Green
-- `tag:#warehousing`  → 🟣 Purple
-- `tag:#architecture` → 🟡 Yellow
+### The "Realtime" Rule
+**Criterion**: At least ONE example must be a practical "Realtime" implementation.
 
-> **Note**: `99_Misc` is intentionally NOT in this list. Files there will not appear in the Graph.
+1.  **Definition**: Realtime = Practical implementation example using actual tools/platforms.
+2.  **Default Field**: Data Engineering.
+3.  **Selection Logic**:
+    - **User specifies tool**: Show implementation in that tool.
+    - **Tool not specified**: Default to Data Engineering implementation.
+    - **Tool irrelevant**: Fall back to Data Engineering (e.g., if user asks "Iceberg in Tableau", use Data Engineering instead).
+4.  **Format**: Show HOW to implement (code/config), not just WHAT it is.
 
 ---
 
-## 4️⃣ LLM Integration (Principal Engineer)
+## 4. LLM Integration (Principal Engineer)
 
 ### Step 1: Note Identification
 User points to a journal entry in `01_Raw/` and asks for analysis.
@@ -87,27 +106,35 @@ User points to a journal entry in `01_Raw/` and asks for analysis.
 ### Step 2: Invoke
 Command: **"Deep dive this"** or **"Analyze my latest journal"**
 
-### Step 3: Analysis (The Realtime Rule)
-**Criterion**: At least ONE example must be a practical "Realtime" implementation.
-
+### Step 3: Analysis
 1.  **Concept**: Define what the user asked about.
-2.  **The Realtime Example**:
-    - **Default**: Data Engineering implementation.
-    - **Specific**: If the user asks about a specific tool (e.g., Tableau), show the implementation there *if relevant*. If not, fallback to DE.
-    - **How-To**: Show code, configuration, or specific steps.
+2.  **The Realtime Example** (Strict adherence to Rule above).
 3.  **Syntax/Code**: Python, SQL, YAML, etc.
 4.  **Visuals**: Mermaid diagram (if relevant).
 5.  **Flashcard**: Q/A for Anki.
 
 ### Step 4: Propose & Confirm
 Before appending, Antigravity MUST:
-1. **State the target file**: e.g., *"I will append to `02_Brain/pages/01_Concepts/LangChain.md`"*
-2. **Wait for user confirmation** ("OK" or correction).
-3. Only then write to the file.
+1. **State the target file**: e.g., *"I will append to `02_Brain/pages/05_Warehousing/Snowflake.md`"*
+2. **Wait for user confirmation**.
 
-### Status Updates
-- Change `Explain: false` → `Explain: false` (or `true` if deep dive)
-- Change `status: seed` → `status: sapling`
-- Change `examples: dataengineering[1]` (update if specific tool used)
-- Change `diagram: false` → `diagram: mermaid` (if diagram added)
+### Global Rules
+1. **No Emojis**: Use plain text (e.g., "X", "Note", "tip").
+2. **Detailed Explanations**: Provide comprehensive, actionable content.
 
+---
+
+## 5. Technical Notes for Antigravity
+
+### Shell Commands
+- The user's terminal runs **Bash** (even on Windows).
+- Use `rm` to delete files, NOT `del`.
+- Use `mv` to move files, NOT `move`.
+
+### File Operations
+- Prefer using `write_to_file` with `Overwrite: true` to move content (avoids shell issues).
+- After writing to destination, use `rm` to clean up staged files.
+
+### Frontmatter Formatting
+- Always ensure a newline before the closing `---` delimiter.
+- Use `false`/`true` (lowercase) for boolean properties, not `F`/`T`.
