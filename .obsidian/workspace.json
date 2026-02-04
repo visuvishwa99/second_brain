@@ -211,8 +211,9 @@
       "omnisearch:Omnisearch": false
     }
   },
-  "active": "4720317845d391f5",
+  "active": "5ac9bce76ec6c7ae",
   "lastOpenFiles": [
+    "01_Raw/journals/2026/Q1/2026-02-03.md",
     "02_Brain/pages/05_Warehousing/dbt.md",
     "02_Brain/pages/01_Concepts/Analytical_Eng.md",
     "02_Brain/pages/05_Warehousing/BigQuery.md",
@@ -241,7 +242,6 @@
     "02_Brain/pages/02_Compute/Spark_QA.md",
     "02_Brain/pages/99_Misc/amex.md",
     "02_Brain/pages/02_Compute/Spark_Streaming_QA.md",
-    "02_Brain/pages/04_Cloud/Cloud_MOC.md",
     "scripts/move_decks.py",
     "agents/workflows",
     "Untitled.base",
