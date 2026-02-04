@@ -1,19 +1,11 @@
 ---
-created at : {{date}} {{time}}
+created_at: "{{date}} {{time}}"
+Explain: F
 tags:
-  - journal
-  - daily
+examples: 2
+Realtime: NA
+diagram: mermaid
 ---
 
-# Journal Entry - {{time}}
-
-**Date:** [[{{date}}]]
-**Time:** {{time}}
-**Explain:** *t**
-
-
-## 📝 Notes
 
 - 
-
-

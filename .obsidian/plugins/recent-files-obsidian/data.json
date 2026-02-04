@@ -1,12 +1,56 @@
 {
   "recentFiles": [
     {
-      "basename": "2026-02-02_20-03-30",
-      "path": "01_Raw/journals/2026/Q1/2026-02-02_20-03-30.md"
+      "basename": "2025-03-02",
+      "path": "02_Brain/pages/07_Languages/2025-03-02.md"
+    },
+    {
+      "basename": "Spark_QA",
+      "path": "02_Brain/pages/02_Compute/Spark_QA.md"
     },
     {
       "basename": "amex",
       "path": "02_Brain/pages/99_Misc/amex.md"
+    },
+    {
+      "basename": "Cloud_MOC",
+      "path": "02_Brain/pages/04_Cloud/Cloud_MOC.md"
+    },
+    {
+      "basename": "Gcp",
+      "path": "02_Brain/pages/04_Cloud/gcp/Gcp.md"
+    },
+    {
+      "basename": "2024-05-10",
+      "path": "02_Brain/pages/03_Streaming/2024-05-10.md"
+    },
+    {
+      "basename": "2026-02-03_19-35-27",
+      "path": "01_Raw/journals/2026/Q1/2026-02-03_19-35-27.md"
+    },
+    {
+      "basename": "2026-02-03_19-35-45",
+      "path": "01_Raw/journals/2026/Q1/2026-02-03_19-35-45.md"
+    },
+    {
+      "basename": "Journal",
+      "path": "Templates/Journal.md"
+    },
+    {
+      "basename": "Analytical Eng",
+      "path": "02_Brain/pages/01_Concepts/Analytical Eng.md"
+    },
+    {
+      "basename": "Architecture_MOC",
+      "path": "02_Brain/pages/08_Architecture/Architecture_MOC.md"
+    },
+    {
+      "basename": "Ingestion",
+      "path": "02_Brain/pages/01_Concepts/Ingestion.md"
+    },
+    {
+      "basename": "Batch processing",
+      "path": "02_Brain/pages/01_Concepts/Batch processing.md"
     },
     {
       "basename": "Misc_MOC",
@@ -29,20 +73,12 @@
       "path": "02_Brain/pages/03_Streaming/Kafka FAQ _v1.0.md"
     },
     {
-      "basename": "Batch processing",
-      "path": "02_Brain/pages/01_Concepts/Batch processing.md"
-    },
-    {
       "basename": "DATAENG_MOC",
       "path": "02_Brain/pages/00_Map/DATAENG_MOC.md"
     },
     {
       "basename": "Delta",
       "path": "02_Brain/pages/08_Architecture/Delta.md"
-    },
-    {
-      "basename": "2026-02-01_14-55-28",
-      "path": "01_Raw/journals/2026/Q1/2026-02-01_14-55-28.md"
     },
     {
       "basename": "2026-01-29_22-09-25",

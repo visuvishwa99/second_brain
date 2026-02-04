@@ -11,6 +11,4 @@
 		- Line => Check for the resting data (After resting period (ex: 90-180 days ) we generate new offer). Increase / decrease the line bases on the business logic provided by PO .
 		- Fulfillments => Renaming the table names as per downstream add timestamps to the batch
 		- Audit log utility => (Profile , line , eligiblity)
-		-
-		-
-		-
+		

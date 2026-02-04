@@ -4,17 +4,21 @@
     "type": "split",
     "children": [
       {
-        "id": "79d6fa57d7eedc16",
+        "id": "3b28e2d1ec380aa7",
         "type": "tabs",
         "children": [
           {
-            "id": "8ef2e4a3836e04f4",
+            "id": "3475599d84a7a6fb",
             "type": "leaf",
             "state": {
-              "type": "empty",
-              "state": {},
+              "type": "markdown",
+              "state": {
+                "file": "02_Brain/pages/07_Languages/2025-03-02.md",
+                "mode": "source",
+                "source": false
+              },
               "icon": "lucide-file",
-              "title": "New tab"
+              "title": "2025-03-02"
             }
           }
         ]
@@ -210,10 +214,26 @@
       "obsidian-git:Open Git source control": false
     }
   },
-  "active": "8ef2e4a3836e04f4",
+  "active": "7c8a813f8f31cbaf",
   "lastOpenFiles": [
-    "01_Raw/journals/2026/Q1/2026-02-02_20-03-30.md",
+    "scripts/tag_standardizer.py",
+    "02_Brain/pages/02_Compute/Spark_QA.md",
     "02_Brain/pages/99_Misc/amex.md",
+    "02_Brain/pages/02_Compute/Spark_Streaming_QA.md",
+    "02_Brain/pages/04_Cloud/Cloud_MOC.md",
+    "02_Brain/pages/04_Cloud/gcp/Gcp.md",
+    "02_Brain/pages/03_Streaming/2024-05-10.md",
+    "01_Raw/journals/2026/Q1/2026-02-03_19-35-27.md",
+    "01_Raw/journals/2026/Q1/2026-02-03_19-35-45.md",
+    "Templates/Journal.md",
+    "01_Raw/journals/2026/Q1/2026-02-02_20-03-30.md",
+    "01_Raw/journals/2026/Q1/2026-02-01_14-55-28.md",
+    "02_Brain/pages/01_Concepts/Analytical Eng.md",
+    "02_Brain/pages/08_Architecture/Architecture_MOC.md",
+    "02_Brain/pages/01_Concepts/Ingestion.md",
+    "01_Raw/journals/2026/Q1/2026-02-03_19-23-33.md",
+    "02_Brain/pages/01_Concepts/Batch processing.md",
+    "Untitled.md",
     "02_Brain/pages/99_Misc/Misc_MOC.md",
     "02_Brain/pages/99_Misc/2024-05-16.md",
     "02_Brain/pages/01_Concepts/Transformation.md",
@@ -222,24 +242,8 @@
     "03_Mart/PySpark_OOPS.md",
     "03_Mart/PySpark_Syntax.md",
     "03_Mart/spark_optimization.md",
-    "03_Mart/kafka.md",
-    "03_Mart/Aws.md",
-    "03_Mart/python.md",
-    "03_Mart/SQL.md",
-    "03_Mart/mpp.md",
-    "03_Mart/Table Formats.md",
     "scripts/move_decks.py",
-    "03_Mart/deck.md",
-    "02_Brain/pages/01_Concepts/Batch processing.md",
-    "02_Brain/pages/00_Map/DATAENG_MOC.md",
-    "02_Brain/pages/08_Architecture/Delta.md",
-    "02_Brain/pages/08_Architecture/Functional_Data_Engineering.md",
-    "agents/workflows/deep_dive.md",
     "agents/workflows",
-    "03_Mart/anki_imports.md",
-    "03_Mart/cMiscDataengineeringProjectsbuild_second_brain03_Martanki_imports.md",
-    "01_Raw/journals/2026/Q1/2026-01-29_22-09-25.md",
-    "01_Raw/journals/2026/Q1/2026-02-01_14-55-28.md",
     "Untitled.base",
     "Untitled.canvas",
     "01_Raw/journals/2026/Q1 1",
