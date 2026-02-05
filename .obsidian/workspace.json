@@ -11,10 +11,14 @@
             "id": "b7875d94d31395ab",
             "type": "leaf",
             "state": {
-              "type": "empty",
-              "state": {},
+              "type": "markdown",
+              "state": {
+                "file": "03_Mart/streaming_cards.md",
+                "mode": "source",
+                "source": true
+              },
               "icon": "lucide-file",
-              "title": "New tab"
+              "title": "streaming_cards"
             }
           }
         ]
@@ -85,38 +89,6 @@
         "type": "tabs",
         "children": [
           {
-            "id": "f4d66826f57e99f2",
-            "type": "leaf",
-            "state": {
-              "type": "backlink",
-              "state": {
-                "collapseAll": true,
-                "extraContext": false,
-                "sortOrder": "alphabetical",
-                "showSearch": false,
-                "searchQuery": "",
-                "backlinkCollapsed": false,
-                "unlinkedCollapsed": true
-              },
-              "icon": "links-coming-in",
-              "title": "Backlinks"
-            }
-          },
-          {
-            "id": "4e87bceb20b3f9e9",
-            "type": "leaf",
-            "state": {
-              "type": "outgoing-link",
-              "state": {
-                "file": "03_Mart/sample_cards.md",
-                "linksCollapsed": false,
-                "unlinkedCollapsed": true
-              },
-              "icon": "links-going-out",
-              "title": "Outgoing links from sample_cards"
-            }
-          },
-          {
             "id": "4d4e23130459e5c6",
             "type": "leaf",
             "state": {
@@ -132,31 +104,6 @@
             }
           },
           {
-            "id": "c1f0babd950c7db8",
-            "type": "leaf",
-            "state": {
-              "type": "outline",
-              "state": {
-                "file": "03_Mart/sample_cards.md",
-                "followCursor": false,
-                "showSearch": false,
-                "searchQuery": ""
-              },
-              "icon": "lucide-list",
-              "title": "Outline of sample_cards"
-            }
-          },
-          {
-            "id": "09b52d227642df17",
-            "type": "leaf",
-            "state": {
-              "type": "git-view",
-              "state": {},
-              "icon": "git-pull-request",
-              "title": "Source Control"
-            }
-          },
-          {
             "id": "c457eb95051c50be",
             "type": "leaf",
             "state": {
@@ -169,13 +116,33 @@
               "icon": "lucide-archive",
               "title": "All properties"
             }
+          },
+          {
+            "id": "19ff5aa9c30a0b6e",
+            "type": "leaf",
+            "state": {
+              "type": "review-queue-list-view",
+              "state": {},
+              "icon": "SpacedRepIcon",
+              "title": "Notes Review Queue"
+            }
+          },
+          {
+            "id": "8321c052c847cf7e",
+            "type": "leaf",
+            "state": {
+              "type": "git-view",
+              "state": {},
+              "icon": "git-pull-request",
+              "title": "Source Control"
+            }
           }
         ],
-        "currentTab": 4
+        "currentTab": 3
       }
     ],
     "direction": "horizontal",
-    "width": 200
+    "width": 372.5
   },
   "left-ribbon": {
     "hiddenItems": {
@@ -189,10 +156,11 @@
       "mermaid-tools:Open Mermaid Toolbar": false,
       "obsidian-git:Open Git source control": false,
       "omnisearch:Omnisearch": false,
-      "obsidian-to-anki-plugin:Obsidian_to_Anki - Scan Vault": false
+      "obsidian-to-anki-plugin:Obsidian_to_Anki - Scan Vault": false,
+      "obsidian-spaced-repetition:Review flashcards": false
     }
   },
-  "active": "b7875d94d31395ab",
+  "active": "19ff5aa9c30a0b6e",
   "lastOpenFiles": [
     "03_Mart/streaming_cards.md",
     "scripts/clean_anki_ids.py",
