@@ -1,80 +1,72 @@
 {
   "recentFiles": [
     {
-      "basename": "2026-02-04_17-10-05",
-      "path": "01_Raw/journals/2026/Q1/2026-02-04_17-10-05.md"
+      "basename": "streaming_cards",
+      "path": "03_Mart/streaming_cards.md"
     },
     {
-      "basename": "SQL",
-      "path": "03_Mart/SQL.md"
+      "basename": "warehousing_cards",
+      "path": "03_Mart/warehousing_cards.md"
     },
     {
-      "basename": "2026-02-04_17-06-02",
-      "path": "01_Raw/journals/2026/Q1/2026-02-04_17-06-02.md"
+      "basename": "User_Guide",
+      "path": "User_Guide.md"
     },
     {
-      "basename": "tumblin_win_agg",
-      "path": "02_Brain/pages/03_Streaming/tumblin_win_agg.md"
+      "basename": "2024-05-10",
+      "path": "01_Raw/journals/2026/Q1/2024-05-10.md"
     },
     {
-      "basename": "Aws",
-      "path": "03_Mart/Aws.md"
+      "basename": "2024-05-15",
+      "path": "01_Raw/journals/2026/Q1/2024-05-15.md"
     },
     {
-      "basename": "spark_output_modes",
-      "path": "02_Brain/pages/03_Streaming/spark_output_modes.md"
-    },
-    {
-      "basename": "Misc_MOC",
-      "path": "02_Brain/pages/99_Misc/Misc_MOC.md"
-    },
-    {
-      "basename": "2026-02-04_16-51-22",
-      "path": "01_Raw/journals/2026/Q1/2026-02-04_16-51-22.md"
-    },
-    {
-      "basename": "2026-02-04_16-20-39",
-      "path": "01_Raw/journals/2026/Q1/2026-02-04_16-20-39.md"
-    },
-    {
-      "basename": "2026-02-04_16-23-11",
-      "path": "01_Raw/journals/2026/Q1/2026-02-04_16-23-11.md"
-    },
-    {
-      "basename": "2026-02-04_16-25-56",
-      "path": "01_Raw/journals/2026/Q1/2026-02-04_16-25-56.md"
-    },
-    {
-      "basename": "2026-02-04_12-37-04",
-      "path": "01_Raw/journals/2026/Q1/2026-02-04_12-37-04.md"
-    },
-    {
-      "basename": "2026-02-04_16-22-56",
-      "path": "01_Raw/journals/2026/Q1/2026-02-04_16-22-56.md"
-    },
-    {
-      "basename": "Journal",
-      "path": "Templates/Journal.md"
-    },
-    {
-      "basename": "2026-02-04_13-53-02",
-      "path": "01_Raw/journals/2026/Q1/2026-02-04_13-53-02.md"
+      "basename": "2026-02-03",
+      "path": "01_Raw/journals/2026/Q1/2026-02-03.md"
     },
     {
       "basename": "2026-02-03_19-35-27",
       "path": "01_Raw/journals/2026/Q1/2026-02-03_19-35-27.md"
     },
     {
+      "basename": "2026-02-04_12-37-04",
+      "path": "01_Raw/journals/2026/Q1/2026-02-04_12-37-04.md"
+    },
+    {
+      "basename": "2026-02-04_13-53-02",
+      "path": "01_Raw/journals/2026/Q1/2026-02-04_13-53-02.md"
+    },
+    {
+      "basename": "2026-02-04_20-35-46",
+      "path": "01_Raw/journals/2026/Q1/2026/Q1/2026-02-04_20-35-46.md"
+    },
+    {
+      "basename": "project_loan_pipeline",
+      "path": "02_Brain/pages/08_Architecture/project_loan_pipeline.md"
+    },
+    {
+      "basename": "skills",
+      "path": "agents/skills.md"
+    },
+    {
+      "basename": "system_design",
+      "path": "02_Brain/pages/01_Concepts/system_design.md"
+    },
+    {
+      "basename": "data_merging_strategies",
+      "path": "02_Brain/pages/01_Concepts/data_merging_strategies.md"
+    },
+    {
       "basename": "2026-02-03_19-35-45",
       "path": "01_Raw/journals/2026/Q1/2026-02-03_19-35-45.md"
     },
     {
-      "basename": "anki_imports",
-      "path": "03_Mart/anki_imports.md"
+      "basename": "Misc_MOC",
+      "path": "02_Brain/pages/99_Misc/Misc_MOC.md"
     },
     {
-      "basename": "2026-02-03",
-      "path": "01_Raw/journals/2026/Q1/2026-02-03.md"
+      "basename": "Journal",
+      "path": "Templates/Journal.md"
     },
     {
       "basename": "deep_dive",
@@ -87,10 +79,6 @@
     {
       "basename": "GEMINI",
       "path": "gemini/GEMINI.md"
-    },
-    {
-      "basename": "2025-03-02",
-      "path": "02_Brain/pages/07_Languages/2025-03-02.md"
     },
     {
       "basename": "Cloud_MOC",

@@ -1,7 +1,6 @@
 ---
 tags:
- - ingestion
-
+  - ingestion
 ---
 
 - data skew in Sqoop

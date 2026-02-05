@@ -1,6 +1,6 @@
 ---
 tags:
- - ingestion
+  - ingestion
 - ingestion
 ---
 # 06_Ingestion Index

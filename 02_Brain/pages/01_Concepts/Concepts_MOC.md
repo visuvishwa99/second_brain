@@ -1,7 +1,6 @@
 ---
 tags:
- - concepts
-- index
+  - concepts
 ---
 # 01_Concepts Index
 

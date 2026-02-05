@@ -1,7 +1,7 @@
 ---
 created_at: "2026-02-04 13:58"
 tags:
- - architecture
+  - architecture
 Explain: false
 examples: 2
 Realtime: NA

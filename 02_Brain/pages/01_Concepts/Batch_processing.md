@@ -1,7 +1,6 @@
 ---
 tags:
- - concepts
-- level2
+  - concepts
 ---
 
 - Terminal for all Batch

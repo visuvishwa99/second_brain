@@ -1,7 +1,6 @@
 ---
 tags:
- - warehousing
-- warehousing
+  - warehousing
 ---
 
 # BigQuery Architecture

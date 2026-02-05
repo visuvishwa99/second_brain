@@ -1,7 +1,7 @@
 ---
 created_at: "2026-02-03 20:23"
 tags:
- - ai
+  - ai
 Explain: F
 examples: 2
 Realtime: NA

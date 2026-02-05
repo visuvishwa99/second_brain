@@ -1,7 +1,6 @@
 ---
 tags:
- - concepts
-- level2
+  - concepts
 ---
 
 - This Terminal is for Cloud related tech

@@ -4,7 +4,6 @@ status: seed
 processed: false
 Explain: false
 tags:
-examples:
  - dataengineering[1]: [Interview System Design - Design Databricks]
 diagram: NA
 ---

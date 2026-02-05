@@ -20,3 +20,6 @@
 | 2026-02-04 13:46:00 | 2026-02-04_12-37-04.md | 05_Warehousing | Success |
 | 2026-02-04 13:46:00 | 2026-02-03.md | 99_Misc | Success |
 | 2026-02-04 13:58:00 | 2026-02-04_13-53-02.md | 08_Architecture | Success |
+| 2026-02-04 17:42:00 | 2026-02-04_17-36-51.md | 02_Brain/pages/05_Warehousing/scd.md | Success |
+| 2026-02-04 17:42:00 | 2024-05-15.md | 02_Brain/pages/07_Languages/java.md | Success |
+| 2026-02-04 17:42:00 | 2024-05-10.md | 02_Brain/pages/03_Streaming/spark_streaming.md | Success |

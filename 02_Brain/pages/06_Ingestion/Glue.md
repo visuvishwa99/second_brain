@@ -1,7 +1,6 @@
 ---
 tags:
- - ingestion
-
+  - ingestion
 ---
 
 - Glue -> Fully managed cloud-optimized ETL service on AWS

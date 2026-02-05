@@ -1,6 +1,5 @@
 ---
-tags:
----
+tags:---
 
 - [[gafg]]
 - [[amex]]

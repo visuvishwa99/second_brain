@@ -1,11 +1,10 @@
 ---
 tags:
- - compute
-- index
+  - compute
 ---
 # 02_Compute Index
 
-- [[pyspark_oops]]
+- [[python_oops]]
 - [[pyspark_syntax]]
 - [[spark]]
 - [[spark_optimization]]

@@ -1,7 +1,6 @@
 ---
 tags:
- - ai
-- AI
+  - ai
 ---
 # 09_AI Index
 

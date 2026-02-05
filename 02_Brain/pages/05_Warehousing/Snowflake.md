@@ -5,7 +5,7 @@ status: sapling
 processed: true
 Explain: true
 tags:
- - warehousing
+  - warehousing
 examples:
  - dataengineering[1]: [Declarative Pipeline with Dynamic Tables]
  - snowflake[1]: [Cortex Code (CoCo) Integration]

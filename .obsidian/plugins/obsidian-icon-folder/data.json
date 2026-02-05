@@ -6,11 +6,11 @@
     "emojiStyle": "native",
     "iconColor": null,
     "recentlyUsedIcons": [
+      "LiFolderDown",
       "LiLayoutTemplate",
       "LiFiles",
       "♊",
-      "🤖",
-      "LiDatabase"
+      "🤖"
     ],
     "recentlyUsedIconsSize": 5,
     "rules": [],
@@ -37,7 +37,10 @@
   "01_Raw": "🥟",
   "01_Raw/Archive": "LiArchive",
   "01_Raw/journals": "LiNotebookTabs",
-  "01_Raw/stage": "LiStickyNote",
+  "01_Raw/stage": {
+    "iconName": "LiFolderDown",
+    "iconColor": "#c2bc0f"
+  },
   "02_Brain": "🧠",
   "03_Mart": "LiDatabase",
   "agents": "🤖",

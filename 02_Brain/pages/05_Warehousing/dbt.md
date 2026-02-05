@@ -1,6 +1,6 @@
 ---
 tags:
- - warehousing
+  - warehousing
 - warehousing
 ---
 
