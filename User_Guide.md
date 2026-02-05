@@ -60,6 +60,37 @@ diagram: false # true/mermaid = Agent creates a Mermaid diagram.
 
 ---
 
+## Anki Spaced Repetition (03_Mart)
+
+We use the Obsidian_to_Anki plugin. 
+
+### Card Syntax
+Use the **Cloze** style with `{curly braces}` for simplicity.
+
+```markdown
+TARGET DECK: SecondBrain::05_Warehousing
+
+START
+Cloze
+Snowflake micro-partitions are contiguous units of storage between {50 MB} and {500 MB} of uncompressed data.
+END
+
+START
+Cloze
+{Time Travel} in Snowflake allows you to access historical data.
+END
+```
+
+### Cleaning Up IDs
+The plugin automatically injects `<!--ID: 12345-->` tags to track cards. To remove them (e.g., for a clean slate or sharing):
+1. In VS Code, press `Ctrl + Shift + F` (Find in Files).
+2. Use **Regex Mode** (Alt+R).
+3. **Find**: `<!--ID: \d+-->\n?`
+4. **Replace**: (Leave empty).
+5. Click **Replace All**.
+
+---
+
 ## Mobile Sync (iPhone)
 
 To sync your Second Brain between your PC and iPhone without iCloud:

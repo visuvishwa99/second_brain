@@ -34,13 +34,9 @@
     "debugMode": false,
     "useInternalPlugins": false
   },
-  "01_Raw": "🥟",
+  "01_Raw": "LiFolderDown",
   "01_Raw/Archive": "LiArchive",
   "01_Raw/journals": "LiNotebookTabs",
-  "01_Raw/stage": {
-    "iconName": "LiFolderDown",
-    "iconColor": "#c2bc0f"
-  },
   "02_Brain": "🧠",
   "03_Mart": "LiDatabase",
   "agents": "🤖",

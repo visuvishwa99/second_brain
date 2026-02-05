@@ -1,16 +1,20 @@
 {
   "recentFiles": [
     {
-      "basename": "streaming_cards",
-      "path": "03_Mart/streaming_cards.md"
+      "basename": "anki_test",
+      "path": "03_Mart/anki_test.md"
     },
     {
-      "basename": "warehousing_cards",
-      "path": "03_Mart/warehousing_cards.md"
+      "basename": "spark_streaming",
+      "path": "02_Brain/pages/03_Streaming/spark_streaming.md"
     },
     {
-      "basename": "journal_test_flashcards",
-      "path": "01_Raw/journal_test_flashcards.md"
+      "basename": "amex",
+      "path": "02_Brain/pages/00_DATAENG/amex.md"
+    },
+    {
+      "basename": "batch_processing",
+      "path": "02_Brain/pages/01_Concepts/batch_processing.md"
     },
     {
       "basename": "2026-02-05_09-39-12",
