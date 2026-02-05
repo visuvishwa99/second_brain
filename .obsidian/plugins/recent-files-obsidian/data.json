@@ -9,6 +9,26 @@
       "path": "03_Mart/warehousing_cards.md"
     },
     {
+      "basename": "journal_test_flashcards",
+      "path": "01_Raw/journal_test_flashcards.md"
+    },
+    {
+      "basename": "2026-02-05_09-39-12",
+      "path": "01_Raw/journals/2026/Q1/2026/Q1/2026-02-05_09-39-12.md"
+    },
+    {
+      "basename": "2026-02-04_13-53-02",
+      "path": "01_Raw/journals/2026/Q1/2026-02-04_13-53-02.md"
+    },
+    {
+      "basename": "2026-02-05_09-37-59",
+      "path": "01_Raw/journals/2026/Q1/2026/Q1/2026-02-05_09-37-59.md"
+    },
+    {
+      "basename": "Journal",
+      "path": "Templates/Journal.md"
+    },
+    {
       "basename": "User_Guide",
       "path": "User_Guide.md"
     },
@@ -31,10 +51,6 @@
     {
       "basename": "2026-02-04_12-37-04",
       "path": "01_Raw/journals/2026/Q1/2026-02-04_12-37-04.md"
-    },
-    {
-      "basename": "2026-02-04_13-53-02",
-      "path": "01_Raw/journals/2026/Q1/2026-02-04_13-53-02.md"
     },
     {
       "basename": "2026-02-04_20-35-46",
@@ -63,10 +79,6 @@
     {
       "basename": "Misc_MOC",
       "path": "02_Brain/pages/99_Misc/Misc_MOC.md"
-    },
-    {
-      "basename": "Journal",
-      "path": "Templates/Journal.md"
     },
     {
       "basename": "deep_dive",

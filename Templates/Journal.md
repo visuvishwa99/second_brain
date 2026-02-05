@@ -7,6 +7,9 @@ tags:
 examples: 1
 Realtime: false
 diagram: false
-space repetition: false
+card_creation : false
+card_type : "basic"
+card_diagram : false
 ---
+
 

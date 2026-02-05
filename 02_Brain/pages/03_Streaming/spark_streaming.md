@@ -11,6 +11,13 @@ tags:
     - **Unbounded Table**: Conceptually, new data is just "appended" to the table.
     - **Fault Tolerance**: Uses **Checkpointing** and Write-Ahead Logs (WAL) to ensure exactly-once semantics.
 
+- ## Triggers
+    - Controls how often the query produces a result.
+    - **Default (Unspecified)**: Runs micro-batch as soon as previous one finishes.
+    - **Fixed Interval**: `ProcessingTime("10 seconds")`.
+    - **AvailableNow**: Processes all available data then stops (Batch-like).
+    - **OneTime** (Deprecated): Use AvailableNow.
+
 - ## State Management
     - ### Stateless Transformations
         - **Definition**: No result depends on previous batches.
@@ -57,6 +64,13 @@ tags:
       | **Append** | Only **new** rows are written. | Stateless, Watermarked Aggs. | Log ingestion, IoT raw data. |
       | **Update** | Only **changed** rows are written. | Aggregations. | Dashboard updates (only limit to rows that changed). |
       | **Complete**| **Entire** result table is rewritten. | Aggregations (Small output). | Small leaderboards, top-N. |
+
+- ## Common Sinks
+    - **File**: Parquet, ORC, JSON, CSV. Supports "Append" mode.
+    - **Kafka**: Write to a Kafka topic.
+    - **Foreach / ForeachBatch**: Arbitrary logic (e.g., Upsert to Delta, write to NoSQL).
+    - **Console**: Prints to stdout (Debugging only, memory expensive).
+    - **Memory**: Stores as in-memory table (Debugging only, limited size).
 
 - ## Design Patterns
     - ### The `foreachBatch` Pattern (Upserts)
