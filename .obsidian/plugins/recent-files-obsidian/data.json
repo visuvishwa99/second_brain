@@ -1,12 +1,72 @@
 {
   "recentFiles": [
     {
-      "basename": "2026-02-04_13-53-02",
-      "path": "01_Raw/journals/2026/Q1/2026-02-04_13-53-02.md"
+      "basename": "2026-02-04_17-10-05",
+      "path": "01_Raw/journals/2026/Q1/2026-02-04_17-10-05.md"
+    },
+    {
+      "basename": "SQL",
+      "path": "03_Mart/SQL.md"
+    },
+    {
+      "basename": "2026-02-04_17-06-02",
+      "path": "01_Raw/journals/2026/Q1/2026-02-04_17-06-02.md"
+    },
+    {
+      "basename": "tumblin_win_agg",
+      "path": "02_Brain/pages/03_Streaming/tumblin_win_agg.md"
+    },
+    {
+      "basename": "Aws",
+      "path": "03_Mart/Aws.md"
+    },
+    {
+      "basename": "spark_output_modes",
+      "path": "02_Brain/pages/03_Streaming/spark_output_modes.md"
+    },
+    {
+      "basename": "Misc_MOC",
+      "path": "02_Brain/pages/99_Misc/Misc_MOC.md"
+    },
+    {
+      "basename": "2026-02-04_16-51-22",
+      "path": "01_Raw/journals/2026/Q1/2026-02-04_16-51-22.md"
+    },
+    {
+      "basename": "2026-02-04_16-20-39",
+      "path": "01_Raw/journals/2026/Q1/2026-02-04_16-20-39.md"
+    },
+    {
+      "basename": "2026-02-04_16-23-11",
+      "path": "01_Raw/journals/2026/Q1/2026-02-04_16-23-11.md"
+    },
+    {
+      "basename": "2026-02-04_16-25-56",
+      "path": "01_Raw/journals/2026/Q1/2026-02-04_16-25-56.md"
     },
     {
       "basename": "2026-02-04_12-37-04",
       "path": "01_Raw/journals/2026/Q1/2026-02-04_12-37-04.md"
+    },
+    {
+      "basename": "2026-02-04_16-22-56",
+      "path": "01_Raw/journals/2026/Q1/2026-02-04_16-22-56.md"
+    },
+    {
+      "basename": "Journal",
+      "path": "Templates/Journal.md"
+    },
+    {
+      "basename": "2026-02-04_13-53-02",
+      "path": "01_Raw/journals/2026/Q1/2026-02-04_13-53-02.md"
+    },
+    {
+      "basename": "2026-02-03_19-35-27",
+      "path": "01_Raw/journals/2026/Q1/2026-02-03_19-35-27.md"
+    },
+    {
+      "basename": "2026-02-03_19-35-45",
+      "path": "01_Raw/journals/2026/Q1/2026-02-03_19-35-45.md"
     },
     {
       "basename": "anki_imports",
@@ -17,32 +77,12 @@
       "path": "01_Raw/journals/2026/Q1/2026-02-03.md"
     },
     {
-      "basename": "2026-02-03_19-35-45",
-      "path": "01_Raw/journals/2026/Q1/2026-02-03_19-35-45.md"
-    },
-    {
-      "basename": "2026-02-03_19-35-27",
-      "path": "01_Raw/journals/2026/Q1/2026-02-03_19-35-27.md"
-    },
-    {
-      "basename": "Journal",
-      "path": "Templates/Journal.md"
-    },
-    {
       "basename": "deep_dive",
       "path": "agents/workflows/deep_dive.md"
     },
     {
-      "basename": "Kafka_FAQ__v1.0",
-      "path": "02_Brain/pages/03_Streaming/Kafka_FAQ__v1.0.md"
-    },
-    {
       "basename": "dbt",
       "path": "02_Brain/pages/05_Warehousing/dbt.md"
-    },
-    {
-      "basename": "Analytical_Eng",
-      "path": "02_Brain/pages/01_Concepts/Analytical_Eng.md"
     },
     {
       "basename": "GEMINI",
@@ -53,52 +93,16 @@
       "path": "02_Brain/pages/07_Languages/2025-03-02.md"
     },
     {
-      "basename": "Spark_QA",
-      "path": "02_Brain/pages/02_Compute/Spark_QA.md"
-    },
-    {
-      "basename": "amex",
-      "path": "02_Brain/pages/99_Misc/amex.md"
-    },
-    {
       "basename": "Cloud_MOC",
       "path": "02_Brain/pages/04_Cloud/Cloud_MOC.md"
-    },
-    {
-      "basename": "Gcp",
-      "path": "02_Brain/pages/04_Cloud/gcp/Gcp.md"
-    },
-    {
-      "basename": "2024-05-10",
-      "path": "02_Brain/pages/03_Streaming/2024-05-10.md"
     },
     {
       "basename": "Architecture_MOC",
       "path": "02_Brain/pages/08_Architecture/Architecture_MOC.md"
     },
     {
-      "basename": "Ingestion",
-      "path": "02_Brain/pages/01_Concepts/Ingestion.md"
-    },
-    {
-      "basename": "Misc_MOC",
-      "path": "02_Brain/pages/99_Misc/Misc_MOC.md"
-    },
-    {
       "basename": "2024-05-16",
       "path": "02_Brain/pages/99_Misc/2024-05-16.md"
-    },
-    {
-      "basename": "Transformation",
-      "path": "02_Brain/pages/01_Concepts/Transformation.md"
-    },
-    {
-      "basename": "Azure",
-      "path": "02_Brain/pages/04_Cloud/azure/Azure.md"
-    },
-    {
-      "basename": "Delta",
-      "path": "02_Brain/pages/08_Architecture/Delta.md"
     },
     {
       "basename": "2026-01-29_22-09-25",

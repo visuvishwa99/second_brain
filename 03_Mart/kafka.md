@@ -1,6 +1,6 @@
 ---
 tags:
-  - level3
+ 
 ---
 
 deck:: [[kafka]]

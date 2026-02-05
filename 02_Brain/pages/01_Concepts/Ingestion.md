@@ -1,7 +1,7 @@
 ---
 tags:
-  - concepts
-  - level2
+ - concepts
+- level2
 ---
 
 - incremental
@@ -9,7 +9,4 @@ tags:
 	- ![image.png](../../assets/image_1738863589462_0.png)
 
 
-### Related
-- [[sqoop]]
-- [[kafka]]
-- [[Glue]]
+

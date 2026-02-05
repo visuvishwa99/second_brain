@@ -14,13 +14,14 @@
 | `06_Ingestion` | ETL/ELT tools | `#ingestion` | Airbyte, Fivetran, APIs |
 | `07_Languages` | Programming | `#languages` | Python, Scala, Bash |
 | `08_Architecture` | Patterns & design | `#architecture` | Medallion, Lakehouse, Mesh |
-| `99_Misc` | Uncategorized (review later) | #default | Anything else |
+| `09_AI` | Artificial Intelligence | `#ai` | LLM, RAG, Agents, OpenAI |
+| `99_Misc` | Uncategorized (review later) | `#misc` | Anything else |
 
-### Tagging Rules
+### Tagging Rules (One Folder = One Tag)
 > [!IMPORTANT]
-> **Rule 1**: Every file MUST have its folder's mandatory tag.
-> **Rule 2**: Use ONLY existing tags (from the table above) or broad terms like `#spark`, `#aws`.
-> **Rule 3**: If a new, unique tag is needed, the file MUST go to `99_Misc`.
+> **Rule 1**: Use **ONLY** the high-level tag corresponding to the folder (e.g., `#streaming` for `03_Streaming`).
+> **Rule 2**: Do NOT use sub-tags like "kafka" or "spark_streaming". Use the file name for specificity.
+> **Rule 3**: This ensures the Obsidian Graph is clean and clustered by domain.
 
 ### 99_Misc Special Rules
 > [!NOTE]
@@ -64,39 +65,42 @@ After publishing, Antigravity MUST complete these steps:
 
 ---
 
-## 3. Node Identification Parameters
+## 3. Template Field Definitions
 
-### Append Format (for adding to existing files)
-When appending to an existing file, use this separator and header:
-
-```markdown
+### Journal Template Fields
+```yaml
 ---
-[New Entry]
 created_at: "{{date}} {{time}}"
 status: seed
-processed: false
-Explain: false [Full explanation of the concept - detailed and comprehensive]
-tags: [relevant, topic, tags]
-examples: 
-  - dataengineering[1]: [Realtime implementation example with actual code/configuration]
-  - [specified-tool][2]: [Realtime implementation OR default to dataengineering if irrelevant]
-diagram: NA [or describe if diagram would be helpful]
+processed: false        # false = Agent will process. true = Skip.
+Explain: false          # true = Deep Dive analysis. false = Concise summary.
+tags:                   # Folder tag (streaming, warehousing, etc.)
+examples: 1             # Number of syntax/code examples to include.
+Realtime: false         # true = Add a Production-Grade Scenario.
+diagram: false          # true = Generate a Mermaid diagram.
 ---
-
-### [Topic Title]
-(Content goes here...)
 ```
 
-### The "Realtime" Rule
-**Criterion**: At least ONE example must be a practical "Realtime" implementation.
+### Field Logic
 
-1.  **Definition**: Realtime = Practical implementation example using actual tools/platforms.
-2.  **Default Field**: Data Engineering.
-3.  **Selection Logic**:
-    - **User specifies tool**: Show implementation in that tool.
-    - **Tool not specified**: Default to Data Engineering implementation.
-    - **Tool irrelevant**: Fall back to Data Engineering (e.g., if user asks "Iceberg in Tableau", use Data Engineering instead).
-4.  **Format**: Show HOW to implement (code/config), not just WHAT it is.
+| Field | Value | Behavior |
+|-------|-------|----------|
+| `Explain` | `true` | Full Principal Engineer analysis (concepts, code, diagrams). |
+| `Explain` | `false` | Concise Librarian summary (just organize and file). |
+| `examples` | `1`, `2`, etc. | Number of small syntax/usage code snippets to include. |
+| `Realtime` | `true` | Add a **Production-Grade Scenario** based on `tags` + note content. |
+| `Realtime` | `false` | No production scenario, just the standard examples. |
+| `diagram` | `true` | Generate a Mermaid diagram for the concept. |
+
+### The "Realtime" Rule (Context-Aware)
+
+When `Realtime: true`:
+1.  **Read `tags`**: Determines the domain (e.g., `streaming`, `warehousing`).
+2.  **Read note content**: Infers the specific tool (e.g., Kafka, Snowflake).
+3.  **Generate**: A complex, **end-to-end Production Scenario** using industry-standard tools.
+    *   Example for `streaming`: Kafka Source -> Spark Structured Streaming -> Delta Lake Sink.
+    *   Example for `warehousing`: CDC Ingestion -> dbt Transformations -> Snowflake serving layer.
+4.  **Fallback**: If no tool can be inferred, default to a generic Data Engineering scenario.
 
 ---
 
@@ -110,9 +114,9 @@ Command: **"Deep dive this"** or **"Analyze my latest journal"**
 
 ### Step 3: Analysis
 1.  **Concept**: Define what the user asked about.
-2.  **The Realtime Example** (Strict adherence to Rule above).
-3.  **Syntax/Code**: Python, SQL, YAML, etc.
-4.  **Visuals**: Mermaid diagram (if relevant).
+2.  **Code Examples**: Based on `examples` count.
+3.  **Realtime Scenario**: If `Realtime: true`, add production-grade implementation.
+4.  **Visuals**: Mermaid diagram (if `diagram: true`).
 5.  **Flashcard**: Q/A for Anki.
 
 ### Step 4: Propose & Confirm
@@ -144,4 +148,3 @@ Before appending, Antigravity MUST:
 ### File Naming Conventions
 - **MOC Files**: Must be ALL CAPS with MOC suffix (e.g., `CONCEPT_MOC.md`, `WAREHOUSING_MOC.md`).
 - **Standard Notes**: Must be **lowercase** with **underscores** (e.g., `snowflake_cortex.md`, `delta_lake.md`).
-

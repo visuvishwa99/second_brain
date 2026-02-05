@@ -1,7 +1,7 @@
 ---
 tags:
-  - cloud
-  - index
+ - cloud
+- index
 ---
 # 04_Cloud Index
 

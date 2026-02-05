@@ -1,7 +1,7 @@
 ---
 tags:
-  - index
-  - streaming
+ - streaming
+- streaming
 ---
 # 03_Streaming Index
 

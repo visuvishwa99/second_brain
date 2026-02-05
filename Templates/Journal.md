@@ -4,11 +4,8 @@ status: seed
 processed: false
 Explain: false
 tags:
-examples:
-  - dataengineering[1]:
-Realtime: NA
+examples: 1
+Realtime: false
 diagram: false
 ---
 
-
-- 

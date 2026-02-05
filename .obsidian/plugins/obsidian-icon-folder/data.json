@@ -1,0 +1,47 @@
+{
+  "settings": {
+    "migrated": 6,
+    "iconPacksPath": ".obsidian/icons",
+    "fontSize": 16,
+    "emojiStyle": "native",
+    "iconColor": null,
+    "recentlyUsedIcons": [
+      "LiLayoutTemplate",
+      "LiFiles",
+      "♊",
+      "🤖",
+      "LiDatabase"
+    ],
+    "recentlyUsedIconsSize": 5,
+    "rules": [],
+    "extraMargin": {
+      "top": 0,
+      "right": 4,
+      "bottom": 0,
+      "left": 0
+    },
+    "iconInTabsEnabled": false,
+    "iconInTitleEnabled": false,
+    "iconInTitlePosition": "above",
+    "iconInFrontmatterEnabled": false,
+    "iconInFrontmatterFieldName": "icon",
+    "iconColorInFrontmatterFieldName": "iconColor",
+    "iconsBackgroundCheckEnabled": false,
+    "iconsInNotesEnabled": true,
+    "iconsInLinksEnabled": true,
+    "iconIdentifier": ":",
+    "lucideIconPackType": "native",
+    "debugMode": false,
+    "useInternalPlugins": false
+  },
+  "01_Raw": "🥟",
+  "01_Raw/Archive": "LiArchive",
+  "01_Raw/journals": "LiNotebookTabs",
+  "01_Raw/stage": "LiStickyNote",
+  "02_Brain": "🧠",
+  "03_Mart": "LiDatabase",
+  "agents": "🤖",
+  "gemini": "♊",
+  "scripts": "LiFiles",
+  "Templates": "LiLayoutTemplate"
+}

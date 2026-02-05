@@ -1,7 +1,7 @@
 ---
 created_at: "2026-02-03 20:23"
 tags:
-  - architecture
+ - architecture
 Explain: F
 examples: 2
 Realtime: NA
@@ -56,9 +56,9 @@ UPDATE target SET col = val WHERE date = '2024-01-01'
 Use **Overwrite Partition**:
 ```sql
 -- ✅ Functional Approach: Replace the entire partition atomically
-INSERT OVERWRITE target_table 
+INSERT OVERWRITE target_table
 PARTITION (date='2024-01-01')
-SELECT * FROM source_transformed 
+SELECT * FROM source_transformed
 WHERE date = '2024-01-01'
 ```
 
@@ -67,20 +67,20 @@ This ensures **idempotency**. If you run it twice, the result is identical.
 ### 3. Visualization
 ```mermaid
 flowchart LR
-    classDef logic fill:#2d3436,stroke:#dfe6e9,stroke-width:2px,color:#fff
-    classDef storage fill:#0984e3,stroke:#74b9ff,stroke-width:2px,color:#fff
-    classDef process fill:#6c5ce7,stroke:#a29bfe,stroke-width:2px,color:#fff
-    classDef group fill:#f1f2f6,stroke:#2f3542,stroke-width:1px,color:#2d3436
+ classDef logic fill:#2d3436,stroke:,stroke-width:2px,color:
+ classDef storage fill:#0984e3,stroke:#74b9ff,stroke-width:2px,color:
+ classDef process fill:#6c5ce7,stroke:,stroke-width:2px,color:
+ classDef group fill:,stroke:#2f3542,stroke-width:1px,color:#2d3436
 
-    subgraph Functional_Pipeline
-        Input[(Immutable Source)]:::storage -->|Transform| P1[Partition 2024-01-01]:::process
-        P1 -->|Overwrite| Output[(Data Lake)]:::storage
-    end
-    
-    subgraph Mutable_AntiPattern
-        Input2[(Source)]:::storage -->|Updates/Merges| P2[Existing Data]:::process
-        P2 -->|Mutate| Output2[(Stateful Table)]:::storage
-    end
+ subgraph Functional_Pipeline
+ Input[(Immutable Source)]:::storage -->|Transform| P1[Partition 2024-01-01]:::process
+ P1 -->|Overwrite| Output[(Data Lake)]:::storage
+ end
+
+ subgraph Mutable_AntiPattern
+ Input2[(Source)]:::storage -->|Updates/Merges| P2[Existing Data]:::process
+ P2 -->|Mutate| Output2[(Stateful Table)]:::storage
+ end
 ```
 
 ### 4. Key Trade-offs

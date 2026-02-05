@@ -1,7 +1,7 @@
 ---
 tags:
-  - architecture
-  - index
+ - architecture
+- index
 ---
 # 08_Architecture Index
 

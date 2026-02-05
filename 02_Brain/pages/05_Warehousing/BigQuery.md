@@ -1,7 +1,7 @@
 ---
 tags:
-  - level3
-  - warehousing
+ - warehousing
+- warehousing
 ---
 
 # BigQuery Architecture
@@ -23,9 +23,9 @@ tags:
 	- ## Query Execution Flow
 		- ![image.png](../../assets/image_1745386451003_0.png)
 - # BigQuery Tables
-  collapsed:: true
+ collapsed:: true
 	- ## Empty Tables
-	  collapsed:: true
+	 collapsed:: true
 		- Tables created with defined schema but containing no data
 		- Serve as structure for future data insertion or loading
 	- ## Creating Tables
@@ -38,9 +38,9 @@ tags:
 			- Amazon S3
 			- Azure Blob storage
 	- ## Partitioning Types
-	  1. Integer Range
-	  2. Time-unit Column (e.g., 1960-01-01, 2159-12-12)
-	  3. Ingestion time
+	 1. Integer Range
+	 2. Time-unit Column (e.g., 1960-01-01, 2159-12-12)
+	 3. Ingestion time
 		- Note: You can't create a string as partition column in BigQuery
 - # BigQuery Concepts
 	- DB called as :-> {{Dataset}} ^68086cc4-4594-41fc-9b51-bdfbc5c4af78

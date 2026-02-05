@@ -1,15 +1,15 @@
 ---
 tags:
-  - concepts
-  - level2
+ - concepts
+- level2
 ---
 
 - [[dbt]]
-- [[SQL]]
-- [[Snowflake]]
+- [[sql]]
+- [[snowflake]]
+- [[bigquery]]
+- [[athena]]
+- [[redshift]]
 
 
 ### Related
-- [[BigQuery]]
-- [[Athena]]
-- [[RedshiftQA]]

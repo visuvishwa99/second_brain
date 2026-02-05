@@ -32,8 +32,8 @@ Organize knowledge by topic files, not by creating scattered individual files fo
 
 ### 3. Draft (Staging)
 - Generate content based on `Explain` flag:
-  - `Explain: true` -> Full "Deep Dive" analysis.
-  - `Explain: false` -> Concise summary/cleanup.
+ - `Explain: true` -> Full "Deep Dive" analysis.
+ - `Explain: false` -> Concise summary/cleanup.
 - Save to `01_Raw/stage/<Topic>.md`.
 
 ### 4. Review & Approve
@@ -42,12 +42,12 @@ Organize knowledge by topic files, not by creating scattered individual files fo
 
 ### 5. Publish (Checklist)
 After approval:
-1.  [ ] Write/Append to `02_Brain/pages/<Category>/<File>.md`
-2.  [ ] Delete staged file using `rm` (NOT `del`)
-3.  [ ] Update source journal: `processed: true`
-4.  [ ] Append flashcard to `03_Mart/anki_imports.md`
-5.  [ ] Log to `agents/movement_log.md`:
-      `| YYYY-MM-DD HH:MM:SS | <SourceFile> | <DestinationFolder> | Success |`
+1. [ ] Write/Append to `02_Brain/pages/<Category>/<File>.md`
+2. [ ] Delete staged file using `rm` (NOT `del`)
+3. [ ] Update source journal: `processed: true`
+4. [ ] Append flashcard to `03_Mart/anki_imports.md`
+5. [ ] Log to `agents/movement_log.md`:
+ `| YYYY-MM-DD HH:MM:SS | <SourceFile> | <DestinationFolder> | Success |`
 
 ---
 

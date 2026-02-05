@@ -1,17 +1,17 @@
 - Athena -> Amazon Athena is a query service that makes it easy to analyze data directly
-  collapsed:: true
-  S3 using standard SQL
+ collapsed:: true
+ S3 using standard SQL
 	- Athena is not database or not data warehouse
 	- For very small queries (processing less than 10 MB), you'll still be billed for 10 MB
 - To run Amazon Athena queries on data stored in Amazon S3, follow these steps:
-  collapsed:: true
+ collapsed:: true
 	- Ensure your data is stored in S3 in a supported format (e.g., CSV, JSON, Parquet, ORC)
 	- Create a database in Athena if you haven't already.
 	- Open the Athena console in AWS.
 	- Query Editor, write your SQL query to analyze the data in your S3-backed table.
 	-
 - Optimization and Cost
-  collapsed:: true
+ collapsed:: true
 	- Amazon Athena (Query Performance & Cost Efficiency)
 	- Partitioning and Bucketing for Faster Queries – Use CREATE TABLE WITH PARTITION to avoid full-table scans and improve query efficiency.
 	- Leverage Result Caching – Enable Athena query caching to speed up recurring queries and reduce costs.

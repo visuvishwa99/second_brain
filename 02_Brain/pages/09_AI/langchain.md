@@ -1,7 +1,7 @@
 ---
 created_at: "2026-02-03 20:23"
 tags:
-  - concepts
+ - ai
 Explain: F
 examples: 2
 Realtime: NA
@@ -16,23 +16,23 @@ This note covers the LangChain ecosystem, specifically comparing **LangChain**, 
 ## The Framework Breakdown
 
 - **LangChain (Linear Workflows):**
-    - Best for **predefined, linear paths** called "chains."
-    - The LLM follows a specific sequence (e.g., fetching a document and then summarizing it) without making autonomous decisions on the process flow.
-    - **Use Case:** A basic E-commerce chatbot that answers policy questions using Retrieval Augmented Generation (RAG).
-        
+ - Best for **predefined, linear paths** called "chains."
+ - The LLM follows a specific sequence (e.g., fetching a document and then summarizing it) without making autonomous decisions on the process flow.
+ - **Use Case:** A basic E-commerce chatbot that answers policy questions using Retrieval Augmented Generation (RAG).
+
 - **LangGraph (Complex Agents):**
-    - An orchestration framework designed for **stateful, iterative workflows**.
-    - Unlike linear chains, LangGraph allows for **loops and retries**, enabling the LLM to act as an "agent" that can reason, plan, and adjust its steps autonomously.
-    - **Use Case:** A multi-step exchange request that requires checking order databases, SKU availability, and printing shipping labels.
-        
+ - An orchestration framework designed for **stateful, iterative workflows**.
+ - Unlike linear chains, LangGraph allows for **loops and retries**, enabling the LLM to act as an "agent" that can reason, plan, and adjust its steps autonomously.
+ - **Use Case:** A multi-step exchange request that requires checking order databases, SKU availability, and printing shipping labels.
+
 - **LangSmith (Observability):**
-    - The "control room" for your AI applications.
-    - It is used for **debugging, tracing, and monitoring** performance metrics like latency and token costs (e.g., tracking a call that used 390 tokens).
+ - The "control room" for your AI applications.
+ - It is used for **debugging, tracing, and monitoring** performance metrics like latency and token costs (e.g., tracking a call that used 390 tokens).
 
 ## Key Concepts & Examples
 
 - **Retrieval Augmented Generation (RAG):** The process of chunking private organizational data and storing it in vector databases so an LLM can access specific context for its answers.
-    
+
 - **Stock Transaction Graph:** An example of a LangGraph implementation where the LLM uses a custom Python tool to fetch real-time stock prices and calculate transaction totals based on user input.
 
 ## Conclusion: Which Tool to Use?
@@ -44,8 +44,8 @@ This note covers the LangChain ecosystem, specifically comparing **LangChain**, 
 
 | AI Component (sklearn) | Data Engineering/Machine Learning Equivalent |
 | ---------------------- | -------------------------------------------- |
-| **TfidfVectorizer**    | Feature Engineering / Tokenization (like transforming text cols in Spark ML) |
-| **cosine_similarity**  | Distance Metric (like K-Nearest Neighbors logic) |
+| **TfidfVectorizer** | Feature Engineering / Tokenization (like transforming text cols in Spark ML) |
+| **cosine_similarity** | Distance Metric (like K-Nearest Neighbors logic) |
 | **VectorMemory Class** | In-Memory Search Index (like a tiny, local Elasticsearch) |
 
 ---
@@ -63,10 +63,10 @@ This note covers the LangChain ecosystem, specifically comparing **LangChain**, 
 Imagine an **Auto-Remediation Bot** for pipeline failures:
 1. **LangChain**: Simple linear chain. Receive Alert → Summarize Error → Slack it.
 2. **LangGraph**: Stateful Agent.
-   - Node A: Check Error Log.
-   - Node B: Is it a "Memory Error"?
-   - Yes → Node C: Increase cluster size → Node D: Rerun Job.
-   - Loop: Check status again.
+ - Node A: Check Error Log.
+ - Node B: Is it a "Memory Error"?
+ - Yes → Node C: Increase cluster size → Node D: Rerun Job.
+ - Loop: Check status again.
 3. **LangSmith**: Monitor the agent to ensure it didn't spend $50 in API calls looping infinitely.
 
 ### 3. Syntax (LangGraph State)
@@ -75,8 +75,8 @@ from langgraph.graph import StateGraph
 from typing import TypedDict
 
 class AgentState(TypedDict):
-    input: str
-    messages: list
+ input: str
+ messages: list
 
 workflow = StateGraph(AgentState)
 workflow.add_node("check_logs", check_logs_tool)
@@ -84,34 +84,34 @@ workflow.add_node("resize_cluster", resize_cluster_tool)
 
 # Define the loop/edge
 workflow.add_conditional_edges(
-    "check_logs",
-    should_resize,
-    {
-        "resize": "resize_cluster",
-        "end": END
-    }
+ "check_logs",
+ should_resize,
+ {
+ "resize": "resize_cluster",
+ "end": END
+ }
 )
 ```
 
 ### 4. Visualization
 ```mermaid
 flowchart TD
-    classDef logic fill:#2d3436,stroke:#dfe6e9,stroke-width:2px,color:#fff
-    classDef storage fill:#0984e3,stroke:#74b9ff,stroke-width:2px,color:#fff
-    classDef process fill:#6c5ce7,stroke:#a29bfe,stroke-width:2px,color:#fff
-    classDef user fill:#00b894,stroke:#55efc4,stroke-width:2px,color:#fff
-    classDef group fill:#f1f2f6,stroke:#2f3542,stroke-width:1px,color:#2d3436
+ classDef logic fill:#2d3436,stroke:,stroke-width:2px,color:
+ classDef storage fill:#0984e3,stroke:#74b9ff,stroke-width:2px,color:
+ classDef process fill:#6c5ce7,stroke:,stroke-width:2px,color:
+ classDef user fill:#00b894,stroke:#55efc4,stroke-width:2px,color:
+ classDef group fill:,stroke:#2f3542,stroke-width:1px,color:#2d3436
 
-    U((User)):::user -->|Query| LC[LangChain]:::process
-    
-    subgraph LangGraph_Agent
-        Start --> Check_Logs:::logic
-        Check_Logs -->|Error Found| Decide{Fixable?}:::logic
-        Decide -->|Yes| Resize_Cluster:::process
-        Resize_Cluster --> Check_Logs
-        Decide -->|No| Alert_Human:::storage
-    end
-    
-    LC --> LangGraph_Agent
-    LangGraph_Agent -.->|Traces| LS[(LangSmith)]:::storage
+ U((User)):::user -->|Query| LC[LangChain]:::process
+
+ subgraph LangGraph_Agent
+ Start --> Check_Logs:::logic
+ Check_Logs -->|Error Found| Decide{Fixable?}:::logic
+ Decide -->|Yes| Resize_Cluster:::process
+ Resize_Cluster --> Check_Logs
+ Decide -->|No| Alert_Human:::storage
+ end
+
+ LC --> LangGraph_Agent
+ LangGraph_Agent -.->|Traces| LS[(LangSmith)]:::storage
 ```

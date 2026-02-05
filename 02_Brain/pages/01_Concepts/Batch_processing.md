@@ -1,18 +1,12 @@
 ---
 tags:
-  - concepts
-  - level2
+ - concepts
+- level2
 ---
 
 - Terminal for all Batch
-- [[Ingestion]]
-- [[Transformation]]
-- [[Reporting]]
--
-
-
-### Related
-- [[spark]]
-- [[Glue]]
-
+- [[ingestion]]
+- [[transformation]]
+- [[reporting]]
+- [[medellion_architecture]]
 

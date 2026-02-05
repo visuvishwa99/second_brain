@@ -1,12 +1,11 @@
 ---
 tags:
-  - level2
 ---
 
 - [[gafg]]
 - [[amex]]
-- [[Freeide_mac]]
+- [[freeide_mac]]
+- [[cava]]
 
 
-### Related
-- [[deck]]
+

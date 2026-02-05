@@ -15,7 +15,7 @@ flowchart TD
 
     end
 
-  
+
 
     %% --- Section 2: Agent State (Memory) ---
 
@@ -25,7 +25,7 @@ flowchart TD
 
     end
 
-  
+
 
     %% --- Section 3: Cyclic Workflow ---
 
@@ -45,7 +45,7 @@ flowchart TD
 
     end
 
-  
+
 
     %% --- Section 4: Tools ---
 
@@ -77,26 +77,26 @@ flowchart TD
 
     %% Styling to match Subgraphs
 
-    style Tech_Stack fill:#fff,stroke:#2d3436,stroke-width:1px,color:#2d3436
+    style Tech_Stack fill:,stroke:#2d3436,stroke-width:1px,color:#2d3436
 
-    style State_Schema fill:#f1f2f6,stroke:#2f3542,stroke-width:1px,color:#2d3436
+    style State_Schema fill:,stroke:#2f3542,stroke-width:1px,color:#2d3436
 
-    style Agent_Loop fill:#f1f2f6,stroke:#2f3542,stroke-width:1px,color:#2d3436
+    style Agent_Loop fill:,stroke:#2f3542,stroke-width:1px,color:#2d3436
 
-    style Tools_Layer fill:#f1f2f6,stroke:#2f3542,stroke-width:1px,color:#2d3436
+    style Tools_Layer fill:,stroke:#2f3542,stroke-width:1px,color:#2d3436
 
-  
+
 
     %% Global Style Block
 
-    classDef logic fill:#2d3436,stroke:#dfe6e9,stroke-width:2px,color:#fff
+    classDef logic fill:#2d3436,stroke:,stroke-width:2px,color:
 
-    classDef storage fill:#0984e3,stroke:#74b9ff,stroke-width:2px,color:#fff
+    classDef storage fill:#0984e3,stroke:#74b9ff,stroke-width:2px,color:
 
-    classDef process fill:#6c5ce7,stroke:#a29bfe,stroke-width:2px,color:#fff
+    classDef process fill:#6c5ce7,stroke:,stroke-width:2px,color:
 
-    classDef user fill:#00b894,stroke:#55efc4,stroke-width:2px,color:#fff
+    classDef user fill:#00b894,stroke:#55efc4,stroke-width:2px,color:
 
-    classDef group fill:#f1f2f6,stroke:#2f3542,stroke-width:1px,color:#2d3436
+    classDef group fill:,stroke:#2f3542,stroke-width:1px,color:#2d3436
 ```
 

@@ -1,11 +1,10 @@
 ---
 tags:
-  - concepts
-  - level2
+ - concepts
+- level2
 ---
 
-- [[Graph_DB]]
+- [[graph_db]]
 
 
-### Related
-- [[mpp]]
+

@@ -1,37 +1,22 @@
 {
   "collapse-filter": false,
-  "search": "path:02_Brain",
+  "search": "",
   "showTags": false,
   "showAttachments": false,
   "hideUnresolved": true,
   "showOrphans": false,
   "collapse-color-groups": true,
-  "colorGroups": [
-    {
-      "query": "file:DATAENG_MOC",
-      "color": {
-        "a": 1,
-        "rgb": 255
-      }
-    },
-    {
-      "query": "file:MOC",
-      "color": {
-        "a": 1,
-        "rgb": 8900331
-      }
-    }
-  ],
+  "colorGroups": [],
   "collapse-display": true,
   "showArrow": false,
-  "textFadeMultiplier": -0.6,
-  "nodeSizeMultiplier": 2.37710345844702,
-  "lineSizeMultiplier": 1.78741243271145,
-  "collapse-forces": false,
-  "centerStrength": 0.393739399749281,
-  "repelStrength": 9.00818523707691,
-  "linkStrength": 0.68402035248138,
-  "linkDistance": 393,
-  "scale": 1.515509412318179,
-  "close": true
+  "textFadeMultiplier": 0,
+  "nodeSizeMultiplier": 1,
+  "lineSizeMultiplier": 1,
+  "collapse-forces": true,
+  "centerStrength": 0.518713248970312,
+  "repelStrength": 10,
+  "linkStrength": 1,
+  "linkDistance": 250,
+  "scale": 1.8621154123205197,
+  "close": false
 }

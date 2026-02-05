@@ -1,9 +1,8 @@
 ---
 tags:
-  - level3
 ---
 
-deck::  [[aws]]
+deck:: [[aws]]
 
 - What are the three main network zones in AWS architecture? :-> {{ "Public Internet" zone, "AWS Public" zone, and "AWS Private" zone }} ^680bd5a5-1251-484e-a197-29cfa989f9ae
 - How do users access AWS Public services from home? :-> {{ Using the internet as transit with a public IP }} ^680bd5a5-d93c-4b54-9a86-8ce2e8984061

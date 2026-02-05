@@ -1,7 +1,7 @@
 ---
 tags:
-  - index
-  - warehousing
+ - warehousing
+- warehousing
 ---
 # 05_Warehousing Index
 
