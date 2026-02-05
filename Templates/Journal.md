@@ -7,5 +7,6 @@ tags:
 examples: 1
 Realtime: false
 diagram: false
+space repetition: false
 ---
 
