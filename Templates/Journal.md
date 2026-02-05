@@ -2,14 +2,12 @@
 created_at: "{{date}} {{time}}"
 status: seed
 processed: false
-Explain: false
 tags:
+Explain: false
 examples: 1
-Realtime: false
-diagram: false
-card_creation : false
-card_type : "basic"
-card_diagram : false
+move_journal_to_brain: true
+move_brain_to_mart: false
+diagram_in_brain: false
 ---
 
 

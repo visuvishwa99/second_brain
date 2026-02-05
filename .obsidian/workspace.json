@@ -4,21 +4,21 @@
     "type": "split",
     "children": [
       {
-        "id": "ad11daf8f2358cb9",
+        "id": "322d6c67f0917a8d",
         "type": "tabs",
         "children": [
           {
-            "id": "129959f8d1ad93bc",
+            "id": "09d0279c66513f87",
             "type": "leaf",
             "state": {
               "type": "markdown",
               "state": {
-                "file": "03_Mart/anki_test.md",
+                "file": "03_Mart/06_Ingestion/sqoop_cards.md",
                 "mode": "source",
                 "source": false
               },
               "icon": "lucide-file",
-              "title": "anki_test"
+              "title": "sqoop_cards"
             }
           }
         ]
@@ -126,13 +126,71 @@
               "icon": "git-pull-request",
               "title": "Source Control"
             }
+          },
+          {
+            "id": "283161a660ff241e",
+            "type": "leaf",
+            "state": {
+              "type": "backlink",
+              "state": {
+                "file": "02_Brain/pages/06_Ingestion/glue.md",
+                "collapseAll": false,
+                "extraContext": false,
+                "sortOrder": "alphabetical",
+                "showSearch": false,
+                "searchQuery": "",
+                "backlinkCollapsed": false,
+                "unlinkedCollapsed": true
+              },
+              "icon": "links-coming-in",
+              "title": "Backlinks for glue"
+            }
+          },
+          {
+            "id": "fe0918267b169213",
+            "type": "leaf",
+            "state": {
+              "type": "outgoing-link",
+              "state": {
+                "file": "02_Brain/pages/06_Ingestion/glue.md",
+                "linksCollapsed": false,
+                "unlinkedCollapsed": true
+              },
+              "icon": "links-going-out",
+              "title": "Outgoing links from glue"
+            }
+          },
+          {
+            "id": "e853b606bd1521c7",
+            "type": "leaf",
+            "state": {
+              "type": "outline",
+              "state": {
+                "file": "02_Brain/pages/06_Ingestion/glue.md",
+                "followCursor": false,
+                "showSearch": false,
+                "searchQuery": ""
+              },
+              "icon": "lucide-list",
+              "title": "Outline of glue"
+            }
+          },
+          {
+            "id": "1e0d514ef1fab20b",
+            "type": "leaf",
+            "state": {
+              "type": "review-queue-list-view",
+              "state": {},
+              "icon": "SpacedRepIcon",
+              "title": "Notes Review Queue"
+            }
           }
         ],
         "currentTab": 2
       }
     ],
     "direction": "horizontal",
-    "width": 372.5
+    "width": 200
   },
   "left-ribbon": {
     "hiddenItems": {
@@ -150,42 +208,44 @@
       "obsidian-to-anki-plugin:Obsidian_to_Anki - Scan Vault": false
     }
   },
-  "active": "129959f8d1ad93bc",
+  "active": "7c1dcbf000c50fbd",
   "lastOpenFiles": [
-    "implementation_plan_old.md",
-    "implementation_plan.md",
-    "03_Mart/warehousing_cards.md",
-    "03_Mart/streaming_cards.md",
-    "03_Mart/anki_test.md",
-    "02_Brain/pages/03_Streaming/spark_streaming.md",
-    "01_Raw/journal_test_flashcards.md",
-    "02_Brain/pages/00_DATAENG/amex.md",
-    "02_Brain/pages/01_Concepts/batch_processing.md",
-    "01_Raw/journals/2026/Q1/2026/Q1/2026-02-05_09-39-12.md",
-    "01_Raw/journals/2026/Q1/2026-02-04_13-53-02.md",
-    "01_Raw/journals/2026/Q1/2026/Q1/2026-02-05_09-37-59.md",
-    "Templates/Journal.md",
-    "scripts/clean_anki_ids.py",
-    "User_Guide.md",
-    "03_Mart/sample_cards.md",
-    "Untitled.canvas",
-    "03_Mart/concepts.md",
-    "01_Raw/stage/aws_s3.md",
-    "01_Raw/stage/scd.md",
-    "01_Raw/stage/spark_streaming.md",
-    "02_Brain/pages/03_Streaming/kafka.md",
-    "01_Raw/stage/kafka.md",
-    "scripts/convert_to_logseq.py",
-    "01_Raw/journals/2026/Q1/2024-05-10.md",
-    "scripts/test_mart_gen.py",
-    "01_Raw/journals/2026/Q1/2024-05-15.md",
-    "01_Raw/journals/2026/Q1/2026-02-03.md",
-    "01_Raw/journals/2026/Q1/2026-02-03_19-35-27.md",
-    "01_Raw/journals/2026/Q1/2026-02-04_12-37-04.md",
-    "01_Raw/journals/2026/Q1/Untitled.base",
-    "01_Raw/journals/2026/Q1/2026/Q1",
-    "01_Raw/journals/2026/Q1/2026",
-    "scripts/clean_yaml_tags.py",
-    "02_Brain/pages/02_Compute/sedgW4fLn"
+    "02_Brain/99_Misc/Misc_MOC.md",
+    "02_Brain/99_Misc/doordash_interview_2026.md",
+    "02_Brain/99_Misc/2026-01-29_22-09-25.md",
+    "02_Brain/99_Misc/2026-01-27.md",
+    "02_Brain/99_Misc/2026-01-25.md",
+    "02_Brain/99_Misc/2026-01-23.md",
+    "02_Brain/99_Misc/2024-05-16.md",
+    "02_Brain/99_Misc/2024-05-12.md",
+    "02_Brain/99_Misc",
+    "02_Brain/09_AI/AI_MOC.md",
+    "02_Brain/09_AI/langchain.md",
+    "02_Brain/09_AI",
+    "02_Brain/08_Architecture/snowflake_vs_databricks_2026.md",
+    "02_Brain/08_Architecture/snowflake_vs_databricks.md",
+    "02_Brain/08_Architecture/project_loan_pipeline.md",
+    "02_Brain/08_Architecture/graph_db.md",
+    "02_Brain/08_Architecture/functional_data_engineering.md",
+    "02_Brain/08_Architecture/delta.md",
+    "02_Brain/08_Architecture/Architecture_MOC.md",
+    "02_Brain/08_Architecture",
+    "02_Brain/07_Languages/python_algorithms.md",
+    "02_Brain/07_Languages/Languages_MOC.md",
+    "02_Brain/07_Languages/java.md",
+    "02_Brain/07_Languages",
+    "02_Brain/06_Ingestion/Ingestion_MOC.md",
+    "02_Brain/06_Ingestion/sqoop.md",
+    "02_Brain/06_Ingestion/glue.md",
+    "02_Brain/06_Ingestion",
+    "02_Brain/05_Warehousing/Warehousing_MOC.md",
+    "02_Brain/05_Warehousing/scd.md",
+    "02_Brain/05_Warehousing/redshift.md",
+    "02_Brain/05_Warehousing",
+    "02_Brain/04_Cloud/gcp",
+    "02_Brain/04_Cloud/azure",
+    "02_Brain/04_Cloud",
+    "02_Brain/03_Streaming",
+    "Untitled.canvas"
   ]
 }

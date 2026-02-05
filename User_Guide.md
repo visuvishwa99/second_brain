@@ -73,13 +73,17 @@ TARGET DECK: SecondBrain::05_Warehousing
 START
 Cloze
 Snowflake micro-partitions are contiguous units of storage between {50 MB} and {500 MB} of uncompressed data.
+<!--ID: 1770331406602-->
 END
 
 START
 Cloze
 {Time Travel} in Snowflake allows you to access historical data.
+<!--ID: 1770331406610-->
 END
 ```
+
+> **Important**: There MUST be a blank line between each `END` and the next `START`.
 
 ### Cleaning Up IDs
 The plugin automatically injects `<!--ID: 12345-->` tags to track cards. To remove them (e.g., for a clean slate or sharing):

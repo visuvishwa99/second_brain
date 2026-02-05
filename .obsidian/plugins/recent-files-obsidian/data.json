@@ -1,28 +1,28 @@
 {
   "recentFiles": [
     {
-      "basename": "anki_test",
-      "path": "03_Mart/anki_test.md"
+      "basename": "sqoop_cards",
+      "path": "03_Mart/06_Ingestion/sqoop_cards.md"
     },
     {
-      "basename": "spark_streaming",
-      "path": "02_Brain/pages/03_Streaming/spark_streaming.md"
+      "basename": "glue_cards",
+      "path": "03_Mart/06_Ingestion/glue_cards.md"
     },
     {
-      "basename": "amex",
-      "path": "02_Brain/pages/00_DATAENG/amex.md"
-    },
-    {
-      "basename": "batch_processing",
-      "path": "02_Brain/pages/01_Concepts/batch_processing.md"
-    },
-    {
-      "basename": "2026-02-05_09-39-12",
-      "path": "01_Raw/journals/2026/Q1/2026/Q1/2026-02-05_09-39-12.md"
+      "basename": "snowflake_vs_databricks_cards",
+      "path": "03_Mart/08_Architecture/snowflake_vs_databricks_cards.md"
     },
     {
       "basename": "2026-02-04_13-53-02",
       "path": "01_Raw/journals/2026/Q1/2026-02-04_13-53-02.md"
+    },
+    {
+      "basename": "anki_test",
+      "path": "03_Mart/anki_test.md"
+    },
+    {
+      "basename": "2026-02-05_09-39-12",
+      "path": "01_Raw/journals/2026/Q1/2026/Q1/2026-02-05_09-39-12.md"
     },
     {
       "basename": "2026-02-05_09-37-59",
@@ -61,52 +61,20 @@
       "path": "01_Raw/journals/2026/Q1/2026/Q1/2026-02-04_20-35-46.md"
     },
     {
-      "basename": "project_loan_pipeline",
-      "path": "02_Brain/pages/08_Architecture/project_loan_pipeline.md"
-    },
-    {
       "basename": "skills",
       "path": "agents/skills.md"
-    },
-    {
-      "basename": "system_design",
-      "path": "02_Brain/pages/01_Concepts/system_design.md"
-    },
-    {
-      "basename": "data_merging_strategies",
-      "path": "02_Brain/pages/01_Concepts/data_merging_strategies.md"
     },
     {
       "basename": "2026-02-03_19-35-45",
       "path": "01_Raw/journals/2026/Q1/2026-02-03_19-35-45.md"
     },
     {
-      "basename": "Misc_MOC",
-      "path": "02_Brain/pages/99_Misc/Misc_MOC.md"
-    },
-    {
       "basename": "deep_dive",
       "path": "agents/workflows/deep_dive.md"
     },
     {
-      "basename": "dbt",
-      "path": "02_Brain/pages/05_Warehousing/dbt.md"
-    },
-    {
       "basename": "GEMINI",
       "path": "gemini/GEMINI.md"
-    },
-    {
-      "basename": "Cloud_MOC",
-      "path": "02_Brain/pages/04_Cloud/Cloud_MOC.md"
-    },
-    {
-      "basename": "Architecture_MOC",
-      "path": "02_Brain/pages/08_Architecture/Architecture_MOC.md"
-    },
-    {
-      "basename": "2024-05-16",
-      "path": "02_Brain/pages/99_Misc/2024-05-16.md"
     },
     {
       "basename": "2026-01-29_22-09-25",

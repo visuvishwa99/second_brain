@@ -23,3 +23,5 @@
 | 2026-02-04 17:42:00 | 2026-02-04_17-36-51.md | 02_Brain/pages/05_Warehousing/scd.md | Success |
 | 2026-02-04 17:42:00 | 2024-05-15.md | 02_Brain/pages/07_Languages/java.md | Success |
 | 2026-02-04 17:42:00 | 2024-05-10.md | 02_Brain/pages/03_Streaming/spark_streaming.md | Success |
+| 2026-02-05 15:42:14 | 2026-02-04_13-53-02.md | 02_Brain/pages/08_Architecture/snowflake_vs_databricks.md | Success |
+| 2026-02-05 15:42:14 | 2026-02-04_13-53-02.md | 03_Mart/08_Architecture/snowflake_vs_databricks_cards.md | Success |

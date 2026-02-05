@@ -36,32 +36,67 @@
 ### Core Principle
 Organize knowledge by topic files, not by creating scattered individual files for each question. **Search First, Create Later.**
 
-## Trigger
+### Trigger
 Command: `Process my notes` or `Analyze my latest journal`
 
 ### Workflow Steps
 1. **Scan**: User points to a journal file in `./01_Raw/`.
 2. **Search Existing Files**:
-   - Check `02_Brain` for an existing file matching the topic (e.g., if topic is "Snowflake Time Travel", look for `Snowflake.md`).
-3. **Draft (Staging)**: 
-   - **If Existing File Found**: Prepare an **Append Entry** (see format below).
-   - **If No Match**: Prepare a **New File**.
-   - Save the draft to `./01_Raw/stage/<Topic>.md` for review.
-4. **Review**: User checks the file in `stage`.
-5. **Publish**: 
-   - User says "Approve" or "Move to Brain".
-   - Antigravity appends/moves content to the target file in `02_Brain`.
-   - Appends flashcard to `./03_Mart/anki_imports.md`.
-   - Marks source journal as `processed: true`.
+   - Check `02_Brain` for an existing file matching the topic.
+3. **Process & Move (Direct)**:
+   - If `move_journal_to_brain: true` -> Append/Create in `02_Brain/<Folder>/<Topic>.md`.
+   - If `move_brain_to_mart: true` -> Generate cards in `03_Mart/<Folder>/<Topic>_cards.md`.
+   - Delete source file from `01_Raw`.
+   - Log action to `agents/movement_log.md`.
 
 ### Post-Publish Checklist (CRITICAL)
 After publishing, Antigravity MUST complete these steps:
 - [ ] Write/Append content to `02_Brain/pages/<Category>/<File>.md`
-- [ ] Delete staged file from `01_Raw/stage/` using `rm` (NOT `del`)
+- [ ] If `move_brain_to_mart: true`, generate cards to `03_Mart/<Category>/<File>_cards.md`
+- [ ] Delete source file from `01_Raw` using `rm` (NOT `del`)
 - [ ] Update source journal frontmatter: `processed: true`
-- [ ] Append flashcard to `03_Mart/anki_imports.md`
 - [ ] Log to `agents/movement_log.md` using this format:
       `| YYYY-MM-DD HH:MM:SS | <SourceFile> | <DestinationFolder> | Success |`
+
+---
+
+## 2.5 Rules for 03_Mart (Anki Cards)
+
+### Folder Structure
+Mirror `02_Brain` folder structure:
+- `03_Mart/01_Concepts`
+- `03_Mart/02_Compute`
+- `03_Mart/03_Streaming`
+- `03_Mart/04_Cloud`
+- `03_Mart/05_Warehousing`
+- `03_Mart/06_Ingestion`
+- `03_Mart/07_Languages`
+- `03_Mart/08_Architecture`
+- `03_Mart/09_AI`
+- `03_Mart/99_Misc`
+
+### Card File Naming
+`<topic>_cards.md` (e.g., `snowflake_cards.md`)
+
+### Anki Card Syntax (CurlyCloze)
+Use **Cloze** style with single `{curly braces}`:
+```markdown
+TARGET DECK: SecondBrain::05_Warehousing
+
+START
+Cloze
+Snowflake micro-partitions are between {50 MB} and {500 MB} of uncompressed data.
+END
+
+START
+Cloze
+{Time Travel} allows access to historical data in Snowflake.
+END
+```
+
+> [!IMPORTANT]
+> **Blank Line Required**: There MUST be a blank line between each `END` and the next `START`.
+> **Line Endings**: Card files MUST use **LF** (Unix) line endings, NOT CRLF (Windows). After creating card files, run: `sed -i 's/\r$//' <file.md>`
 
 ---
 

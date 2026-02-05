@@ -107,11 +107,11 @@
   },
   "Added Media": [],
   "File Hashes": {
-    "User_Guide.md": "43ab2c122610ce5ff7b836edba52cb26",
-    "Templates/Journal.md": "8ef27859e7f2404c97cadb1644178823",
-    "gemini/GEMINI.md": "1bd56e424dc98d4062b6086d48cca866",
+    "User_Guide.md": "bafb0ec25e60147e4c088dc8d865ff93",
+    "Templates/Journal.md": "7bd06c6a9f10927f8bf325ca1e203aa6",
+    "gemini/GEMINI.md": "b97952b003cad28f126ba1d911cd2db1",
     "agents/workflows/deep_dive.md": "3fb9da7f1ebb12fb076b2c7dc9cf1218",
-    "agents/movement_log.md": "a29dc07fec4868f3283e906fb308ba32",
+    "agents/movement_log.md": "aaef41af85f4d0ea1a76ece0c62bc1cf",
     "agents/skills.md": "b000d0665e1398b020b5dc5609129cac",
     "03_Mart/warehousing_cards.md": "657a95546c44224e679de5d67f938a05",
     "03_Mart/streaming_cards.md": "0cbb5ecf74f5bcc5080dd70eb8cdf983",
@@ -141,7 +141,7 @@
     "02_Brain/pages/07_Languages/Languages_MOC.md": "a3f044d6ad2bf8a9ccae8d2e21936d91",
     "02_Brain/pages/06_Ingestion/sqoop.md": "565b8a0f0de44429b588367aacabbeb9",
     "02_Brain/pages/06_Ingestion/Ingestion_MOC.md": "93183540363b6feec0eae5c7bf5f8833",
-    "02_Brain/pages/06_Ingestion/glue.md": "abcddbbef290a9657634888556e8dfc3",
+    "02_Brain/pages/06_Ingestion/glue.md": "4656e945a9e3dc4e88a89eab161513e9",
     "02_Brain/pages/05_Warehousing/Warehousing_MOC.md": "475dda6fa425bb4f75ad6e5affaebc82",
     "02_Brain/pages/05_Warehousing/snowflake.md": "d26c58c40aee0a8511e74381f8956fe0",
     "02_Brain/pages/05_Warehousing/bigquery.md": "c4fde1837fca53c2e3f3929346a9cdd2",
@@ -167,7 +167,7 @@
     "02_Brain/pages/00_DATAENG/DATAENG_MOC.md": "fc6181f212077d23d129391625582b57",
     "02_Brain/pages/00_DATAENG/amex.md": "a73a785c6e35fd99250ebb9ef7c8a115",
     "02_Brain/test.md": "7f4a5128488f2936a4a269b5cea1ea00",
-    "01_Raw/journals/2026/Q1/2026-02-04_13-53-02.md": "df044f5ade9488b0240b35b061436f42",
+    "01_Raw/journals/2026/Q1/2026-02-04_13-53-02.md": "47c6cca279385eca59d30a85e4a6fdbc",
     "01_Raw/journals/2026/Q1/2026-02-03_19-35-27.md": "e29e2a5c28162974cb57a2d1ad2216ea",
     "01_Raw/journals/2026/Q1/2024-05-10.md": "398b46296618142c82e07f14a0c74dd9",
     "01_Raw/journals/2026/Q1/2026-02-04_12-37-04.md": "fb880e4a781c08e39679c5fdad026906",
@@ -177,7 +177,12 @@
     "01_Raw/journals/2026/Q1/2026-02-03_19-35-45.md": "14e44b0412fee3f78325bf88d3f9aeb3",
     "01_Raw/journals/2026/Q1/2026-02-03.md": "9a4d45370f7d9e476b5c0ed5dc8943b1",
     "01_Raw/journals/2026/Q1/2024-05-15.md": "9c991726f19da61d790024e51058f1b0",
-    "03_Mart/anki_test.md": "7b8295c0713c1a0424294e62a3e6a9b8"
+    "03_Mart/anki_test.md": "7b8295c0713c1a0424294e62a3e6a9b8",
+    "implementation_plan_old.md": "ce0ced69df04a2131eef53c9a6c83b46",
+    "03_Mart/08_Architecture/snowflake_vs_databricks_cards.md": "d2f7287b9380d84f6d040c4bda4cd6a7",
+    "02_Brain/pages/08_Architecture/snowflake_vs_databricks.md": "1f5d1c6a38971c056d6de76c8687efb9",
+    "03_Mart/06_Ingestion/glue_cards.md": "a8c93ded3910c37427ba1499b05edb08",
+    "03_Mart/06_Ingestion/sqoop_cards.md": "5d7920dab8531347f4f6222682277d78"
   },
   "fields_dict": {
     "Basic": [
