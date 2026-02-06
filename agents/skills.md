@@ -42,7 +42,7 @@ Organize knowledge by topic files, not by creating scattered individual files fo
 
 ### 5. Publish (Checklist)
 After approval:
-1. [ ] Write/Append to `02_Brain/pages/<Category>/<File>.md`
+1. [ ] Write/Append to `02_Brain/<Category>/<File>.md`
 2. [ ] Delete staged file using `rm` (NOT `del`)
 3. [ ] Update source journal: `processed: true`
 4. [ ] Append flashcard to `03_Mart/anki_imports.md`

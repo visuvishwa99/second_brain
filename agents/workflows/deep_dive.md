@@ -44,7 +44,7 @@ description: Analyzes the latest journal entry and creates a Principal Engineer 
 ### 5. Draft to Staging
 - Save the generated content to `./01_Raw/stage/<TopicName>.md`.
 - Present the plan to the user:
- - *"I will append to `02_Brain/pages/05_Warehousing/Snowflake.md`"*
+ - *"I will append to `02_Brain/05_Warehousing/Snowflake.md`"*
 - Wait for user confirmation ("Approve" or "OK").
 
 ### 6. Publish (Post-Approval Checklist)

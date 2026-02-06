@@ -51,7 +51,7 @@ Command: `Process my notes` or `Analyze my latest journal`
 
 ### Post-Publish Checklist (CRITICAL)
 After publishing, Antigravity MUST complete these steps:
-- [ ] Write/Append content to `02_Brain/pages/<Category>/<File>.md`
+- [ ] Write/Append content to `02_Brain/<Category>/<File>.md`
 - [ ] If `move_brain_to_mart: true`, generate cards to `03_Mart/<Category>/<File>_cards.md`
 - [ ] Delete source file from `01_Raw` using `rm` (NOT `del`)
 - [ ] Update source journal frontmatter: `processed: true`
@@ -156,7 +156,7 @@ Command: **"Deep dive this"** or **"Analyze my latest journal"**
 
 ### Step 4: Propose & Confirm
 Before appending, Antigravity MUST:
-1. **State the target file**: e.g., *"I will append to `02_Brain/pages/05_Warehousing/Snowflake.md`"*
+1. **State the target file**: e.g., *"I will append to `02_Brain/05_Warehousing/Snowflake.md`"*
 2. **Wait for user confirmation**.
 
 ### Global Rules
@@ -175,6 +175,10 @@ Before appending, Antigravity MUST:
 ### File Operations
 - Prefer using `write_to_file` with `Overwrite: true` to move content (avoids shell issues).
 - After writing to destination, use `rm` to clean up staged files.
+
+### Anki Card Post-Processing (CRITICAL)
+- **After generating ANY card files**, Antigravity MUST run: `bash scripts/fix_card_line_endings.sh`
+- This converts CRLF (Windows) to LF (Unix) which is required for the Obsidian_to_Anki plugin.
 
 ### Frontmatter Formatting
 - Always ensure a newline before the closing `---` delimiter.
