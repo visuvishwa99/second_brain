@@ -2,6 +2,20 @@
 
 This guide explains how to interact with your AI agent (Antigravity) to manage your Second Brain.
 
+```bash
+build_second_brain/
+├── .agent/workflows/     # Antigravity system (slash commands)
+├── automation/           # Your automation docs & logs
+│   ├── auditor.md
+│   ├── audit_report.md
+│   ├── movement_log.md
+│   └── skills.md
+├── 01_Raw/
+├── 02_Brain/
+├── 03_Mart/
+└── scripts/
+```
+
 > [!TIP]
 > **Guide vs. Walkthrough**: 
 > - **Guides** (like this one) are **permanent** project manuals meant for long-term reference. 
@@ -56,7 +70,7 @@ Use this to check the health of your Second Brain.
 * **Command**: `bash scripts/run_audit.sh`
 * **Action**:
  * Scans for duplicates and rule violations.
- * Generates a report in `agents/audit_report.md`.
+ * Generates a report in `automation/audit_report.md`.
 
 ---
 
@@ -80,7 +94,7 @@ move_brain_to_mart: true # Generate Anki cards in 03_Mart.
 
 ## Logging & Knowledge Lineage
 
-Every movement from `01_Raw` to `02_Brain` is logged in [movement_log.md](file:///c:/Misc/Dataengineering/Projects/build_second_brain/agents/movement_log.md) for auditability.
+Every movement from `01_Raw` to `02_Brain` is logged in [movement_log.md](file:///c:/Misc/Dataengineering/Projects/build_second_brain/automation/movement_log.md) for auditability.
 
 **Log Format**:
 `| Timestamp | Operation | Source | Destination | Status | Notes |`

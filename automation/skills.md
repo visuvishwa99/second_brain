@@ -46,7 +46,7 @@ After approval:
 2. [ ] Delete staged file using `rm` (NOT `del`)
 3. [ ] Update source journal: `processed: true`
 4. [ ] Append flashcard to `03_Mart/anki_imports.md`
-5. [ ] Log to `agents/movement_log.md`:
+5. [ ] Log to `automation/movement_log.md`:
  `| YYYY-MM-DD HH:MM:SS | <SourceFile> | <DestinationFolder> | Success |`
 
 ---

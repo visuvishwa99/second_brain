@@ -13,12 +13,12 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "01_Raw/journals/2026/Q1/2026-02-04_13-53-02.md",
+                "file": "User_Guide.md",
                 "mode": "preview",
                 "source": false
               },
               "icon": "lucide-file",
-              "title": "2026-02-04_13-53-02"
+              "title": "User_Guide"
             }
           }
         ]
@@ -208,8 +208,28 @@
       "obsidian-to-anki-plugin:Obsidian_to_Anki - Scan Vault": false
     }
   },
-  "active": "8321c052c847cf7e",
+  "active": "7c1dcbf000c50fbd",
   "lastOpenFiles": [
+    "01_Raw/journals/2026/Q1/2026-02-04_13-53-02.md",
+    "01_Raw/journals/2026/Q1/2026/Q1/2024-05-10.md",
+    "01_Raw/journals/2026/Q1/2026/Q1/2024-05-15.md",
+    "01_Raw/journals/2026/Q1/2026/Q1/2026-02-03_19-35-27.md",
+    "01_Raw/journals/2026/Q1/2026/Q1/2026-02-03_19-35-45.md",
+    "01_Raw/journals/2026/Q1/2026/Q1/2026-02-03.md",
+    "01_Raw/journals/2026/Q1/2026/Q1/2026-02-04_12-37-04.md",
+    "01_Raw/journals/2026/Q1/2026/Q1/2026-02-04_13-53-02.md",
+    "sedjWVZgp",
+    "automation/auditor.md",
+    "automation/workflows/deep_dive.md",
+    "automation/workflows",
+    "automation/movement_log.md",
+    "automation/skills.md",
+    "automation/maintenance_agent.md",
+    "automation/audit_report.md",
+    "automation/audit_raw.txt",
+    "automation",
+    "03_Mart/01_Concepts/sedijHjJp",
+    "03_Mart/01_Concepts/seduzJ4zC",
     "agents/maintenance_agent.md",
     "agents/audit_report.md",
     "agents/audit_raw.txt",
@@ -218,34 +238,14 @@
     "scripts/audit_brain.sh",
     "User_Guide.md",
     "gemini/GEMINI.md",
-    "01_Raw/journals/2026/Q1/2026-02-04_13-53-02.md",
     "02_Brain/02_Compute/spark.md",
-    "03_Mart/99_misc",
     "03_Mart/03_Streaming/spark_streaming_cards.md",
-    "03_Mart/01_Concepts/sedkQB8ok",
     "01_Raw/journals/2026/Q1/2026/Q1/2026-02-06_09-55-40.md",
     "03_Mart/09_AI/sandboxed_ai_execution_cards.md",
     "02_Brain/09_AI/sandboxed_ai_execution.md",
-    "03_Mart/08_Architecture/seddh5ZwY",
-    "03_Mart/08_Architecture/sedlV3zcQ",
-    "03_Mart/05_Warehousing/sedBfTyD9",
-    "03_Mart/05_Warehousing/sedmf7blV",
     "03_Mart/anki_test.md",
     "03_Mart/09_AI/langchain_cards.md",
     "03_Mart/08_Architecture/snowflake_vs_databricks_cards.md",
-    "03_Mart/08_Architecture/functional_data_engineering_cards.md",
-    "03_Mart/08_Architecture/delta_cards.md",
-    "03_Mart/07_Languages/python_algorithms_cards.md",
-    "03_Mart/07_Languages/java_cards.md",
-    "03_Mart/06_Ingestion/sqoop_cards.md",
-    "03_Mart/06_Ingestion/glue_cards.md",
-    "03_Mart/05_Warehousing/dbt_cards.md",
-    "03_Mart/05_Warehousing/athena_cards.md",
-    "03_Mart/05_Warehousing/bigquery_cards.md",
-    "03_Mart/05_Warehousing/redshift_cards.md",
-    "03_Mart/05_Warehousing/scd_cards.md",
-    "03_Mart/04_Cloud/aws_s3_cards.md",
-    "03_Mart/03_Streaming/kafka_cards.md",
     "Untitled.canvas"
   ]
 }

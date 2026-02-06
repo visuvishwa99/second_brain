@@ -15,4 +15,4 @@ echo "Step 2/2: Running duplicate detection..."
 python scripts/audit_brain.py
 
 echo ""
-echo "✅ Audit complete! Review: agents/audit_report.md"
+echo "✅ Audit complete! Review: automation/audit_report.md"

@@ -13,8 +13,8 @@ from pathlib import Path
 
 BRAIN_DIR = "./02_Brain"
 MART_DIR = "./03_Mart"
-RAW_INPUT = "./agents/audit_raw.txt"
-REPORT_OUTPUT = "./agents/audit_report.md"
+RAW_INPUT = "./automation/audit_raw.txt"
+REPORT_OUTPUT = "./automation/audit_report.md"
 SIMILARITY_THRESHOLD = 0.70  # 70%
 
 def get_text_content(filepath):

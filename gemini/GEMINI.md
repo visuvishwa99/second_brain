@@ -47,7 +47,7 @@ Command: `Process my notes` or `Analyze my latest journal`
    - If `move_journal_to_brain: true` -> Append/Create in `02_Brain/<Folder>/<Topic>.md`.
    - If `move_brain_to_mart: true` -> Generate cards in `03_Mart/<Folder>/<Topic>_cards.md`.
    - Delete source file from `01_Raw`.
-   - Log action to `agents/movement_log.md`.
+   - Log action to `automation/movement_log.md`.
 
 ### Post-Publish Checklist (CRITICAL)
 After publishing, Antigravity MUST complete these steps:
@@ -55,7 +55,7 @@ After publishing, Antigravity MUST complete these steps:
 - [ ] If `move_brain_to_mart: true`, generate cards to `03_Mart/<Category>/<File>_cards.md`
 - [ ] Delete source file from `01_Raw` using `rm` (NOT `del`)
 - [ ] Update source journal frontmatter: `processed: true`
-- [ ] Log action to `agents/movement_log.md` (see Logging Rules below)
+- [ ] Log action to `automation/movement_log.md` (see Logging Rules below)
 
 ### Logging Rules
 
@@ -212,7 +212,7 @@ The **Auditor** is a read-only agent that ensures the Second Brain remains high-
 
 ### Process
 1. Run the audit script.
-2. Review findings in `agents/audit_report.md`.
+2. Review findings in `automation/audit_report.md`.
 3. Inform Antigravity to perform necessary merges or cleanups.
 
 ---

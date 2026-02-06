@@ -59,7 +59,7 @@ After user approval, execute these steps **in order**:
 4. **Append Flashcard**:
  - Use `replace_file_content` or `write_to_file` to append the flashcard to `03_Mart/anki_imports.md`.
 5. **Log Movement**:
- - Append a new row to `agents/movement_log.md`:
+ - Append a new row to `automation/movement_log.md`:
  `| YYYY-MM-DD HH:MM:SS | <SourceFile> | <DestinationFolder> | Success |`
 
 ---

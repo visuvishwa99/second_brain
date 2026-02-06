@@ -17,3 +17,23 @@ Cloze
 {Retrieval Augmented Generation (RAG)} is the process of chunking private data and storing it in a {vector database} to provide context to an LLM.
 <!--ID: 1770353415866-->
 END
+
+START
+Cloze
+{LlamaIndex} is optimized for complex {RAG} pipelines and excels at connecting LLMs to data sources like PDFs, APIs, and databases.
+END
+
+START
+Cloze
+LangChain follows a {linear} path (A→B→C), while LangGraph allows {loops and retries} for autonomous agents.
+END
+
+START
+Cloze
+In a Data Platform, {LangGraph} can build an auto-remediation agent that retries failed jobs, while {LangSmith} monitors API costs to prevent runaway spending.
+END
+
+START
+Cloze
+In LangGraph, use {StateGraph} to define agent state and {add_conditional_edges} to create loops and branching logic.
+END
