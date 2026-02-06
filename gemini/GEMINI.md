@@ -195,6 +195,28 @@ Before appending, Antigravity MUST:
 
 ---
 
+## 4.5 Maintenance & Quality Control (The Auditor)
+
+### Agent Overview
+The **Auditor** is a read-only agent that ensures the Second Brain remains high-quality and consistent with these rules.
+
+### Audit Trigger
+**Command**: `bash scripts/run_audit.sh`
+
+### Audit Scope
+- Identifying duplicate/similar topics (70% threshold).
+- Detecting missing tags or incomplete frontmatter.
+- Finding orphan Anki cards (Mart cards without a Brain source).
+- Identifying naming convention violations.
+- Identifying stale unprocessed journals in `01_Raw`.
+
+### Process
+1. Run the audit script.
+2. Review findings in `agents/audit_report.md`.
+3. Inform Antigravity to perform necessary merges or cleanups.
+
+---
+
 ## 5. Technical Notes for Antigravity
 
 ### Shell Commands

@@ -2,6 +2,11 @@
 
 This guide explains how to interact with your AI agent (Antigravity) to manage your Second Brain.
 
+> [!TIP]
+> **Guide vs. Walkthrough**: 
+> - **Guides** (like this one) are **permanent** project manuals meant for long-term reference. 
+> - **Walkthroughs** (AI artifacts) are **temporary** "change logs" or summary reports generated for a specific task. Once you've reviewed a walkthrough, you can rely on the permanent Guides.
+
 ## The Personas
 
 ### 1. The Librarian
@@ -13,6 +18,11 @@ This guide explains how to interact with your AI agent (Antigravity) to manage y
 * **Role**: Senior Architect, Mentor.
 * **Goal**: Deeply analyze a concept, provide real-world Data Engineering examples, write code, and draw diagrams.
 * **Trigger Condition**: `Explain: true` in your note.
+
+### 3. The Auditor (Maintenance Agent)
+* **Role**: Quality Control, consistency checker.
+* **Goal**: Scan for duplicates, missing tags, and rule violations.
+* **Trigger Condition**: Manual run using `bash scripts/run_audit.sh`.
 
 ---
 
@@ -41,6 +51,13 @@ Use this to target a specific file.
 * **Say**: *"Process 2026-02-04.md"*
 * **Action**: Runs the workflow on that specific file only.
 
+### Option 4: Maintenance Audit
+Use this to check the health of your Second Brain.
+* **Command**: `bash scripts/run_audit.sh`
+* **Action**:
+ * Scans for duplicates and rule violations.
+ * Generates a report in `agents/audit_report.md`.
+
 ---
 
 ## The Journal Template Rules
@@ -51,12 +68,22 @@ Your journal template controls the AI's behavior.
 ---
 processed: false # false = Agent will look at it. true = Agent ignores it.
 Explain: false # false = Just file it. true = DEEP DIVE it.
-examples:
- - dataengineering[1]: # The "Realtime Rule": Must have 1 practical DE example.
-Realtime: NA # Or specify a tool (e.g., Databricks, Snowflake).
-diagram: false # true/mermaid = Agent creates a Mermaid diagram.
+examples: 2 # Number of code/syntax examples to include.
+Realtime: true # Add a production-grade scenario.
+diagram: true # Generate a Mermaid diagram.
+move_journal_to_brain: true # Append/Create in 02_Brain.
+move_brain_to_mart: true # Generate Anki cards in 03_Mart.
 ---
 ```
+
+---
+
+## Logging & Knowledge Lineage
+
+Every movement from `01_Raw` to `02_Brain` is logged in [movement_log.md](file:///c:/Misc/Dataengineering/Projects/build_second_brain/agents/movement_log.md) for auditability.
+
+**Log Format**:
+`| Timestamp | Operation | Source | Destination | Status | Notes |`
 
 ---
 
@@ -83,15 +110,14 @@ Cloze
 END
 ```
 
-> **Important**: There MUST be a blank line between each `END` and the next `START`.
+> [!IMPORTANT]
+> **Line Endings (LF)**: Anki cards MUST use Unix (LF) line endings. After generating cards, you **MUST** run:
+> `bash scripts/fix_card_line_endings.sh`
 
 ### Cleaning Up IDs
-The plugin automatically injects `<!--ID: 12345-->` tags to track cards. To remove them (e.g., for a clean slate or sharing):
-1. In VS Code, press `Ctrl + Shift + F` (Find in Files).
-2. Use **Regex Mode** (Alt+R).
-3. **Find**: `<!--ID: \d+-->\n?`
-4. **Replace**: (Leave empty).
-5. Click **Replace All**.
+The plugin automatically injects `<!--ID: 12345-->` tags to track cards. To remove them safely:
+* **Automated**: Run `bash scripts/clean_anki_ids.sh`.
+* **Manual**: In VS Code, use Regex find/replace: `<!--ID: \d+-->\n?`
 
 ---
 

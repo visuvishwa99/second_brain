@@ -208,8 +208,14 @@
       "obsidian-to-anki-plugin:Obsidian_to_Anki - Scan Vault": false
     }
   },
-  "active": "5fbe2be987779446",
+  "active": "8321c052c847cf7e",
   "lastOpenFiles": [
+    "agents/maintenance_agent.md",
+    "agents/audit_report.md",
+    "agents/audit_raw.txt",
+    "scripts/run_audit.sh",
+    "scripts/audit_brain.py",
+    "scripts/audit_brain.sh",
     "User_Guide.md",
     "gemini/GEMINI.md",
     "01_Raw/journals/2026/Q1/2026-02-04_13-53-02.md",
@@ -224,10 +230,6 @@
     "03_Mart/08_Architecture/sedlV3zcQ",
     "03_Mart/05_Warehousing/sedBfTyD9",
     "03_Mart/05_Warehousing/sedmf7blV",
-    "03_Mart/01_Concepts/sedxX7vab",
-    "03_Mart/01_Concepts/sed6ZtrOG",
-    "03_Mart/01_Concepts/sedjxuzkB",
-    "03_Mart/01_Concepts/sedui81TI",
     "03_Mart/anki_test.md",
     "03_Mart/09_AI/langchain_cards.md",
     "03_Mart/08_Architecture/snowflake_vs_databricks_cards.md",
@@ -244,8 +246,6 @@
     "03_Mart/05_Warehousing/scd_cards.md",
     "03_Mart/04_Cloud/aws_s3_cards.md",
     "03_Mart/03_Streaming/kafka_cards.md",
-    "03_Mart/02_Compute/spark_cards.md",
-    "03_Mart/01_Concepts/data_merging_strategies_cards.md",
     "Untitled.canvas"
   ]
 }
