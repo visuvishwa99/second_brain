@@ -4,17 +4,21 @@
     "type": "split",
     "children": [
       {
-        "id": "322d6c67f0917a8d",
+        "id": "79e7bdd6e43489ef",
         "type": "tabs",
         "children": [
           {
-            "id": "09d0279c66513f87",
+            "id": "5fbe2be987779446",
             "type": "leaf",
             "state": {
-              "type": "empty",
-              "state": {},
+              "type": "markdown",
+              "state": {
+                "file": "01_Raw/journals/2026/Q1/2026-02-04_13-53-02.md",
+                "mode": "preview",
+                "source": false
+              },
               "icon": "lucide-file",
-              "title": "New tab"
+              "title": "2026-02-04_13-53-02"
             }
           }
         ]
@@ -204,8 +208,18 @@
       "obsidian-to-anki-plugin:Obsidian_to_Anki - Scan Vault": false
     }
   },
-  "active": "09d0279c66513f87",
+  "active": "5fbe2be987779446",
   "lastOpenFiles": [
+    "User_Guide.md",
+    "gemini/GEMINI.md",
+    "01_Raw/journals/2026/Q1/2026-02-04_13-53-02.md",
+    "02_Brain/02_Compute/spark.md",
+    "03_Mart/99_misc",
+    "03_Mart/03_Streaming/spark_streaming_cards.md",
+    "03_Mart/01_Concepts/sedkQB8ok",
+    "01_Raw/journals/2026/Q1/2026/Q1/2026-02-06_09-55-40.md",
+    "03_Mart/09_AI/sandboxed_ai_execution_cards.md",
+    "02_Brain/09_AI/sandboxed_ai_execution.md",
     "03_Mart/08_Architecture/seddh5ZwY",
     "03_Mart/08_Architecture/sedlV3zcQ",
     "03_Mart/05_Warehousing/sedBfTyD9",
@@ -216,14 +230,11 @@
     "03_Mart/01_Concepts/sedui81TI",
     "03_Mart/anki_test.md",
     "03_Mart/09_AI/langchain_cards.md",
-    "03_Mart/09_AI",
     "03_Mart/08_Architecture/snowflake_vs_databricks_cards.md",
     "03_Mart/08_Architecture/functional_data_engineering_cards.md",
     "03_Mart/08_Architecture/delta_cards.md",
-    "03_Mart/08_Architecture",
     "03_Mart/07_Languages/python_algorithms_cards.md",
     "03_Mart/07_Languages/java_cards.md",
-    "03_Mart/07_Languages",
     "03_Mart/06_Ingestion/sqoop_cards.md",
     "03_Mart/06_Ingestion/glue_cards.md",
     "03_Mart/05_Warehousing/dbt_cards.md",
@@ -232,16 +243,9 @@
     "03_Mart/05_Warehousing/redshift_cards.md",
     "03_Mart/05_Warehousing/scd_cards.md",
     "03_Mart/04_Cloud/aws_s3_cards.md",
-    "03_Mart/03_Streaming/spark_streaming_cards.md",
     "03_Mart/03_Streaming/kafka_cards.md",
     "03_Mart/02_Compute/spark_cards.md",
     "03_Mart/01_Concepts/data_merging_strategies_cards.md",
-    "03_Mart/01_Concepts/ingestion_cards.md",
-    "03_Mart/01_Concepts/data_engineering_foundations_cards.md",
-    "02_Brain/07_Languages/Languages_MOC.md",
-    "03_Mart/05_Warehousing/snowflake_cards.md",
-    "02_Brain/99_Misc/Misc_MOC.md",
-    "02_Brain/99_Misc/doordash_interview_2026.md",
     "Untitled.canvas"
   ]
 }

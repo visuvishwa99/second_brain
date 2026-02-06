@@ -1,12 +1,28 @@
 {
   "recentFiles": [
     {
-      "basename": "Languages_MOC",
-      "path": "02_Brain/07_Languages/Languages_MOC.md"
-    },
-    {
       "basename": "2026-02-04_13-53-02",
       "path": "01_Raw/journals/2026/Q1/2026-02-04_13-53-02.md"
+    },
+    {
+      "basename": "User_Guide",
+      "path": "User_Guide.md"
+    },
+    {
+      "basename": "GEMINI",
+      "path": "gemini/GEMINI.md"
+    },
+    {
+      "basename": "spark",
+      "path": "02_Brain/02_Compute/spark.md"
+    },
+    {
+      "basename": "spark_streaming_cards",
+      "path": "03_Mart/03_Streaming/spark_streaming_cards.md"
+    },
+    {
+      "basename": "Languages_MOC",
+      "path": "02_Brain/07_Languages/Languages_MOC.md"
     },
     {
       "basename": "2026-02-05_09-39-12",
@@ -19,10 +35,6 @@
     {
       "basename": "Journal",
       "path": "Templates/Journal.md"
-    },
-    {
-      "basename": "User_Guide",
-      "path": "User_Guide.md"
     },
     {
       "basename": "2024-05-10",
@@ -59,10 +71,6 @@
     {
       "basename": "deep_dive",
       "path": "agents/workflows/deep_dive.md"
-    },
-    {
-      "basename": "GEMINI",
-      "path": "gemini/GEMINI.md"
     },
     {
       "basename": "2026-01-29_22-09-25",

@@ -55,8 +55,38 @@ After publishing, Antigravity MUST complete these steps:
 - [ ] If `move_brain_to_mart: true`, generate cards to `03_Mart/<Category>/<File>_cards.md`
 - [ ] Delete source file from `01_Raw` using `rm` (NOT `del`)
 - [ ] Update source journal frontmatter: `processed: true`
-- [ ] Log to `agents/movement_log.md` using this format:
-      `| YYYY-MM-DD HH:MM:SS | <SourceFile> | <DestinationFolder> | Success |`
+- [ ] Log action to `agents/movement_log.md` (see Logging Rules below)
+
+### Logging Rules
+
+**Purpose**: Track knowledge lineage (where content came from, where it went).
+
+**Log Schema**:
+```
+| Timestamp | Operation | Source | Destination | Status | Notes |
+```
+
+**Operations to Log**:
+| Operation | When to Log |
+|-----------|-------------|
+| `CREATE` | New file created in Brain or Mart |
+| `UPDATE` | Significant changes to a Brain note (new sections, major rewrites) |
+| `DELETE` | File removed from any folder |
+| `BULK_GEN` | Multiple files generated/regenerated |
+
+**Do NOT Log**: Reads, minor typo fixes, failed operations.
+
+**Example Entries**:
+```markdown
+| 2026-02-06 09:59 | CREATE | 2026-02-06_09-55-40.md | 09_AI/sandboxed_ai.md | Success | Deep dive on Monty |
+| 2026-02-06 10:15 | CREATE | - | 09_AI/sandboxed_ai_cards.md | Success | 5 cards |
+| 2026-02-06 11:00 | UPDATE | - | 05_Warehousing/scd.md | Success | Added SCD Type 2 |
+| 2026-02-06 12:00 | DELETE | - | 99_Misc/temp_note.md | Success | Duplicate |
+| 2026-02-05 16:30 | BULK_GEN | - | 03_Mart/ | Success | 22 cards regenerated |
+```
+
+> [!IMPORTANT]
+> **Folder Creation is NOT Allowed**: All folders are pre-established. If a note doesn't fit, use `99_Misc`.
 
 ---
 
