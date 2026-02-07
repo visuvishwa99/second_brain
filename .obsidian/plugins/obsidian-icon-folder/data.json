@@ -35,11 +35,11 @@
     "useInternalPlugins": false
   },
   "01_Raw": "LiFolderDown",
-  "01_Raw/Archive": "LiArchive",
   "01_Raw/journals": "LiNotebookTabs",
   "02_Brain": "🧠",
   "03_Mart": "LiDatabase",
   "gemini": "♊",
   "scripts": "LiFiles",
-  "Templates": "LiLayoutTemplate"
+  "Templates": "LiLayoutTemplate",
+  "02_Brain/Archive": "LiArchive"
 }

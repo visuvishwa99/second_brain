@@ -5,7 +5,7 @@
 
 BRAIN_DIR="./02_Brain"
 MART_DIR="./03_Mart"
-RAW_DIR="./01_Raw"
+RAW_DIR="./01_Raw/journals"
 OUTPUT="./automation/audit_raw.txt"
 
 echo "=== Second Brain Audit - $(date '+%Y-%m-%d %H:%M') ===" > "$OUTPUT"

@@ -41,3 +41,21 @@ Cloze
 Spark 3.4+ `applyInPandasWithState` allows arbitrary {stateful processing} in Python using Pandas UDFs.
 <!--ID: 1770353416010-->
 END
+
+START
+Cloze
+{Continuous Processing} mode in Spark achieves latency as low as {1ms} by launching long-running tasks instead of micro-batches.
+<!--ID: 1770408520526-->
+END
+
+START
+Cloze
+The {RocksDB State Store} is the gold standard for large-scale stateful Spark Streaming, storing state on {local disk} instead of JVM heap memory.
+<!--ID: 1770408520528-->
+END
+
+START
+Cloze
+As of 2026, {DStreams} is deprecated for new projects. Use {Structured Streaming} for event-time processing and watermarking.
+<!--ID: 1770408520530-->
+END

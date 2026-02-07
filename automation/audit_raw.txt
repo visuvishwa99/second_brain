@@ -1,9 +1,6 @@
-=== Second Brain Audit - 2026-02-06 12:17 ===
+=== Second Brain Audit - 2026-02-06 13:15 ===
 
 ## Stale Journals (unprocessed)
-- ./01_Raw/journals/2026/Q1/2026/Q1/2026-02-04_20-35-46.md
-- ./01_Raw/journals/2026/Q1/2026/Q1/2026-02-05_09-37-59.md
-- ./01_Raw/journals/2026/Q1/2026/Q1/2026-02-05_09-39-12.md
 
 ## Brain Notes Missing Tags
 - [NO_TAG] ./02_Brain/00_DATAENG/amex.md
@@ -13,7 +10,6 @@
 - [NO_TAG] ./02_Brain/08_Architecture/delta.md
 - [NO_TAG] ./02_Brain/08_Architecture/graph_db.md
 - [NO_TAG] ./02_Brain/08_Architecture/project_loan_pipeline.md
-- [NO_TAG] ./02_Brain/test.md
 
 ## File Naming Violations
 
@@ -41,9 +37,8 @@
 - [NO_CARDS] ./02_Brain/99_Misc/2026-01-27.md
 - [NO_CARDS] ./02_Brain/99_Misc/2026-01-29_22-09-25.md
 - [NO_CARDS] ./02_Brain/99_Misc/doordash_interview_2026.md
-- [NO_CARDS] ./02_Brain/test.md
 
 ## Summary
-- Brain Notes: 43
+- Brain Notes: 42
 - Mart Cards: 22
-- Raw Journals: 10
+- Raw Journals: 7
