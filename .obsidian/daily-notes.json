@@ -1,5 +1,5 @@
 {
   "format": "YYYY/[Q]Q/YYYY-MM-DD_HH-mm-ss",
-  "folder": "01_Raw/journals/2026/Q1",
+  "folder": "01_Raw/journals/",
   "template": "Templates/Journal.md"
 }

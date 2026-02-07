@@ -124,3 +124,26 @@ tags:
     - ### Related
         - **Databricks Auto Loader**: Proprietary optimized source (`cloudFiles`) for file ingestion.
         - **Delta Live Tables (DLT)**: Declarative framework building pipelines on top of Spark Streaming.
+
+---
+
+## 2026 Updates
+
+### Continuous Processing Mode
+The biggest latency improvement in Spark Streaming:
+- **Micro-batching (Traditional)**: Latency ~100ms
+- **Continuous Processing**: Latency as low as **~1ms**
+
+Achieves this by launching **long-running tasks** that constantly poll the source, rather than launching new tasks for every micro-batch.
+
+### DStreams vs Structured Streaming (2026)
+
+| Feature | Legacy (DStreams) | Structured Streaming |
+|---------|-------------------|----------------------|
+| **API Type** | RDD-based | Dataset/DataFrame-based |
+| **Latency** | 100ms - 1s | 1ms - 100ms |
+| **Fault Tolerance** | Manual Checkpointing | Declarative Checkpointing |
+| **SQL Support** | Limited | Native |
+| **State Store** | HDFS (Memory-mapped) | RocksDB (Disk-optimized) |
+
+> **Note (2026):** If you are starting a new project, **do not use DStreams**. Structured Streaming is the standard for event-time processing and watermarking.
