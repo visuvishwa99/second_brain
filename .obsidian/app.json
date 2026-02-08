@@ -4,5 +4,6 @@
   "newFileLocation": "folder",
   "newFileFolderPath": "01_Raw/journals/",
   "userIgnoreFilters": null,
-  "alwaysUpdateLinks": true
+  "alwaysUpdateLinks": true,
+  "attachmentFolderPath": "./attachments"
 }
