@@ -31,3 +31,4 @@
 | 2026-02-07 16:11 | CREATE | - | 03_Mart/02_Compute/databricks_architecture_cards.md | Success | 5 cards generated |
 | 2026-02-07 16:20 | UPDATE | - | 02_Brain/07_Languages/python_algorithms.md | Success | Added Two Pointers and Sliding Window patterns |
 | 2026-02-07 16:20 | UPDATE | - | 03_Mart/07_Languages/python_algorithms_cards.md | Success | Updated cards with new patterns |
+| 2026-02-07 21:38 | CREATE | 2026-02-07_21-34-20.md | 02_Compute/pyspark_decorators.md | Success | PySpark Decorators for Performance |

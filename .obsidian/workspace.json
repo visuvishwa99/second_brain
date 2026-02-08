@@ -13,12 +13,12 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "02_Brain/08_Architecture/snowflake_vs_databricks.md",
+                "file": "02_Brain/02_Compute/databricks_architecture.md",
                 "mode": "preview",
                 "source": false
               },
               "icon": "lucide-file",
-              "title": "snowflake_vs_databricks"
+              "title": "databricks_architecture"
             }
           }
         ]
@@ -166,23 +166,13 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "02_Brain/pages/06_Ingestion/glue.md",
+                "file": "02_Brain/02_Compute/databricks_architecture.md",
                 "followCursor": false,
                 "showSearch": false,
                 "searchQuery": ""
               },
               "icon": "lucide-list",
-              "title": "Outline of glue"
-            }
-          },
-          {
-            "id": "1e0d514ef1fab20b",
-            "type": "leaf",
-            "state": {
-              "type": "review-queue-list-view",
-              "state": {},
-              "icon": "SpacedRepIcon",
-              "title": "Notes Review Queue"
+              "title": "Outline of databricks_architecture"
             }
           }
         ],
@@ -190,7 +180,7 @@
       }
     ],
     "direction": "horizontal",
-    "width": 393.5
+    "width": 200
   },
   "left-ribbon": {
     "hiddenItems": {
@@ -208,14 +198,17 @@
       "obsidian-to-anki-plugin:Obsidian_to_Anki - Scan Vault": false
     }
   },
-  "active": "7c1dcbf000c50fbd",
+  "active": "e853b606bd1521c7",
   "lastOpenFiles": [
+    "02_Brain/02_Compute/pyspark_decorators.md",
+    "02_Brain/08_Architecture/snowflake_vs_databricks.md",
+    "01_Raw/journals/2026/Q1/2026-02-07_21-34-20.md",
+    "01_Raw/journals/2026/Q1",
+    "01_Raw/journals/2026",
     "02_Brain/08_Architecture/snowflake_vs_databricks_2026.md",
     "02_Brain/test.md",
     "01_Raw/journals/2026/Q1/2026-02-06_13-13-28.md",
     "01_Raw/journals/2026/Q1/2026/Q1/2024-05-10.md",
-    "01_Raw/journals/2026/Q1",
-    "01_Raw/journals/2026",
     "01_Raw/journals/2026-02-04_13-53-02.md",
     "01_Raw/journals/2026-02-04_12-37-04.md",
     "01_Raw/journals/2026-02-03_19-35-45.md",
@@ -235,9 +228,6 @@
     "01_Raw/journals/2026/Q1/2026/Q1/2026-02-05_09-37-59.md",
     "01_Raw/journals/2026/Q1/2026/Q1/2026-02-04_20-35-46.md",
     "01_Raw/journals/2026/Q1/2026/Q1/2026-02-04_13-53-02.md",
-    "01_Raw/journals/2026/Q1/2026/Q1/2026-02-04_12-37-04.md",
-    "01_Raw/journals/2026/Q1/2026/Q1/2026-02-03_19-35-45.md",
-    "01_Raw/journals/2026/Q1/2026/Q1/2026-02-03_19-35-27.md",
     "sedjWVZgp",
     "automation/workflows",
     "automation/audit_raw.txt",

@@ -1,6 +1,14 @@
 {
   "recentFiles": [
     {
+      "basename": "databricks_architecture",
+      "path": "02_Brain/02_Compute/databricks_architecture.md"
+    },
+    {
+      "basename": "pyspark_decorators",
+      "path": "02_Brain/02_Compute/pyspark_decorators.md"
+    },
+    {
       "basename": "snowflake_vs_databricks",
       "path": "02_Brain/08_Architecture/snowflake_vs_databricks.md"
     },
