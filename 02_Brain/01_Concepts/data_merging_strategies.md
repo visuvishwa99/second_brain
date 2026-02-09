@@ -6,7 +6,7 @@ tags:
 # Data Merging Strategies
 
 ## 1. Upserts (Update + Insert)
-**Definition**: The operation of checking if a record exists. If it does, **update** it; if it doesn't, **insert** it. Essential for maintaining the "Current State" of a dataset.
+**Definition**: The operation of checking if a record exists. If it does, **update** it; if it doesn't, **insert** it. Essential for maintaining the "Current State" of a dataset.****
 
 ### Execution
 - **When is it used?** When ingesting Dimension tables (SCD Type 1) or current-state snapshots where duplicates are not allowed.
