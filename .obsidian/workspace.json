@@ -13,12 +13,12 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "01_Raw/journals/2026-02-08_00-21-05.md",
-                "mode": "source",
+                "file": "01_Raw/journals/2026-02-08_00-09-43.md",
+                "mode": "preview",
                 "source": false
               },
               "icon": "lucide-file",
-              "title": "2026-02-08_00-21-05"
+              "title": "2026-02-08_00-09-43"
             }
           }
         ]
@@ -199,7 +199,16 @@
   },
   "active": "3fef64da12203268",
   "lastOpenFiles": [
+    "Templates/Journal.md",
+    "User_Guide.md",
     "01_Raw/journals/2026-02-08_00-09-43.md",
+    "01_Raw/journals/2026-02-09_10-02-13.md",
+    "02_Brain/09_AI/databricks_de_agent.md",
+    "03_Mart/05_Warehousing/databricks_shallow_clones_cards.md",
+    "02_Brain/05_Warehousing/databricks_shallow_clones.md",
+    "03_Mart/05_Warehousing/database_indexing_cards.md",
+    "02_Brain/05_Warehousing/database_indexing.md",
+    "01_Raw/journals/2026-02-08_03-01-41.md",
     "01_Raw/journals/2026-02-08_00-21-05.md",
     "01_Raw/journals/attachments/Pasted image 20260208001129.png",
     "01_Raw/journals/attachments/Pasted image 20260208001058.png",
@@ -223,15 +232,6 @@
     "01_Raw/journals/2026-02-04_12-37-04.md",
     "01_Raw/journals/2026-02-03_19-35-45.md",
     "01_Raw/journals/2026-02-03_19-35-27.md",
-    "01_Raw/journals/2026-02-03.md",
-    "01_Raw/journals/2024-05-15.md",
-    "01_Raw/journals/2024-05-10.md",
-    "01_Raw/journals/2026/Q1/2026-02-04_13-53-02.md",
-    "01_Raw/journals/2026/Q1/2026-02-04_12-37-04.md",
-    "01_Raw/journals/2026/Q1/2026-02-03_19-35-45.md",
-    "01_Raw/journals/2026/Q1/2026-02-03_19-35-27.md",
-    "01_Raw/journals/2026/Q1/2026-02-03.md",
-    "01_Raw/journals/2026/Q1/2024-05-15.md",
     "sedjWVZgp",
     "automation/workflows",
     "automation/audit_raw.txt",

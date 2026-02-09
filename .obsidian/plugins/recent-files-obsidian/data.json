@@ -1,12 +1,16 @@
 {
   "recentFiles": [
     {
-      "basename": "2026-02-08_00-21-05",
-      "path": "01_Raw/journals/2026-02-08_00-21-05.md"
-    },
-    {
       "basename": "2026-02-08_00-09-43",
       "path": "01_Raw/journals/2026-02-08_00-09-43.md"
+    },
+    {
+      "basename": "Journal",
+      "path": "Templates/Journal.md"
+    },
+    {
+      "basename": "User_Guide",
+      "path": "User_Guide.md"
     },
     {
       "basename": "databricks_architecture",
@@ -25,10 +29,6 @@
       "path": "02_Brain/08_Architecture/snowflake_vs_databricks_2026.md"
     },
     {
-      "basename": "User_Guide",
-      "path": "User_Guide.md"
-    },
-    {
       "basename": "GEMINI",
       "path": "gemini/GEMINI.md"
     },
@@ -43,10 +43,6 @@
     {
       "basename": "Languages_MOC",
       "path": "02_Brain/07_Languages/Languages_MOC.md"
-    },
-    {
-      "basename": "Journal",
-      "path": "Templates/Journal.md"
     },
     {
       "basename": "2026-01-29_22-09-25",

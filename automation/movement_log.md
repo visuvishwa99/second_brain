@@ -32,3 +32,8 @@
 | 2026-02-07 16:20 | UPDATE | - | 02_Brain/07_Languages/python_algorithms.md | Success | Added Two Pointers and Sliding Window patterns |
 | 2026-02-07 16:20 | UPDATE | - | 03_Mart/07_Languages/python_algorithms_cards.md | Success | Updated cards with new patterns |
 | 2026-02-07 21:38 | CREATE | 2026-02-07_21-34-20.md | 02_Compute/pyspark_decorators.md | Success | PySpark Decorators for Performance |
+| 2026-02-09 10:04 | CREATE | 2026-02-08_00-21-05.md | 05_Warehousing/database_indexing.md | Success | Index usage insights |
+| 2026-02-09 10:04 | CREATE | - | 03_Mart/05_Warehousing/database_indexing_cards.md | Success | 5 cards |
+| 2026-02-09 10:04 | CREATE | 2026-02-08_03-01-41.md | 05_Warehousing/databricks_shallow_clones.md | Success | Test Env Clones |
+| 2026-02-09 10:04 | CREATE | - | 03_Mart/05_Warehousing/databricks_shallow_clones_cards.md | Success | 3 cards |
+| 2026-02-09 10:04 | CREATE | 2026-02-09_10-02-13.md | 09_AI/databricks_de_agent.md | Success | Databricks Agent |
