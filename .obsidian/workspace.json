@@ -13,12 +13,12 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "01_Raw/journals/2026-02-11_19-55-56.md",
+                "file": "02_Brain/09_AI/embeddings_and_retrieval.md",
                 "mode": "preview",
                 "source": false
               },
               "icon": "lucide-file",
-              "title": "2026-02-11_19-55-56"
+              "title": "embeddings_and_retrieval"
             }
           }
         ]
@@ -200,6 +200,7 @@
   "active": "84b9480985b0ec36",
   "lastOpenFiles": [
     "01_Raw/journals/2026-02-11_19-55-56.md",
+    "02_Brain/09_AI/embeddings_and_retrieval.md",
     "conflict-files-obsidian-git.md",
     "03_Mart/01_Concepts/sedW96fDV",
     "03_Mart/01_Concepts/sedxwuyYJ",
@@ -232,7 +233,6 @@
     "01_Raw/journals/attachments/Pasted image 20260208001058.png",
     "01_Raw/journals/attachments/Pasted image 20260208001022.png",
     "01_Raw/journals/attachments",
-    "01_Raw/journals/2026/Q1/2026-02-08_00-06-35.md",
     "01_Raw/journals/2026/Q1",
     "01_Raw/journals/2026",
     "Clippings",

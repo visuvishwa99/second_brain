@@ -245,3 +245,13 @@ The **Auditor** is a read-only agent that ensures the Second Brain remains high-
     - **Remove timestamps/bookmarks** (e.g., `[05:09]`) from text.
     - **Recurring Topics**: Append to a single topic file (e.g., `ai_industry_updates.md`) instead of creating dated files (e.g., `update_2026_02_10.md`), unless explicitly asked.
 
+### Mermaid Diagram Rules (Obsidian Compatibility)
+> [!IMPORTANT]
+> Obsidian's Mermaid renderer does NOT support the following. **Never use them** in diagrams:
+> - **Font Awesome icons**: e.g., `fa:fa-user`, `fa:fa-search`, `fa:fa-robot`
+> - **HTML tags inside node labels**: e.g., `<b>`, `<br/>`, `<i>`
+>
+> **Instead use**:
+> - Plain text labels: `User["User Query"]` instead of `User(["fa:fa-user User Query"])`
+> - `\n` for line breaks inside labels: `["Line 1\nLine 2"]` instead of `["Line 1<br/>Line 2"]`
+> - Subgraph titles in quotes: `subgraph Name ["Display Title"]`
