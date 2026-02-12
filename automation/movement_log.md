@@ -37,3 +37,5 @@
 | 2026-02-09 10:04 | CREATE | 2026-02-08_03-01-41.md | 05_Warehousing/databricks_shallow_clones.md | Success | Test Env Clones |
 | 2026-02-09 10:04 | CREATE | - | 03_Mart/05_Warehousing/databricks_shallow_clones_cards.md | Success | 3 cards |
 | 2026-02-09 10:04 | CREATE | 2026-02-09_10-02-13.md | 09_AI/databricks_de_agent.md | Success | Databricks Agent |
+| 2026-02-10 12:25 | CREATE | 2026-02-10_12-23-49.md | 05_Warehousing/dbt_incremental_strategies.md | Success | Deep dive on dbt incremental |
+| 2026-02-10 12:25 | CREATE | - | 05_Warehousing/dbt_incremental_strategies_cards.md | Success | 6 cards |

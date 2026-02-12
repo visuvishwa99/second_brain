@@ -239,3 +239,9 @@ The **Auditor** is a read-only agent that ensures the Second Brain remains high-
 ### File Naming Conventions
 - **MOC Files**: Must be ALL CAPS with MOC suffix (e.g., `CONCEPT_MOC.md`, `WAREHOUSING_MOC.md`).
 - **Standard Notes**: Must be **lowercase** with **underscores** (e.g., `snowflake_cortex.md`, `delta_lake.md`).
+
+### Content Cleaning Rules
+- **Video/Journal Summaries**:
+    - **Remove timestamps/bookmarks** (e.g., `[05:09]`) from text.
+    - **Recurring Topics**: Append to a single topic file (e.g., `ai_industry_updates.md`) instead of creating dated files (e.g., `update_2026_02_10.md`), unless explicitly asked.
+

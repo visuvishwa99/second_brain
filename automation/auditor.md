@@ -35,6 +35,16 @@ The Auditor is a read-only agent dedicated to maintaining the health, quality, a
 - Finds **Orphan Cards**: Card files in `03_Mart` without a corresponding Brain note in `02_Brain`.
 - Finds **Missing Cards**: Brain notes that haven't had cards generated yet.
 
+### 4. Content Hygiene
+- **Timestamp Check**: Flag video summaries containing timestamps (e.g., `[05:09]`) for cleanup.
+- **Date Suffix Check**: Flag recurrent topic files with date suffixes (e.g., `ai_updates_2026_02_10.md`) that should be consolidated.
+
+### 5. File Reduction Strategy
+- **Small File Detection**: Identify notes with < 50 words or < 15 lines that should be merged into parent topic files.
+- **Merge Proposals**: Suggest merging 'satellite' notes (e.g., `dbt_incremental.md`, `dbt_tests.md`) into 'core' notes (`dbt.md`) to reduce file clutter.
+
+
+
 ---
 
 ## Usage

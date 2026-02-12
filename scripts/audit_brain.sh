@@ -66,6 +66,24 @@ find "$BRAIN_DIR" -name "*.md" -type f ! -name "*_MOC.md" | while read -r brain_
 done
 echo "" >> "$OUTPUT"
 
+
+# --- 7. Consolidation Candidates ---
+echo "## Consolidation Candidates" >> "$OUTPUT"
+# Check for small files (< 15 lines)
+find "$BRAIN_DIR" -name "*.md" -type f ! -name "*_MOC.md" | while read -r file; do
+    line_count=$(wc -l < "$file")
+    if [ "$line_count" -lt 15 ]; then
+        echo "- [SMALL_FILE] $file ($line_count lines) -> Consider merging" >> "$OUTPUT"
+    fi
+done
+echo "" >> "$OUTPUT"
+
+# Check for date suffixes
+find "$BRAIN_DIR" -name "*[0-9][0-9][0-9][0-9]-[0-9][0-9]-[0-9][0-9]*.md" -type f ! -name "*_MOC.md" | while read -r file; do
+    echo "- [DATED_FILE] $file -> Consider merging" >> "$OUTPUT"
+done
+echo "" >> "$OUTPUT"
+
 # --- 6. Summary Counts ---
 echo "## Summary" >> "$OUTPUT"
 brain_count=$(find "$BRAIN_DIR" -name "*.md" -type f ! -name "*_MOC.md" | wc -l)
