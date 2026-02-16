@@ -1,6 +1,10 @@
 {
   "recentFiles": [
     {
+      "basename": "amex",
+      "path": "02_Brain/00_DATAENG/amex.md"
+    },
+    {
       "basename": "spark",
       "path": "02_Brain/02_Compute/spark.md"
     },

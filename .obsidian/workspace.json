@@ -4,31 +4,37 @@
     "type": "split",
     "children": [
       {
-        "id": "c376262ab531a173",
+        "id": "eb75398a800f68d0",
         "type": "split",
         "children": [
           {
             "id": "98e6622824202c17",
             "type": "tabs",
+            "dimension": 70.93023255813954,
             "children": [
               {
                 "id": "cbe833f2505b0f50",
                 "type": "leaf",
                 "state": {
-                  "type": "empty",
-                  "state": {},
-                  "icon": "lucide-file",
-                  "title": "New tab"
+                  "type": "split-diff-view",
+                  "state": {
+                    "aFile": ".obsidian/plugins/terminal/data.json",
+                    "bFile": ".obsidian/plugins/terminal/data.json",
+                    "aRef": ""
+                  },
+                  "icon": "diff",
+                  "title": "Diff: data.json  (Working Tree)"
                 }
               }
             ]
           },
           {
-            "id": "7316ce7d6cd0d066",
+            "id": "40e4fa23862c2c05",
             "type": "tabs",
+            "dimension": 29.069767441860467,
             "children": [
               {
-                "id": "548f2e7fe6ab8090",
+                "id": "f96cd601bc9894a5",
                 "type": "leaf",
                 "pinned": true,
                 "state": {
@@ -64,7 +70,7 @@
                   },
                   "pinned": true,
                   "icon": "terminal",
-                  "title": "Terminal: Select ◇  Ready (build_second_brain)"
+                  "title": "Terminal: C:\\Windows\\System32\\conhost.exe"
                 }
               }
             ]
@@ -246,38 +252,39 @@
       "terminal:Open terminal": false
     }
   },
-  "active": "548f2e7fe6ab8090",
+  "active": "cbe833f2505b0f50",
   "lastOpenFiles": [
+    "03_Mart/01_Concepts/sedu32NuO",
+    "03_Mart/99_misc/doordash_interview_2026_cards.md",
+    "03_Mart/05_Warehousing/snowflake_cards.md",
+    "03_Mart/04_Cloud/aws_cards.md",
+    "03_Mart/09_AI/embeddings_and_retrieval_cards.md",
+    "03_Mart/09_AI/databricks_de_agent_cards.md",
+    "03_Mart/09_AI/ai_safety_vs_reliability_cards.md",
+    "03_Mart/08_Architecture/snowflake_vs_databricks_2026_cards.md",
+    "03_Mart/05_Warehousing/data_modeling_fundamentals_cards.md",
+    "03_Mart/04_Cloud/gcp_cards.md",
+    "03_Mart/04_Cloud/azure_cards.md",
+    "03_Mart/02_Compute/pyspark_decorators_cards.md",
+    "03_Mart/01_Concepts/system_design_cards.md",
+    "03_Mart/01_Concepts/cloud_engineering_cards.md",
+    "03_Mart/00_DATAENG/project_flows_cards.md",
+    "03_Mart/00_DATAENG/amex_cards.md",
+    "03_Mart/00_DATAENG",
+    "02_Brain/04_Cloud/gcp.md",
+    "02_Brain/04_Cloud/azure.md",
+    "02_Brain/04_Cloud/aws.md",
+    "02_Brain/00_DATAENG/amex.md",
     "02_Brain/02_Compute/spark.md",
     "02_Brain/02_Compute/pyspark_decorators.md",
     "02_Brain/02_Compute/databricks_architecture.md",
     "03_Mart/03_Streaming/azure_event_hubs_cards.md",
     "03_Mart/05_Warehousing/bigquery_cards.md",
     "GEMINI.md",
-    "gemini/GEMINI.md",
-    "Untitled.md",
-    "automation/workflows/deep_dive.md",
-    "copilot/copilot-custom-prompts/Explain like I am 5.md",
-    "copilot/copilot-custom-prompts/Rewrite as tweet thread.md",
-    "copilot/copilot-custom-prompts/Fix grammar and spelling.md",
-    "copilot/copilot-conversations/what_is_langchain@20260215_192635.md",
     "copilot/copilot-conversations",
-    "copilot/copilot-custom-prompts/Clip Web Page.md",
-    "copilot/copilot-custom-prompts/Clip YouTube Transcript.md",
-    "copilot/copilot-custom-prompts/Rewrite as tweet.md",
-    "copilot/copilot-custom-prompts/Remove URLs.md",
-    "copilot/copilot-custom-prompts/Generate glossary.md",
-    "copilot/copilot-custom-prompts/Generate table of contents.md",
-    "copilot/copilot-custom-prompts/Make longer.md",
-    "copilot/copilot-custom-prompts/Make shorter.md",
-    "copilot/copilot-custom-prompts/Emojify.md",
-    "copilot/copilot-custom-prompts/Simplify.md",
-    "copilot/copilot-custom-prompts/Summarize.md",
-    "copilot/copilot-custom-prompts/Translate to Chinese.md",
     "copilot/copilot-custom-prompts",
     "copilot",
     "03_Mart/01_Concepts/sed5tZu4W",
-    "03_Mart/05_Warehousing/dbt_model_versioning_cards.md",
     "03_Mart/01_Concepts/sedW96fDV",
     "03_Mart/01_Concepts/sedxwuyYJ",
     "03_Mart/sedoEkzxg",
@@ -286,7 +293,6 @@
     "01_Raw/journals/attachments/Pasted image 20260208001058.png",
     "01_Raw/journals/attachments/Pasted image 20260208001022.png",
     "01_Raw/journals/attachments",
-    "01_Raw/journals/2026/Q1",
     "Untitled.canvas"
   ]
 }

@@ -26,3 +26,7 @@ So if you are a backend or full-stack engineer in 2026, take databases seriously
 - Learn to **migrate data** without taking everything down
 
 Tools will keep changing. The people who really understand data will keep getting called when it matters.
+
+## SQL vs Graph DB
+- SQL VS GRAPH DB
+	- ![image.png](../../assets/image_1740681755003_0.png)
