@@ -1,12 +1,36 @@
 {
   "recentFiles": [
     {
-      "basename": "langchain",
-      "path": "02_Brain/09_AI/langchain.md"
+      "basename": "spark",
+      "path": "02_Brain/02_Compute/spark.md"
+    },
+    {
+      "basename": "pyspark_decorators",
+      "path": "02_Brain/02_Compute/pyspark_decorators.md"
+    },
+    {
+      "basename": "databricks_architecture",
+      "path": "02_Brain/02_Compute/databricks_architecture.md"
+    },
+    {
+      "basename": "azure_event_hubs_cards",
+      "path": "03_Mart/03_Streaming/azure_event_hubs_cards.md"
+    },
+    {
+      "basename": "bigquery_cards",
+      "path": "03_Mart/05_Warehousing/bigquery_cards.md"
     },
     {
       "basename": "GEMINI",
-      "path": "gemini/GEMINI.md"
+      "path": "GEMINI.md"
+    },
+    {
+      "basename": "deep_dive",
+      "path": "automation/workflows/deep_dive.md"
+    },
+    {
+      "basename": "langchain",
+      "path": "02_Brain/09_AI/langchain.md"
     },
     {
       "basename": "python_algorithms",
@@ -33,24 +57,12 @@
       "path": "User_Guide.md"
     },
     {
-      "basename": "databricks_architecture",
-      "path": "02_Brain/02_Compute/databricks_architecture.md"
-    },
-    {
-      "basename": "pyspark_decorators",
-      "path": "02_Brain/02_Compute/pyspark_decorators.md"
-    },
-    {
       "basename": "snowflake_vs_databricks",
       "path": "02_Brain/08_Architecture/snowflake_vs_databricks.md"
     },
     {
       "basename": "snowflake_vs_databricks_2026",
       "path": "02_Brain/08_Architecture/snowflake_vs_databricks_2026.md"
-    },
-    {
-      "basename": "spark",
-      "path": "02_Brain/02_Compute/spark.md"
     },
     {
       "basename": "spark_streaming_cards",

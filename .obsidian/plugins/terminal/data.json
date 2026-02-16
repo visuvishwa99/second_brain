@@ -14,6 +14,33 @@
   "pinNewInstance": true,
   "preferredRenderer": "webgl",
   "profiles": {
+    "Gemini (npx)": {
+      "args": [
+        "/k",
+        "npx @google/gemini-cli"
+      ],
+      "executable": "C:\\Windows\\System32\\cmd.exe",
+      "followTheme": true,
+      "name": "Gemini (npx)",
+      "platforms": {
+        "win32": true
+      },
+      "pythonExecutable": "",
+      "restoreHistory": false,
+      "rightClickAction": "copyPaste",
+      "successExitCodes": [
+        "0",
+        "SIGINT",
+        "SIGTERM"
+      ],
+      "terminalOptions": {
+        "convertEol": true,
+        "ignoreBracketedPasteMode": true,
+        "documentOverride": null
+      },
+      "type": "integrated",
+      "useWin32Conhost": false
+    },
     "darwinExternalDefault": {
       "args": [
         "\"$PWD\""

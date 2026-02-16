@@ -4,24 +4,73 @@
     "type": "split",
     "children": [
       {
-        "id": "b2ca90039f406689",
-        "type": "tabs",
+        "id": "c376262ab531a173",
+        "type": "split",
         "children": [
           {
-            "id": "b45cea6cf06d22d4",
-            "type": "leaf",
-            "state": {
-              "type": "split-diff-view",
-              "state": {
-                "aFile": "03_Mart/02_Compute/emr_pricing_optimization_cards.md",
-                "bFile": "03_Mart/02_Compute/emr_pricing_optimization_cards.md",
-                "aRef": ""
-              },
-              "icon": "diff",
-              "title": "Diff: emr_pricing_optimization_cards  (Working Tree)"
-            }
+            "id": "98e6622824202c17",
+            "type": "tabs",
+            "children": [
+              {
+                "id": "cbe833f2505b0f50",
+                "type": "leaf",
+                "state": {
+                  "type": "empty",
+                  "state": {},
+                  "icon": "lucide-file",
+                  "title": "New tab"
+                }
+              }
+            ]
+          },
+          {
+            "id": "7316ce7d6cd0d066",
+            "type": "tabs",
+            "children": [
+              {
+                "id": "548f2e7fe6ab8090",
+                "type": "leaf",
+                "pinned": true,
+                "state": {
+                  "type": "terminal:terminal",
+                  "state": {
+                    "terminal:terminal": {
+                      "cwd": "C:\\Misc\\Dataengineering\\Projects\\build_second_brain",
+                      "focus": false,
+                      "profile": {
+                        "args": [],
+                        "executable": "C:\\Windows\\System32\\cmd.exe",
+                        "followTheme": true,
+                        "name": "",
+                        "platforms": {
+                          "win32": true
+                        },
+                        "pythonExecutable": "python3",
+                        "restoreHistory": false,
+                        "rightClickAction": "copyPaste",
+                        "successExitCodes": [
+                          "0",
+                          "SIGINT",
+                          "SIGTERM"
+                        ],
+                        "terminalOptions": {
+                          "documentOverride": null
+                        },
+                        "type": "integrated",
+                        "useWin32Conhost": true
+                      },
+                      "serial": null
+                    }
+                  },
+                  "pinned": true,
+                  "icon": "terminal",
+                  "title": "Terminal: Select ◇  Ready (build_second_brain)"
+                }
+              }
+            ]
           }
-        ]
+        ],
+        "direction": "horizontal"
       }
     ],
     "direction": "vertical"
@@ -78,7 +127,7 @@
       }
     ],
     "direction": "horizontal",
-    "width": 300
+    "width": 212.50198364257812
   },
   "right": {
     "id": "58c1c20fc7402ddd",
@@ -166,13 +215,12 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "Clippings/Home.md",
                 "followCursor": false,
                 "showSearch": false,
                 "searchQuery": ""
               },
               "icon": "lucide-list",
-              "title": "Outline of Home"
+              "title": "Outline"
             }
           }
         ],
@@ -180,7 +228,7 @@
       }
     ],
     "direction": "horizontal",
-    "width": 359.5
+    "width": 200
   },
   "left-ribbon": {
     "hiddenItems": {
@@ -191,54 +239,54 @@
       "templates:Insert template": false,
       "command-palette:Open command palette": false,
       "bases:Create new base": false,
-      "mermaid-tools:Open Mermaid Toolbar": false,
+      "mermaid-tools:Open Mermaid Toolbar": true,
       "obsidian-git:Open Git source control": false,
       "omnisearch:Omnisearch": false,
       "obsidian-to-anki-plugin:Obsidian_to_Anki - Scan Vault": false,
       "terminal:Open terminal": false
     }
   },
-  "active": "7c1dcbf000c50fbd",
+  "active": "548f2e7fe6ab8090",
   "lastOpenFiles": [
-    "03_Mart/01_Concepts/sed5tZu4W",
+    "02_Brain/02_Compute/spark.md",
+    "02_Brain/02_Compute/pyspark_decorators.md",
+    "02_Brain/02_Compute/databricks_architecture.md",
     "03_Mart/03_Streaming/azure_event_hubs_cards.md",
-    "03_Mart/05_Warehousing/dbt_model_versioning_cards.md",
-    "02_Brain/03_Streaming/azure_event_hubs.md",
-    "02_Brain/05_Warehousing/dbt_model_versioning.md",
-    "02_Brain/09_AI/ai_safety_vs_reliability.md",
-    "01_Raw/journals/2026-02-09.md",
-    "02_Brain/09_AI/langchain.md",
-    "01_Raw/journals/2026-02-12_11-45-35.md",
-    "01_Raw/journals/2026-02-12_07-42-59.md",
+    "03_Mart/05_Warehousing/bigquery_cards.md",
+    "GEMINI.md",
     "gemini/GEMINI.md",
-    "01_Raw/journals/2026-02-12_09-54-16.md",
-    "03_Mart/02_Compute/emr_pricing_optimization_cards.md",
-    "02_Brain/02_Compute/emr_pricing_optimization.md",
-    "02_Brain/07_Languages/python_algorithms.md",
-    "02_Brain/01_Concepts/data_merging_strategies.md",
-    "02_Brain/01_Concepts/system_design.md",
-    "02_Brain/09_AI/embeddings_and_retrieval.md",
-    "01_Raw/journals/2026-02-11_20-47-38.md",
-    "01_Raw/journals/2026-02-11_19-55-56.md",
-    "conflict-files-obsidian-git.md",
+    "Untitled.md",
+    "automation/workflows/deep_dive.md",
+    "copilot/copilot-custom-prompts/Explain like I am 5.md",
+    "copilot/copilot-custom-prompts/Rewrite as tweet thread.md",
+    "copilot/copilot-custom-prompts/Fix grammar and spelling.md",
+    "copilot/copilot-conversations/what_is_langchain@20260215_192635.md",
+    "copilot/copilot-conversations",
+    "copilot/copilot-custom-prompts/Clip Web Page.md",
+    "copilot/copilot-custom-prompts/Clip YouTube Transcript.md",
+    "copilot/copilot-custom-prompts/Rewrite as tweet.md",
+    "copilot/copilot-custom-prompts/Remove URLs.md",
+    "copilot/copilot-custom-prompts/Generate glossary.md",
+    "copilot/copilot-custom-prompts/Generate table of contents.md",
+    "copilot/copilot-custom-prompts/Make longer.md",
+    "copilot/copilot-custom-prompts/Make shorter.md",
+    "copilot/copilot-custom-prompts/Emojify.md",
+    "copilot/copilot-custom-prompts/Simplify.md",
+    "copilot/copilot-custom-prompts/Summarize.md",
+    "copilot/copilot-custom-prompts/Translate to Chinese.md",
+    "copilot/copilot-custom-prompts",
+    "copilot",
+    "03_Mart/01_Concepts/sed5tZu4W",
+    "03_Mart/05_Warehousing/dbt_model_versioning_cards.md",
     "03_Mart/01_Concepts/sedW96fDV",
     "03_Mart/01_Concepts/sedxwuyYJ",
-    "01_Raw/journals/2026-02-10_12-23-49.md",
-    "03_Mart/05_Warehousing/dbt_incremental_strategies_cards.md",
-    "02_Brain/05_Warehousing/dbt_incremental_strategies.md",
     "03_Mart/sedoEkzxg",
     "03_Mart/01_Concepts/sedxtsUAh",
-    "01_Raw/journals/2026-02-08_00-09-11.md",
-    "03_Mart/09_AI/langextract_cards.md",
     "01_Raw/journals/attachments/Pasted image 20260208001129.png",
     "01_Raw/journals/attachments/Pasted image 20260208001058.png",
     "01_Raw/journals/attachments/Pasted image 20260208001022.png",
     "01_Raw/journals/attachments",
     "01_Raw/journals/2026/Q1",
-    "01_Raw/journals/2026",
-    "Clippings",
-    "sedjWVZgp",
-    "automation/workflows",
     "Untitled.canvas"
   ]
 }
