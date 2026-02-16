@@ -4,21 +4,21 @@
     "type": "split",
     "children": [
       {
-        "id": "7e25a40ddba0662e",
+        "id": "b2ca90039f406689",
         "type": "tabs",
         "children": [
           {
-            "id": "84b9480985b0ec36",
+            "id": "b45cea6cf06d22d4",
             "type": "leaf",
             "state": {
-              "type": "markdown",
+              "type": "split-diff-view",
               "state": {
-                "file": "01_Raw/journals/2026-02-11_20-47-38.md",
-                "mode": "source",
-                "source": false
+                "aFile": "03_Mart/02_Compute/emr_pricing_optimization_cards.md",
+                "bFile": "03_Mart/02_Compute/emr_pricing_optimization_cards.md",
+                "aRef": ""
               },
-              "icon": "lucide-file",
-              "title": "2026-02-11_20-47-38"
+              "icon": "diff",
+              "title": "Diff: emr_pricing_optimization_cards  (Working Tree)"
             }
           }
         ]
@@ -194,14 +194,32 @@
       "mermaid-tools:Open Mermaid Toolbar": false,
       "obsidian-git:Open Git source control": false,
       "omnisearch:Omnisearch": false,
-      "obsidian-to-anki-plugin:Obsidian_to_Anki - Scan Vault": false
+      "obsidian-to-anki-plugin:Obsidian_to_Anki - Scan Vault": false,
+      "terminal:Open terminal": false
     }
   },
-  "active": "84b9480985b0ec36",
+  "active": "7c1dcbf000c50fbd",
   "lastOpenFiles": [
+    "03_Mart/01_Concepts/sed5tZu4W",
+    "03_Mart/03_Streaming/azure_event_hubs_cards.md",
+    "03_Mart/05_Warehousing/dbt_model_versioning_cards.md",
+    "02_Brain/03_Streaming/azure_event_hubs.md",
+    "02_Brain/05_Warehousing/dbt_model_versioning.md",
+    "02_Brain/09_AI/ai_safety_vs_reliability.md",
+    "01_Raw/journals/2026-02-09.md",
+    "02_Brain/09_AI/langchain.md",
+    "01_Raw/journals/2026-02-12_11-45-35.md",
+    "01_Raw/journals/2026-02-12_07-42-59.md",
+    "gemini/GEMINI.md",
+    "01_Raw/journals/2026-02-12_09-54-16.md",
+    "03_Mart/02_Compute/emr_pricing_optimization_cards.md",
+    "02_Brain/02_Compute/emr_pricing_optimization.md",
+    "02_Brain/07_Languages/python_algorithms.md",
+    "02_Brain/01_Concepts/data_merging_strategies.md",
+    "02_Brain/01_Concepts/system_design.md",
     "02_Brain/09_AI/embeddings_and_retrieval.md",
-    "01_Raw/journals/2026-02-11_19-55-56.md",
     "01_Raw/journals/2026-02-11_20-47-38.md",
+    "01_Raw/journals/2026-02-11_19-55-56.md",
     "conflict-files-obsidian-git.md",
     "03_Mart/01_Concepts/sedW96fDV",
     "03_Mart/01_Concepts/sedxwuyYJ",
@@ -212,23 +230,6 @@
     "03_Mart/01_Concepts/sedxtsUAh",
     "01_Raw/journals/2026-02-08_00-09-11.md",
     "03_Mart/09_AI/langextract_cards.md",
-    "02_Brain/09_AI/langextract.md",
-    "02_Brain/05_Warehousing/data_modeling_fundamentals.md",
-    "03_Mart/05_Warehousing/database_indexing_strategies_cards.md",
-    "02_Brain/05_Warehousing/database_indexing_strategies.md",
-    "02_Brain/09_AI/ai_industry_updates.md",
-    "01_Raw/journals/2026-02-08_00-09-43.md",
-    "01_Raw/journals/2026-02-08_00-21-05.md",
-    "01_Raw/journals/2026-02-09_13-13-49.md",
-    "01_Raw/journals/2026-02-10_11-30-51.md",
-    "Templates/Journal.md",
-    "User_Guide.md",
-    "01_Raw/journals/2026-02-09_10-02-13.md",
-    "02_Brain/09_AI/databricks_de_agent.md",
-    "03_Mart/05_Warehousing/databricks_shallow_clones_cards.md",
-    "02_Brain/05_Warehousing/databricks_shallow_clones.md",
-    "03_Mart/05_Warehousing/database_indexing_cards.md",
-    "02_Brain/05_Warehousing/database_indexing.md",
     "01_Raw/journals/attachments/Pasted image 20260208001129.png",
     "01_Raw/journals/attachments/Pasted image 20260208001058.png",
     "01_Raw/journals/attachments/Pasted image 20260208001022.png",

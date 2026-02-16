@@ -39,3 +39,10 @@
 | 2026-02-09 10:04 | CREATE | 2026-02-09_10-02-13.md | 09_AI/databricks_de_agent.md | Success | Databricks Agent |
 | 2026-02-10 12:25 | CREATE | 2026-02-10_12-23-49.md | 05_Warehousing/dbt_incremental_strategies.md | Success | Deep dive on dbt incremental |
 | 2026-02-10 12:25 | CREATE | - | 05_Warehousing/dbt_incremental_strategies_cards.md | Success | 6 cards |
+| 2026-02-12 10:00 | CREATE | 2026-02-12_09-54-16.md | 02_Brain/02_Compute/emr_pricing_optimization.md | Success | Deep dive on EMR Pricing vs K8s |
+| 2026-02-12 10:00 | CREATE | - | 03_Mart/02_Compute/emr_pricing_optimization_cards.md | Success | 5 cards |
+| 2026-02-15 19:04 | CREATE | 2026-02-09.md | 02_Brain/09_AI/ai_safety_vs_reliability.md | Success | AI Safety architecture |
+| 2026-02-15 19:04 | CREATE | 2026-02-12_07-42-59.md | 02_Brain/05_Warehousing/dbt_model_versioning.md | Success | dbt logic versioning |
+| 2026-02-15 19:04 | CREATE | - | 03_Mart/05_Warehousing/dbt_model_versioning_cards.md | Success | 3 cards |
+| 2026-02-15 19:04 | CREATE | 2026-02-12_11-45-35.md | 02_Brain/03_Streaming/azure_event_hubs.md | Success | Event Hubs vs Kafka |
+| 2026-02-15 19:04 | CREATE | - | 03_Mart/03_Streaming/azure_event_hubs_cards.md | Success | 5 cards |

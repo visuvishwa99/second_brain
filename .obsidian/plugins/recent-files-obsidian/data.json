@@ -1,8 +1,24 @@
 {
   "recentFiles": [
     {
-      "basename": "2026-02-11_20-47-38",
-      "path": "01_Raw/journals/2026-02-11_20-47-38.md"
+      "basename": "langchain",
+      "path": "02_Brain/09_AI/langchain.md"
+    },
+    {
+      "basename": "GEMINI",
+      "path": "gemini/GEMINI.md"
+    },
+    {
+      "basename": "python_algorithms",
+      "path": "02_Brain/07_Languages/python_algorithms.md"
+    },
+    {
+      "basename": "data_merging_strategies",
+      "path": "02_Brain/01_Concepts/data_merging_strategies.md"
+    },
+    {
+      "basename": "system_design",
+      "path": "02_Brain/01_Concepts/system_design.md"
     },
     {
       "basename": "embeddings_and_retrieval",
@@ -31,10 +47,6 @@
     {
       "basename": "snowflake_vs_databricks_2026",
       "path": "02_Brain/08_Architecture/snowflake_vs_databricks_2026.md"
-    },
-    {
-      "basename": "GEMINI",
-      "path": "gemini/GEMINI.md"
     },
     {
       "basename": "spark",

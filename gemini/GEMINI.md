@@ -40,7 +40,7 @@ Organize knowledge by topic files, not by creating scattered individual files fo
 Command: `Process my notes` or `Analyze my latest journal`
 
 ### Workflow Steps
-1. **Scan**: User points to a journal file in `./01_Raw/`.
+1. **Scan**: User points to a journal file in `./01_Raw/journals/`. **ONLY** process files in this specific directory.
 2. **Search Existing Files**:
    - Check `02_Brain` for an existing file matching the topic.
 3. **Process & Move (Direct)**:
@@ -155,7 +155,7 @@ diagram: false          # true = Generate a Mermaid diagram.
 | `examples` | `1`, `2`, etc. | Number of small syntax/usage code snippets to include. |
 | `Realtime` | `true` | Add a **Production-Grade Scenario** based on `tags` + note content. |
 | `Realtime` | `false` | No production scenario, just the standard examples. |
-| `diagram` | `true` | Generate a Mermaid diagram for the concept. |
+| `diagram` | `true` | Generate a Mermaid diagram (ONLY allowed if Explain is true). |
 
 ### The "Realtime" Rule (Context-Aware)
 
@@ -179,10 +179,11 @@ Command: **"Deep dive this"** or **"Analyze my latest journal"**
 
 ### Step 3: Analysis
 1.  **Concept**: Define what the user asked about.
-2.  **Code Examples**: Based on `examples` count.
-3.  **Realtime Scenario**: If `Realtime: true`, add production-grade implementation.
-4.  **Visuals**: Mermaid diagram (if `diagram: true`).
-5.  **Flashcard**: Q/A for Anki.
+2.  **Link Extraction**: If URLs are present, extract key insights from them (MANDATORY).
+3.  **Code Examples**: Based on `examples` count.
+4.  **Realtime Scenario**: If `Realtime: true`, add production-grade implementation.
+5.  **Visuals**: Mermaid diagram (ONLY if `Explain: true` AND `diagram: true`).
+6.  **Flashcard**: Q/A for Anki.
 
 ### Step 4: Propose & Confirm
 Before appending, Antigravity MUST:
@@ -208,7 +209,7 @@ The **Auditor** is a read-only agent that ensures the Second Brain remains high-
 - Detecting missing tags or incomplete frontmatter.
 - Finding orphan Anki cards (Mart cards without a Brain source).
 - Identifying naming convention violations.
-- Identifying stale unprocessed journals in `01_Raw`.
+- Identifying stale unprocessed journals in `01_Raw/journals`.
 
 ### Process
 1. Run the audit script.
@@ -221,7 +222,7 @@ The **Auditor** is a read-only agent that ensures the Second Brain remains high-
 
 ### Shell Commands
 - The user's terminal runs **Bash** (even on Windows).
-- Use `rm` to delete files, NOT `del`.
+- Use `rm` to delete files, NOT `del`. **ALWAYS use forward slashes** for paths (e.g., `c:/path/to/file`) to avoid path resolution errors in Bash on Windows.
 - Use `mv` to move files, NOT `move`.
 
 ### File Operations
