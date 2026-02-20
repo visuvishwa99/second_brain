@@ -83,3 +83,16 @@ tags:
 					- `OPTIMIZE .. ZORDER BY (column)
 				- 3. VACUUM (Removes Old Data for Storage Efficiency)
 					- VACUUM fact_subscriptions RETAIN 48 HOURS;
+
+## Delta Type Widening
+Type widening allows changing a column's type (e.g., `INT` to `BIGINT`) without rewriting existing Parquet files. However, this introduces hidden performance trade-offs.
+
+- **Mechanism**:
+    - Old files retain the original physical types.
+    - Delta schema reflects the new type.
+    - Spark performs **runtime casts** during reads (e.g., `cast(int as string)`).
+- **Hidden Costs**:
+    - Blocks **predicate pushdown**.
+    - Disables **broadcast joins**.
+    - Increases shuffle volume and can cause executor spills.
+- **Recommendation**: If a widened column is used in **joins, filters, or group-bys**, run `OPTIMIZE` to normalize the file schemas and eliminate the runtime reconciliation overhead.

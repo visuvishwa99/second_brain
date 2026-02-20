@@ -184,7 +184,7 @@
         "documentOverride": null
       },
       "type": "integrated",
-      "useWin32Conhost": true
+      "useWin32Conhost": false
     }
   }
 }

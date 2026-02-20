@@ -1,6 +1,14 @@
 {
   "recentFiles": [
     {
+      "basename": "GEMINI",
+      "path": "GEMINI.md"
+    },
+    {
+      "basename": "User_Guide",
+      "path": "User_Guide.md"
+    },
+    {
       "basename": "amex",
       "path": "02_Brain/00_DATAENG/amex.md"
     },
@@ -23,10 +31,6 @@
     {
       "basename": "bigquery_cards",
       "path": "03_Mart/05_Warehousing/bigquery_cards.md"
-    },
-    {
-      "basename": "GEMINI",
-      "path": "GEMINI.md"
     },
     {
       "basename": "deep_dive",
@@ -55,10 +59,6 @@
     {
       "basename": "Journal",
       "path": "Templates/Journal.md"
-    },
-    {
-      "basename": "User_Guide",
-      "path": "User_Guide.md"
     },
     {
       "basename": "snowflake_vs_databricks",

@@ -152,7 +152,8 @@ To sync your Second Brain between your PC and iPhone without iCloud:
  * **Pull Repository**: Repo = `build_second_brain`.
  * **Push Repository**: Repo = `build_second_brain`.
  * **Open App**: App = Obsidian.
-4. Add shortcut to Home Screen.
+1. Add shortcut to Home Screen.
+2. npx @google/gemini-cli  
 
 ### Usage
 * **Before working on mobile**: Tap "Sync Brain" to pull latest from PC.

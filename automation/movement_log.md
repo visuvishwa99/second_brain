@@ -46,3 +46,11 @@
 | 2026-02-15 19:04 | CREATE | - | 03_Mart/05_Warehousing/dbt_model_versioning_cards.md | Success | 3 cards |
 | 2026-02-15 19:04 | CREATE | 2026-02-12_11-45-35.md | 02_Brain/03_Streaming/azure_event_hubs.md | Success | Event Hubs vs Kafka |
 | 2026-02-15 19:04 | CREATE | - | 03_Mart/03_Streaming/azure_event_hubs_cards.md | Success | 5 cards |
+| 2026-02-20 11:30 | CREATE | 2026-02-20_10-50-41.md | 02_Brain/09_AI/ai_interviews.md | Success | Deep dive on AI System Design & CV |
+| 2026-02-20 11:30 | CREATE | - | 03_Mart/09_AI/ai_interviews_cards.md | Success | 3 cards |
+| 2026-02-20 11:35 | UPDATE | 2026-02-20_09-31-11.md | 02_Brain/05_Warehousing/database_indexing.md | Success | Added Lakehouse Indexing |
+| 2026-02-20 11:35 | UPDATE | 2026-02-20_09-31-11.md | 02_Brain/08_Architecture/delta.md | Success | Added Delta Type Widening |
+| 2026-02-20 11:35 | CREATE | - | 03_Mart/05_Warehousing/database_indexing_cards.md | Success | 1 card |
+| 2026-02-20 11:35 | CREATE | - | 03_Mart/08_Architecture/delta_cards.md | Success | 2 cards |
+| 2026-02-20 11:40 | UPDATE | 2026-02-16_22-53-44.md | 02_Brain/04_Cloud/aws.md | Success | Added Lambda Scaling |
+| 2026-02-20 11:40 | CREATE | - | 03_Mart/04_Cloud/aws_cards.md | Success | 2 cards |

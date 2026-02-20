@@ -27,3 +27,16 @@ tags:
 ## IAM
 
 - ![IAM_roles.jpeg](../../../assets/IAM_roles_1739418168094_0.jpeg)
+
+## AWS Lambda Scaling
+Lambda is designed for horizontal scalability ("Scale Out"), not vertical scalability ("Scale Up").
+
+- **Horizontal Scaling (Automatic)**: 
+    - Lambda creates new instances for concurrent requests.
+    - 1,000 concurrent requests → up to 1,000 instances (subject to account limits).
+- **Vertical Scaling (Manual)**:
+    - Configured via memory allocation (128 MB to 10 GB).
+    - CPU and network power scale proportionally with memory.
+- **Constraints**: 
+    - No dynamic vertical scaling at runtime.
+    - Not suitable for massive single-instance compute or extremely long-running processes (use EC2, ECS, or EKS instead).

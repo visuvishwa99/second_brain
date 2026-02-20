@@ -37,14 +37,30 @@ The goal is to have the minimum number of indexes that cover the maximum number 
 
 ## Code Example (Postgres)
 ```sql
--- Check for unused indexes
-SELECT
-    schemaname,
-    relname,
-    indexrelname,
-    idx_scan,
-    idx_tup_read,
-    idx_tup_fetch
-FROM pg_stat_user_indexes
-ORDER BY idx_scan ASC;
+
+## Lakehouse Indexing (LakeBase)
+Lakehouse engines are traditionally optimized for full scans, making point lookups expensive. Solutions like Onehouse LakeBase introduce first-class indexing primitives for **Apache Iceberg** and **Apache Hudi**.
+
+```mermaid
+graph TD
+    Query["Point Lookup / Narrow Query"] --> IndexLayer["Lakehouse Index Layer (RLI/SI)"]
+    IndexLayer --> Cache["Distributed Cache"]
+    Cache --> Data["Iceberg/Hudi Tables"]
+    subgraph "LakeBase Serving Layer"
+        IndexLayer
+        Cache
+    end
 ```
+
+- **Global Record-Level Indexing (RLI)**: Speeds up specific record lookups.
+- **Secondary Indexing (SI)**: Allows fast filtering on non-primary keys.
+- **Index Joins**: Changes join complexity from O(N + M) (scan-based) to O(K) where K is the number of qualifying rows. This is critical for AI agent exploration patterns.
+- **Performance**: TPC-DS benchmarks show up to a 95% reduction in query latency for narrow queries.
+
+### Index Join Comparison
+| Feature | Standard Lakehouse Join (Spark/Trino) | LakeBase Index Join |
+| :--- | :--- | :--- |
+| **Strategy** | Broadcast, Shuffle Hash, Sort-Merge | Global RLI / SI Lookups |
+| **Complexity** | O(N + M) (Data scanned/shuffled) | O(K) (Filtered working set) |
+| **Use Case** | Batch/Large Scans | Selective/Agent Drill-down |
+
