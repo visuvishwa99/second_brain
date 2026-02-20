@@ -4,21 +4,21 @@
     "type": "split",
     "children": [
       {
-        "id": "ceba3bcbcccb92e6",
+        "id": "fc54b1f9324bfdbf",
         "type": "tabs",
         "children": [
           {
-            "id": "8b998a7702fb6afb",
+            "id": "10f2e99be9b02ad2",
             "type": "leaf",
             "state": {
-              "type": "split-diff-view",
+              "type": "markdown",
               "state": {
-                "aFile": ".gitignore",
-                "bFile": ".gitignore",
-                "aRef": ""
+                "file": "02_Brain/05_Warehousing/data_lake_table_formats.md",
+                "mode": "preview",
+                "source": false
               },
-              "icon": "diff",
-              "title": "Diff: .gitignore  (Working Tree)"
+              "icon": "lucide-file",
+              "title": "data_lake_table_formats"
             }
           }
         ]
@@ -123,8 +123,8 @@
             "state": {
               "type": "git-view",
               "state": {},
-              "icon": "git-pull-request",
-              "title": "Source Control"
+              "icon": "lucide-ghost",
+              "title": "git-view"
             }
           },
           {
@@ -189,18 +189,32 @@
       "daily-notes:Open today's daily note": false,
       "templates:Insert template": false,
       "command-palette:Open command palette": false,
-      "bases:Create new base": false,
-      "mermaid-tools:Open Mermaid Toolbar": true,
-      "obsidian-git:Open Git source control": false,
-      "omnisearch:Omnisearch": false,
-      "obsidian-to-anki-plugin:Obsidian_to_Anki - Scan Vault": false,
-      "terminal:Open terminal": false
+      "bases:Create new base": false
     }
   },
-  "active": "8b998a7702fb6afb",
+  "active": "8321c052c847cf7e",
   "lastOpenFiles": [
+    "02_Brain/05_Warehousing/data_lake_table_formats.md",
+    "README.md",
+    "attachments/Pasted image 20260220134321.png",
+    "fix_lf.ps1",
+    "attachments/Pasted image 20260220134039.png",
+    "attachments/Pasted image 20260220133839.png",
+    "01_Raw/journals/2026-02-20_13-25-56.md",
+    "03_Mart/05_Warehousing/data_lake_table_formats_cards.md",
+    "attachments/Pasted image 20260220133054.png",
+    "attachments/Pasted image 20260220132917.png",
+    "attachments",
     "GEMINI.md",
+    "Untitled.md",
     "User_Guide.md",
+    "02_Brain/05_Warehousing/athena.md",
+    "02_Brain/01_Concepts/system_design.md",
+    "02_Brain/01_Concepts/ingestion.md",
+    "02_Brain/01_Concepts/data_merging_strategies.md",
+    "02_Brain/01_Concepts/data_engineering_foundations.md",
+    "02_Brain/01_Concepts/Concepts_MOC.md",
+    "02_Brain/01_Concepts/cloud_engineering.md",
     "scripts/audit_brain.ps1",
     "scripts/audit_brain_shim.py",
     "03_Mart/09_AI/ai_interviews_cards.md",
@@ -217,24 +231,9 @@
     "03_Mart/09_AI/databricks_de_agent_cards.md",
     "03_Mart/09_AI/ai_safety_vs_reliability_cards.md",
     "03_Mart/08_Architecture/snowflake_vs_databricks_2026_cards.md",
-    "03_Mart/05_Warehousing/data_modeling_fundamentals_cards.md",
-    "03_Mart/04_Cloud/gcp_cards.md",
-    "03_Mart/04_Cloud/azure_cards.md",
-    "03_Mart/02_Compute/pyspark_decorators_cards.md",
-    "03_Mart/01_Concepts/system_design_cards.md",
-    "03_Mart/01_Concepts/cloud_engineering_cards.md",
-    "03_Mart/00_DATAENG/project_flows_cards.md",
-    "03_Mart/00_DATAENG/amex_cards.md",
     "03_Mart/00_DATAENG",
-    "02_Brain/04_Cloud/gcp.md",
-    "02_Brain/04_Cloud/azure.md",
-    "02_Brain/04_Cloud/aws.md",
-    "02_Brain/00_DATAENG/amex.md",
-    "02_Brain/02_Compute/spark.md",
     "copilot/copilot-conversations",
     "copilot/copilot-custom-prompts",
-    "copilot",
-    "03_Mart/01_Concepts/sed5tZu4W",
     "01_Raw/journals/attachments/Pasted image 20260208001129.png",
     "01_Raw/journals/attachments/Pasted image 20260208001058.png",
     "01_Raw/journals/attachments/Pasted image 20260208001022.png",

@@ -1,12 +1,44 @@
 {
   "recentFiles": [
     {
-      "basename": "GEMINI",
-      "path": "GEMINI.md"
+      "basename": "Untitled",
+      "path": "Untitled.md"
     },
     {
       "basename": "User_Guide",
       "path": "User_Guide.md"
+    },
+    {
+      "basename": "athena",
+      "path": "02_Brain/05_Warehousing/athena.md"
+    },
+    {
+      "basename": "system_design",
+      "path": "02_Brain/01_Concepts/system_design.md"
+    },
+    {
+      "basename": "ingestion",
+      "path": "02_Brain/01_Concepts/ingestion.md"
+    },
+    {
+      "basename": "data_merging_strategies",
+      "path": "02_Brain/01_Concepts/data_merging_strategies.md"
+    },
+    {
+      "basename": "data_engineering_foundations",
+      "path": "02_Brain/01_Concepts/data_engineering_foundations.md"
+    },
+    {
+      "basename": "Concepts_MOC",
+      "path": "02_Brain/01_Concepts/Concepts_MOC.md"
+    },
+    {
+      "basename": "cloud_engineering",
+      "path": "02_Brain/01_Concepts/cloud_engineering.md"
+    },
+    {
+      "basename": "GEMINI",
+      "path": "GEMINI.md"
     },
     {
       "basename": "amex",
@@ -43,14 +75,6 @@
     {
       "basename": "python_algorithms",
       "path": "02_Brain/07_Languages/python_algorithms.md"
-    },
-    {
-      "basename": "data_merging_strategies",
-      "path": "02_Brain/01_Concepts/data_merging_strategies.md"
-    },
-    {
-      "basename": "system_design",
-      "path": "02_Brain/01_Concepts/system_design.md"
     },
     {
       "basename": "embeddings_and_retrieval",

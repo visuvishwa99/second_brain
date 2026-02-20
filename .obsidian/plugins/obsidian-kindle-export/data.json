@@ -6,5 +6,6 @@
   "smtphost": "",
   "pass": "",
   "expath": "",
-  "backend": "https://staneks.de/apps/md2mobi/"
+  "backend": "https://staneks.de/apps/md2mobi/",
+  "ribbonicon": false
 }
