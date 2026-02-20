@@ -1,3 +1,7 @@
+---
+tags:
+  - warehousing
+---
 - Athena -> Amazon Athena is a query service that makes it easy to analyze data directly
  collapsed:: true
  S3 using standard SQL

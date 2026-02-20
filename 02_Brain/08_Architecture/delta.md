@@ -1,3 +1,7 @@
+---
+tags:
+  - architecture
+---
 - Delta
  Tables are a storage format and table abstraction layer that sits on top of
  your existing data lake storage (like S3 on AWS).

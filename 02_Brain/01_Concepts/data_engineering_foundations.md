@@ -45,6 +45,17 @@ tags:
     - Completeness, Accuracy, Consistency, Timeliness, Validity.
 
 - ### Related
-    - [[batch_processing]]
-    - [[streaming]]
     - [[data_merging_strategies]]
+
+- ## Batch Processing
+- Terminal for all Batch
+- [[ingestion]]
+- [[transformation]]
+- [[reporting]]
+- [[medellion_architecture]]
+
+- ## Streaming
+- [[spark_streaming]]
+- [[kafka]]
+- [[stateless]]
+- [[statefull]]

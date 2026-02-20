@@ -23,3 +23,7 @@ tags:
 - ### Related
     - [[Cloud_engineering]]
     - [[Batch_processing]]
+
+## IAM
+
+- ![IAM_roles.jpeg](../../../assets/IAM_roles_1739418168094_0.jpeg)
