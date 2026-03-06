@@ -3,7 +3,7 @@
 This guide explains how to interact with your AI agent (Antigravity) to manage your Second Brain.
 
 ```bash
-build_second_brain/
+second_brain/
 ├── .agent/workflows/     # Antigravity system (slash commands)
 ├── automation/           # Your automation docs & logs
 │   ├── auditor.md
@@ -103,7 +103,7 @@ Controls how the agent handles attachments (PDFs, images, links) in your journal
 
 ## Logging & Knowledge Lineage
 
-Every movement from `01_Raw` to `02_Brain`, as well as manual script tools (Maintenance and Audits), is logged in [movement_log.md](file:///c:/Misc/Dataengineering/Projects/build_second_brain/automation/movement_log.md) for auditability.
+Every movement from `01_Raw` to `02_Brain`, as well as manual script tools (Maintenance and Audits), is logged in [movement_log.md](file:///c:/Misc/Dataengineering/Projects/second_brain/automation/movement_log.md) for auditability.
 
 > [!IMPORTANT]
 > **How to Log (NEVER VIOLATE)**:
@@ -185,16 +185,16 @@ To sync your Second Brain between your PC and iPhone without iCloud:
 
 ### Prerequisites
 1. **Working Copy** (Git client for iOS) - Download from App Store.
-2. Clone your `build_second_brain` repo in Working Copy.
+2. Clone your `second_brain` repo in Working Copy.
 3. **Obsidian Mobile** - Open the vault from the Working Copy folder.
 
 ### Create a "Sync Brain" Shortcut
 1. Open the **Shortcuts** app on your iPhone.
 2. Tap **+** to create a new shortcut. Name it **"Sync Brain"**.
 3. Add these actions (search for "Working Copy"):
- * **Commit Repository**: Repo = `build_second_brain`, Message = "Mobile sync".
- * **Pull Repository**: Repo = `build_second_brain`.
- * **Push Repository**: Repo = `build_second_brain`.
+ * **Commit Repository**: Repo = `second_brain`, Message = "Mobile sync".
+ * **Pull Repository**: Repo = `second_brain`.
+ * **Push Repository**: Repo = `second_brain`.
  * **Open App**: App = Obsidian.
 1. Add shortcut to Home Screen.
 2. npx @google/gemini-cli  
