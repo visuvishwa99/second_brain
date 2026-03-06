@@ -2,7 +2,10 @@
 # run_audit.sh - Orchestrator for the Maintenance Agent
 # Usage: bash scripts/run_audit.sh
 
-echo "🔍 Starting Second Brain Audit..."
+SCRIPT_DIR="$(cd "$(dirname "$0")" && pwd)"
+source "$SCRIPT_DIR/log_action.sh"
+
+echo "[AUDIT] Starting Second Brain Audit..."
 echo ""
 
 # Step 1: Fast bash scan
@@ -15,4 +18,6 @@ echo "Step 2/2: Running duplicate detection..."
 python scripts/audit_brain.py
 
 echo ""
-echo "✅ Audit complete! Review: automation/audit_report.md"
+echo "[DONE] Audit complete! Review: automation/audit_report.md"
+
+log_action "AUDIT" "-" "automation/audit_report.md" "Success" "Full audit scan completed"

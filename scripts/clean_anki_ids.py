@@ -2,6 +2,10 @@ import os
 import re
 import sys
 
+# Add scripts directory to path for shared imports
+sys.path.insert(0, os.path.dirname(os.path.abspath(__file__)))
+from log_action import log_action
+
 def clean_ids(target_path):
     """
     Recursively removes <!--ID: ...--> tags from Markdown files in target_path.
@@ -35,6 +39,8 @@ def clean_ids(target_path):
         print("No IDs found to clean.")
     else:
         print(f"Finished cleaning {count} files.")
+        log_action("MAINTENANCE", target_path, "-", "Success",
+                   f"Cleaned Anki IDs from {count} files")
 
 if __name__ == "__main__":
     if len(sys.argv) < 2:

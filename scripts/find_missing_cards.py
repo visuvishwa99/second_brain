@@ -1,4 +1,9 @@
 import os
+import sys
+
+# Add scripts directory to path for shared imports
+sys.path.insert(0, os.path.dirname(os.path.abspath(__file__)))
+from log_action import log_action
 
 brain_dir = r"c:\Misc\Dataengineering\Projects\build_second_brain\02_Brain"
 mart_dir = r"c:\Misc\Dataengineering\Projects\build_second_brain\03_Mart"
@@ -32,3 +37,6 @@ for root, dirs, files in os.walk(brain_dir):
 print("Files needing cards:")
 for p in missing_cards:
     print(p)
+
+log_action("AUDIT", "-", "-", "Success",
+           f"Missing cards scan: {len(missing_cards)} Brain notes without cards")

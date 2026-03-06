@@ -2,6 +2,10 @@ import os
 import re
 import sys
 
+# Add scripts directory to path for shared imports
+sys.path.insert(0, os.path.dirname(os.path.abspath(__file__)))
+from log_action import log_action
+
 # Configuration
 VAULT_PATH = r"c:\Misc\Dataengineering\Projects\build_second_brain"
 TARGET_DIRS = ['02_Brain']
@@ -168,6 +172,9 @@ def main():
         print("To apply changes, run: python scripts/clean_yaml_tags.py --apply")
     else:
         print(f"DONE: Updated {count} files.")
+        if count > 0:
+            log_action("MAINTENANCE", "-", "02_Brain/", "Success",
+                       f"Enforced folder-based tags on {count} files")
     print(f"{'='*60}\n")
 
 if __name__ == "__main__":

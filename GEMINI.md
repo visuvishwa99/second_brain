@@ -61,6 +61,13 @@ After publishing, Antigravity MUST complete these steps:
 
 **Purpose**: Track knowledge lineage (where content came from, where it went).
 
+> [!IMPORTANT]
+> **How to Log (NEVER VIOLATE)**:
+> NEVER edit `automation/movement_log.md` manually using file writing tools (`replace_file_content`, `write_to_file`, or echo). 
+> **ALWAYS** use the dedicated bash script via the terminal: 
+> `bash scripts/log_action.sh "OPERATION" "Source" "Destination" "Status" "Notes"`
+> This guarantees there are no empty lines injected that break the Markdown table rendering.
+
 **Log Schema**:
 ```
 | Timestamp | Operation | Source | Destination | Status | Notes |
@@ -73,8 +80,10 @@ After publishing, Antigravity MUST complete these steps:
 | `UPDATE` | Significant changes to a Brain note (new sections, major rewrites) |
 | `DELETE` | File removed from any folder |
 | `BULK_GEN` | Multiple files generated/regenerated |
+| `MAINTENANCE` | Script-driven cleanup (line endings, tag fixes, Anki ID removal) |
+| `AUDIT` | Audit scans (duplicate detection, missing cards, compliance checks) |
 
-**Do NOT Log**: Reads, minor typo fixes, failed operations.
+**Do NOT Log**: Reads, minor typo fixes, failed operations, dry-run previews.
 
 **Example Entries**:
 ```markdown
@@ -83,6 +92,8 @@ After publishing, Antigravity MUST complete these steps:
 | 2026-02-06 11:00 | UPDATE | - | 05_Warehousing/scd.md | Success | Added SCD Type 2 |
 | 2026-02-06 12:00 | DELETE | - | 99_Misc/temp_note.md | Success | Duplicate |
 | 2026-02-05 16:30 | BULK_GEN | - | 03_Mart/ | Success | 22 cards regenerated |
+| 2026-02-28 15:24 | MAINTENANCE | - | 03_Mart/ | Success | Fixed CRLF -> LF in 49 card files |
+| 2026-02-28 15:30 | AUDIT | - | automation/audit_report.md | Success | Full audit scan completed |
 ```
 
 > [!IMPORTANT]
@@ -116,17 +127,75 @@ TARGET DECK: SecondBrain::05_Warehousing
 START
 Cloze
 Snowflake micro-partitions are between {50 MB} and {500 MB} of uncompressed data.
+<!--ID: 1772824416005-->
 END
 
 START
 Cloze
 {Time Travel} allows access to historical data in Snowflake.
+<!--ID: 1772824416013-->
 END
 ```
 
 > [!IMPORTANT]
 > **Blank Line Required**: There MUST be a blank line between each `END` and the next `START`.
 > **Line Endings**: Card files MUST use **LF** (Unix) line endings, NOT CRLF (Windows). After creating card files, run: `sed -i 's/\r$//' <file.md>`
+
+### Card Generation Rules (CRITICAL -- NEVER VIOLATE)
+
+> [!CAUTION]
+> **NEVER overwrite a card file.** Overwriting destroys existing Anki IDs and deletes unrelated cards.
+
+When `move_brain_to_mart: true` and a card file needs to be updated:
+
+1. **Read the existing card file first.** If `<topic>_cards.md` already exists, read its full contents before writing anything.
+2. **Never overwrite.** Always **append** new cards after the last `END` in the existing file. Never use `write_to_file` with `Overwrite: true` on a card file that already has content.
+3. **Preserve all Anki IDs.** Lines like `<!--ID: 1771611852879-->` are assigned by the Obsidian_to_Anki plugin. Removing them causes Anki to treat cards as deleted. Never remove or alter these lines.
+4. **Deduplicate by semantic context.** Before appending, compare each new card against existing cards:
+   - If a new card covers the **same concept** as an existing card (even with different wording), **skip** the new card (the existing one wins because it already has an Anki ID and review history).
+   - If a new card covers a **different concept**, append it.
+   - **Different topics are never duplicates.** For example, a "Snowflake CoCo" card and a "Snowflake COPY INTO" card are completely different topics -- both must be kept.
+5. **Never replace unrelated cards.** The card file is a collection of cards for a topic (e.g., `snowflake_cards.md` holds ALL Snowflake-related cards). New journal entries add to this collection; they do not replace it.
+6. **Use `replace_file_content` or manual append** to add new cards at the end of the file, after the final `END` line.
+
+**Example -- Correct behavior:**
+```
+Existing snowflake_cards.md has 6 CoCo cards with Anki IDs.
+New journal generates 2 COPY INTO cards.
+Result: File now has 8 cards (6 original + 2 new appended at end).
+```
+
+**Example -- WRONG behavior (NEVER do this):**
+```
+Existing snowflake_cards.md has 6 CoCo cards with Anki IDs.
+New journal generates 2 COPY INTO cards.
+Result: File now has only 2 COPY INTO cards (6 originals destroyed).
+```
+
+---
+
+## 2.6 Bulk Card Regeneration (Nuclear Option)
+
+### Purpose
+When cards are corrupted, overwritten, or out of sync with Brain content, this workflow wipes ALL card files and regenerates them from scratch using `02_Brain` as the source of truth.
+
+> [!WARNING]
+> This destroys ALL existing Anki IDs. Cards will be re-imported as new in Anki, losing review history and scheduling. Only use when a fresh start is genuinely needed.
+
+### Trigger
+Command: `/regenerate-cards` or `Regenerate all cards`
+
+### Workflow Steps
+1. **Delete**: Run `bash scripts/regenerate_all_cards.sh` to remove all `*_cards.md` files from `03_Mart`.
+2. **Scan**: Agent reads every file in `02_Brain/` (excluding MOC files, `.gitignore`, `assets/`, `Archive/`).
+3. **Generate**: For each Brain file, create a corresponding `<topic>_cards.md` in the matching `03_Mart/<folder>/`.
+4. **Fix line endings**: Run `bash scripts/fix_card_line_endings.sh`.
+5. **Log**: Record `BULK_GEN` operation in `automation/movement_log.md`.
+
+### Rules
+- Follow all card syntax rules from Section 2.5 (CurlyCloze, blank lines, LF endings).
+- Do NOT generate cards from MOC files or archive files.
+- Propose the plan and wait for user confirmation before generating.
 
 ---
 
@@ -143,6 +212,7 @@ tags:                   # Folder tag (streaming, warehousing, etc.)
 examples: 1             # Number of syntax/code examples to include.
 Realtime: false         # true = Add a Production-Grade Scenario.
 diagram: false          # true = Generate a Mermaid diagram.
+extract_info: true      # true = Extract info from attachments and discard them. false = Keep attachments at the end.
 ---
 ```
 
@@ -156,6 +226,8 @@ diagram: false          # true = Generate a Mermaid diagram.
 | `Realtime` | `true` | Add a **Production-Grade Scenario** based on `tags` + note content. |
 | `Realtime` | `false` | No production scenario, just the standard examples. |
 | `diagram` | `true` | Generate a Mermaid diagram (ONLY allowed if Explain is true). |
+| `extract_info` | `true` | Extract info from PDF/Images/Links and discard the attachments afterward. |
+| `extract_info` | `false` | Extract info and append the original documents/images/links at the end of the note. |
 
 ### The "Realtime" Rule (Context-Aware)
 
@@ -221,7 +293,7 @@ The **Auditor** is a read-only agent that ensures the Second Brain remains high-
 ## 5. Technical Notes for Antigravity
 
 ### Shell Commands
-- The user's terminal runs **Bash** (even on Windows).
+- The user's terminal runs **Bash** (even on Windows). **You MUST use Git Bash** for full compatibility with shell scripts.
 - Use `rm` to delete files, NOT `del`. **ALWAYS use forward slashes** for paths (e.g., `c:/path/to/file`) to avoid path resolution errors in Bash on Windows.
 - Use `mv` to move files, NOT `move`.
 
@@ -256,3 +328,39 @@ The **Auditor** is a read-only agent that ensures the Second Brain remains high-
 > - Plain text labels: `User["User Query"]` instead of `User(["fa:fa-user User Query"])`
 > - `\n` for line breaks inside labels: `["Line 1\nLine 2"]` instead of `["Line 1<br/>Line 2"]`
 > - Subgraph titles in quotes: `subgraph Name ["Display Title"]`
+
+---
+
+## 6. Gemini CLI Compatibility
+
+This file (`GEMINI.md`) is read by **both** Antigravity (IDE agent) and **Gemini CLI** (terminal agent). All pipeline rules, folder taxonomy, tagging, and workflow logic apply identically to both. The differences below ensure smooth operation from either tool.
+
+### Launching Gemini CLI (Auto-Approve)
+When running from Obsidian Terminal or any shell, use the sandbox mode to skip per-action confirmation prompts:
+```bash
+gemini -s   # sandbox mode, auto-approves file operations within the project
+```
+Without this flag, Gemini CLI will prompt for approval on every file write and delete, which defeats the automation workflow.
+
+### Tool Mapping (Antigravity vs CLI)
+The workflow steps in Sections 2-4 reference Antigravity-specific tools. Gemini CLI must achieve the same outcomes using its own capabilities:
+
+| Operation | Antigravity Tool | Gemini CLI Equivalent |
+|-----------|-----------------|----------------------|
+| Create/overwrite a file | `write_to_file` | Write file directly (CLI built-in) |
+| Edit part of a file | `replace_file_content` | Edit file (CLI built-in) |
+| Delete a file | `rm` via `run_command` | `rm` via shell execution |
+| Read a file | `view_file` | Read file (CLI built-in) |
+| Read a URL | `read_url_content` | Google Search or `fetch` tool |
+
+### Workflow Triggers (CLI)
+The same trigger phrases work in both environments:
+- `process` or `Process my notes` -- Runs the Librarian workflow.
+- `Deep dive this` or `Analyze my latest journal` -- Runs the Principal Engineer analysis.
+- `bash scripts/run_audit.sh` -- Runs the Auditor.
+
+### CLI-Specific Rules
+1. **Same post-publish checklist applies**: Write to Brain, optionally generate Mart cards, delete source from `01_Raw`, log to `automation/movement_log.md`.
+2. **Same Anki line-ending fix applies**: After generating card files, run `bash scripts/fix_card_line_endings.sh`.
+3. **Same "Propose and Confirm" step applies**: Even in CLI, state the target file and wait for user confirmation before writing.
+4. **No emojis**: This rule is global across all agents and tools.

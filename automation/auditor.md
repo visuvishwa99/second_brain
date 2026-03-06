@@ -59,7 +59,7 @@ bash scripts/run_audit.sh
 
 ### Output
 The results are consolidated into:
-- [audit_report.md](./audit_report.md)
+- [audit_report.md](file:///c:/Misc/Dataengineering/Projects/build_second_brain/automation/audit_report.md)
 
 ---
 

@@ -1,25 +1,49 @@
-﻿# Audit Report - 2026-02-20 13:42
+# Audit Report - 2026-02-27 09:22
+
+## Critical Issues
+
+### Duplicate/Similar Notes
+- None found
+
+### Duplicate Cards
+- None found
+
+---
 
 ## Compliance Issues
 
-### Stale Journals (unprocessed)
+=== Second Brain Audit - 2026-02-27 09:22 ===
 
-### Brain Notes Missing Tags
+## Stale Journals (unprocessed)
 
-### File Naming Violations
+## Brain Notes Missing Tags
 
-### Orphan Cards (Mart without Brain)
+## File Naming Violations
 
-### Brain Notes without Cards
+## Orphan Cards (Mart without Brain)
 
-### Consolidation Candidates
+## Brain Notes without Cards
+- [NO_CARDS] ./02_Brain/03_Streaming/dbt_flink_adapter.md
+- [NO_CARDS] ./02_Brain/06_Ingestion/fragile_api_ingestion.md
+- [NO_CARDS] ./02_Brain/99_Misc/2026-01-27.md
+
+## Consolidation Candidates
+- [SMALL_FILE] ./02_Brain/01_Concepts/system_design.md (9 lines) -> Consider merging
+- [SMALL_FILE] ./02_Brain/04_Cloud/azure.md (13 lines) -> Consider merging
+- [SMALL_FILE] ./02_Brain/04_Cloud/gcp.md (13 lines) -> Consider merging
+- [SMALL_FILE] ./02_Brain/05_Warehousing/database_performance.md (13 lines) -> Consider merging
+- [SMALL_FILE] ./02_Brain/99_Misc/2026-01-27.md (8 lines) -> Consider merging
+
+- [DATED_FILE] ./02_Brain/99_Misc/2026-01-27.md -> Consider merging
 
 ## Summary
-- Brain Notes: 1
-- Mart Cards: 1
+- Brain Notes: 50
+- Mart Cards: 48
 - Raw Journals: 0
 
+
 ---
+
 ## Next Steps
 1. Review flagged duplicates and merge if appropriate
 2. Add missing tags to Brain notes
@@ -27,4 +51,3 @@
 4. Process stale journals in 01_Raw
 
 > This report is **read-only**. No files were modified.
-> **Note:** Duplicate detection was SKIPPED because Python is not available in this environment.

@@ -7,9 +7,14 @@ Usage: python scripts/audit_brain.py
 
 import os
 import re
+import sys
 from datetime import datetime
 from difflib import SequenceMatcher
 from pathlib import Path
+
+# Add scripts directory to path for shared imports
+sys.path.insert(0, os.path.dirname(os.path.abspath(__file__)))
+from log_action import log_action
 
 BRAIN_DIR = "./02_Brain"
 MART_DIR = "./03_Mart"
@@ -57,7 +62,7 @@ def find_duplicates():
             
             sim = similarity(text1, text2)
             if sim >= SIMILARITY_THRESHOLD:
-                level = "🔴 DUPLICATE" if sim >= 0.90 else "🟡 SIMILAR"
+                level = "[DUPLICATE]" if sim >= 0.90 else "[SIMILAR]"
                 duplicates.append((level, sim, path1, path2))
     
     return sorted(duplicates, key=lambda x: -x[1])
@@ -108,9 +113,9 @@ def generate_report():
     card_dups = find_duplicate_cards()
     
     # Build report
-    report = f"""# 🔍 Audit Report - {timestamp}
+    report = f"""# Audit Report - {timestamp}
 
-## 🔴 Critical Issues
+## Critical Issues
 
 ### Duplicate/Similar Notes
 """
@@ -118,7 +123,7 @@ def generate_report():
         for level, sim, p1, p2 in note_dups[:10]:
             report += f"- {level} ({sim:.0%}): `{Path(p1).name}` ↔ `{Path(p2).name}`\n"
     else:
-        report += "- None found ✅\n"
+        report += "- None found\n"
     
     report += """
 ### Duplicate Cards
@@ -127,12 +132,12 @@ def generate_report():
         for sim, id1, id2 in card_dups:
             report += f"- ({sim:.0%}): `{id1.split('::')[0]}` card {id1.split('::')[1]}\n"
     else:
-        report += "- None found ✅\n"
+        report += "- None found\n"
     
     report += f"""
 ---
 
-## 🟡 Compliance Issues
+## Compliance Issues
 
 {raw_content}
 
@@ -150,7 +155,11 @@ def generate_report():
     with open(REPORT_OUTPUT, 'w', encoding='utf-8') as f:
         f.write(report)
     
-    print(f"✅ Report generated: {REPORT_OUTPUT}")
+    print(f"[DONE] Report generated: {REPORT_OUTPUT}")
+
+    dup_count = len(note_dups) + len(card_dups)
+    log_action("AUDIT", "-", "automation/audit_report.md", "Success",
+               f"Duplicate detection completed ({dup_count} issues found)")
 
 if __name__ == "__main__":
     generate_report()

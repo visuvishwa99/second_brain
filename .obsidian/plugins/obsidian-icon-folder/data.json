@@ -3,16 +3,17 @@
     "migrated": 6,
     "iconPacksPath": ".obsidian/icons",
     "fontSize": 16,
-    "emojiStyle": "native",
+    "emojiStyle": "twemoji",
     "iconColor": null,
     "recentlyUsedIcons": [
+      "LiBrain",
+      "LiAnvil",
       "🌍",
       "LiFolderDown",
       "LiLayoutTemplate",
-      "LiFiles",
-      "♊"
+      "LiFiles"
     ],
-    "recentlyUsedIconsSize": 5,
+    "recentlyUsedIconsSize": 7,
     "rules": [],
     "extraMargin": {
       "top": 0,
@@ -34,12 +35,18 @@
     "debugMode": false,
     "useInternalPlugins": false
   },
-  "01_Raw": "LiFolderDown",
+  "01_Raw": {
+    "iconName": "LiAnvil",
+    "iconColor": "#ccf500"
+  },
   "01_Raw/journals": "LiNotebookTabs",
-  "02_Brain": "🧠",
-  "03_Mart": "LiDatabase",
+  "03_Mart": {
+    "iconName": "LiDatabase",
+    "iconColor": "#00b3ff"
+  },
   "scripts": "LiFiles",
   "Templates": "LiLayoutTemplate",
   "02_Brain/Archive": "LiArchive",
-  "02_Brain/00_DATAENG/DATAENG_MOC.md": "🌍"
+  "02_Brain/00_DATAENG/DATAENG_MOC.md": "🌍",
+  "02_Brain": "LiBrain"
 }

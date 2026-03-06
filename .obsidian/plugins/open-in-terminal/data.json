@@ -1,0 +1,11 @@
+{
+  "terminalApp": {
+    "win": "C:\\Program Files\\Git\\bin\\bash.exe"
+  },
+  "enableClaude": false,
+  "enableCodex": false,
+  "enableCursor": false,
+  "enableGemini": false,
+  "enableOpencode": false,
+  "enableWslOnWindows": false
+}

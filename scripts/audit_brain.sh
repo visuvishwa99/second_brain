@@ -3,6 +3,9 @@
 # Part of the Maintenance Agent (The Auditor)
 # Usage: bash scripts/audit_brain.sh
 
+SCRIPT_DIR="$(cd "$(dirname "$0")" && pwd)"
+source "$SCRIPT_DIR/log_action.sh"
+
 BRAIN_DIR="./02_Brain"
 MART_DIR="./03_Mart"
 RAW_DIR="./01_Raw/journals"
@@ -95,3 +98,5 @@ echo "- Raw Journals: $raw_count" >> "$OUTPUT"
 
 echo "=== Scan complete. Output: $OUTPUT ==="
 cat "$OUTPUT"
+
+log_action "AUDIT" "-" "automation/audit_raw.txt" "Success" "Bash audit scan completed"

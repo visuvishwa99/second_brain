@@ -1,3 +1,11 @@
 {
-  "cssTheme": ""
+  "cssTheme": "Shimmering Focus",
+  "textFontFamily": "Arial Rounded MT",
+  "baseFontSize": 13,
+  "baseFontSizeAction": true,
+  "showViewHeader": true,
+  "showRibbon": true,
+  "interfaceFontFamily": "Arial Rounded MT",
+  "monospaceFontFamily": "Franklin Gothic Book",
+  "nativeMenus": true
 }
