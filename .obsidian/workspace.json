@@ -13,12 +13,12 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "automation/movement_log.md",
+                "file": "02_Brain/09_AI/llm_jargons.md",
                 "mode": "preview",
                 "source": false
               },
               "icon": "lucide-file",
-              "title": "movement_log"
+              "title": "llm_jargons"
             }
           }
         ]
@@ -78,7 +78,7 @@
       }
     ],
     "direction": "horizontal",
-    "width": 232.50198364257812
+    "width": 311.5019836425781
   },
   "right": {
     "id": "58c1c20fc7402ddd",
@@ -152,12 +152,12 @@
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "01_Raw/journals/attachments/Pasted image 20260208001129.png",
+                "file": "01_Raw/journals/2026-03-17_09-40-53.md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               },
               "icon": "links-going-out",
-              "title": "Outgoing links from Pasted image 20260208001129"
+              "title": "Outgoing links from 2026-03-17_09-40-53"
             }
           },
           {
@@ -211,46 +211,49 @@
   },
   "active": "00aa7f146de71cab",
   "lastOpenFiles": [
-    "03_Mart/01_Concepts/system_design_cards.md",
-    "03_Mart/sedj60iIY",
-    "03_Mart/09_AI/sedxVhtei",
-    "03_Mart/09_AI/sedr4Sp5w",
-    "03_Mart/09_AI/seduDI7Pd",
-    "03_Mart/09_AI/sedU3VxMy",
-    "03_Mart/09_AI/sed2NZ0jl",
-    "03_Mart/09_AI/sedKIZTKi",
-    "03_Mart/08_Architecture/sedw4ywvl",
-    "03_Mart/08_Architecture/sed5MKZb2",
-    "03_Mart/08_Architecture/sed5gaCSJ",
-    "03_Mart/01_Concepts/ingestion_cards.md",
-    "03_Mart/01_Concepts/data_merging_strategies_cards.md",
-    "03_Mart/01_Concepts/data_engineering_foundations_cards.md",
-    "03_Mart/01_Concepts/cloud_engineering_cards.md",
-    "03_Mart/09_AI/web_search_for_agents_cards.md",
-    "03_Mart/09_AI/sandboxed_ai_execution_cards.md",
-    "03_Mart/09_AI/llm_routing_cards.md",
-    "03_Mart/09_AI/langextract_cards.md",
-    "03_Mart/09_AI/langchain_cards.md",
-    "03_Mart/09_AI/embeddings_and_retrieval_cards.md",
-    "03_Mart/09_AI/databricks_de_agent_cards.md",
-    "03_Mart/09_AI/ai_safety_vs_reliability_cards.md",
-    "03_Mart/09_AI/ai_interviews_cards.md",
-    "03_Mart/09_AI/AWS_bedrock_jargons_cards.md",
-    "03_Mart/08_Architecture/snowflake_vs_databricks_2026_cards.md",
-    "03_Mart/08_Architecture/snowflake_vs_databricks_cards.md",
-    "03_Mart/08_Architecture/functional_data_engineering_cards.md",
-    "03_Mart/08_Architecture/delta_cards.md",
-    "03_Mart/07_Languages/python_algorithms_cards.md",
-    "03_Mart/07_Languages/java_cards.md",
-    "03_Mart/06_Ingestion/sqoop_cards.md",
-    "03_Mart/06_Ingestion/glue_cards.md",
-    "03_Mart/06_Ingestion/fragile_api_ingestion_cards.md",
-    "03_Mart/05_Warehousing/snowflake_cards.md",
-    "03_Mart/05_Warehousing/scd_cards.md",
+    "02_Brain/assets/llm_gallery_20260326.png",
+    "01_Raw/journals/2026-03-26_17-01-27.md",
+    "02_Brain/09_AI/llm_routing.md",
+    "01_Raw/journals/attachments/image.png",
+    "Templates/Journal.md",
+    "01_Raw/journals/2026-03-26_16-41-14.md",
+    "GEMINI.md",
+    "02_Brain/09_AI/langchain.md",
+    "02_Brain/09_AI/llm_architecture_gallery.md",
+    "02_Brain/09_AI/embeddings_and_retrieval.md",
+    "02_Brain/09_AI/aws_bedrock_jargons.md",
+    "02_Brain/09_AI/ai_safety_vs_reliability.md",
+    "02_Brain/09_AI/AI_MOC.md",
+    "02_Brain/09_AI/ai_interviews.md",
+    "02_Brain/09_AI/ai_agent_security_and_guardrails.md",
+    "02_Brain/09_AI/sandboxed_ai_execution.md",
+    "02_Brain/09_AI/web_search_for_agents.md",
+    "01_Raw/journals/2026-03-25_12-39-29.md",
+    "03_Mart/sed2udwQn",
+    "03_Mart/99_misc/sedu1XNLG",
+    "03_Mart/09_AI/sedFOSBLz",
+    "03_Mart/09_AI/sedPYEB1n",
+    "03_Mart/09_AI/sed3ZzK8C",
+    "03_Mart/09_AI/seds7Y8tF",
+    "03_Mart/09_AI/sedyRGuMJ",
+    "03_Mart/09_AI/sedoJUI5v",
+    "03_Mart/09_AI/sed2sGNvp",
+    "03_Mart/09_AI/sedj5a80J",
+    "03_Mart/09_AI/llm_architecture_gallery_cards.md",
+    "03_Mart/09_AI/ai_agent_security_and_guardrails_cards.md",
+    "01_Raw/journals/2026-03-25_09-55-10.md",
+    "01_Raw/journals/2026-03-21_18-16-34.md",
+    "01_Raw/journals/2026-03-17_09-40-53.md",
+    "attachments/Pasted image 20260208001058.png",
+    "attachments/Pasted image 20260208001022.png",
+    "03_Mart/05_Warehousing/dbt_cards.md",
+    "03_Mart/05_Warehousing/redshift_cards.md",
+    "03_Mart/05_Warehousing/iceberg_cards.md",
+    "automation/movement_log.md",
+    "attachments/Pasted image 20260208001129.png",
     "01_Raw/journals/attachments/Pasted image 20260208001129.png",
     "01_Raw/journals/attachments/Pasted image 20260208001058.png",
     "01_Raw/journals/attachments/Pasted image 20260208001022.png",
-    "01_Raw/journals/attachments/image.png",
     "01_Raw/journals/attachments/image-2.png",
     "01_Raw/journals/attachments/image-1.png",
     "Untitled.canvas"

@@ -6,9 +6,9 @@ tags:
 Explain: false
 examples: 1
 move_journal_to_brain: true
-move_brain_to_mart: false
+move_brain_to_mart: true
 diagram_in_brain: false
-extract_info: false
+del_attachment: false
 ---
 
 

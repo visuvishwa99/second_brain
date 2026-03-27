@@ -1,11 +1,14 @@
 {
   "terminalApp": {
-    "win": "C:\\Program Files\\Git\\bin\\bash.exe"
+    "win": "C:\\Program Files\\WezTerm\\wezterm-gui.exe"
   },
   "enableClaude": false,
   "enableCodex": false,
   "enableCursor": false,
   "enableGemini": false,
   "enableOpencode": false,
-  "enableWslOnWindows": false
+  "enableWslOnWindows": false,
+  "enableGitCommitPush": false,
+  "enableGitPull": false,
+  "defaultCommitMessage": "update"
 }

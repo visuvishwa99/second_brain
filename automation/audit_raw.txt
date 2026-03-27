@@ -1,17 +1,14 @@
-=== Second Brain Audit - 2026-03-06 12:26 ===
+=== Second Brain Audit - 2026-03-14 17:43 ===
 
 ## Stale Journals (unprocessed)
 
 ## Brain Notes Missing Tags
 
 ## File Naming Violations
-- [UPPERCASE] ./02_Brain/09_AI/AWS_bedrock_jargons.md (filename should be lowercase)
 
 ## Orphan Cards (Mart without Brain)
 
 ## Brain Notes without Cards
-- [NO_CARDS] ./02_Brain/99_Misc/2026-01-27.md
-- [NO_CARDS] ./02_Brain/99_Misc/doordash_interview_2026.md
 
 ## Consolidation Candidates
 - [SMALL_FILE] ./02_Brain/01_Concepts/system_design.md (9 lines) -> Consider merging
@@ -19,11 +16,9 @@
 - [SMALL_FILE] ./02_Brain/04_Cloud/azure.md (13 lines) -> Consider merging
 - [SMALL_FILE] ./02_Brain/04_Cloud/gcp.md (13 lines) -> Consider merging
 - [SMALL_FILE] ./02_Brain/05_Warehousing/database_performance.md (13 lines) -> Consider merging
-- [SMALL_FILE] ./02_Brain/99_Misc/2026-01-27.md (8 lines) -> Consider merging
 
-- [DATED_FILE] ./02_Brain/99_Misc/2026-01-27.md -> Consider merging
 
 ## Summary
-- Brain Notes: 53
-- Mart Cards: 52
-- Raw Journals: 1
+- Brain Notes: 54
+- Mart Cards: 55
+- Raw Journals: 0

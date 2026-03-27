@@ -53,9 +53,8 @@ Command: `Process my notes` or `Analyze my latest journal`
 After publishing, Antigravity MUST complete these steps:
 - [ ] Write/Append content to `02_Brain/<Category>/<File>.md`
 - [ ] If `move_brain_to_mart: true`, generate cards to `03_Mart/<Category>/<File>_cards.md`
-- [ ] Delete source file from `01_Raw` using `rm` (NOT `del`)
+- [ ] Run `bash scripts/post_process.sh` with appropriate flags to handle line-ending fixes, source file deletion, and logging in a single command (see Section 5 for usage)
 - [ ] Update source journal frontmatter: `processed: true`
-- [ ] Log action to `automation/movement_log.md` (see Logging Rules below)
 
 ### Logging Rules
 
@@ -64,8 +63,9 @@ After publishing, Antigravity MUST complete these steps:
 > [!IMPORTANT]
 > **How to Log (NEVER VIOLATE)**:
 > NEVER edit `automation/movement_log.md` manually using file writing tools (`replace_file_content`, `write_to_file`, or echo). 
-> **ALWAYS** use the dedicated bash script via the terminal: 
-> `bash scripts/log_action.sh "OPERATION" "Source" "Destination" "Status" "Notes"`
+> **ALWAYS** use one of these methods:
+> - **Preferred (unified)**: `bash scripts/post_process.sh --log "OPERATION" "Source" "Destination" "Status" "Notes"`
+> - **Standalone**: `bash scripts/log_action.sh "OPERATION" "Source" "Destination" "Status" "Notes"`
 > This guarantees there are no empty lines injected that break the Markdown table rendering.
 
 **Log Schema**:
@@ -145,6 +145,7 @@ END
 
 > [!CAUTION]
 > **NEVER overwrite a card file.** Overwriting destroys existing Anki IDs and deletes unrelated cards.
+> **NEVER put Anki cards in `02_Brain`.** Card blocks (`START` / `Cloze` / `END`) belong **exclusively** in `03_Mart`. Brain files are for knowledge content only.
 
 When `move_brain_to_mart: true` and a card file needs to be updated:
 
@@ -189,8 +190,7 @@ Command: `/regenerate-cards` or `Regenerate all cards`
 1. **Delete**: Run `bash scripts/regenerate_all_cards.sh` to remove all `*_cards.md` files from `03_Mart`.
 2. **Scan**: Agent reads every file in `02_Brain/` (excluding MOC files, `.gitignore`, `assets/`, `Archive/`).
 3. **Generate**: For each Brain file, create a corresponding `<topic>_cards.md` in the matching `03_Mart/<folder>/`.
-4. **Fix line endings**: Run `bash scripts/fix_card_line_endings.sh`.
-5. **Log**: Record `BULK_GEN` operation in `automation/movement_log.md`.
+4. **Fix line endings + Log**: Run `bash scripts/post_process.sh --fix-endings --log "BULK_GEN" "-" "03_Mart/" "Success" "Regenerated all cards"`.
 
 ### Rules
 - Follow all card syntax rules from Section 2.5 (CurlyCloze, blank lines, LF endings).
@@ -212,22 +212,22 @@ tags:                   # Folder tag (streaming, warehousing, etc.)
 examples: 1             # Number of syntax/code examples to include.
 Realtime: false         # true = Add a Production-Grade Scenario.
 diagram: false          # true = Generate a Mermaid diagram.
-extract_info: true      # true = Extract info from attachments and discard them. false = Keep attachments at the end.
+del_attachment: true    # true = Extract info and delete attachment. false/none = Extract info, keep attachment and move to `attachments` folder.
 ---
 ```
 
 ### Field Logic
 
-| Field | Value | Behavior |
-|-------|-------|----------|
-| `Explain` | `true` | Full Principal Engineer analysis (concepts, code, diagrams). |
-| `Explain` | `false` | Concise Librarian summary (just organize and file). |
-| `examples` | `1`, `2`, etc. | Number of small syntax/usage code snippets to include. |
-| `Realtime` | `true` | Add a **Production-Grade Scenario** based on `tags` + note content. |
-| `Realtime` | `false` | No production scenario, just the standard examples. |
-| `diagram` | `true` | Generate a Mermaid diagram (ONLY allowed if Explain is true). |
-| `extract_info` | `true` | Extract info from PDF/Images/Links and discard the attachments afterward. |
-| `extract_info` | `false` | Extract info and append the original documents/images/links at the end of the note. |
+| Field          | Value          | Behavior                                                                            |
+| -------------- | -------------- | ----------------------------------------------------------------------------------- |
+| `Explain`      | `true`         | Full Principal Engineer analysis (concepts, code, diagrams).                        |
+| `Explain`      | `false`        | Concise Librarian summary (just organize and file).                                 |
+| `examples`     | `1`, `2`, etc. | Number of small syntax/usage code snippets to include.                              |
+| `Realtime`     | `true`         | Add a **Production-Grade Scenario** based on `tags` + note content.                 |
+| `Realtime`     | `false`        | No production scenario, just the standard examples.                                 |
+| `diagram`      | `true`         | Generate a Mermaid diagram (ONLY allowed if Explain is true).                       |
+| `del_attachment` | `true`         | Extract information and delete the attachment.                                      |
+| `del_attachment` | `false`/none     | Extract information, keep diagram/attachment, and move to `attachments` folder.     |
 
 ### The "Realtime" Rule (Context-Aware)
 
@@ -297,13 +297,32 @@ The **Auditor** is a read-only agent that ensures the Second Brain remains high-
 - Use `rm` to delete files, NOT `del`. **ALWAYS use forward slashes** for paths (e.g., `c:/path/to/file`) to avoid path resolution errors in Bash on Windows.
 - Use `mv` to move files, NOT `move`.
 
+> [!CAUTION]
+> **NEVER chain shell commands with `&&`**. Gemini CLI may run commands through PowerShell, which does not support `&&`. Instead, use the unified `post_process.sh` script to combine multiple post-publish steps (line-ending fixes, file deletion, logging) into a **single command invocation**.
+
 ### File Operations
 - Prefer using `write_to_file` with `Overwrite: true` to move content (avoids shell issues).
 - After writing to destination, use `rm` to clean up staged files.
 
 ### Anki Card Post-Processing (CRITICAL)
-- **After generating ANY card files**, Antigravity MUST run: `bash scripts/fix_card_line_endings.sh`
+- **After generating ANY card files**, use `bash scripts/post_process.sh` with the appropriate flags.
 - This converts CRLF (Windows) to LF (Unix) which is required for the Obsidian_to_Anki plugin.
+- **Usage examples**:
+  - Fix endings only: `bash scripts/post_process.sh --fix-endings`
+  - Fix endings + delete source + log: 
+    ```bash
+    bash scripts/post_process.sh --fix-endings \
+        --delete "01_Raw/journals/2026-03-06.md" \
+        --log "CREATE" "journal.md" "02_Brain/05_Warehousing/spark.md" "Success" "Added Spark section"
+    ```
+  - Multiple deletions and logs in one call:
+    ```bash
+    bash scripts/post_process.sh --fix-endings \
+        --delete "01_Raw/journals/file1.md" \
+        --delete "01_Raw/journals/file2.md" \
+        --log "CREATE" "file1.md" "02_Brain/03_Streaming/kafka.md" "Success" "Added Kafka section" \
+        --log "CREATE" "-" "03_Mart/03_Streaming/kafka_cards.md" "Success" "Appended 3 cards"
+    ```
 
 ### Frontmatter Formatting
 - Always ensure a newline before the closing `---` delimiter.
@@ -361,6 +380,6 @@ The same trigger phrases work in both environments:
 
 ### CLI-Specific Rules
 1. **Same post-publish checklist applies**: Write to Brain, optionally generate Mart cards, delete source from `01_Raw`, log to `automation/movement_log.md`.
-2. **Same Anki line-ending fix applies**: After generating card files, run `bash scripts/fix_card_line_endings.sh`.
+2. **Use `post_process.sh` for all post-publish steps**: After generating card files, run `bash scripts/post_process.sh` with `--fix-endings`, `--delete`, and `--log` flags as needed. **Never chain commands with `&&`.**
 3. **Same "Propose and Confirm" step applies**: Even in CLI, state the target file and wait for user confirmation before writing.
 4. **No emojis**: This rule is global across all agents and tools.

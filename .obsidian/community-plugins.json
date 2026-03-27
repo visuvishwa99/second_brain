@@ -9,5 +9,6 @@
   "obsidian-to-anki-plugin",
   "image-converter",
   "obsidian-kindle-export",
-  "open-in-terminal"
+  "open-in-terminal",
+  "obsidian-auto-link-title"
 ]

@@ -1,8 +1,144 @@
 {
   "recentFiles": [
     {
+      "basename": "llm_jargons",
+      "path": "02_Brain/09_AI/llm_jargons.md"
+    },
+    {
+      "basename": "llm_gallery_20260326",
+      "path": "02_Brain/assets/llm_gallery_20260326.png"
+    },
+    {
+      "basename": "2026-03-26_17-01-27",
+      "path": "01_Raw/journals/2026-03-26_17-01-27.md"
+    },
+    {
+      "basename": "llm_routing",
+      "path": "02_Brain/09_AI/llm_routing.md"
+    },
+    {
+      "basename": "Journal",
+      "path": "Templates/Journal.md"
+    },
+    {
+      "basename": "GEMINI",
+      "path": "GEMINI.md"
+    },
+    {
+      "basename": "langchain",
+      "path": "02_Brain/09_AI/langchain.md"
+    },
+    {
+      "basename": "embeddings_and_retrieval",
+      "path": "02_Brain/09_AI/embeddings_and_retrieval.md"
+    },
+    {
+      "basename": "aws_bedrock_jargons",
+      "path": "02_Brain/09_AI/aws_bedrock_jargons.md"
+    },
+    {
+      "basename": "ai_safety_vs_reliability",
+      "path": "02_Brain/09_AI/ai_safety_vs_reliability.md"
+    },
+    {
+      "basename": "AI_MOC",
+      "path": "02_Brain/09_AI/AI_MOC.md"
+    },
+    {
+      "basename": "ai_interviews",
+      "path": "02_Brain/09_AI/ai_interviews.md"
+    },
+    {
+      "basename": "ai_agent_security_and_guardrails",
+      "path": "02_Brain/09_AI/ai_agent_security_and_guardrails.md"
+    },
+    {
+      "basename": "sandboxed_ai_execution",
+      "path": "02_Brain/09_AI/sandboxed_ai_execution.md"
+    },
+    {
+      "basename": "web_search_for_agents",
+      "path": "02_Brain/09_AI/web_search_for_agents.md"
+    },
+    {
+      "basename": "Pasted image 20260208001058",
+      "path": "attachments/Pasted image 20260208001058.png"
+    },
+    {
+      "basename": "Pasted image 20260208001022",
+      "path": "attachments/Pasted image 20260208001022.png"
+    },
+    {
+      "basename": "dbt_cards",
+      "path": "03_Mart/05_Warehousing/dbt_cards.md"
+    },
+    {
+      "basename": "redshift_cards",
+      "path": "03_Mart/05_Warehousing/redshift_cards.md"
+    },
+    {
+      "basename": "iceberg_cards",
+      "path": "03_Mart/05_Warehousing/iceberg_cards.md"
+    },
+    {
       "basename": "movement_log",
       "path": "automation/movement_log.md"
+    },
+    {
+      "basename": "negative_space_programming",
+      "path": "02_Brain/07_Languages/negative_space_programming.md"
+    },
+    {
+      "basename": "DATAENG_MOC",
+      "path": "02_Brain/00_DATAENG/DATAENG_MOC.md"
+    },
+    {
+      "basename": "doordash_interview_2026",
+      "path": "02_Brain/99_Misc/doordash_interview_2026.md"
+    },
+    {
+      "basename": "Misc_MOC",
+      "path": "02_Brain/99_Misc/Misc_MOC.md"
+    },
+    {
+      "basename": "langchain_cards",
+      "path": "03_Mart/09_AI/langchain_cards.md"
+    },
+    {
+      "basename": "ai_interviews_cards",
+      "path": "03_Mart/09_AI/ai_interviews_cards.md"
+    },
+    {
+      "basename": "sandboxed_ai_execution_cards",
+      "path": "03_Mart/09_AI/sandboxed_ai_execution_cards.md"
+    },
+    {
+      "basename": "web_search_for_agents_cards",
+      "path": "03_Mart/09_AI/web_search_for_agents_cards.md"
+    },
+    {
+      "basename": "data_engineering_foundations_cards",
+      "path": "03_Mart/01_Concepts/data_engineering_foundations_cards.md"
+    },
+    {
+      "basename": "amex_cards",
+      "path": "03_Mart/00_DATAENG/amex_cards.md"
+    },
+    {
+      "basename": "project_flows_cards",
+      "path": "03_Mart/00_DATAENG/project_flows_cards.md"
+    },
+    {
+      "basename": "athena_cards",
+      "path": "03_Mart/05_Warehousing/athena_cards.md"
+    },
+    {
+      "basename": "database_indexing_strategies_cards",
+      "path": "03_Mart/05_Warehousing/database_indexing_strategies_cards.md"
+    },
+    {
+      "basename": "bigquery_cards",
+      "path": "03_Mart/05_Warehousing/bigquery_cards.md"
     },
     {
       "basename": "system_design_cards",
@@ -17,10 +153,6 @@
       "path": "03_Mart/01_Concepts/data_merging_strategies_cards.md"
     },
     {
-      "basename": "data_engineering_foundations_cards",
-      "path": "03_Mart/01_Concepts/data_engineering_foundations_cards.md"
-    },
-    {
       "basename": "cloud_engineering_cards",
       "path": "03_Mart/01_Concepts/cloud_engineering_cards.md"
     },
@@ -31,10 +163,6 @@
     {
       "basename": "database_indexing",
       "path": "02_Brain/05_Warehousing/database_indexing.md"
-    },
-    {
-      "basename": "Pasted image 20260208001129",
-      "path": "01_Raw/journals/attachments/Pasted image 20260208001129.png"
     },
     {
       "basename": "spark_streaming",
@@ -69,112 +197,8 @@
       "path": "02_Brain/02_Compute/databricks_architecture.md"
     },
     {
-      "basename": "GEMINI",
-      "path": "GEMINI.md"
-    },
-    {
-      "basename": "AWS_bedrock_jargons",
-      "path": "02_Brain/09_AI/AWS_bedrock_jargons.md"
-    },
-    {
       "basename": "amex",
       "path": "02_Brain/00_DATAENG/amex.md"
-    },
-    {
-      "basename": "audit_report",
-      "path": "automation/audit_report.md"
-    },
-    {
-      "basename": "deep_dive",
-      "path": "automation/workflows/deep_dive.md"
-    },
-    {
-      "basename": "Journal",
-      "path": "Templates/Journal.md"
-    },
-    {
-      "basename": "snowflake_vs_databricks",
-      "path": "02_Brain/08_Architecture/snowflake_vs_databricks.md"
-    },
-    {
-      "basename": "functional_data_engineering",
-      "path": "02_Brain/08_Architecture/functional_data_engineering.md"
-    },
-    {
-      "basename": "Architecture_MOC",
-      "path": "02_Brain/08_Architecture/Architecture_MOC.md"
-    },
-    {
-      "basename": "delta",
-      "path": "02_Brain/08_Architecture/delta.md"
-    },
-    {
-      "basename": "fragile_api_ingestion",
-      "path": "02_Brain/06_Ingestion/fragile_api_ingestion.md"
-    },
-    {
-      "basename": "sqoop",
-      "path": "02_Brain/06_Ingestion/sqoop.md"
-    },
-    {
-      "basename": "Ingestion_MOC",
-      "path": "02_Brain/06_Ingestion/Ingestion_MOC.md"
-    },
-    {
-      "basename": "glue",
-      "path": "02_Brain/06_Ingestion/glue.md"
-    },
-    {
-      "basename": "project_flows",
-      "path": "02_Brain/00_DATAENG/project_flows.md"
-    },
-    {
-      "basename": "DATAENG_MOC",
-      "path": "02_Brain/00_DATAENG/DATAENG_MOC.md"
-    },
-    {
-      "basename": "dbt",
-      "path": "02_Brain/05_Warehousing/dbt.md"
-    },
-    {
-      "basename": "Cloud_MOC",
-      "path": "02_Brain/04_Cloud/Cloud_MOC.md"
-    },
-    {
-      "basename": "spark",
-      "path": "02_Brain/02_Compute/spark.md"
-    },
-    {
-      "basename": "pyspark_decorators",
-      "path": "02_Brain/02_Compute/pyspark_decorators.md"
-    },
-    {
-      "basename": "Compute_MOC",
-      "path": "02_Brain/02_Compute/Compute_MOC.md"
-    },
-    {
-      "basename": "emr_pricing_optimization",
-      "path": "02_Brain/02_Compute/emr_pricing_optimization.md"
-    },
-    {
-      "basename": "system_design",
-      "path": "02_Brain/01_Concepts/system_design.md"
-    },
-    {
-      "basename": "cloud_engineering",
-      "path": "02_Brain/01_Concepts/cloud_engineering.md"
-    },
-    {
-      "basename": "azure",
-      "path": "02_Brain/04_Cloud/azure.md"
-    },
-    {
-      "basename": "Concepts_MOC",
-      "path": "02_Brain/01_Concepts/Concepts_MOC.md"
-    },
-    {
-      "basename": "data_merging_strategies",
-      "path": "02_Brain/01_Concepts/data_merging_strategies.md"
     }
   ],
   "omittedPaths": [],

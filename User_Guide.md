@@ -3,7 +3,7 @@
 This guide explains how to interact with your AI agent (Antigravity) to manage your Second Brain.
 
 ```bash
-second_brain/
+build_second_brain/
 ├── .agent/workflows/     # Antigravity system (slash commands)
 ├── automation/           # Your automation docs & logs
 │   ├── auditor.md
@@ -103,13 +103,14 @@ Controls how the agent handles attachments (PDFs, images, links) in your journal
 
 ## Logging & Knowledge Lineage
 
-Every movement from `01_Raw` to `02_Brain`, as well as manual script tools (Maintenance and Audits), is logged in [movement_log.md](file:///c:/Misc/Dataengineering/Projects/second_brain/automation/movement_log.md) for auditability.
+Every movement from `01_Raw` to `02_Brain`, as well as manual script tools (Maintenance and Audits), is logged in [movement_log.md](file:///c:/Misc/Dataengineering/Projects/build_second_brain/automation/movement_log.md) for auditability.
 
 > [!IMPORTANT]
 > **How to Log (NEVER VIOLATE)**:
 > NEVER edit `automation/movement_log.md` manually using file writing tools (`replace_file_content`, `write_to_file`, or echo). 
-> **ALWAYS** use the dedicated bash script via the terminal: 
-> `bash scripts/log_action.sh "OPERATION" "Source" "Destination" "Status" "Notes"`
+> **ALWAYS** use one of these methods:
+> - **Preferred (unified)**: `bash scripts/post_process.sh --log "OPERATION" "Source" "Destination" "Status" "Notes"`
+> - **Standalone**: `bash scripts/log_action.sh "OPERATION" "Source" "Destination" "Status" "Notes"`
 > This guarantees there are no empty lines injected that break the Markdown table rendering.
 
 **Log Format**:
@@ -146,7 +147,7 @@ END
 
 > [!IMPORTANT]
 > **Line Endings (LF)**: Anki cards MUST use Unix (LF) line endings. After generating cards, you **MUST** run:
-> `bash scripts/fix_card_line_endings.sh`
+> `bash scripts/post_process.sh --fix-endings`
 
 ### Cleaning Up IDs
 The plugin automatically injects `<!--ID: 12345-->` tags to track cards. To remove them safely:
@@ -167,12 +168,14 @@ All scripts live in the `scripts/` directory. Here is a summary of each one and 
 | `run_audit.sh` | Bash | **Orchestrator** -- runs the full audit pipeline (Steps 1 and 2 below) in sequence. | `bash scripts/run_audit.sh` |
 | `audit_brain.sh` | Bash | **Step 1 of audit** -- fast file-system scan for stale journals, missing tags, naming violations, orphan cards, Brain notes without cards, and consolidation candidates. Outputs raw findings to `automation/audit_raw.txt`. | Called by `run_audit.sh` |
 | `audit_brain.py` | Python | **Step 2 of audit** -- smart duplicate detection using SequenceMatcher (70% similarity threshold for notes, 85% for cards). Reads the raw scan from Step 1, then generates the final `automation/audit_report.md`. | Called by `run_audit.sh` |
-| `fix_card_line_endings.sh` | Bash | Converts CRLF (Windows) to LF (Unix) line endings on all `.md` files in `03_Mart`. **Required** after generating Anki cards so the Obsidian_to_Anki plugin can parse them. | `bash scripts/fix_card_line_endings.sh` |
+| `post_process.sh` | Bash | **Unified post-publish script** -- handles line-ending fixes (`--fix-endings`), source file deletion (`--delete`), and logging (`--log`) in a single invocation. Replaces chained `&&` commands. | `bash scripts/post_process.sh --fix-endings --delete "file" --log "OP" "src" "dest" "Status" "Notes"` |
+| `fix_card_line_endings.sh` | Bash | Converts CRLF (Windows) to LF (Unix) line endings on all `.md` files in `03_Mart`. Superseded by `post_process.sh --fix-endings` but still works standalone. | `bash scripts/fix_card_line_endings.sh` |
 | `clean_anki_ids.py` | Python | Removes `<!--ID: ...-->` tracking tags injected by the Obsidian_to_Anki plugin. Accepts a file or directory path. | `python scripts/clean_anki_ids.py <path>` |
 | `clean_yaml_tags.py` | Python | Enforces the "One Folder = One Tag" rule across all `02_Brain` files. Rewrites frontmatter so `tags:` contains only the folder's designated tag. Runs in **dry-run** mode by default. | `python scripts/clean_yaml_tags.py` (preview) or `python scripts/clean_yaml_tags.py --apply` (write) |
 | `find_missing_cards.py` | Python | Lists all Brain notes in `02_Brain` that do **not** have a corresponding `_cards.md` file in `03_Mart`. Useful for identifying gaps in Anki coverage. | `python scripts/find_missing_cards.py` |
 | `log_action.sh` | Bash | **Shared utility** -- sourced by bash scripts to append standardized log entries to `movement_log.md`. | N/A (Internal use) |
 | `log_action.py` | Python | **Shared utility** -- imported by python scripts to append standardized log entries to `movement_log.md`. | N/A (Internal use) |
+| `regenerate_all_cards.sh` | Bash | **Nuclear option** -- deletes ALL `*_cards.md` files from `03_Mart` for a full regeneration. Only Step 1; the agent handles Step 2 (generation). | `bash scripts/regenerate_all_cards.sh` |
 
 > [!NOTE]
 > All the above tools automatically log their operations (as `MAINTENANCE` or `AUDIT`) to `automation/movement_log.md` when you run them.
@@ -185,16 +188,16 @@ To sync your Second Brain between your PC and iPhone without iCloud:
 
 ### Prerequisites
 1. **Working Copy** (Git client for iOS) - Download from App Store.
-2. Clone your `second_brain` repo in Working Copy.
+2. Clone your `build_second_brain` repo in Working Copy.
 3. **Obsidian Mobile** - Open the vault from the Working Copy folder.
 
 ### Create a "Sync Brain" Shortcut
 1. Open the **Shortcuts** app on your iPhone.
 2. Tap **+** to create a new shortcut. Name it **"Sync Brain"**.
 3. Add these actions (search for "Working Copy"):
- * **Commit Repository**: Repo = `second_brain`, Message = "Mobile sync".
- * **Pull Repository**: Repo = `second_brain`.
- * **Push Repository**: Repo = `second_brain`.
+ * **Commit Repository**: Repo = `build_second_brain`, Message = "Mobile sync".
+ * **Pull Repository**: Repo = `build_second_brain`.
+ * **Push Repository**: Repo = `build_second_brain`.
  * **Open App**: App = Obsidian.
 1. Add shortcut to Home Screen.
 2. npx @google/gemini-cli  
